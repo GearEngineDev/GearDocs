@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GearEngine: Gear/src/Gear/Events/ApplicationEvent.h 소스 파일</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../EngineLogo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GearEngine
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d3/d87/_application_event_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ApplicationEvent.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d3/d87/_application_event_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/d6d/_event_8h.html">Event.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d8/d4b/namespace_gear.html">Gear</a> {</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="../../db/d09/class_gear_1_1_window_resize_event.html">    6</a></span>&#160;    <span class="keyword">class </span>GEAR_API <a class="code" href="../../db/d09/class_gear_1_1_window_resize_event.html">WindowResizeEvent</a> : <span class="keyword">public</span> <a class="code" href="../../d2/d64/class_gear_1_1_event.html">Event</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../db/d09/class_gear_1_1_window_resize_event.html#a8adfccfb161be7bcdaac940f0207cd37">    8</a></span>&#160;        <a class="code" href="../../db/d09/class_gear_1_1_window_resize_event.html#a8adfccfb161be7bcdaac940f0207cd37">WindowResizeEvent</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> width, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> height)</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;            :m_Width(width), m_Height(height)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        {}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../db/d09/class_gear_1_1_window_resize_event.html#a4adf7bfbec6e04a3d537b4048249aba7">   12</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../db/d09/class_gear_1_1_window_resize_event.html#a4adf7bfbec6e04a3d537b4048249aba7">GetWidth</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_Width; }</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../db/d09/class_gear_1_1_window_resize_event.html#a0c70f168380cffb368130811365b0419">   13</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../db/d09/class_gear_1_1_window_resize_event.html#a0c70f168380cffb368130811365b0419">GetHeight</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_Height; }</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../db/d09/class_gear_1_1_window_resize_event.html#a98d46ccc58b6e5be5ff7a1260631804d">   15</a></span>&#160;        std::string <a class="code" href="../../db/d09/class_gear_1_1_window_resize_event.html#a98d46ccc58b6e5be5ff7a1260631804d">ToString</a>()<span class="keyword"> const override </span>{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            std::stringstream ss;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            ss &lt;&lt; <span class="stringliteral">&quot;WindowResizeEvent: &quot;</span> &lt;&lt; m_Width &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; m_Height;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="../../de/d6d/_event_8h.html#a80d534fc4d69a68eefd1573fd0ac2f44">EVENT_CLASS_TYPE</a>(WindowResize)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="../../de/d6d/_event_8h.html#abd52deea587a36ef619e596a0c691839">EVENT_CLASS_CATEGORY</a>(<a class="code" href="../../d8/d4b/namespace_gear.html#aacb11cc0857c3ae782a0d0dccac79ef1a415c1a0fc7c89e376dbd8a019d72ee5e">EventCategoryApplication</a>) </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../db/d09/class_gear_1_1_window_resize_event.html#a1a3990c08a428f3765873170a9d8fb1d">   24</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../db/d09/class_gear_1_1_window_resize_event.html#a1a3990c08a428f3765873170a9d8fb1d">m_Width</a>, m_Height;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    };</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d5/d2f/class_gear_1_1_window_close_event.html">   27</a></span>&#160;    <span class="keyword">class </span>GEAR_API <a class="code" href="../../d5/d2f/class_gear_1_1_window_close_event.html">WindowCloseEvent</a> : <span class="keyword">public</span> <a class="code" href="../../d2/d64/class_gear_1_1_event.html">Event</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d5/d2f/class_gear_1_1_window_close_event.html#aa1a96789da3093c900ec47440ba7b556">   29</a></span>&#160;        <a class="code" href="../../d5/d2f/class_gear_1_1_window_close_event.html#aa1a96789da3093c900ec47440ba7b556">WindowCloseEvent</a>() {}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="../../de/d6d/_event_8h.html#a80d534fc4d69a68eefd1573fd0ac2f44">EVENT_CLASS_TYPE</a>(WindowClose)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="../../de/d6d/_event_8h.html#abd52deea587a36ef619e596a0c691839">EVENT_CLASS_CATEGORY</a>(<a class="code" href="../../d8/d4b/namespace_gear.html#aacb11cc0857c3ae782a0d0dccac79ef1a415c1a0fc7c89e376dbd8a019d72ee5e">EventCategoryApplication</a>)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    };</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../df/d04/class_gear_1_1_app_tick_event.html">   35</a></span>&#160;    <span class="keyword">class </span>GEAR_API <a class="code" href="../../df/d04/class_gear_1_1_app_tick_event.html">AppTickEvent</a> : <span class="keyword">public</span> <a class="code" href="../../d2/d64/class_gear_1_1_event.html">Event</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../df/d04/class_gear_1_1_app_tick_event.html#a4dd398f931e49694dbaa08c9ec7be0da">   37</a></span>&#160;        <a class="code" href="../../df/d04/class_gear_1_1_app_tick_event.html#a4dd398f931e49694dbaa08c9ec7be0da">AppTickEvent</a>() {}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="../../de/d6d/_event_8h.html#a80d534fc4d69a68eefd1573fd0ac2f44">EVENT_CLASS_TYPE</a>(AppTick)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="../../de/d6d/_event_8h.html#abd52deea587a36ef619e596a0c691839">EVENT_CLASS_CATEGORY</a>(<a class="code" href="../../d8/d4b/namespace_gear.html#aacb11cc0857c3ae782a0d0dccac79ef1a415c1a0fc7c89e376dbd8a019d72ee5e">EventCategoryApplication</a>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    };</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d0/d54/class_gear_1_1_app_update_event.html">   43</a></span>&#160;    <span class="keyword">class </span>GEAR_API <a class="code" href="../../d0/d54/class_gear_1_1_app_update_event.html">AppUpdateEvent</a> : <span class="keyword">public</span> <a class="code" href="../../d2/d64/class_gear_1_1_event.html">Event</a> {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d0/d54/class_gear_1_1_app_update_event.html#a95a4cd210f8f40878884d1b05190b99c">   45</a></span>&#160;        <a class="code" href="../../d0/d54/class_gear_1_1_app_update_event.html#a95a4cd210f8f40878884d1b05190b99c">AppUpdateEvent</a>() {}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="../../de/d6d/_event_8h.html#a80d534fc4d69a68eefd1573fd0ac2f44">EVENT_CLASS_TYPE</a>(AppUpdate)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="../../de/d6d/_event_8h.html#abd52deea587a36ef619e596a0c691839">EVENT_CLASS_CATEGORY</a>(<a class="code" href="../../d8/d4b/namespace_gear.html#aacb11cc0857c3ae782a0d0dccac79ef1a415c1a0fc7c89e376dbd8a019d72ee5e">EventCategoryApplication</a>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    };</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d3/db5/class_gear_1_1_app_render_event.html">   51</a></span>&#160;    <span class="keyword">class </span>GEAR_API <a class="code" href="../../d3/db5/class_gear_1_1_app_render_event.html">AppRenderEvent</a> : <span class="keyword">public</span> <a class="code" href="../../d2/d64/class_gear_1_1_event.html">Event</a> {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d3/db5/class_gear_1_1_app_render_event.html#aeca8ae67401b46fd93482acf07c72181">   53</a></span>&#160;        <a class="code" href="../../d3/db5/class_gear_1_1_app_render_event.html#aeca8ae67401b46fd93482acf07c72181">AppRenderEvent</a>() {}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="../../de/d6d/_event_8h.html#a80d534fc4d69a68eefd1573fd0ac2f44">EVENT_CLASS_TYPE</a>(AppRender)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="../../de/d6d/_event_8h.html#abd52deea587a36ef619e596a0c691839">EVENT_CLASS_CATEGORY</a>(<a class="code" href="../../d8/d4b/namespace_gear.html#aacb11cc0857c3ae782a0d0dccac79ef1a415c1a0fc7c89e376dbd8a019d72ee5e">EventCategoryApplication</a>)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    };</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_gear_1_1_window_resize_event_html_a0c70f168380cffb368130811365b0419"><div class="ttname"><a href="../../db/d09/class_gear_1_1_window_resize_event.html#a0c70f168380cffb368130811365b0419">Gear::WindowResizeEvent::GetHeight</a></div><div class="ttdeci">unsigned int GetHeight() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d87/_application_event_8h_source.html#l00013">ApplicationEvent.h:13</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_event_html"><div class="ttname"><a href="../../d2/d64/class_gear_1_1_event.html">Gear::Event</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6d/_event_8h_source.html#l00035">Event.h:35</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_window_resize_event_html_a8adfccfb161be7bcdaac940f0207cd37"><div class="ttname"><a href="../../db/d09/class_gear_1_1_window_resize_event.html#a8adfccfb161be7bcdaac940f0207cd37">Gear::WindowResizeEvent::WindowResizeEvent</a></div><div class="ttdeci">WindowResizeEvent(unsigned int width, unsigned int height)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d87/_application_event_8h_source.html#l00008">ApplicationEvent.h:8</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_app_tick_event_html_a4dd398f931e49694dbaa08c9ec7be0da"><div class="ttname"><a href="../../df/d04/class_gear_1_1_app_tick_event.html#a4dd398f931e49694dbaa08c9ec7be0da">Gear::AppTickEvent::AppTickEvent</a></div><div class="ttdeci">AppTickEvent()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d87/_application_event_8h_source.html#l00037">ApplicationEvent.h:37</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_app_tick_event_html"><div class="ttname"><a href="../../df/d04/class_gear_1_1_app_tick_event.html">Gear::AppTickEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d87/_application_event_8h_source.html#l00035">ApplicationEvent.h:35</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_app_render_event_html_aeca8ae67401b46fd93482acf07c72181"><div class="ttname"><a href="../../d3/db5/class_gear_1_1_app_render_event.html#aeca8ae67401b46fd93482acf07c72181">Gear::AppRenderEvent::AppRenderEvent</a></div><div class="ttdeci">AppRenderEvent()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d87/_application_event_8h_source.html#l00053">ApplicationEvent.h:53</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_app_render_event_html"><div class="ttname"><a href="../../d3/db5/class_gear_1_1_app_render_event.html">Gear::AppRenderEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d87/_application_event_8h_source.html#l00051">ApplicationEvent.h:51</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_window_resize_event_html_a98d46ccc58b6e5be5ff7a1260631804d"><div class="ttname"><a href="../../db/d09/class_gear_1_1_window_resize_event.html#a98d46ccc58b6e5be5ff7a1260631804d">Gear::WindowResizeEvent::ToString</a></div><div class="ttdeci">std::string ToString() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d87/_application_event_8h_source.html#l00015">ApplicationEvent.h:15</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_window_resize_event_html_a1a3990c08a428f3765873170a9d8fb1d"><div class="ttname"><a href="../../db/d09/class_gear_1_1_window_resize_event.html#a1a3990c08a428f3765873170a9d8fb1d">Gear::WindowResizeEvent::m_Width</a></div><div class="ttdeci">unsigned int m_Width</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d87/_application_event_8h_source.html#l00024">ApplicationEvent.h:24</a></div></div>
+<div class="ttc" id="anamespace_gear_html"><div class="ttname"><a href="../../d8/d4b/namespace_gear.html">Gear</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d42/_application_8cpp_source.html#l00011">Application.cpp:11</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_app_update_event_html_a95a4cd210f8f40878884d1b05190b99c"><div class="ttname"><a href="../../d0/d54/class_gear_1_1_app_update_event.html#a95a4cd210f8f40878884d1b05190b99c">Gear::AppUpdateEvent::AppUpdateEvent</a></div><div class="ttdeci">AppUpdateEvent()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d87/_application_event_8h_source.html#l00045">ApplicationEvent.h:45</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_window_close_event_html"><div class="ttname"><a href="../../d5/d2f/class_gear_1_1_window_close_event.html">Gear::WindowCloseEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d87/_application_event_8h_source.html#l00027">ApplicationEvent.h:27</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_window_resize_event_html_a4adf7bfbec6e04a3d537b4048249aba7"><div class="ttname"><a href="../../db/d09/class_gear_1_1_window_resize_event.html#a4adf7bfbec6e04a3d537b4048249aba7">Gear::WindowResizeEvent::GetWidth</a></div><div class="ttdeci">unsigned int GetWidth() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d87/_application_event_8h_source.html#l00012">ApplicationEvent.h:12</a></div></div>
+<div class="ttc" id="a_event_8h_html_a80d534fc4d69a68eefd1573fd0ac2f44"><div class="ttname"><a href="../../de/d6d/_event_8h.html#a80d534fc4d69a68eefd1573fd0ac2f44">EVENT_CLASS_TYPE</a></div><div class="ttdeci">#define EVENT_CLASS_TYPE(type)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6d/_event_8h_source.html#l00029">Event.h:29</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_window_resize_event_html"><div class="ttname"><a href="../../db/d09/class_gear_1_1_window_resize_event.html">Gear::WindowResizeEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d87/_application_event_8h_source.html#l00006">ApplicationEvent.h:6</a></div></div>
+<div class="ttc" id="a_event_8h_html"><div class="ttname"><a href="../../de/d6d/_event_8h.html">Event.h</a></div></div>
+<div class="ttc" id="anamespace_gear_html_aacb11cc0857c3ae782a0d0dccac79ef1a415c1a0fc7c89e376dbd8a019d72ee5e"><div class="ttname"><a href="../../d8/d4b/namespace_gear.html#aacb11cc0857c3ae782a0d0dccac79ef1a415c1a0fc7c89e376dbd8a019d72ee5e">Gear::EventCategoryApplication</a></div><div class="ttdeci">@ EventCategoryApplication</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6d/_event_8h_source.html#l00022">Event.h:22</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_app_update_event_html"><div class="ttname"><a href="../../d0/d54/class_gear_1_1_app_update_event.html">Gear::AppUpdateEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d87/_application_event_8h_source.html#l00043">ApplicationEvent.h:43</a></div></div>
+<div class="ttc" id="a_event_8h_html_abd52deea587a36ef619e596a0c691839"><div class="ttname"><a href="../../de/d6d/_event_8h.html#abd52deea587a36ef619e596a0c691839">EVENT_CLASS_CATEGORY</a></div><div class="ttdeci">#define EVENT_CLASS_CATEGORY(category)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6d/_event_8h_source.html#l00033">Event.h:33</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_window_close_event_html_aa1a96789da3093c900ec47440ba7b556"><div class="ttname"><a href="../../d5/d2f/class_gear_1_1_window_close_event.html#aa1a96789da3093c900ec47440ba7b556">Gear::WindowCloseEvent::WindowCloseEvent</a></div><div class="ttdeci">WindowCloseEvent()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d87/_application_event_8h_source.html#l00029">ApplicationEvent.h:29</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_53d5e98abdf3a310efd03de30bd70f59.html">Gear</a></li><li class="navelem"><a class="el" href="../../dir_2e86bc557449db88413d12c593cb549e.html">src</a></li><li class="navelem"><a class="el" href="../../dir_cb4ae8cb444fc781104283c5acb48e8f.html">Gear</a></li><li class="navelem"><a class="el" href="../../dir_a2745e25161412806476164a1b8c4feb.html">Events</a></li><li class="navelem"><a class="el" href="../../d3/d87/_application_event_8h.html">ApplicationEvent.h</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

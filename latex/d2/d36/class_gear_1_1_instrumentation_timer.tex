@@ -1,0 +1,146 @@
+\hypertarget{class_gear_1_1_instrumentation_timer}{}\doxysection{Gear\+::Instrumentation\+Timer 클래스 참조}
+\label{class_gear_1_1_instrumentation_timer}\index{Gear::InstrumentationTimer@{Gear::InstrumentationTimer}}
+
+
+{\ttfamily \#include $<$Instrumentor.\+h$>$}
+
+
+
+Gear\+::Instrumentation\+Timer에 대한 협력 다이어그램\+:
+% FIG 0
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_instrumentation_timer_aaefd4e33d644fc8f7680f53a384a7ae7}{Instrumentation\+Timer}} (const char $\ast$name)
+\item 
+\mbox{\hyperlink{class_gear_1_1_instrumentation_timer_a03aaa656d8b30cef79af849dffee1884}{$\sim$\+Instrumentation\+Timer}} ()
+\item 
+void \mbox{\hyperlink{class_gear_1_1_instrumentation_timer_a1fafbc479824d8f15bb0d63f9964944a}{Stop}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{class_gear_1_1_instrumentation_timer_a8d58d3dbae98324450496c8cc2b2d52f}{m\+\_\+\+Name}}
+\item 
+std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::high\+\_\+resolution\+\_\+clock $>$ \mbox{\hyperlink{class_gear_1_1_instrumentation_timer_a23cc4832ab95caedb1e5298308ec2631}{m\+\_\+\+Start\+Timepoint}}
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_instrumentation_timer_abfcc27bdaea6c62f75e64b1cf7a1af8d}{m\+\_\+\+Stopped}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Instrumentor.\+h 파일의 92 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_instrumentation_timer_aaefd4e33d644fc8f7680f53a384a7ae7}\label{class_gear_1_1_instrumentation_timer_aaefd4e33d644fc8f7680f53a384a7ae7}} 
+\index{Gear::InstrumentationTimer@{Gear::InstrumentationTimer}!InstrumentationTimer@{InstrumentationTimer}}
+\index{InstrumentationTimer@{InstrumentationTimer}!Gear::InstrumentationTimer@{Gear::InstrumentationTimer}}
+\doxysubsubsection{\texorpdfstring{InstrumentationTimer()}{InstrumentationTimer()}}
+{\footnotesize\ttfamily Gear\+::\+Instrumentation\+Timer\+::\+Instrumentation\+Timer (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Instrumentor.\+h 파일의 95 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{96             : \mbox{\hyperlink{class_gear_1_1_instrumentation_timer_a8d58d3dbae98324450496c8cc2b2d52f}{m\_Name}}(name), \mbox{\hyperlink{class_gear_1_1_instrumentation_timer_abfcc27bdaea6c62f75e64b1cf7a1af8d}{m\_Stopped}}(\textcolor{keyword}{false})}
+\DoxyCodeLine{97         \{}
+\DoxyCodeLine{98             \mbox{\hyperlink{class_gear_1_1_instrumentation_timer_a23cc4832ab95caedb1e5298308ec2631}{m\_StartTimepoint}} = std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{99         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_instrumentation_timer_a03aaa656d8b30cef79af849dffee1884}\label{class_gear_1_1_instrumentation_timer_a03aaa656d8b30cef79af849dffee1884}} 
+\index{Gear::InstrumentationTimer@{Gear::InstrumentationTimer}!````~InstrumentationTimer@{$\sim$InstrumentationTimer}}
+\index{````~InstrumentationTimer@{$\sim$InstrumentationTimer}!Gear::InstrumentationTimer@{Gear::InstrumentationTimer}}
+\doxysubsubsection{\texorpdfstring{$\sim$InstrumentationTimer()}{~InstrumentationTimer()}}
+{\footnotesize\ttfamily Gear\+::\+Instrumentation\+Timer\+::$\sim$\+Instrumentation\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Instrumentor.\+h 파일의 101 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{102         \{}
+\DoxyCodeLine{103             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_gear_1_1_instrumentation_timer_abfcc27bdaea6c62f75e64b1cf7a1af8d}{m\_Stopped}})}
+\DoxyCodeLine{104                 \mbox{\hyperlink{class_gear_1_1_instrumentation_timer_a1fafbc479824d8f15bb0d63f9964944a}{Stop}}();}
+\DoxyCodeLine{105         \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 1
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_instrumentation_timer_a1fafbc479824d8f15bb0d63f9964944a}\label{class_gear_1_1_instrumentation_timer_a1fafbc479824d8f15bb0d63f9964944a}} 
+\index{Gear::InstrumentationTimer@{Gear::InstrumentationTimer}!Stop@{Stop}}
+\index{Stop@{Stop}!Gear::InstrumentationTimer@{Gear::InstrumentationTimer}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily void Gear\+::\+Instrumentation\+Timer\+::\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Instrumentor.\+h 파일의 107 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{108         \{}
+\DoxyCodeLine{109             \textcolor{keyword}{auto} endTimepoint = std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111             \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} start = std::chrono::time\_point\_cast<std::chrono::microseconds>(\mbox{\hyperlink{class_gear_1_1_instrumentation_timer_a23cc4832ab95caedb1e5298308ec2631}{m\_StartTimepoint}}).time\_since\_epoch().count();}
+\DoxyCodeLine{112             \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} end = std::chrono::time\_point\_cast<std::chrono::microseconds>(endTimepoint).time\_since\_epoch().count();}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114             uint32\_t threadID = std::hash<std::thread::id>\{\}(std::this\_thread::get\_id());}
+\DoxyCodeLine{115             \mbox{\hyperlink{class_gear_1_1_instrumentor_ab99c04e194f05e850c9621a97b21e715}{Instrumentor::Get}}().\mbox{\hyperlink{class_gear_1_1_instrumentor_a5aebc0c559581f0a426094376fdb2f2e}{WriteProfile}}(\{ \mbox{\hyperlink{class_gear_1_1_instrumentation_timer_a8d58d3dbae98324450496c8cc2b2d52f}{m\_Name}}, start, end, threadID \});}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117             \mbox{\hyperlink{class_gear_1_1_instrumentation_timer_abfcc27bdaea6c62f75e64b1cf7a1af8d}{m\_Stopped}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{118         \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_instrumentation_timer_a8d58d3dbae98324450496c8cc2b2d52f}\label{class_gear_1_1_instrumentation_timer_a8d58d3dbae98324450496c8cc2b2d52f}} 
+\index{Gear::InstrumentationTimer@{Gear::InstrumentationTimer}!m\_Name@{m\_Name}}
+\index{m\_Name@{m\_Name}!Gear::InstrumentationTimer@{Gear::InstrumentationTimer}}
+\doxysubsubsection{\texorpdfstring{m\_Name}{m\_Name}}
+{\footnotesize\ttfamily const char$\ast$ Gear\+::\+Instrumentation\+Timer\+::m\+\_\+\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instrumentor.\+h 파일의 120 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_instrumentation_timer_a23cc4832ab95caedb1e5298308ec2631}\label{class_gear_1_1_instrumentation_timer_a23cc4832ab95caedb1e5298308ec2631}} 
+\index{Gear::InstrumentationTimer@{Gear::InstrumentationTimer}!m\_StartTimepoint@{m\_StartTimepoint}}
+\index{m\_StartTimepoint@{m\_StartTimepoint}!Gear::InstrumentationTimer@{Gear::InstrumentationTimer}}
+\doxysubsubsection{\texorpdfstring{m\_StartTimepoint}{m\_StartTimepoint}}
+{\footnotesize\ttfamily std\+::chrono\+::time\+\_\+point$<$std\+::chrono\+::high\+\_\+resolution\+\_\+clock$>$ Gear\+::\+Instrumentation\+Timer\+::m\+\_\+\+Start\+Timepoint\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instrumentor.\+h 파일의 121 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_instrumentation_timer_abfcc27bdaea6c62f75e64b1cf7a1af8d}\label{class_gear_1_1_instrumentation_timer_abfcc27bdaea6c62f75e64b1cf7a1af8d}} 
+\index{Gear::InstrumentationTimer@{Gear::InstrumentationTimer}!m\_Stopped@{m\_Stopped}}
+\index{m\_Stopped@{m\_Stopped}!Gear::InstrumentationTimer@{Gear::InstrumentationTimer}}
+\doxysubsubsection{\texorpdfstring{m\_Stopped}{m\_Stopped}}
+{\footnotesize\ttfamily bool Gear\+::\+Instrumentation\+Timer\+::m\+\_\+\+Stopped\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instrumentor.\+h 파일의 122 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Debug/\mbox{\hyperlink{_instrumentor_8h}{Instrumentor.\+h}}\end{DoxyCompactItemize}

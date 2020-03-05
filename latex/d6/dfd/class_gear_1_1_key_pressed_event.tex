@@ -1,0 +1,205 @@
+\hypertarget{class_gear_1_1_key_pressed_event}{}\doxysection{Gear\+::Key\+Pressed\+Event 클래스 참조}
+\label{class_gear_1_1_key_pressed_event}\index{Gear::KeyPressedEvent@{Gear::KeyPressedEvent}}
+
+
+{\ttfamily \#include $<$Key\+Event.\+h$>$}
+
+
+
+Gear\+::Key\+Pressed\+Event에 대한 상속 다이어그램 \+: 
+% FIG 0
+
+
+Gear\+::Key\+Pressed\+Event에 대한 협력 다이어그램\+:
+% FIG 1
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_key_pressed_event_a2cf7cf81346ac2de955c6bf5caf079ad}{Key\+Pressed\+Event}} (int keycode, int repeat\+Count)
+\item 
+int \mbox{\hyperlink{class_gear_1_1_key_pressed_event_a5d3f35212e1eed58cdd522bb6be10733}{Get\+Repeat\+Count}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_gear_1_1_key_pressed_event_a16f5e5c608f8851e9c557be17a9d446c}{To\+String}} () const override
+\item 
+int \mbox{\hyperlink{class_gear_1_1_key_event_a1e48e2b7dee2c8bf57d6fca1b487d8f9}{Get\+Key\+Code}} () const
+\item 
+virtual \mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7ba}{Event\+Type}} \mbox{\hyperlink{class_gear_1_1_event_aafeedc7f01a03c29964cecd1dcfcdd3d}{Get\+Event\+Type}} () const =0
+\item 
+virtual const char $\ast$ \mbox{\hyperlink{class_gear_1_1_event_aa17c21c5a7560a271ed3da2b799123d8}{Get\+Name}} () const =0
+\item 
+virtual int \mbox{\hyperlink{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}{Get\+Category\+Flags}} () const =0
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_event_aa68ff805c8d833d4701aa06ccb4c8968}{Is\+In\+Category}} (\mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1}{Event\+Category}} category)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_event_accf654785eb1c3dda58dfc8b0a8765c9}{m\+\_\+\+Handled}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 속성}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_gear_1_1_key_event_af82d15225006c73f9bd0a3105c3c41fa}{m\+\_\+\+Key\+Code}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_gear_1_1_key_pressed_event_a5b359ff7104d54dc97b497afa44dddb7}{m\+\_\+\+Repeat\+Count}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Key\+Event.\+h 파일의 17 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_key_pressed_event_a2cf7cf81346ac2de955c6bf5caf079ad}\label{class_gear_1_1_key_pressed_event_a2cf7cf81346ac2de955c6bf5caf079ad}} 
+\index{Gear::KeyPressedEvent@{Gear::KeyPressedEvent}!KeyPressedEvent@{KeyPressedEvent}}
+\index{KeyPressedEvent@{KeyPressedEvent}!Gear::KeyPressedEvent@{Gear::KeyPressedEvent}}
+\doxysubsubsection{\texorpdfstring{KeyPressedEvent()}{KeyPressedEvent()}}
+{\footnotesize\ttfamily Gear\+::\+Key\+Pressed\+Event\+::\+Key\+Pressed\+Event (\begin{DoxyParamCaption}\item[{int}]{keycode,  }\item[{int}]{repeat\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Key\+Event.\+h 파일의 19 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20             : \mbox{\hyperlink{class_gear_1_1_key_event_a35db0960f5f693e6f70659b6d202d59d}{KeyEvent}}(keycode), \mbox{\hyperlink{class_gear_1_1_key_pressed_event_a5b359ff7104d54dc97b497afa44dddb7}{m\_RepeatCount}}(repeatCount)}
+\DoxyCodeLine{21         \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}\label{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}} 
+\index{Gear::KeyPressedEvent@{Gear::KeyPressedEvent}!GetCategoryFlags@{GetCategoryFlags}}
+\index{GetCategoryFlags@{GetCategoryFlags}!Gear::KeyPressedEvent@{Gear::KeyPressedEvent}}
+\doxysubsubsection{\texorpdfstring{GetCategoryFlags()}{GetCategoryFlags()}}
+{\footnotesize\ttfamily virtual int Gear\+::\+Event\+::\+Get\+Category\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_gear_1_1_event_aafeedc7f01a03c29964cecd1dcfcdd3d}\label{class_gear_1_1_event_aafeedc7f01a03c29964cecd1dcfcdd3d}} 
+\index{Gear::KeyPressedEvent@{Gear::KeyPressedEvent}!GetEventType@{GetEventType}}
+\index{GetEventType@{GetEventType}!Gear::KeyPressedEvent@{Gear::KeyPressedEvent}}
+\doxysubsubsection{\texorpdfstring{GetEventType()}{GetEventType()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7ba}{Event\+Type}} Gear\+::\+Event\+::\+Get\+Event\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\mbox{\Hypertarget{class_gear_1_1_key_event_a1e48e2b7dee2c8bf57d6fca1b487d8f9}\label{class_gear_1_1_key_event_a1e48e2b7dee2c8bf57d6fca1b487d8f9}} 
+\index{Gear::KeyPressedEvent@{Gear::KeyPressedEvent}!GetKeyCode@{GetKeyCode}}
+\index{GetKeyCode@{GetKeyCode}!Gear::KeyPressedEvent@{Gear::KeyPressedEvent}}
+\doxysubsubsection{\texorpdfstring{GetKeyCode()}{GetKeyCode()}}
+{\footnotesize\ttfamily int Gear\+::\+Key\+Event\+::\+Get\+Key\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Key\+Event.\+h 파일의 8 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_key_event_af82d15225006c73f9bd0a3105c3c41fa}{m\_KeyCode}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_event_aa17c21c5a7560a271ed3da2b799123d8}\label{class_gear_1_1_event_aa17c21c5a7560a271ed3da2b799123d8}} 
+\index{Gear::KeyPressedEvent@{Gear::KeyPressedEvent}!GetName@{GetName}}
+\index{GetName@{GetName}!Gear::KeyPressedEvent@{Gear::KeyPressedEvent}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Gear\+::\+Event\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_gear_1_1_key_pressed_event_a5d3f35212e1eed58cdd522bb6be10733}\label{class_gear_1_1_key_pressed_event_a5d3f35212e1eed58cdd522bb6be10733}} 
+\index{Gear::KeyPressedEvent@{Gear::KeyPressedEvent}!GetRepeatCount@{GetRepeatCount}}
+\index{GetRepeatCount@{GetRepeatCount}!Gear::KeyPressedEvent@{Gear::KeyPressedEvent}}
+\doxysubsubsection{\texorpdfstring{GetRepeatCount()}{GetRepeatCount()}}
+{\footnotesize\ttfamily int Gear\+::\+Key\+Pressed\+Event\+::\+Get\+Repeat\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Key\+Event.\+h 파일의 22 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_key_pressed_event_a5b359ff7104d54dc97b497afa44dddb7}{m\_RepeatCount}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_event_aa68ff805c8d833d4701aa06ccb4c8968}\label{class_gear_1_1_event_aa68ff805c8d833d4701aa06ccb4c8968}} 
+\index{Gear::KeyPressedEvent@{Gear::KeyPressedEvent}!IsInCategory@{IsInCategory}}
+\index{IsInCategory@{IsInCategory}!Gear::KeyPressedEvent@{Gear::KeyPressedEvent}}
+\doxysubsubsection{\texorpdfstring{IsInCategory()}{IsInCategory()}}
+{\footnotesize\ttfamily bool Gear\+::\+Event\+::\+Is\+In\+Category (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1}{Event\+Category}}}]{category }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Event.\+h 파일의 43 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                                                          \{}
+\DoxyCodeLine{44             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}{GetCategoryFlags}}() \& category;}
+\DoxyCodeLine{45         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_key_pressed_event_a16f5e5c608f8851e9c557be17a9d446c}\label{class_gear_1_1_key_pressed_event_a16f5e5c608f8851e9c557be17a9d446c}} 
+\index{Gear::KeyPressedEvent@{Gear::KeyPressedEvent}!ToString@{ToString}}
+\index{ToString@{ToString}!Gear::KeyPressedEvent@{Gear::KeyPressedEvent}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily std\+::string Gear\+::\+Key\+Pressed\+Event\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_event_a969ee911d682f0436cdf2da5bb0b6913}{Gear\+::\+Event}}(으)로부터 재구현되었습니다.
+
+
+
+Key\+Event.\+h 파일의 24 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                                             \{}
+\DoxyCodeLine{25             std::stringstream ss;}
+\DoxyCodeLine{26             ss << \textcolor{stringliteral}{"keyPressedEvent: "} << \mbox{\hyperlink{class_gear_1_1_key_event_af82d15225006c73f9bd0a3105c3c41fa}{m\_KeyCode}} << \textcolor{stringliteral}{"("} << \mbox{\hyperlink{class_gear_1_1_key_pressed_event_a5b359ff7104d54dc97b497afa44dddb7}{m\_RepeatCount}} << \textcolor{stringliteral}{"repeats)"};}
+\DoxyCodeLine{27             \textcolor{keywordflow}{return} ss.str();}
+\DoxyCodeLine{28         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_event_accf654785eb1c3dda58dfc8b0a8765c9}\label{class_gear_1_1_event_accf654785eb1c3dda58dfc8b0a8765c9}} 
+\index{Gear::KeyPressedEvent@{Gear::KeyPressedEvent}!m\_Handled@{m\_Handled}}
+\index{m\_Handled@{m\_Handled}!Gear::KeyPressedEvent@{Gear::KeyPressedEvent}}
+\doxysubsubsection{\texorpdfstring{m\_Handled}{m\_Handled}}
+{\footnotesize\ttfamily bool Gear\+::\+Event\+::m\+\_\+\+Handled = false\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Event.\+h 파일의 47 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_key_event_af82d15225006c73f9bd0a3105c3c41fa}\label{class_gear_1_1_key_event_af82d15225006c73f9bd0a3105c3c41fa}} 
+\index{Gear::KeyPressedEvent@{Gear::KeyPressedEvent}!m\_KeyCode@{m\_KeyCode}}
+\index{m\_KeyCode@{m\_KeyCode}!Gear::KeyPressedEvent@{Gear::KeyPressedEvent}}
+\doxysubsubsection{\texorpdfstring{m\_KeyCode}{m\_KeyCode}}
+{\footnotesize\ttfamily int Gear\+::\+Key\+Event\+::m\+\_\+\+Key\+Code\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Key\+Event.\+h 파일의 14 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_key_pressed_event_a5b359ff7104d54dc97b497afa44dddb7}\label{class_gear_1_1_key_pressed_event_a5b359ff7104d54dc97b497afa44dddb7}} 
+\index{Gear::KeyPressedEvent@{Gear::KeyPressedEvent}!m\_RepeatCount@{m\_RepeatCount}}
+\index{m\_RepeatCount@{m\_RepeatCount}!Gear::KeyPressedEvent@{Gear::KeyPressedEvent}}
+\doxysubsubsection{\texorpdfstring{m\_RepeatCount}{m\_RepeatCount}}
+{\footnotesize\ttfamily int Gear\+::\+Key\+Pressed\+Event\+::m\+\_\+\+Repeat\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Key\+Event.\+h 파일의 33 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Events/\mbox{\hyperlink{_key_event_8h}{Key\+Event.\+h}}\end{DoxyCompactItemize}

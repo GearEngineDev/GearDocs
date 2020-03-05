@@ -1,0 +1,233 @@
+\hypertarget{class_gear_1_1_buffer_layout}{}\doxysection{Gear\+::Buffer\+Layout 클래스 참조}
+\label{class_gear_1_1_buffer_layout}\index{Gear::BufferLayout@{Gear::BufferLayout}}
+
+
+{\ttfamily \#include $<$Buffer.\+h$>$}
+
+
+
+Gear\+::Buffer\+Layout에 대한 협력 다이어그램\+:
+% FIG 0
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_buffer_layout_ae8c8897e02dfa3692e2f76f94a71fc0a}{Buffer\+Layout}} ()
+\item 
+\mbox{\hyperlink{class_gear_1_1_buffer_layout_a902c68b8b4b62b4075fe4a51cf136a21}{Buffer\+Layout}} (const std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{struct_gear_1_1_buffer_element}{Buffer\+Element}} $>$ \&elements)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_gear_1_1_buffer_layout_a9208e0443e6e372e297430ed85a48fed}{Get\+Stride}} () const
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{struct_gear_1_1_buffer_element}{Buffer\+Element}} $>$ \& \mbox{\hyperlink{class_gear_1_1_buffer_layout_af95ee94bb190ba0fb01abafe0a3b221b}{Get\+Elements}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_gear_1_1_buffer_element}{Buffer\+Element}} $>$\+::iterator \mbox{\hyperlink{class_gear_1_1_buffer_layout_a94009bcaefb5e0bc1807da2ee5256f1b}{begin}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_gear_1_1_buffer_element}{Buffer\+Element}} $>$\+::iterator \mbox{\hyperlink{class_gear_1_1_buffer_layout_a2bf17bf19b2cd86e18a89c4586872cd9}{end}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_gear_1_1_buffer_element}{Buffer\+Element}} $>$\+::const\+\_\+iterator \mbox{\hyperlink{class_gear_1_1_buffer_layout_a52b54511c9d2c6c2a6d2caa12b4b228a}{begin}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_gear_1_1_buffer_element}{Buffer\+Element}} $>$\+::const\+\_\+iterator \mbox{\hyperlink{class_gear_1_1_buffer_layout_a497920322ef68652e0f2bbd9a62c9653}{end}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_gear_1_1_buffer_layout_a0d9378d9fb9400bf3774ae9d1f297a36}{Calculate\+Offset\+And\+Stride}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_gear_1_1_buffer_element}{Buffer\+Element}} $>$ \mbox{\hyperlink{class_gear_1_1_buffer_layout_ae36d7ce533b10849dcb0ea1a5810c507}{m\+\_\+\+Elements}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_gear_1_1_buffer_layout_adfc2642f0113a45b635783e4c1da4a11}{m\+\_\+\+Stride}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Buffer.\+h 파일의 71 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_buffer_layout_ae8c8897e02dfa3692e2f76f94a71fc0a}\label{class_gear_1_1_buffer_layout_ae8c8897e02dfa3692e2f76f94a71fc0a}} 
+\index{Gear::BufferLayout@{Gear::BufferLayout}!BufferLayout@{BufferLayout}}
+\index{BufferLayout@{BufferLayout}!Gear::BufferLayout@{Gear::BufferLayout}}
+\doxysubsubsection{\texorpdfstring{BufferLayout()}{BufferLayout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Gear\+::\+Buffer\+Layout\+::\+Buffer\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Buffer.\+h 파일의 74 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_buffer_layout_a902c68b8b4b62b4075fe4a51cf136a21}\label{class_gear_1_1_buffer_layout_a902c68b8b4b62b4075fe4a51cf136a21}} 
+\index{Gear::BufferLayout@{Gear::BufferLayout}!BufferLayout@{BufferLayout}}
+\index{BufferLayout@{BufferLayout}!Gear::BufferLayout@{Gear::BufferLayout}}
+\doxysubsubsection{\texorpdfstring{BufferLayout()}{BufferLayout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Gear\+::\+Buffer\+Layout\+::\+Buffer\+Layout (\begin{DoxyParamCaption}\item[{const std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{struct_gear_1_1_buffer_element}{Buffer\+Element}} $>$ \&}]{elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Buffer.\+h 파일의 75 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76             :\mbox{\hyperlink{class_gear_1_1_buffer_layout_ae36d7ce533b10849dcb0ea1a5810c507}{m\_Elements}}(elements)}
+\DoxyCodeLine{77         \{}
+\DoxyCodeLine{78             \mbox{\hyperlink{class_gear_1_1_buffer_layout_a0d9378d9fb9400bf3774ae9d1f297a36}{CalculateOffsetAndStride}}();}
+\DoxyCodeLine{79         \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 1
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_buffer_layout_a94009bcaefb5e0bc1807da2ee5256f1b}\label{class_gear_1_1_buffer_layout_a94009bcaefb5e0bc1807da2ee5256f1b}} 
+\index{Gear::BufferLayout@{Gear::BufferLayout}!begin@{begin}}
+\index{begin@{begin}!Gear::BufferLayout@{Gear::BufferLayout}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_gear_1_1_buffer_element}{Buffer\+Element}}$>$\+::iterator Gear\+::\+Buffer\+Layout\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Buffer.\+h 파일의 84 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_buffer_layout_ae36d7ce533b10849dcb0ea1a5810c507}{m\_Elements}}.begin(); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_buffer_layout_a52b54511c9d2c6c2a6d2caa12b4b228a}\label{class_gear_1_1_buffer_layout_a52b54511c9d2c6c2a6d2caa12b4b228a}} 
+\index{Gear::BufferLayout@{Gear::BufferLayout}!begin@{begin}}
+\index{begin@{begin}!Gear::BufferLayout@{Gear::BufferLayout}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_gear_1_1_buffer_element}{Buffer\+Element}}$>$\+::const\+\_\+iterator Gear\+::\+Buffer\+Layout\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Buffer.\+h 파일의 86 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_buffer_layout_ae36d7ce533b10849dcb0ea1a5810c507}{m\_Elements}}.begin(); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_buffer_layout_a0d9378d9fb9400bf3774ae9d1f297a36}\label{class_gear_1_1_buffer_layout_a0d9378d9fb9400bf3774ae9d1f297a36}} 
+\index{Gear::BufferLayout@{Gear::BufferLayout}!CalculateOffsetAndStride@{CalculateOffsetAndStride}}
+\index{CalculateOffsetAndStride@{CalculateOffsetAndStride}!Gear::BufferLayout@{Gear::BufferLayout}}
+\doxysubsubsection{\texorpdfstring{CalculateOffsetAndStride()}{CalculateOffsetAndStride()}}
+{\footnotesize\ttfamily void Gear\+::\+Buffer\+Layout\+::\+Calculate\+Offset\+And\+Stride (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Buffer.\+h 파일의 89 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{90         \{}
+\DoxyCodeLine{91             uint32\_t offset = 0;}
+\DoxyCodeLine{92             \mbox{\hyperlink{class_gear_1_1_buffer_layout_adfc2642f0113a45b635783e4c1da4a11}{m\_Stride}} = 0;}
+\DoxyCodeLine{93             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& element : \mbox{\hyperlink{class_gear_1_1_buffer_layout_ae36d7ce533b10849dcb0ea1a5810c507}{m\_Elements}})}
+\DoxyCodeLine{94             \{}
+\DoxyCodeLine{95                 element.Offset = offset;}
+\DoxyCodeLine{96                 offset += element.Size;}
+\DoxyCodeLine{97                 \mbox{\hyperlink{class_gear_1_1_buffer_layout_adfc2642f0113a45b635783e4c1da4a11}{m\_Stride}} += element.Size;}
+\DoxyCodeLine{98             \}}
+\DoxyCodeLine{99         \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\mbox{\Hypertarget{class_gear_1_1_buffer_layout_a2bf17bf19b2cd86e18a89c4586872cd9}\label{class_gear_1_1_buffer_layout_a2bf17bf19b2cd86e18a89c4586872cd9}} 
+\index{Gear::BufferLayout@{Gear::BufferLayout}!end@{end}}
+\index{end@{end}!Gear::BufferLayout@{Gear::BufferLayout}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_gear_1_1_buffer_element}{Buffer\+Element}}$>$\+::iterator Gear\+::\+Buffer\+Layout\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Buffer.\+h 파일의 85 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{85 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_buffer_layout_ae36d7ce533b10849dcb0ea1a5810c507}{m\_Elements}}.end(); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_buffer_layout_a497920322ef68652e0f2bbd9a62c9653}\label{class_gear_1_1_buffer_layout_a497920322ef68652e0f2bbd9a62c9653}} 
+\index{Gear::BufferLayout@{Gear::BufferLayout}!end@{end}}
+\index{end@{end}!Gear::BufferLayout@{Gear::BufferLayout}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_gear_1_1_buffer_element}{Buffer\+Element}}$>$\+::const\+\_\+iterator Gear\+::\+Buffer\+Layout\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Buffer.\+h 파일의 87 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{87 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_buffer_layout_ae36d7ce533b10849dcb0ea1a5810c507}{m\_Elements}}.end(); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_buffer_layout_af95ee94bb190ba0fb01abafe0a3b221b}\label{class_gear_1_1_buffer_layout_af95ee94bb190ba0fb01abafe0a3b221b}} 
+\index{Gear::BufferLayout@{Gear::BufferLayout}!GetElements@{GetElements}}
+\index{GetElements@{GetElements}!Gear::BufferLayout@{Gear::BufferLayout}}
+\doxysubsubsection{\texorpdfstring{GetElements()}{GetElements()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{struct_gear_1_1_buffer_element}{Buffer\+Element}}$>$\& Gear\+::\+Buffer\+Layout\+::\+Get\+Elements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Buffer.\+h 파일의 82 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_buffer_layout_ae36d7ce533b10849dcb0ea1a5810c507}{m\_Elements}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_buffer_layout_a9208e0443e6e372e297430ed85a48fed}\label{class_gear_1_1_buffer_layout_a9208e0443e6e372e297430ed85a48fed}} 
+\index{Gear::BufferLayout@{Gear::BufferLayout}!GetStride@{GetStride}}
+\index{GetStride@{GetStride}!Gear::BufferLayout@{Gear::BufferLayout}}
+\doxysubsubsection{\texorpdfstring{GetStride()}{GetStride()}}
+{\footnotesize\ttfamily uint32\+\_\+t Gear\+::\+Buffer\+Layout\+::\+Get\+Stride (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Buffer.\+h 파일의 81 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{81 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_buffer_layout_adfc2642f0113a45b635783e4c1da4a11}{m\_Stride}}; \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_buffer_layout_ae36d7ce533b10849dcb0ea1a5810c507}\label{class_gear_1_1_buffer_layout_ae36d7ce533b10849dcb0ea1a5810c507}} 
+\index{Gear::BufferLayout@{Gear::BufferLayout}!m\_Elements@{m\_Elements}}
+\index{m\_Elements@{m\_Elements}!Gear::BufferLayout@{Gear::BufferLayout}}
+\doxysubsubsection{\texorpdfstring{m\_Elements}{m\_Elements}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_gear_1_1_buffer_element}{Buffer\+Element}}$>$ Gear\+::\+Buffer\+Layout\+::m\+\_\+\+Elements\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Buffer.\+h 파일의 101 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_buffer_layout_adfc2642f0113a45b635783e4c1da4a11}\label{class_gear_1_1_buffer_layout_adfc2642f0113a45b635783e4c1da4a11}} 
+\index{Gear::BufferLayout@{Gear::BufferLayout}!m\_Stride@{m\_Stride}}
+\index{m\_Stride@{m\_Stride}!Gear::BufferLayout@{Gear::BufferLayout}}
+\doxysubsubsection{\texorpdfstring{m\_Stride}{m\_Stride}}
+{\footnotesize\ttfamily uint32\+\_\+t Gear\+::\+Buffer\+Layout\+::m\+\_\+\+Stride = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Buffer.\+h 파일의 102 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Renderer/\mbox{\hyperlink{_buffer_8h}{Buffer.\+h}}\end{DoxyCompactItemize}

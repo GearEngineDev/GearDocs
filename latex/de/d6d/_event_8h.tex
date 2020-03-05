@@ -1,0 +1,98 @@
+\hypertarget{_event_8h}{}\doxysection{Gear/src/\+Gear/\+Events/\+Event.h 파일 참조}
+\label{_event_8h}\index{Gear/src/Gear/Events/Event.h@{Gear/src/Gear/Events/Event.h}}
+{\ttfamily \#include \char`\"{}Gear/\+Core/\+Core.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}grpch.\+h\char`\"{}}\newline
+Event.\+h에 대한 include 의존 그래프
+% FIG 0
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\+:
+% FIG 1
+\doxysubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_gear_1_1_event}{Gear\+::\+Event}}
+\item 
+class \mbox{\hyperlink{class_gear_1_1_event_dispatcher}{Gear\+::\+Event\+Dispatcher}}
+\end{DoxyCompactItemize}
+\doxysubsection*{네임스페이스}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_gear}{Gear}}
+\end{DoxyCompactItemize}
+\doxysubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}{E\+V\+E\+N\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+T\+Y\+PE}}(type)
+\item 
+\#define \mbox{\hyperlink{_event_8h_abd52deea587a36ef619e596a0c691839}{E\+V\+E\+N\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+C\+A\+T\+E\+G\+O\+RY}}(category)~virtual int Get\+Category\+Flags() const override \{ return category; \}
+\end{DoxyCompactItemize}
+\doxysubsection*{열거형 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7ba}{Gear\+::\+Event\+Type}} \{ \newline
+\mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1a6adf97f83acf6453d4a6a4b1070f3754}{Gear\+::\+None}} = 0, 
+\mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7baac984201d37197ab297a14d19efee4b07}{Gear\+::\+Event\+Type\+::\+Window\+Close}}, 
+\mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7baa9f8f27bff2915738c4fe1b970e12f89c}{Gear\+::\+Event\+Type\+::\+Window\+Resize}}, 
+\mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7baa1c68d5453b28d52622bf5486a5fd95ca}{Gear\+::\+Event\+Type\+::\+Window\+Focus}}, 
+\newline
+\mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7baa1c2119b9d61e623975f13f1029f1d97c}{Gear\+::\+Event\+Type\+::\+Window\+Lost\+Focus}}, 
+\mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7baab94473d9dfc85f8fdbf5cb3b1d992bda}{Gear\+::\+Event\+Type\+::\+Window\+Moved}}, 
+\mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7baa559b408d45669603dbac61cd15984f13}{Gear\+::\+Event\+Type\+::\+App\+Tick}}, 
+\mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7baac177abb86f28dea426f2e3409e14bcda}{Gear\+::\+Event\+Type\+::\+App\+Update}}, 
+\newline
+\mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7baa4b2eb3c601042333ac1c0565ff58e3d6}{Gear\+::\+Event\+Type\+::\+App\+Render}}, 
+\mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7baac17e6984c1e5a887a49831beadee6bca}{Gear\+::\+Event\+Type\+::\+Key\+Pressed}}, 
+\mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7baa4a77f07c8ad223b71ab4ce78a63841ab}{Gear\+::\+Event\+Type\+::\+Key\+Released}}, 
+\mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7baa9afbfd35b289eb4fc7f1bc148d7b422e}{Gear\+::\+Event\+Type\+::\+Key\+Typed}}, 
+\newline
+\mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7baa7349f643d689997b7c54bf93e4095f5c}{Gear\+::\+Event\+Type\+::\+Mouse\+Button\+Pressed}}, 
+\mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7baa7584c169de594c27f00084b93186fd7c}{Gear\+::\+Event\+Type\+::\+Mouse\+Button\+Released}}, 
+\mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7baac2770ad109c8063ce69a3608a9a16c08}{Gear\+::\+Event\+Type\+::\+Mouse\+Moved}}, 
+\mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7baa50edb169910041bb3c06f6e8322d74c1}{Gear\+::\+Event\+Type\+::\+Mouse\+Scrolled}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1}{Gear\+::\+Event\+Category}} \{ \newline
+\mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1a8e46388add6ddee9ace7d2bb1ea66b59}{Gear\+::\+None}} = 0, 
+\mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1a6adf97f83acf6453d4a6a4b1070f3754}{Gear\+::\+None}} = 0, 
+\mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1a415c1a0fc7c89e376dbd8a019d72ee5e}{Gear\+::\+Event\+Category\+Application}} = B\+IT(0), 
+\mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1a98503369beaeebc09a485397d68ebb4d}{Gear\+::\+Event\+Category\+Input}} = B\+IT(1), 
+\newline
+\mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1ae028659baee3d25fe41135d9990271bb}{Gear\+::\+Event\+Category\+Keyboard}} = B\+IT(2), 
+\mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1a1532c08c7daf3e68ca1e673db67fcf3b}{Gear\+::\+Event\+Category\+Mouse}} = B\+IT(3), 
+\mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1aa95b6838047a5e18d51a6eb6c89e2bab}{Gear\+::\+Event\+Category\+Mouse\+Button}} = B\+IT(4)
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespace_gear_a45dd9595faf4ecaabbc228579633da45}{Gear\+::operator$<$$<$}} (std\+::ostream \&os, const Event \&e)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{매크로 문서화}
+\mbox{\Hypertarget{_event_8h_abd52deea587a36ef619e596a0c691839}\label{_event_8h_abd52deea587a36ef619e596a0c691839}} 
+\index{Event.h@{Event.h}!EVENT\_CLASS\_CATEGORY@{EVENT\_CLASS\_CATEGORY}}
+\index{EVENT\_CLASS\_CATEGORY@{EVENT\_CLASS\_CATEGORY}!Event.h@{Event.h}}
+\doxysubsubsection{\texorpdfstring{EVENT\_CLASS\_CATEGORY}{EVENT\_CLASS\_CATEGORY}}
+{\footnotesize\ttfamily \#define E\+V\+E\+N\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+C\+A\+T\+E\+G\+O\+RY(\begin{DoxyParamCaption}\item[{}]{category }\end{DoxyParamCaption})~virtual int Get\+Category\+Flags() const override \{ return category; \}}
+
+
+
+Event.\+h 파일의 33 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}\label{_event_8h_a80d534fc4d69a68eefd1573fd0ac2f44}} 
+\index{Event.h@{Event.h}!EVENT\_CLASS\_TYPE@{EVENT\_CLASS\_TYPE}}
+\index{EVENT\_CLASS\_TYPE@{EVENT\_CLASS\_TYPE}!Event.h@{Event.h}}
+\doxysubsubsection{\texorpdfstring{EVENT\_CLASS\_TYPE}{EVENT\_CLASS\_TYPE}}
+{\footnotesize\ttfamily \#define E\+V\+E\+N\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{type }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                \textcolor{keyword}{static} \mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7ba}{EventType}} GetStaticType() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7ba}{EventType}}::\#\#type; \} \(\backslash\)}
+\DoxyCodeLine{                                virtual \mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7ba}{EventType}} GetEventType()\textcolor{keyword}{ const override }\{ \textcolor{keywordflow}{return} GetStaticType(); \}\(\backslash\)}
+\DoxyCodeLine{                                virtual \textcolor{keyword}{const} \textcolor{keywordtype}{char}* GetName()\textcolor{keyword}{ const override }\{ \textcolor{keywordflow}{return} \#type; \}}
+
+\end{DoxyCode}
+
+
+Event.\+h 파일의 29 번째 라인에서 정의되었습니다.
+

@@ -1,0 +1,145 @@
+\hypertarget{_log_8h}{}\doxysection{Gear/src/\+Gear/\+Core/\+Log.h 파일 참조}
+\label{_log_8h}\index{Gear/src/Gear/Core/Log.h@{Gear/src/Gear/Core/Log.h}}
+{\ttfamily \#include \char`\"{}Core.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}spdlog/spdlog.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}spdlog/fmt/ostr.\+h\char`\"{}}\newline
+Log.\+h에 대한 include 의존 그래프
+% FIG 0
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\+:
+% FIG 1
+\doxysubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_gear_1_1_log}{Gear\+::\+Log}}
+\end{DoxyCompactItemize}
+\doxysubsection*{네임스페이스}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_gear}{Gear}}
+\end{DoxyCompactItemize}
+\doxysubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_log_8h_a98d54f2d256213ca6b228eff1f1067c2}{G\+R\+\_\+\+C\+O\+R\+E\+\_\+\+T\+R\+A\+CE}}(...)~\+::\mbox{\hyperlink{class_gear_1_1_log_a3c1a737f9bd5ef0e4de2ae308b2d2426}{Gear\+::\+Log\+::\+Get\+Core\+Logger}}()-\/$>$trace(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{_log_8h_adcf02b331e781f082585b15d04bd56de}{G\+R\+\_\+\+C\+O\+R\+E\+\_\+\+I\+N\+FO}}(...)~\+::\mbox{\hyperlink{class_gear_1_1_log_a3c1a737f9bd5ef0e4de2ae308b2d2426}{Gear\+::\+Log\+::\+Get\+Core\+Logger}}()-\/$>$info(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{_log_8h_a7d7ec9cdaae4b6b91f4b76a27aa4f47f}{G\+R\+\_\+\+C\+O\+R\+E\+\_\+\+W\+A\+RN}}(...)~\+::\mbox{\hyperlink{class_gear_1_1_log_a3c1a737f9bd5ef0e4de2ae308b2d2426}{Gear\+::\+Log\+::\+Get\+Core\+Logger}}()-\/$>$warn(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{_log_8h_a7e4992b12c6d3a2fd60ba5135e671c39}{G\+R\+\_\+\+C\+O\+R\+E\+\_\+\+E\+R\+R\+OR}}(...)~\+::\mbox{\hyperlink{class_gear_1_1_log_a3c1a737f9bd5ef0e4de2ae308b2d2426}{Gear\+::\+Log\+::\+Get\+Core\+Logger}}()-\/$>$error(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{_log_8h_ade262be0d26dd724c477232418086bd2}{G\+R\+\_\+\+C\+O\+R\+E\+\_\+\+F\+A\+T\+AL}}(...)~\+::\mbox{\hyperlink{class_gear_1_1_log_a3c1a737f9bd5ef0e4de2ae308b2d2426}{Gear\+::\+Log\+::\+Get\+Core\+Logger}}()-\/$>$fatal(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{_log_8h_a5ceac966ab03218b09072f446cfd9de1}{G\+R\+\_\+\+T\+R\+A\+CE}}(...)~\+::\mbox{\hyperlink{class_gear_1_1_log_acfaf57af95c0eb9845e9b6a585e7dfe2}{Gear\+::\+Log\+::\+Get\+Client\+Logger}}()-\/$>$trace(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{_log_8h_a3f40d648c8d79be839dad6095d9c7c59}{G\+R\+\_\+\+I\+N\+FO}}(...)~\+::\mbox{\hyperlink{class_gear_1_1_log_acfaf57af95c0eb9845e9b6a585e7dfe2}{Gear\+::\+Log\+::\+Get\+Client\+Logger}}()-\/$>$info(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{_log_8h_a56db31c7cb1a960cecf34a6aa7a926b5}{G\+R\+\_\+\+W\+A\+RN}}(...)~\+::\mbox{\hyperlink{class_gear_1_1_log_acfaf57af95c0eb9845e9b6a585e7dfe2}{Gear\+::\+Log\+::\+Get\+Client\+Logger}}()-\/$>$warn(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{_log_8h_aefb4a9d38ee5e3da6e50c623aeab8801}{G\+R\+\_\+\+E\+R\+R\+OR}}(...)~\+::\mbox{\hyperlink{class_gear_1_1_log_acfaf57af95c0eb9845e9b6a585e7dfe2}{Gear\+::\+Log\+::\+Get\+Client\+Logger}}()-\/$>$error(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{_log_8h_a22343668dea5db2f660b162709666aa6}{G\+R\+\_\+\+F\+A\+T\+AL}}(...)~\+::\mbox{\hyperlink{class_gear_1_1_log_acfaf57af95c0eb9845e9b6a585e7dfe2}{Gear\+::\+Log\+::\+Get\+Client\+Logger}}()-\/$>$fatal(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{매크로 문서화}
+\mbox{\Hypertarget{_log_8h_a7e4992b12c6d3a2fd60ba5135e671c39}\label{_log_8h_a7e4992b12c6d3a2fd60ba5135e671c39}} 
+\index{Log.h@{Log.h}!GR\_CORE\_ERROR@{GR\_CORE\_ERROR}}
+\index{GR\_CORE\_ERROR@{GR\_CORE\_ERROR}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{GR\_CORE\_ERROR}{GR\_CORE\_ERROR}}
+{\footnotesize\ttfamily \#define G\+R\+\_\+\+C\+O\+R\+E\+\_\+\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\+::\mbox{\hyperlink{class_gear_1_1_log_a3c1a737f9bd5ef0e4de2ae308b2d2426}{Gear\+::\+Log\+::\+Get\+Core\+Logger}}()-\/$>$error(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Log.\+h 파일의 29 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_log_8h_ade262be0d26dd724c477232418086bd2}\label{_log_8h_ade262be0d26dd724c477232418086bd2}} 
+\index{Log.h@{Log.h}!GR\_CORE\_FATAL@{GR\_CORE\_FATAL}}
+\index{GR\_CORE\_FATAL@{GR\_CORE\_FATAL}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{GR\_CORE\_FATAL}{GR\_CORE\_FATAL}}
+{\footnotesize\ttfamily \#define G\+R\+\_\+\+C\+O\+R\+E\+\_\+\+F\+A\+T\+AL(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\+::\mbox{\hyperlink{class_gear_1_1_log_a3c1a737f9bd5ef0e4de2ae308b2d2426}{Gear\+::\+Log\+::\+Get\+Core\+Logger}}()-\/$>$fatal(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Log.\+h 파일의 30 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_log_8h_adcf02b331e781f082585b15d04bd56de}\label{_log_8h_adcf02b331e781f082585b15d04bd56de}} 
+\index{Log.h@{Log.h}!GR\_CORE\_INFO@{GR\_CORE\_INFO}}
+\index{GR\_CORE\_INFO@{GR\_CORE\_INFO}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{GR\_CORE\_INFO}{GR\_CORE\_INFO}}
+{\footnotesize\ttfamily \#define G\+R\+\_\+\+C\+O\+R\+E\+\_\+\+I\+N\+FO(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\+::\mbox{\hyperlink{class_gear_1_1_log_a3c1a737f9bd5ef0e4de2ae308b2d2426}{Gear\+::\+Log\+::\+Get\+Core\+Logger}}()-\/$>$info(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Log.\+h 파일의 27 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_log_8h_a98d54f2d256213ca6b228eff1f1067c2}\label{_log_8h_a98d54f2d256213ca6b228eff1f1067c2}} 
+\index{Log.h@{Log.h}!GR\_CORE\_TRACE@{GR\_CORE\_TRACE}}
+\index{GR\_CORE\_TRACE@{GR\_CORE\_TRACE}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{GR\_CORE\_TRACE}{GR\_CORE\_TRACE}}
+{\footnotesize\ttfamily \#define G\+R\+\_\+\+C\+O\+R\+E\+\_\+\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\+::\mbox{\hyperlink{class_gear_1_1_log_a3c1a737f9bd5ef0e4de2ae308b2d2426}{Gear\+::\+Log\+::\+Get\+Core\+Logger}}()-\/$>$trace(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Log.\+h 파일의 26 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_log_8h_a7d7ec9cdaae4b6b91f4b76a27aa4f47f}\label{_log_8h_a7d7ec9cdaae4b6b91f4b76a27aa4f47f}} 
+\index{Log.h@{Log.h}!GR\_CORE\_WARN@{GR\_CORE\_WARN}}
+\index{GR\_CORE\_WARN@{GR\_CORE\_WARN}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{GR\_CORE\_WARN}{GR\_CORE\_WARN}}
+{\footnotesize\ttfamily \#define G\+R\+\_\+\+C\+O\+R\+E\+\_\+\+W\+A\+RN(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\+::\mbox{\hyperlink{class_gear_1_1_log_a3c1a737f9bd5ef0e4de2ae308b2d2426}{Gear\+::\+Log\+::\+Get\+Core\+Logger}}()-\/$>$warn(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Log.\+h 파일의 28 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_log_8h_aefb4a9d38ee5e3da6e50c623aeab8801}\label{_log_8h_aefb4a9d38ee5e3da6e50c623aeab8801}} 
+\index{Log.h@{Log.h}!GR\_ERROR@{GR\_ERROR}}
+\index{GR\_ERROR@{GR\_ERROR}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{GR\_ERROR}{GR\_ERROR}}
+{\footnotesize\ttfamily \#define G\+R\+\_\+\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\+::\mbox{\hyperlink{class_gear_1_1_log_acfaf57af95c0eb9845e9b6a585e7dfe2}{Gear\+::\+Log\+::\+Get\+Client\+Logger}}()-\/$>$error(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Log.\+h 파일의 36 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_log_8h_a22343668dea5db2f660b162709666aa6}\label{_log_8h_a22343668dea5db2f660b162709666aa6}} 
+\index{Log.h@{Log.h}!GR\_FATAL@{GR\_FATAL}}
+\index{GR\_FATAL@{GR\_FATAL}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{GR\_FATAL}{GR\_FATAL}}
+{\footnotesize\ttfamily \#define G\+R\+\_\+\+F\+A\+T\+AL(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\+::\mbox{\hyperlink{class_gear_1_1_log_acfaf57af95c0eb9845e9b6a585e7dfe2}{Gear\+::\+Log\+::\+Get\+Client\+Logger}}()-\/$>$fatal(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Log.\+h 파일의 37 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_log_8h_a3f40d648c8d79be839dad6095d9c7c59}\label{_log_8h_a3f40d648c8d79be839dad6095d9c7c59}} 
+\index{Log.h@{Log.h}!GR\_INFO@{GR\_INFO}}
+\index{GR\_INFO@{GR\_INFO}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{GR\_INFO}{GR\_INFO}}
+{\footnotesize\ttfamily \#define G\+R\+\_\+\+I\+N\+FO(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\+::\mbox{\hyperlink{class_gear_1_1_log_acfaf57af95c0eb9845e9b6a585e7dfe2}{Gear\+::\+Log\+::\+Get\+Client\+Logger}}()-\/$>$info(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Log.\+h 파일의 34 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_log_8h_a5ceac966ab03218b09072f446cfd9de1}\label{_log_8h_a5ceac966ab03218b09072f446cfd9de1}} 
+\index{Log.h@{Log.h}!GR\_TRACE@{GR\_TRACE}}
+\index{GR\_TRACE@{GR\_TRACE}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{GR\_TRACE}{GR\_TRACE}}
+{\footnotesize\ttfamily \#define G\+R\+\_\+\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\+::\mbox{\hyperlink{class_gear_1_1_log_acfaf57af95c0eb9845e9b6a585e7dfe2}{Gear\+::\+Log\+::\+Get\+Client\+Logger}}()-\/$>$trace(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Log.\+h 파일의 33 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_log_8h_a56db31c7cb1a960cecf34a6aa7a926b5}\label{_log_8h_a56db31c7cb1a960cecf34a6aa7a926b5}} 
+\index{Log.h@{Log.h}!GR\_WARN@{GR\_WARN}}
+\index{GR\_WARN@{GR\_WARN}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{GR\_WARN}{GR\_WARN}}
+{\footnotesize\ttfamily \#define G\+R\+\_\+\+W\+A\+RN(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\+::\mbox{\hyperlink{class_gear_1_1_log_acfaf57af95c0eb9845e9b6a585e7dfe2}{Gear\+::\+Log\+::\+Get\+Client\+Logger}}()-\/$>$warn(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Log.\+h 파일의 35 번째 라인에서 정의되었습니다.
+

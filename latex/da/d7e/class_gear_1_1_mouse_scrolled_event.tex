@@ -1,0 +1,204 @@
+\hypertarget{class_gear_1_1_mouse_scrolled_event}{}\doxysection{Gear\+::Mouse\+Scrolled\+Event 클래스 참조}
+\label{class_gear_1_1_mouse_scrolled_event}\index{Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}}
+
+
+{\ttfamily \#include $<$Mouse\+Event.\+h$>$}
+
+
+
+Gear\+::Mouse\+Scrolled\+Event에 대한 상속 다이어그램 \+: 
+% FIG 0
+
+
+Gear\+::Mouse\+Scrolled\+Event에 대한 협력 다이어그램\+:
+% FIG 1
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_mouse_scrolled_event_aef677a1eef0c4c60e9615e735cf453f7}{Mouse\+Scrolled\+Event}} (float x\+Offset, float y\+Offset)
+\item 
+float \mbox{\hyperlink{class_gear_1_1_mouse_scrolled_event_af542199146429bd1cdba44cbdcf6385b}{Get\+X\+Offset}} () const
+\item 
+float \mbox{\hyperlink{class_gear_1_1_mouse_scrolled_event_a3479cee9a34fd5d6083cf7af38af3fea}{Get\+Y\+Offset}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_gear_1_1_mouse_scrolled_event_a7c211e836b313522413ce50145b86899}{To\+String}} () const override
+\item 
+virtual \mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7ba}{Event\+Type}} \mbox{\hyperlink{class_gear_1_1_event_aafeedc7f01a03c29964cecd1dcfcdd3d}{Get\+Event\+Type}} () const =0
+\item 
+virtual const char $\ast$ \mbox{\hyperlink{class_gear_1_1_event_aa17c21c5a7560a271ed3da2b799123d8}{Get\+Name}} () const =0
+\item 
+virtual int \mbox{\hyperlink{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}{Get\+Category\+Flags}} () const =0
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_event_aa68ff805c8d833d4701aa06ccb4c8968}{Is\+In\+Category}} (\mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1}{Event\+Category}} category)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_event_accf654785eb1c3dda58dfc8b0a8765c9}{m\+\_\+\+Handled}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_gear_1_1_mouse_scrolled_event_a6e7d8a09e6af74e757675244fb37ba7a}{m\+\_\+\+X\+Offset}}
+\item 
+float \mbox{\hyperlink{class_gear_1_1_mouse_scrolled_event_aa6ea1aa32ea8b4a25677a41144102b8f}{m\+\_\+\+Y\+Offset}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Mouse\+Event.\+h 파일의 27 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_mouse_scrolled_event_aef677a1eef0c4c60e9615e735cf453f7}\label{class_gear_1_1_mouse_scrolled_event_aef677a1eef0c4c60e9615e735cf453f7}} 
+\index{Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}!MouseScrolledEvent@{MouseScrolledEvent}}
+\index{MouseScrolledEvent@{MouseScrolledEvent}!Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}}
+\doxysubsubsection{\texorpdfstring{MouseScrolledEvent()}{MouseScrolledEvent()}}
+{\footnotesize\ttfamily Gear\+::\+Mouse\+Scrolled\+Event\+::\+Mouse\+Scrolled\+Event (\begin{DoxyParamCaption}\item[{float}]{x\+Offset,  }\item[{float}]{y\+Offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mouse\+Event.\+h 파일의 29 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30             : \mbox{\hyperlink{class_gear_1_1_mouse_scrolled_event_a6e7d8a09e6af74e757675244fb37ba7a}{m\_XOffset}}(xOffset), \mbox{\hyperlink{class_gear_1_1_mouse_scrolled_event_aa6ea1aa32ea8b4a25677a41144102b8f}{m\_YOffset}}(yOffset)}
+\DoxyCodeLine{31         \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}\label{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}} 
+\index{Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}!GetCategoryFlags@{GetCategoryFlags}}
+\index{GetCategoryFlags@{GetCategoryFlags}!Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}}
+\doxysubsubsection{\texorpdfstring{GetCategoryFlags()}{GetCategoryFlags()}}
+{\footnotesize\ttfamily virtual int Gear\+::\+Event\+::\+Get\+Category\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_gear_1_1_event_aafeedc7f01a03c29964cecd1dcfcdd3d}\label{class_gear_1_1_event_aafeedc7f01a03c29964cecd1dcfcdd3d}} 
+\index{Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}!GetEventType@{GetEventType}}
+\index{GetEventType@{GetEventType}!Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}}
+\doxysubsubsection{\texorpdfstring{GetEventType()}{GetEventType()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7ba}{Event\+Type}} Gear\+::\+Event\+::\+Get\+Event\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\mbox{\Hypertarget{class_gear_1_1_event_aa17c21c5a7560a271ed3da2b799123d8}\label{class_gear_1_1_event_aa17c21c5a7560a271ed3da2b799123d8}} 
+\index{Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}!GetName@{GetName}}
+\index{GetName@{GetName}!Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Gear\+::\+Event\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_gear_1_1_mouse_scrolled_event_af542199146429bd1cdba44cbdcf6385b}\label{class_gear_1_1_mouse_scrolled_event_af542199146429bd1cdba44cbdcf6385b}} 
+\index{Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}!GetXOffset@{GetXOffset}}
+\index{GetXOffset@{GetXOffset}!Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}}
+\doxysubsubsection{\texorpdfstring{GetXOffset()}{GetXOffset()}}
+{\footnotesize\ttfamily float Gear\+::\+Mouse\+Scrolled\+Event\+::\+Get\+X\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mouse\+Event.\+h 파일의 32 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_mouse_scrolled_event_a6e7d8a09e6af74e757675244fb37ba7a}{m\_XOffset}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_mouse_scrolled_event_a3479cee9a34fd5d6083cf7af38af3fea}\label{class_gear_1_1_mouse_scrolled_event_a3479cee9a34fd5d6083cf7af38af3fea}} 
+\index{Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}!GetYOffset@{GetYOffset}}
+\index{GetYOffset@{GetYOffset}!Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}}
+\doxysubsubsection{\texorpdfstring{GetYOffset()}{GetYOffset()}}
+{\footnotesize\ttfamily float Gear\+::\+Mouse\+Scrolled\+Event\+::\+Get\+Y\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mouse\+Event.\+h 파일의 33 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_mouse_scrolled_event_aa6ea1aa32ea8b4a25677a41144102b8f}{m\_YOffset}}; \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+\mbox{\Hypertarget{class_gear_1_1_event_aa68ff805c8d833d4701aa06ccb4c8968}\label{class_gear_1_1_event_aa68ff805c8d833d4701aa06ccb4c8968}} 
+\index{Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}!IsInCategory@{IsInCategory}}
+\index{IsInCategory@{IsInCategory}!Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}}
+\doxysubsubsection{\texorpdfstring{IsInCategory()}{IsInCategory()}}
+{\footnotesize\ttfamily bool Gear\+::\+Event\+::\+Is\+In\+Category (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1}{Event\+Category}}}]{category }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Event.\+h 파일의 43 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                                                          \{}
+\DoxyCodeLine{44             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}{GetCategoryFlags}}() \& category;}
+\DoxyCodeLine{45         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_mouse_scrolled_event_a7c211e836b313522413ce50145b86899}\label{class_gear_1_1_mouse_scrolled_event_a7c211e836b313522413ce50145b86899}} 
+\index{Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}!ToString@{ToString}}
+\index{ToString@{ToString}!Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily std\+::string Gear\+::\+Mouse\+Scrolled\+Event\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_event_a969ee911d682f0436cdf2da5bb0b6913}{Gear\+::\+Event}}(으)로부터 재구현되었습니다.
+
+
+
+Mouse\+Event.\+h 파일의 35 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                                             \{}
+\DoxyCodeLine{36             std::stringstream ss;}
+\DoxyCodeLine{37             ss << \textcolor{stringliteral}{"MouseScrolledEvent: "} << \mbox{\hyperlink{class_gear_1_1_mouse_scrolled_event_a6e7d8a09e6af74e757675244fb37ba7a}{m\_XOffset}} << \textcolor{stringliteral}{", "} << \mbox{\hyperlink{class_gear_1_1_mouse_scrolled_event_aa6ea1aa32ea8b4a25677a41144102b8f}{m\_YOffset}};}
+\DoxyCodeLine{38             \textcolor{keywordflow}{return} ss.str();}
+\DoxyCodeLine{39         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_event_accf654785eb1c3dda58dfc8b0a8765c9}\label{class_gear_1_1_event_accf654785eb1c3dda58dfc8b0a8765c9}} 
+\index{Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}!m\_Handled@{m\_Handled}}
+\index{m\_Handled@{m\_Handled}!Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}}
+\doxysubsubsection{\texorpdfstring{m\_Handled}{m\_Handled}}
+{\footnotesize\ttfamily bool Gear\+::\+Event\+::m\+\_\+\+Handled = false\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Event.\+h 파일의 47 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_mouse_scrolled_event_a6e7d8a09e6af74e757675244fb37ba7a}\label{class_gear_1_1_mouse_scrolled_event_a6e7d8a09e6af74e757675244fb37ba7a}} 
+\index{Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}!m\_XOffset@{m\_XOffset}}
+\index{m\_XOffset@{m\_XOffset}!Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}}
+\doxysubsubsection{\texorpdfstring{m\_XOffset}{m\_XOffset}}
+{\footnotesize\ttfamily float Gear\+::\+Mouse\+Scrolled\+Event\+::m\+\_\+\+X\+Offset\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mouse\+Event.\+h 파일의 44 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_mouse_scrolled_event_aa6ea1aa32ea8b4a25677a41144102b8f}\label{class_gear_1_1_mouse_scrolled_event_aa6ea1aa32ea8b4a25677a41144102b8f}} 
+\index{Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}!m\_YOffset@{m\_YOffset}}
+\index{m\_YOffset@{m\_YOffset}!Gear::MouseScrolledEvent@{Gear::MouseScrolledEvent}}
+\doxysubsubsection{\texorpdfstring{m\_YOffset}{m\_YOffset}}
+{\footnotesize\ttfamily float Gear\+::\+Mouse\+Scrolled\+Event\+::m\+\_\+\+Y\+Offset\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mouse\+Event.\+h 파일의 44 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Events/\mbox{\hyperlink{_mouse_event_8h}{Mouse\+Event.\+h}}\end{DoxyCompactItemize}

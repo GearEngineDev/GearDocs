@@ -1,0 +1,303 @@
+\hypertarget{class_gear_1_1_orthographic_camera}{}\doxysection{Gear\+::Orthographic\+Camera 클래스 참조}
+\label{class_gear_1_1_orthographic_camera}\index{Gear::OrthographicCamera@{Gear::OrthographicCamera}}
+
+
+{\ttfamily \#include $<$Orthographic\+Camera.\+h$>$}
+
+
+
+Gear\+::Orthographic\+Camera에 대한 협력 다이어그램\+:
+% FIG 0
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_orthographic_camera_a1edaefa1f1adb15f9f626da0b31430cf}{Orthographic\+Camera}} (float left, float right, float bottom, float top)
+\item 
+const glm\+::vec3 \& \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a1b56b56679c583f0f3a5ac266dc26b09}{Get\+Position}} () const
+\item 
+void \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a5dbc7cbe9c512b38cca28e354ed7a3c0}{Set\+Position}} (const glm\+::vec3 \&position)
+\item 
+float \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a4e5d30ff134ffd70720866333402e95b}{Get\+Rotation}} () const
+\item 
+void \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a7a207d10fbfcf4b90ff1577b0052dc29}{Set\+Rotation}} (float rotation)
+\item 
+void \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a93fa0dbd22fdee3b80a7c39c7dee23bf}{Set\+Projection}} (float left, float right, float bottom, float top)
+\item 
+const glm\+::mat4 \& \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a4a8cb91ead2d6f46f714f61562e8703b}{Get\+Projection\+Matrix}} () const
+\item 
+const glm\+::mat4 \& \mbox{\hyperlink{class_gear_1_1_orthographic_camera_aaa68bb52087954895825c1831a79413c}{Get\+View\+Matrix}} () const
+\item 
+const glm\+::mat4 \& \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a77c8ca9e048a778e0919da14f1c1665c}{Get\+View\+Projection\+Matrix}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a553ba474b3016bc43b698acc2621e22f}{Recalcultate\+View\+Matrix}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::mat4 \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a973c19fd7de5f155ba97842a7b691dcb}{m\+\_\+\+Projection\+Matrix}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{class_gear_1_1_orthographic_camera_ae22cf553c51d7244658aecb48c2b0982}{m\+\_\+\+View\+Matrix}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{class_gear_1_1_orthographic_camera_ac05bc788d9444c3e13fe99743dbddfa7}{m\+\_\+\+View\+Projection\+Matrix}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_gear_1_1_orthographic_camera_acd626a9649f3f45ee61a10235e305cc4}{m\+\_\+\+Position}} = \{ 0.\+0f, 0.\+0f, 0.\+0f \}
+\item 
+float \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a3989c361054b6ecac64f2a74bef28e24}{m\+\_\+\+Rotation}} = 0.\+0f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Orthographic\+Camera.\+h 파일의 7 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_a1edaefa1f1adb15f9f626da0b31430cf}\label{class_gear_1_1_orthographic_camera_a1edaefa1f1adb15f9f626da0b31430cf}} 
+\index{Gear::OrthographicCamera@{Gear::OrthographicCamera}!OrthographicCamera@{OrthographicCamera}}
+\index{OrthographicCamera@{OrthographicCamera}!Gear::OrthographicCamera@{Gear::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{OrthographicCamera()}{OrthographicCamera()}}
+{\footnotesize\ttfamily Gear\+::\+Orthographic\+Camera\+::\+Orthographic\+Camera (\begin{DoxyParamCaption}\item[{float}]{left,  }\item[{float}]{right,  }\item[{float}]{bottom,  }\item[{float}]{top }\end{DoxyParamCaption})}
+
+
+
+Orthographic\+Camera.\+cpp 파일의 7 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8         : \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a973c19fd7de5f155ba97842a7b691dcb}{m\_ProjectionMatrix}}(glm::ortho(left, right, bottom, top, -\/1.0f, 1.0f)), \mbox{\hyperlink{class_gear_1_1_orthographic_camera_ae22cf553c51d7244658aecb48c2b0982}{m\_ViewMatrix}}(1.0f)}
+\DoxyCodeLine{9     \{}
+\DoxyCodeLine{10         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12         \mbox{\hyperlink{class_gear_1_1_orthographic_camera_ac05bc788d9444c3e13fe99743dbddfa7}{m\_ViewProjectionMatrix}} = \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a973c19fd7de5f155ba97842a7b691dcb}{m\_ProjectionMatrix}} * \mbox{\hyperlink{class_gear_1_1_orthographic_camera_ae22cf553c51d7244658aecb48c2b0982}{m\_ViewMatrix}};}
+\DoxyCodeLine{13     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_a1b56b56679c583f0f3a5ac266dc26b09}\label{class_gear_1_1_orthographic_camera_a1b56b56679c583f0f3a5ac266dc26b09}} 
+\index{Gear::OrthographicCamera@{Gear::OrthographicCamera}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Gear::OrthographicCamera@{Gear::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily const glm\+::vec3\& Gear\+::\+Orthographic\+Camera\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Orthographic\+Camera.\+h 파일의 12 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_orthographic_camera_acd626a9649f3f45ee61a10235e305cc4}{m\_Position}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_a4a8cb91ead2d6f46f714f61562e8703b}\label{class_gear_1_1_orthographic_camera_a4a8cb91ead2d6f46f714f61562e8703b}} 
+\index{Gear::OrthographicCamera@{Gear::OrthographicCamera}!GetProjectionMatrix@{GetProjectionMatrix}}
+\index{GetProjectionMatrix@{GetProjectionMatrix}!Gear::OrthographicCamera@{Gear::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{GetProjectionMatrix()}{GetProjectionMatrix()}}
+{\footnotesize\ttfamily const glm\+::mat4\& Gear\+::\+Orthographic\+Camera\+::\+Get\+Projection\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Orthographic\+Camera.\+h 파일의 20 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a973c19fd7de5f155ba97842a7b691dcb}{m\_ProjectionMatrix}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_a4e5d30ff134ffd70720866333402e95b}\label{class_gear_1_1_orthographic_camera_a4e5d30ff134ffd70720866333402e95b}} 
+\index{Gear::OrthographicCamera@{Gear::OrthographicCamera}!GetRotation@{GetRotation}}
+\index{GetRotation@{GetRotation}!Gear::OrthographicCamera@{Gear::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{GetRotation()}{GetRotation()}}
+{\footnotesize\ttfamily float Gear\+::\+Orthographic\+Camera\+::\+Get\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Orthographic\+Camera.\+h 파일의 15 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a3989c361054b6ecac64f2a74bef28e24}{m\_Rotation}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_aaa68bb52087954895825c1831a79413c}\label{class_gear_1_1_orthographic_camera_aaa68bb52087954895825c1831a79413c}} 
+\index{Gear::OrthographicCamera@{Gear::OrthographicCamera}!GetViewMatrix@{GetViewMatrix}}
+\index{GetViewMatrix@{GetViewMatrix}!Gear::OrthographicCamera@{Gear::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{GetViewMatrix()}{GetViewMatrix()}}
+{\footnotesize\ttfamily const glm\+::mat4\& Gear\+::\+Orthographic\+Camera\+::\+Get\+View\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Orthographic\+Camera.\+h 파일의 21 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_orthographic_camera_ae22cf553c51d7244658aecb48c2b0982}{m\_ViewMatrix}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_a77c8ca9e048a778e0919da14f1c1665c}\label{class_gear_1_1_orthographic_camera_a77c8ca9e048a778e0919da14f1c1665c}} 
+\index{Gear::OrthographicCamera@{Gear::OrthographicCamera}!GetViewProjectionMatrix@{GetViewProjectionMatrix}}
+\index{GetViewProjectionMatrix@{GetViewProjectionMatrix}!Gear::OrthographicCamera@{Gear::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{GetViewProjectionMatrix()}{GetViewProjectionMatrix()}}
+{\footnotesize\ttfamily const glm\+::mat4\& Gear\+::\+Orthographic\+Camera\+::\+Get\+View\+Projection\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Orthographic\+Camera.\+h 파일의 22 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_orthographic_camera_ac05bc788d9444c3e13fe99743dbddfa7}{m\_ViewProjectionMatrix}}; \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 1
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_a553ba474b3016bc43b698acc2621e22f}\label{class_gear_1_1_orthographic_camera_a553ba474b3016bc43b698acc2621e22f}} 
+\index{Gear::OrthographicCamera@{Gear::OrthographicCamera}!RecalcultateViewMatrix@{RecalcultateViewMatrix}}
+\index{RecalcultateViewMatrix@{RecalcultateViewMatrix}!Gear::OrthographicCamera@{Gear::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{RecalcultateViewMatrix()}{RecalcultateViewMatrix()}}
+{\footnotesize\ttfamily void Gear\+::\+Orthographic\+Camera\+::\+Recalcultate\+View\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Orthographic\+Camera.\+cpp 파일의 23 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24     \{}
+\DoxyCodeLine{25         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27         glm::mat4 transform = glm::translate(glm::mat4(1.0f), \mbox{\hyperlink{class_gear_1_1_orthographic_camera_acd626a9649f3f45ee61a10235e305cc4}{m\_Position}}) *}
+\DoxyCodeLine{28             glm::rotate(glm::mat4(1.0f), glm::radians(\mbox{\hyperlink{class_gear_1_1_orthographic_camera_a3989c361054b6ecac64f2a74bef28e24}{m\_Rotation}}), glm::vec3(0, 0, 1));}
+\DoxyCodeLine{29         }
+\DoxyCodeLine{30         \mbox{\hyperlink{class_gear_1_1_orthographic_camera_ae22cf553c51d7244658aecb48c2b0982}{m\_ViewMatrix}} = glm::inverse(transform);}
+\DoxyCodeLine{31         \mbox{\hyperlink{class_gear_1_1_orthographic_camera_ac05bc788d9444c3e13fe99743dbddfa7}{m\_ViewProjectionMatrix}} = \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a973c19fd7de5f155ba97842a7b691dcb}{m\_ProjectionMatrix}} * \mbox{\hyperlink{class_gear_1_1_orthographic_camera_ae22cf553c51d7244658aecb48c2b0982}{m\_ViewMatrix}};}
+\DoxyCodeLine{32     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_a5dbc7cbe9c512b38cca28e354ed7a3c0}\label{class_gear_1_1_orthographic_camera_a5dbc7cbe9c512b38cca28e354ed7a3c0}} 
+\index{Gear::OrthographicCamera@{Gear::OrthographicCamera}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!Gear::OrthographicCamera@{Gear::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void Gear\+::\+Orthographic\+Camera\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Orthographic\+Camera.\+h 파일의 13 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13 \{ \mbox{\hyperlink{class_gear_1_1_orthographic_camera_acd626a9649f3f45ee61a10235e305cc4}{m\_Position}} = position; \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a553ba474b3016bc43b698acc2621e22f}{RecalcultateViewMatrix}}(); \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 4
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_a93fa0dbd22fdee3b80a7c39c7dee23bf}\label{class_gear_1_1_orthographic_camera_a93fa0dbd22fdee3b80a7c39c7dee23bf}} 
+\index{Gear::OrthographicCamera@{Gear::OrthographicCamera}!SetProjection@{SetProjection}}
+\index{SetProjection@{SetProjection}!Gear::OrthographicCamera@{Gear::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{SetProjection()}{SetProjection()}}
+{\footnotesize\ttfamily void Gear\+::\+Orthographic\+Camera\+::\+Set\+Projection (\begin{DoxyParamCaption}\item[{float}]{left,  }\item[{float}]{right,  }\item[{float}]{bottom,  }\item[{float}]{top }\end{DoxyParamCaption})}
+
+
+
+Orthographic\+Camera.\+cpp 파일의 15 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16     \{}
+\DoxyCodeLine{17         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19         \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a973c19fd7de5f155ba97842a7b691dcb}{m\_ProjectionMatrix}} = glm::ortho(left, right, bottom, top, -\/1.0f, 1.0f);}
+\DoxyCodeLine{20         \mbox{\hyperlink{class_gear_1_1_orthographic_camera_ac05bc788d9444c3e13fe99743dbddfa7}{m\_ViewProjectionMatrix}} = \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a973c19fd7de5f155ba97842a7b691dcb}{m\_ProjectionMatrix}} * \mbox{\hyperlink{class_gear_1_1_orthographic_camera_ae22cf553c51d7244658aecb48c2b0982}{m\_ViewMatrix}};}
+\DoxyCodeLine{21     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 5
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_a7a207d10fbfcf4b90ff1577b0052dc29}\label{class_gear_1_1_orthographic_camera_a7a207d10fbfcf4b90ff1577b0052dc29}} 
+\index{Gear::OrthographicCamera@{Gear::OrthographicCamera}!SetRotation@{SetRotation}}
+\index{SetRotation@{SetRotation}!Gear::OrthographicCamera@{Gear::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{SetRotation()}{SetRotation()}}
+{\footnotesize\ttfamily void Gear\+::\+Orthographic\+Camera\+::\+Set\+Rotation (\begin{DoxyParamCaption}\item[{float}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Orthographic\+Camera.\+h 파일의 16 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16 \{ \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a3989c361054b6ecac64f2a74bef28e24}{m\_Rotation}} = rotation; \mbox{\hyperlink{class_gear_1_1_orthographic_camera_a553ba474b3016bc43b698acc2621e22f}{RecalcultateViewMatrix}}(); \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 6
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 7
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_acd626a9649f3f45ee61a10235e305cc4}\label{class_gear_1_1_orthographic_camera_acd626a9649f3f45ee61a10235e305cc4}} 
+\index{Gear::OrthographicCamera@{Gear::OrthographicCamera}!m\_Position@{m\_Position}}
+\index{m\_Position@{m\_Position}!Gear::OrthographicCamera@{Gear::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{m\_Position}{m\_Position}}
+{\footnotesize\ttfamily glm\+::vec3 Gear\+::\+Orthographic\+Camera\+::m\+\_\+\+Position = \{ 0.\+0f, 0.\+0f, 0.\+0f \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Orthographic\+Camera.\+h 파일의 31 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_a973c19fd7de5f155ba97842a7b691dcb}\label{class_gear_1_1_orthographic_camera_a973c19fd7de5f155ba97842a7b691dcb}} 
+\index{Gear::OrthographicCamera@{Gear::OrthographicCamera}!m\_ProjectionMatrix@{m\_ProjectionMatrix}}
+\index{m\_ProjectionMatrix@{m\_ProjectionMatrix}!Gear::OrthographicCamera@{Gear::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{m\_ProjectionMatrix}{m\_ProjectionMatrix}}
+{\footnotesize\ttfamily glm\+::mat4 Gear\+::\+Orthographic\+Camera\+::m\+\_\+\+Projection\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Orthographic\+Camera.\+h 파일의 27 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_a3989c361054b6ecac64f2a74bef28e24}\label{class_gear_1_1_orthographic_camera_a3989c361054b6ecac64f2a74bef28e24}} 
+\index{Gear::OrthographicCamera@{Gear::OrthographicCamera}!m\_Rotation@{m\_Rotation}}
+\index{m\_Rotation@{m\_Rotation}!Gear::OrthographicCamera@{Gear::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{m\_Rotation}{m\_Rotation}}
+{\footnotesize\ttfamily float Gear\+::\+Orthographic\+Camera\+::m\+\_\+\+Rotation = 0.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Orthographic\+Camera.\+h 파일의 32 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_ae22cf553c51d7244658aecb48c2b0982}\label{class_gear_1_1_orthographic_camera_ae22cf553c51d7244658aecb48c2b0982}} 
+\index{Gear::OrthographicCamera@{Gear::OrthographicCamera}!m\_ViewMatrix@{m\_ViewMatrix}}
+\index{m\_ViewMatrix@{m\_ViewMatrix}!Gear::OrthographicCamera@{Gear::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{m\_ViewMatrix}{m\_ViewMatrix}}
+{\footnotesize\ttfamily glm\+::mat4 Gear\+::\+Orthographic\+Camera\+::m\+\_\+\+View\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Orthographic\+Camera.\+h 파일의 28 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_ac05bc788d9444c3e13fe99743dbddfa7}\label{class_gear_1_1_orthographic_camera_ac05bc788d9444c3e13fe99743dbddfa7}} 
+\index{Gear::OrthographicCamera@{Gear::OrthographicCamera}!m\_ViewProjectionMatrix@{m\_ViewProjectionMatrix}}
+\index{m\_ViewProjectionMatrix@{m\_ViewProjectionMatrix}!Gear::OrthographicCamera@{Gear::OrthographicCamera}}
+\doxysubsubsection{\texorpdfstring{m\_ViewProjectionMatrix}{m\_ViewProjectionMatrix}}
+{\footnotesize\ttfamily glm\+::mat4 Gear\+::\+Orthographic\+Camera\+::m\+\_\+\+View\+Projection\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Orthographic\+Camera.\+h 파일의 29 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Renderer/\mbox{\hyperlink{_orthographic_camera_8h}{Orthographic\+Camera.\+h}}\item 
+Gear/src/\+Gear/\+Renderer/\mbox{\hyperlink{_orthographic_camera_8cpp}{Orthographic\+Camera.\+cpp}}\end{DoxyCompactItemize}

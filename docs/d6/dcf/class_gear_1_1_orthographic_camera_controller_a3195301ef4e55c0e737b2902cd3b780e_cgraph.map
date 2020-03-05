@@ -1,0 +1,11 @@
+<map id="Gear::OrthographicCameraController::OnEvent" name="Gear::OrthographicCameraController::OnEvent">
+<area shape="rect" id="node1" title=" " alt="" coords="5,86,183,127"/>
+<area shape="rect" id="node2" href="$d3/d64/class_gear_1_1_event_dispatcher.html#ab8abb015f20e1342cabe633f023a7614" title=" " alt="" coords="252,6,404,47"/>
+<area shape="rect" id="node4" href="$d6/dcf/class_gear_1_1_orthographic_camera_controller.html#a35f49fd2b62479db2016c24d3c3f967c" title=" " alt="" coords="234,86,422,127"/>
+<area shape="rect" id="node7" href="$d6/dcf/class_gear_1_1_orthographic_camera_controller.html#a8802accfe1fe096e4a060206c24a9518" title=" " alt="" coords="231,181,425,222"/>
+<area shape="rect" id="node3" href="$d2/d64/class_gear_1_1_event.html#aafeedc7f01a03c29964cecd1dcfcdd3d" title=" " alt="" coords="473,5,652,32"/>
+<area shape="rect" id="node5" href="$da/d7e/class_gear_1_1_mouse_scrolled_event.html#a3479cee9a34fd5d6083cf7af38af3fea" title=" " alt="" coords="475,57,651,98"/>
+<area shape="rect" id="node6" href="$d5/d11/class_gear_1_1_orthographic_camera.html#a93fa0dbd22fdee3b80a7c39c7dee23bf" title=" " alt="" coords="474,122,651,163"/>
+<area shape="rect" id="node8" href="$db/d09/class_gear_1_1_window_resize_event.html#a0c70f168380cffb368130811365b0419" title=" " alt="" coords="475,187,651,229"/>
+<area shape="rect" id="node9" href="$db/d09/class_gear_1_1_window_resize_event.html#a4adf7bfbec6e04a3d537b4048249aba7" title=" " alt="" coords="475,253,651,294"/>
+</map>

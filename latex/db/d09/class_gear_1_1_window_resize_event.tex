@@ -1,0 +1,206 @@
+\hypertarget{class_gear_1_1_window_resize_event}{}\doxysection{Gear\+::Window\+Resize\+Event 클래스 참조}
+\label{class_gear_1_1_window_resize_event}\index{Gear::WindowResizeEvent@{Gear::WindowResizeEvent}}
+
+
+{\ttfamily \#include $<$Application\+Event.\+h$>$}
+
+
+
+Gear\+::Window\+Resize\+Event에 대한 상속 다이어그램 \+: 
+% FIG 0
+
+
+Gear\+::Window\+Resize\+Event에 대한 협력 다이어그램\+:
+% FIG 1
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_window_resize_event_a8adfccfb161be7bcdaac940f0207cd37}{Window\+Resize\+Event}} (unsigned int width, unsigned int height)
+\item 
+unsigned int \mbox{\hyperlink{class_gear_1_1_window_resize_event_a4adf7bfbec6e04a3d537b4048249aba7}{Get\+Width}} () const
+\item 
+unsigned int \mbox{\hyperlink{class_gear_1_1_window_resize_event_a0c70f168380cffb368130811365b0419}{Get\+Height}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_gear_1_1_window_resize_event_a98d46ccc58b6e5be5ff7a1260631804d}{To\+String}} () const override
+\item 
+virtual \mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7ba}{Event\+Type}} \mbox{\hyperlink{class_gear_1_1_event_aafeedc7f01a03c29964cecd1dcfcdd3d}{Get\+Event\+Type}} () const =0
+\item 
+virtual const char $\ast$ \mbox{\hyperlink{class_gear_1_1_event_aa17c21c5a7560a271ed3da2b799123d8}{Get\+Name}} () const =0
+\item 
+virtual int \mbox{\hyperlink{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}{Get\+Category\+Flags}} () const =0
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_event_aa68ff805c8d833d4701aa06ccb4c8968}{Is\+In\+Category}} (\mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1}{Event\+Category}} category)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_event_accf654785eb1c3dda58dfc8b0a8765c9}{m\+\_\+\+Handled}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{class_gear_1_1_window_resize_event_a1a3990c08a428f3765873170a9d8fb1d}{m\+\_\+\+Width}}
+\item 
+unsigned int \mbox{\hyperlink{class_gear_1_1_window_resize_event_a4f9b4b66590c8c0119c61831b3b13c57}{m\+\_\+\+Height}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Application\+Event.\+h 파일의 6 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_window_resize_event_a8adfccfb161be7bcdaac940f0207cd37}\label{class_gear_1_1_window_resize_event_a8adfccfb161be7bcdaac940f0207cd37}} 
+\index{Gear::WindowResizeEvent@{Gear::WindowResizeEvent}!WindowResizeEvent@{WindowResizeEvent}}
+\index{WindowResizeEvent@{WindowResizeEvent}!Gear::WindowResizeEvent@{Gear::WindowResizeEvent}}
+\doxysubsubsection{\texorpdfstring{WindowResizeEvent()}{WindowResizeEvent()}}
+{\footnotesize\ttfamily Gear\+::\+Window\+Resize\+Event\+::\+Window\+Resize\+Event (\begin{DoxyParamCaption}\item[{unsigned int}]{width,  }\item[{unsigned int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Application\+Event.\+h 파일의 8 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9             :\mbox{\hyperlink{class_gear_1_1_window_resize_event_a1a3990c08a428f3765873170a9d8fb1d}{m\_Width}}(width), \mbox{\hyperlink{class_gear_1_1_window_resize_event_a4f9b4b66590c8c0119c61831b3b13c57}{m\_Height}}(height)}
+\DoxyCodeLine{10         \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}\label{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}} 
+\index{Gear::WindowResizeEvent@{Gear::WindowResizeEvent}!GetCategoryFlags@{GetCategoryFlags}}
+\index{GetCategoryFlags@{GetCategoryFlags}!Gear::WindowResizeEvent@{Gear::WindowResizeEvent}}
+\doxysubsubsection{\texorpdfstring{GetCategoryFlags()}{GetCategoryFlags()}}
+{\footnotesize\ttfamily virtual int Gear\+::\+Event\+::\+Get\+Category\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_gear_1_1_event_aafeedc7f01a03c29964cecd1dcfcdd3d}\label{class_gear_1_1_event_aafeedc7f01a03c29964cecd1dcfcdd3d}} 
+\index{Gear::WindowResizeEvent@{Gear::WindowResizeEvent}!GetEventType@{GetEventType}}
+\index{GetEventType@{GetEventType}!Gear::WindowResizeEvent@{Gear::WindowResizeEvent}}
+\doxysubsubsection{\texorpdfstring{GetEventType()}{GetEventType()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7ba}{Event\+Type}} Gear\+::\+Event\+::\+Get\+Event\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\mbox{\Hypertarget{class_gear_1_1_window_resize_event_a0c70f168380cffb368130811365b0419}\label{class_gear_1_1_window_resize_event_a0c70f168380cffb368130811365b0419}} 
+\index{Gear::WindowResizeEvent@{Gear::WindowResizeEvent}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!Gear::WindowResizeEvent@{Gear::WindowResizeEvent}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily unsigned int Gear\+::\+Window\+Resize\+Event\+::\+Get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Application\+Event.\+h 파일의 13 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_window_resize_event_a4f9b4b66590c8c0119c61831b3b13c57}{m\_Height}}; \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+\mbox{\Hypertarget{class_gear_1_1_event_aa17c21c5a7560a271ed3da2b799123d8}\label{class_gear_1_1_event_aa17c21c5a7560a271ed3da2b799123d8}} 
+\index{Gear::WindowResizeEvent@{Gear::WindowResizeEvent}!GetName@{GetName}}
+\index{GetName@{GetName}!Gear::WindowResizeEvent@{Gear::WindowResizeEvent}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Gear\+::\+Event\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_gear_1_1_window_resize_event_a4adf7bfbec6e04a3d537b4048249aba7}\label{class_gear_1_1_window_resize_event_a4adf7bfbec6e04a3d537b4048249aba7}} 
+\index{Gear::WindowResizeEvent@{Gear::WindowResizeEvent}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!Gear::WindowResizeEvent@{Gear::WindowResizeEvent}}
+\doxysubsubsection{\texorpdfstring{GetWidth()}{GetWidth()}}
+{\footnotesize\ttfamily unsigned int Gear\+::\+Window\+Resize\+Event\+::\+Get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Application\+Event.\+h 파일의 12 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_window_resize_event_a1a3990c08a428f3765873170a9d8fb1d}{m\_Width}}; \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 4
+\mbox{\Hypertarget{class_gear_1_1_event_aa68ff805c8d833d4701aa06ccb4c8968}\label{class_gear_1_1_event_aa68ff805c8d833d4701aa06ccb4c8968}} 
+\index{Gear::WindowResizeEvent@{Gear::WindowResizeEvent}!IsInCategory@{IsInCategory}}
+\index{IsInCategory@{IsInCategory}!Gear::WindowResizeEvent@{Gear::WindowResizeEvent}}
+\doxysubsubsection{\texorpdfstring{IsInCategory()}{IsInCategory()}}
+{\footnotesize\ttfamily bool Gear\+::\+Event\+::\+Is\+In\+Category (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1}{Event\+Category}}}]{category }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Event.\+h 파일의 43 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                                                          \{}
+\DoxyCodeLine{44             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}{GetCategoryFlags}}() \& category;}
+\DoxyCodeLine{45         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_window_resize_event_a98d46ccc58b6e5be5ff7a1260631804d}\label{class_gear_1_1_window_resize_event_a98d46ccc58b6e5be5ff7a1260631804d}} 
+\index{Gear::WindowResizeEvent@{Gear::WindowResizeEvent}!ToString@{ToString}}
+\index{ToString@{ToString}!Gear::WindowResizeEvent@{Gear::WindowResizeEvent}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily std\+::string Gear\+::\+Window\+Resize\+Event\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_event_a969ee911d682f0436cdf2da5bb0b6913}{Gear\+::\+Event}}(으)로부터 재구현되었습니다.
+
+
+
+Application\+Event.\+h 파일의 15 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15                                             \{}
+\DoxyCodeLine{16             std::stringstream ss;}
+\DoxyCodeLine{17             ss << \textcolor{stringliteral}{"WindowResizeEvent: "} << \mbox{\hyperlink{class_gear_1_1_window_resize_event_a1a3990c08a428f3765873170a9d8fb1d}{m\_Width}} << \textcolor{stringliteral}{", "} << \mbox{\hyperlink{class_gear_1_1_window_resize_event_a4f9b4b66590c8c0119c61831b3b13c57}{m\_Height}};}
+\DoxyCodeLine{18             \textcolor{keywordflow}{return} ss.str();}
+\DoxyCodeLine{19         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_event_accf654785eb1c3dda58dfc8b0a8765c9}\label{class_gear_1_1_event_accf654785eb1c3dda58dfc8b0a8765c9}} 
+\index{Gear::WindowResizeEvent@{Gear::WindowResizeEvent}!m\_Handled@{m\_Handled}}
+\index{m\_Handled@{m\_Handled}!Gear::WindowResizeEvent@{Gear::WindowResizeEvent}}
+\doxysubsubsection{\texorpdfstring{m\_Handled}{m\_Handled}}
+{\footnotesize\ttfamily bool Gear\+::\+Event\+::m\+\_\+\+Handled = false\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Event.\+h 파일의 47 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_window_resize_event_a4f9b4b66590c8c0119c61831b3b13c57}\label{class_gear_1_1_window_resize_event_a4f9b4b66590c8c0119c61831b3b13c57}} 
+\index{Gear::WindowResizeEvent@{Gear::WindowResizeEvent}!m\_Height@{m\_Height}}
+\index{m\_Height@{m\_Height}!Gear::WindowResizeEvent@{Gear::WindowResizeEvent}}
+\doxysubsubsection{\texorpdfstring{m\_Height}{m\_Height}}
+{\footnotesize\ttfamily unsigned int Gear\+::\+Window\+Resize\+Event\+::m\+\_\+\+Height\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Application\+Event.\+h 파일의 24 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_window_resize_event_a1a3990c08a428f3765873170a9d8fb1d}\label{class_gear_1_1_window_resize_event_a1a3990c08a428f3765873170a9d8fb1d}} 
+\index{Gear::WindowResizeEvent@{Gear::WindowResizeEvent}!m\_Width@{m\_Width}}
+\index{m\_Width@{m\_Width}!Gear::WindowResizeEvent@{Gear::WindowResizeEvent}}
+\doxysubsubsection{\texorpdfstring{m\_Width}{m\_Width}}
+{\footnotesize\ttfamily unsigned int Gear\+::\+Window\+Resize\+Event\+::m\+\_\+\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Application\+Event.\+h 파일의 24 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Events/\mbox{\hyperlink{_application_event_8h}{Application\+Event.\+h}}\end{DoxyCompactItemize}

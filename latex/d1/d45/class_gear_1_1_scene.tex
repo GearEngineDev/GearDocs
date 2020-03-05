@@ -1,0 +1,244 @@
+\hypertarget{class_gear_1_1_scene}{}\doxysection{Gear\+::Scene 클래스 참조}
+\label{class_gear_1_1_scene}\index{Gear::Scene@{Gear::Scene}}
+
+
+{\ttfamily \#include $<$Scene.\+h$>$}
+
+
+
+Gear\+::Scene에 대한 협력 다이어그램\+:
+% FIG 0
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_scene_a514312767bf7c155d9e544f9294cc61d}{Scene}} (const std\+::string \&name)
+\item 
+\mbox{\hyperlink{class_gear_1_1_scene_ada963e0b3a0a6e017cef7f2d3e372d31}{$\sim$\+Scene}} ()
+\item 
+void \mbox{\hyperlink{class_gear_1_1_scene_aebfd7b27de32012854e16558e97c986c}{Push\+Layer}} (\mbox{\hyperlink{class_gear_1_1_layer}{Layer}} $\ast$layer)
+\item 
+void \mbox{\hyperlink{class_gear_1_1_scene_a1c0883621022ed0afdd777644f1b477e}{Pop\+Layer}} (\mbox{\hyperlink{class_gear_1_1_layer}{Layer}} $\ast$layer)
+\item 
+void \mbox{\hyperlink{class_gear_1_1_scene_acab9fab3ef3f62dd3f9cc50f6b37ecea}{Push\+Overlay}} (\mbox{\hyperlink{class_gear_1_1_layer}{Layer}} $\ast$overlay)
+\item 
+void \mbox{\hyperlink{class_gear_1_1_scene_ad496e2cf43e7d9897c10b2b395e88168}{Pop\+Overlay}} (\mbox{\hyperlink{class_gear_1_1_layer}{Layer}} $\ast$overlay)
+\item 
+std\+::string \mbox{\hyperlink{class_gear_1_1_scene_abf17abf32c00f2a40c302054ed14c3c6}{Get\+Name}} () const
+\item 
+auto \mbox{\hyperlink{class_gear_1_1_scene_af1d5da2588df80d2c0477f9a8aae934e}{begin}} ()
+\item 
+auto \mbox{\hyperlink{class_gear_1_1_scene_afa00f2193b0cf960831659f366610a8d}{end}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_gear_1_1_scene_af12b7964b82562bc887fe4ebee741309}{m\+\_\+\+Name}}
+\item 
+\mbox{\hyperlink{class_gear_1_1_layer_stack}{Layer\+Stack}} \mbox{\hyperlink{class_gear_1_1_scene_a3db3141fce6d5985746e05aa063fc31d}{m\+\_\+\+Layer\+Stack}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Scene.\+h 파일의 7 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_scene_a514312767bf7c155d9e544f9294cc61d}\label{class_gear_1_1_scene_a514312767bf7c155d9e544f9294cc61d}} 
+\index{Gear::Scene@{Gear::Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Gear::Scene@{Gear::Scene}}
+\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily Gear\+::\+Scene\+::\+Scene (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Scene.\+cpp 파일의 6 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7         : \mbox{\hyperlink{class_gear_1_1_scene_af12b7964b82562bc887fe4ebee741309}{m\_Name}}(name)}
+\DoxyCodeLine{8     \{}
+\DoxyCodeLine{9     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_scene_ada963e0b3a0a6e017cef7f2d3e372d31}\label{class_gear_1_1_scene_ada963e0b3a0a6e017cef7f2d3e372d31}} 
+\index{Gear::Scene@{Gear::Scene}!````~Scene@{$\sim$Scene}}
+\index{````~Scene@{$\sim$Scene}!Gear::Scene@{Gear::Scene}}
+\doxysubsubsection{\texorpdfstring{$\sim$Scene()}{~Scene()}}
+{\footnotesize\ttfamily Gear\+::\+Scene\+::$\sim$\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Scene.\+cpp 파일의 11 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12     \{}
+\DoxyCodeLine{13     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_scene_af1d5da2588df80d2c0477f9a8aae934e}\label{class_gear_1_1_scene_af1d5da2588df80d2c0477f9a8aae934e}} 
+\index{Gear::Scene@{Gear::Scene}!begin@{begin}}
+\index{begin@{begin}!Gear::Scene@{Gear::Scene}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily auto Gear\+::\+Scene\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Scene.\+h 파일의 20 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_scene_a3db3141fce6d5985746e05aa063fc31d}{m\_LayerStack}}.\mbox{\hyperlink{class_gear_1_1_layer_stack_aec95eaa5840764ada8547824cae4e22c}{begin}}(); \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 1
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\mbox{\Hypertarget{class_gear_1_1_scene_afa00f2193b0cf960831659f366610a8d}\label{class_gear_1_1_scene_afa00f2193b0cf960831659f366610a8d}} 
+\index{Gear::Scene@{Gear::Scene}!end@{end}}
+\index{end@{end}!Gear::Scene@{Gear::Scene}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily auto Gear\+::\+Scene\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Scene.\+h 파일의 21 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_scene_a3db3141fce6d5985746e05aa063fc31d}{m\_LayerStack}}.\mbox{\hyperlink{class_gear_1_1_layer_stack_a53badf9ab610f608479eff671860219a}{end}}(); \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 4
+\mbox{\Hypertarget{class_gear_1_1_scene_abf17abf32c00f2a40c302054ed14c3c6}\label{class_gear_1_1_scene_abf17abf32c00f2a40c302054ed14c3c6}} 
+\index{Gear::Scene@{Gear::Scene}!GetName@{GetName}}
+\index{GetName@{GetName}!Gear::Scene@{Gear::Scene}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily std\+::string Gear\+::\+Scene\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Scene.\+h 파일의 18 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_scene_af12b7964b82562bc887fe4ebee741309}{m\_Name}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_scene_a1c0883621022ed0afdd777644f1b477e}\label{class_gear_1_1_scene_a1c0883621022ed0afdd777644f1b477e}} 
+\index{Gear::Scene@{Gear::Scene}!PopLayer@{PopLayer}}
+\index{PopLayer@{PopLayer}!Gear::Scene@{Gear::Scene}}
+\doxysubsubsection{\texorpdfstring{PopLayer()}{PopLayer()}}
+{\footnotesize\ttfamily void Gear\+::\+Scene\+::\+Pop\+Layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_layer}{Layer}} $\ast$}]{layer }\end{DoxyParamCaption})}
+
+
+
+Scene.\+cpp 파일의 27 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28     \{}
+\DoxyCodeLine{29         \mbox{\hyperlink{class_gear_1_1_scene_a3db3141fce6d5985746e05aa063fc31d}{m\_LayerStack}}.\mbox{\hyperlink{class_gear_1_1_layer_stack_ac13135e6ad2a80b50c8a21f4785b3bda}{PopLayer}}(layer);}
+\DoxyCodeLine{30     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 5
+\mbox{\Hypertarget{class_gear_1_1_scene_ad496e2cf43e7d9897c10b2b395e88168}\label{class_gear_1_1_scene_ad496e2cf43e7d9897c10b2b395e88168}} 
+\index{Gear::Scene@{Gear::Scene}!PopOverlay@{PopOverlay}}
+\index{PopOverlay@{PopOverlay}!Gear::Scene@{Gear::Scene}}
+\doxysubsubsection{\texorpdfstring{PopOverlay()}{PopOverlay()}}
+{\footnotesize\ttfamily void Gear\+::\+Scene\+::\+Pop\+Overlay (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_layer}{Layer}} $\ast$}]{overlay }\end{DoxyParamCaption})}
+
+
+
+Scene.\+cpp 파일의 32 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33     \{}
+\DoxyCodeLine{34         \mbox{\hyperlink{class_gear_1_1_scene_a3db3141fce6d5985746e05aa063fc31d}{m\_LayerStack}}.\mbox{\hyperlink{class_gear_1_1_layer_stack_ad4d755ae14ad818be7d530bca5b24c55}{PopOverlay}}(overlay);}
+\DoxyCodeLine{35     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 6
+\mbox{\Hypertarget{class_gear_1_1_scene_aebfd7b27de32012854e16558e97c986c}\label{class_gear_1_1_scene_aebfd7b27de32012854e16558e97c986c}} 
+\index{Gear::Scene@{Gear::Scene}!PushLayer@{PushLayer}}
+\index{PushLayer@{PushLayer}!Gear::Scene@{Gear::Scene}}
+\doxysubsubsection{\texorpdfstring{PushLayer()}{PushLayer()}}
+{\footnotesize\ttfamily void Gear\+::\+Scene\+::\+Push\+Layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_layer}{Layer}} $\ast$}]{layer }\end{DoxyParamCaption})}
+
+
+
+Scene.\+cpp 파일의 15 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16     \{}
+\DoxyCodeLine{17         \mbox{\hyperlink{class_gear_1_1_scene_a3db3141fce6d5985746e05aa063fc31d}{m\_LayerStack}}.\mbox{\hyperlink{class_gear_1_1_layer_stack_a5e9f743fc344a96dff1bab2195bea654}{PushLayer}}(layer);}
+\DoxyCodeLine{18         layer-\/>OnAttach();}
+\DoxyCodeLine{19     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 7
+\mbox{\Hypertarget{class_gear_1_1_scene_acab9fab3ef3f62dd3f9cc50f6b37ecea}\label{class_gear_1_1_scene_acab9fab3ef3f62dd3f9cc50f6b37ecea}} 
+\index{Gear::Scene@{Gear::Scene}!PushOverlay@{PushOverlay}}
+\index{PushOverlay@{PushOverlay}!Gear::Scene@{Gear::Scene}}
+\doxysubsubsection{\texorpdfstring{PushOverlay()}{PushOverlay()}}
+{\footnotesize\ttfamily void Gear\+::\+Scene\+::\+Push\+Overlay (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_layer}{Layer}} $\ast$}]{overlay }\end{DoxyParamCaption})}
+
+
+
+Scene.\+cpp 파일의 21 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22     \{}
+\DoxyCodeLine{23         \mbox{\hyperlink{class_gear_1_1_scene_a3db3141fce6d5985746e05aa063fc31d}{m\_LayerStack}}.\mbox{\hyperlink{class_gear_1_1_layer_stack_a3f7cb60c0d0119a2d5c6839a3f0e2f8b}{PushOverlay}}(overlay);}
+\DoxyCodeLine{24         overlay-\/>OnAttach();}
+\DoxyCodeLine{25     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 8
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_scene_a3db3141fce6d5985746e05aa063fc31d}\label{class_gear_1_1_scene_a3db3141fce6d5985746e05aa063fc31d}} 
+\index{Gear::Scene@{Gear::Scene}!m\_LayerStack@{m\_LayerStack}}
+\index{m\_LayerStack@{m\_LayerStack}!Gear::Scene@{Gear::Scene}}
+\doxysubsubsection{\texorpdfstring{m\_LayerStack}{m\_LayerStack}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gear_1_1_layer_stack}{Layer\+Stack}} Gear\+::\+Scene\+::m\+\_\+\+Layer\+Stack\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Scene.\+h 파일의 25 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_scene_af12b7964b82562bc887fe4ebee741309}\label{class_gear_1_1_scene_af12b7964b82562bc887fe4ebee741309}} 
+\index{Gear::Scene@{Gear::Scene}!m\_Name@{m\_Name}}
+\index{m\_Name@{m\_Name}!Gear::Scene@{Gear::Scene}}
+\doxysubsubsection{\texorpdfstring{m\_Name}{m\_Name}}
+{\footnotesize\ttfamily std\+::string Gear\+::\+Scene\+::m\+\_\+\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Scene.\+h 파일의 24 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Core/\mbox{\hyperlink{_scene_8h}{Scene.\+h}}\item 
+Gear/src/\+Gear/\+Core/\mbox{\hyperlink{_scene_8cpp}{Scene.\+cpp}}\end{DoxyCompactItemize}

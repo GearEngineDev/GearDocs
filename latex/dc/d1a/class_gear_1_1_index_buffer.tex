@@ -1,0 +1,124 @@
+\hypertarget{class_gear_1_1_index_buffer}{}\doxysection{Gear\+::Index\+Buffer 클래스 참조}
+\label{class_gear_1_1_index_buffer}\index{Gear::IndexBuffer@{Gear::IndexBuffer}}
+
+
+{\ttfamily \#include $<$Buffer.\+h$>$}
+
+
+
+Gear\+::Index\+Buffer에 대한 상속 다이어그램 \+: 
+% FIG 0
+
+
+Gear\+::Index\+Buffer에 대한 협력 다이어그램\+:
+% FIG 1
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_gear_1_1_index_buffer_a1fa74cbfd77426df6c03be4c6d9b84c6}{$\sim$\+Index\+Buffer}} ()
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_index_buffer_abcc51ab5742174195c9b25154741d98a}{Bind}} () const =0
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_index_buffer_a410785fb08233eca86bfabb0cb826728}{Unbind}} () const =0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{class_gear_1_1_index_buffer_aa832328162b6564d624357226429ce9e}{Get\+Count}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_gear_1_1_index_buffer}{Index\+Buffer}} $\ast$ \mbox{\hyperlink{class_gear_1_1_index_buffer_a3740f4ce510a3dce66d5ec88431216e9}{Create}} (uint32\+\_\+t $\ast$indices, uint32\+\_\+t count)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Buffer.\+h 파일의 119 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_index_buffer_a1fa74cbfd77426df6c03be4c6d9b84c6}\label{class_gear_1_1_index_buffer_a1fa74cbfd77426df6c03be4c6d9b84c6}} 
+\index{Gear::IndexBuffer@{Gear::IndexBuffer}!````~IndexBuffer@{$\sim$IndexBuffer}}
+\index{````~IndexBuffer@{$\sim$IndexBuffer}!Gear::IndexBuffer@{Gear::IndexBuffer}}
+\doxysubsubsection{\texorpdfstring{$\sim$IndexBuffer()}{~IndexBuffer()}}
+{\footnotesize\ttfamily virtual Gear\+::\+Index\+Buffer\+::$\sim$\+Index\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Buffer.\+h 파일의 122 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{122 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_index_buffer_abcc51ab5742174195c9b25154741d98a}\label{class_gear_1_1_index_buffer_abcc51ab5742174195c9b25154741d98a}} 
+\index{Gear::IndexBuffer@{Gear::IndexBuffer}!Bind@{Bind}}
+\index{Bind@{Bind}!Gear::IndexBuffer@{Gear::IndexBuffer}}
+\doxysubsubsection{\texorpdfstring{Bind()}{Bind()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Index\+Buffer\+::\+Bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_open_g_l_index_buffer_a4a600afd26fee9262ce4c9801d0aa35b}{Gear\+::\+Open\+G\+L\+Index\+Buffer}}에서 구현되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_index_buffer_a3740f4ce510a3dce66d5ec88431216e9}\label{class_gear_1_1_index_buffer_a3740f4ce510a3dce66d5ec88431216e9}} 
+\index{Gear::IndexBuffer@{Gear::IndexBuffer}!Create@{Create}}
+\index{Create@{Create}!Gear::IndexBuffer@{Gear::IndexBuffer}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gear_1_1_index_buffer}{Index\+Buffer}} $\ast$ Gear\+::\+Index\+Buffer\+::\+Create (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{indices,  }\item[{uint32\+\_\+t}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Buffer.\+cpp 파일의 26 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27     \{}
+\DoxyCodeLine{28         \textcolor{keywordflow}{switch} (\mbox{\hyperlink{class_gear_1_1_renderer_ad13c79d41ff9c92e63e0a356ddb06d1f}{Renderer::GetAPI}}())}
+\DoxyCodeLine{29         \{}
+\DoxyCodeLine{30         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a6adf97f83acf6453d4a6a4b1070f3754}{RendererAPI::API::None}}:}
+\DoxyCodeLine{31             \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{GR\_CORE\_ASSERT}}(\textcolor{keyword}{false}, \textcolor{stringliteral}{"RendererAPI::None is currently not supported!"});}
+\DoxyCodeLine{32             \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{33         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a760716b590ee7c0adc25f434f577d8be}{RendererAPI::API::OpenGL}}:}
+\DoxyCodeLine{34             \textcolor{keywordflow}{return} \textcolor{keyword}{new} OpenGLIndexBuffer(indices, count);}
+\DoxyCodeLine{35         \}}
+\DoxyCodeLine{36         \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{GR\_CORE\_ASSERT}}(\textcolor{keyword}{false}, \textcolor{stringliteral}{"Unknown RendererAPI!"});}
+\DoxyCodeLine{37         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{38     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+\mbox{\Hypertarget{class_gear_1_1_index_buffer_aa832328162b6564d624357226429ce9e}\label{class_gear_1_1_index_buffer_aa832328162b6564d624357226429ce9e}} 
+\index{Gear::IndexBuffer@{Gear::IndexBuffer}!GetCount@{GetCount}}
+\index{GetCount@{GetCount}!Gear::IndexBuffer@{Gear::IndexBuffer}}
+\doxysubsubsection{\texorpdfstring{GetCount()}{GetCount()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t Gear\+::\+Index\+Buffer\+::\+Get\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_open_g_l_index_buffer_a5e0f65b7cc6cf9c5ad63e540f6dacda2}{Gear\+::\+Open\+G\+L\+Index\+Buffer}}에서 구현되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_index_buffer_a410785fb08233eca86bfabb0cb826728}\label{class_gear_1_1_index_buffer_a410785fb08233eca86bfabb0cb826728}} 
+\index{Gear::IndexBuffer@{Gear::IndexBuffer}!Unbind@{Unbind}}
+\index{Unbind@{Unbind}!Gear::IndexBuffer@{Gear::IndexBuffer}}
+\doxysubsubsection{\texorpdfstring{Unbind()}{Unbind()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Index\+Buffer\+::\+Unbind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_open_g_l_index_buffer_a05d3247ec7a60f3709b900aab52073fe}{Gear\+::\+Open\+G\+L\+Index\+Buffer}}에서 구현되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Renderer/\mbox{\hyperlink{_buffer_8h}{Buffer.\+h}}\item 
+Gear/src/\+Gear/\+Renderer/\mbox{\hyperlink{_buffer_8cpp}{Buffer.\+cpp}}\end{DoxyCompactItemize}

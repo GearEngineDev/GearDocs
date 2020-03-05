@@ -1,0 +1,281 @@
+\hypertarget{class_gear_1_1_windows_input}{}\doxysection{Gear\+::Windows\+Input 클래스 참조}
+\label{class_gear_1_1_windows_input}\index{Gear::WindowsInput@{Gear::WindowsInput}}
+
+
+{\ttfamily \#include $<$Windows\+Input.\+h$>$}
+
+
+
+Gear\+::Windows\+Input에 대한 상속 다이어그램 \+: 
+% FIG 0
+
+
+Gear\+::Windows\+Input에 대한 협력 다이어그램\+:
+% FIG 1
+\doxysubsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_gear_1_1_input_a8f5114f35156683c8f50ecca7cd0a9ce}{Is\+Key\+Pressd}} (int keycode)
+\item 
+static bool \mbox{\hyperlink{class_gear_1_1_input_a0d43a87d4a9ecd4914d548a6e8d6cd06}{Is\+Mouse\+Button\+Pressed}} (int button)
+\item 
+static std\+::pair$<$ float, float $>$ \mbox{\hyperlink{class_gear_1_1_input_ab4cd84f1dca74dfbcceba93bf91046e9}{Get\+Mouse\+Position}} ()
+\item 
+static float \mbox{\hyperlink{class_gear_1_1_input_a3e88fb303c92d2fb3277a89a180e9f2a}{Get\+MouseX}} ()
+\item 
+static float \mbox{\hyperlink{class_gear_1_1_input_a70d50306287cd79e70919d0b1ff434dc}{Get\+MouseY}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_gear_1_1_windows_input_a55b1271db4caee4cdefade914962709d}{Is\+Key\+Pressed\+Impl}} (int keycode) override
+\item 
+virtual bool \mbox{\hyperlink{class_gear_1_1_windows_input_aefcf7a8b4351521f5d5a2582e978ef7b}{Is\+Mouse\+Button\+Pressed\+Impl}} (int keycode) override
+\item 
+virtual std\+::pair$<$ float, float $>$ \mbox{\hyperlink{class_gear_1_1_windows_input_afc797a1896a4241ec8b0fbfa71a0d554}{Get\+Mouse\+Position\+Impl}} () override
+\item 
+virtual float \mbox{\hyperlink{class_gear_1_1_windows_input_a216b49d7c547f355e75bdf19fb1c69a3}{Get\+Mouse\+X\+Impl}} () override
+\item 
+virtual float \mbox{\hyperlink{class_gear_1_1_windows_input_ad6f418d040f242db456b78eabccbf33d}{Get\+Mouse\+Y\+Impl}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{정적 Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{namespace_gear_abef5ce1767f345625e08a951f865a20d}{Scope}}$<$ \mbox{\hyperlink{class_gear_1_1_input}{Input}} $>$ \mbox{\hyperlink{class_gear_1_1_input_abd60aff6e71d72d8311d1d10576fbf51}{s\+\_\+\+Instance}} = \mbox{\hyperlink{namespace_gear_a0931f35259d76c5ca3aa6d5e92870716}{Create\+Scope}}$<$\mbox{\hyperlink{class_gear_1_1_windows_input}{Windows\+Input}}$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Windows\+Input.\+h 파일의 6 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_input_ab4cd84f1dca74dfbcceba93bf91046e9}\label{class_gear_1_1_input_ab4cd84f1dca74dfbcceba93bf91046e9}} 
+\index{Gear::WindowsInput@{Gear::WindowsInput}!GetMousePosition@{GetMousePosition}}
+\index{GetMousePosition@{GetMousePosition}!Gear::WindowsInput@{Gear::WindowsInput}}
+\doxysubsubsection{\texorpdfstring{GetMousePosition()}{GetMousePosition()}}
+{\footnotesize\ttfamily static std\+::pair$<$float, float$>$ Gear\+::\+Input\+::\+Get\+Mouse\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [inherited]}}
+
+
+
+Input.\+h 파일의 12 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_input_abd60aff6e71d72d8311d1d10576fbf51}{s\_Instance}}-\/>GetMousePositionImpl (); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_windows_input_afc797a1896a4241ec8b0fbfa71a0d554}\label{class_gear_1_1_windows_input_afc797a1896a4241ec8b0fbfa71a0d554}} 
+\index{Gear::WindowsInput@{Gear::WindowsInput}!GetMousePositionImpl@{GetMousePositionImpl}}
+\index{GetMousePositionImpl@{GetMousePositionImpl}!Gear::WindowsInput@{Gear::WindowsInput}}
+\doxysubsubsection{\texorpdfstring{GetMousePositionImpl()}{GetMousePositionImpl()}}
+{\footnotesize\ttfamily std\+::pair$<$ float, float $>$ Gear\+::\+Windows\+Input\+::\+Get\+Mouse\+Position\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_input_a492b0a1f30e52f20c2987a041f287daa}{Gear\+::\+Input}}를 구현.
+
+
+
+Windows\+Input.\+cpp 파일의 28 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30         \textcolor{keyword}{auto} window = \textcolor{keyword}{static\_cast<}GLFWwindow*\textcolor{keyword}{>}(\mbox{\hyperlink{class_gear_1_1_application_a283bd8871db563d9948c1be5450387fb}{Application::Get}}().\mbox{\hyperlink{class_gear_1_1_application_a2253b406ab3c4a74fd5e58d76e3f0408}{GetWindow}}().\mbox{\hyperlink{class_gear_1_1_window_a91c6a9a81c6a6b4650ff2eecad46df8a}{GetNativeWindow}}());}
+\DoxyCodeLine{31         \textcolor{keywordtype}{double} xpos, ypos;}
+\DoxyCodeLine{32         glfwGetCursorPos(window, \&xpos, \&ypos);}
+\DoxyCodeLine{33         }
+\DoxyCodeLine{34         \textcolor{keywordflow}{return} \{ (float)xpos, (\textcolor{keywordtype}{float})ypos \};}
+\DoxyCodeLine{35     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+\mbox{\Hypertarget{class_gear_1_1_input_a3e88fb303c92d2fb3277a89a180e9f2a}\label{class_gear_1_1_input_a3e88fb303c92d2fb3277a89a180e9f2a}} 
+\index{Gear::WindowsInput@{Gear::WindowsInput}!GetMouseX@{GetMouseX}}
+\index{GetMouseX@{GetMouseX}!Gear::WindowsInput@{Gear::WindowsInput}}
+\doxysubsubsection{\texorpdfstring{GetMouseX()}{GetMouseX()}}
+{\footnotesize\ttfamily static float Gear\+::\+Input\+::\+Get\+MouseX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [inherited]}}
+
+
+
+Input.\+h 파일의 13 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_input_abd60aff6e71d72d8311d1d10576fbf51}{s\_Instance}}-\/>GetMouseXImpl(); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_windows_input_a216b49d7c547f355e75bdf19fb1c69a3}\label{class_gear_1_1_windows_input_a216b49d7c547f355e75bdf19fb1c69a3}} 
+\index{Gear::WindowsInput@{Gear::WindowsInput}!GetMouseXImpl@{GetMouseXImpl}}
+\index{GetMouseXImpl@{GetMouseXImpl}!Gear::WindowsInput@{Gear::WindowsInput}}
+\doxysubsubsection{\texorpdfstring{GetMouseXImpl()}{GetMouseXImpl()}}
+{\footnotesize\ttfamily float Gear\+::\+Windows\+Input\+::\+Get\+Mouse\+X\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_input_aa71ff0d23732f5655519b5b58b63f33a}{Gear\+::\+Input}}를 구현.
+
+
+
+Windows\+Input.\+cpp 파일의 37 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38     \{}
+\DoxyCodeLine{39         \textcolor{keyword}{auto}[x, y] = \mbox{\hyperlink{class_gear_1_1_windows_input_afc797a1896a4241ec8b0fbfa71a0d554}{GetMousePositionImpl}}();}
+\DoxyCodeLine{40         \textcolor{keywordflow}{return} x;}
+\DoxyCodeLine{41     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 4
+\mbox{\Hypertarget{class_gear_1_1_input_a70d50306287cd79e70919d0b1ff434dc}\label{class_gear_1_1_input_a70d50306287cd79e70919d0b1ff434dc}} 
+\index{Gear::WindowsInput@{Gear::WindowsInput}!GetMouseY@{GetMouseY}}
+\index{GetMouseY@{GetMouseY}!Gear::WindowsInput@{Gear::WindowsInput}}
+\doxysubsubsection{\texorpdfstring{GetMouseY()}{GetMouseY()}}
+{\footnotesize\ttfamily static float Gear\+::\+Input\+::\+Get\+MouseY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [inherited]}}
+
+
+
+Input.\+h 파일의 14 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_input_abd60aff6e71d72d8311d1d10576fbf51}{s\_Instance}}-\/>GetMouseYImpl(); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_windows_input_ad6f418d040f242db456b78eabccbf33d}\label{class_gear_1_1_windows_input_ad6f418d040f242db456b78eabccbf33d}} 
+\index{Gear::WindowsInput@{Gear::WindowsInput}!GetMouseYImpl@{GetMouseYImpl}}
+\index{GetMouseYImpl@{GetMouseYImpl}!Gear::WindowsInput@{Gear::WindowsInput}}
+\doxysubsubsection{\texorpdfstring{GetMouseYImpl()}{GetMouseYImpl()}}
+{\footnotesize\ttfamily float Gear\+::\+Windows\+Input\+::\+Get\+Mouse\+Y\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_input_a99735dc6e8fff9014aad0fa162ca781f}{Gear\+::\+Input}}를 구현.
+
+
+
+Windows\+Input.\+cpp 파일의 43 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44     \{}
+\DoxyCodeLine{45         \textcolor{keyword}{auto}[x, y] = \mbox{\hyperlink{class_gear_1_1_windows_input_afc797a1896a4241ec8b0fbfa71a0d554}{GetMousePositionImpl}}();}
+\DoxyCodeLine{46         \textcolor{keywordflow}{return} y;}
+\DoxyCodeLine{47     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 5
+\mbox{\Hypertarget{class_gear_1_1_input_a8f5114f35156683c8f50ecca7cd0a9ce}\label{class_gear_1_1_input_a8f5114f35156683c8f50ecca7cd0a9ce}} 
+\index{Gear::WindowsInput@{Gear::WindowsInput}!IsKeyPressd@{IsKeyPressd}}
+\index{IsKeyPressd@{IsKeyPressd}!Gear::WindowsInput@{Gear::WindowsInput}}
+\doxysubsubsection{\texorpdfstring{IsKeyPressd()}{IsKeyPressd()}}
+{\footnotesize\ttfamily static bool Gear\+::\+Input\+::\+Is\+Key\+Pressd (\begin{DoxyParamCaption}\item[{int}]{keycode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [inherited]}}
+
+
+
+Input.\+h 파일의 9 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_input_abd60aff6e71d72d8311d1d10576fbf51}{s\_Instance}}-\/>IsKeyPressedImpl(keycode); \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 6
+\mbox{\Hypertarget{class_gear_1_1_windows_input_a55b1271db4caee4cdefade914962709d}\label{class_gear_1_1_windows_input_a55b1271db4caee4cdefade914962709d}} 
+\index{Gear::WindowsInput@{Gear::WindowsInput}!IsKeyPressedImpl@{IsKeyPressedImpl}}
+\index{IsKeyPressedImpl@{IsKeyPressedImpl}!Gear::WindowsInput@{Gear::WindowsInput}}
+\doxysubsubsection{\texorpdfstring{IsKeyPressedImpl()}{IsKeyPressedImpl()}}
+{\footnotesize\ttfamily bool Gear\+::\+Windows\+Input\+::\+Is\+Key\+Pressed\+Impl (\begin{DoxyParamCaption}\item[{int}]{keycode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_input_ab8553a2439a659e41c56dd5fbd72eb36}{Gear\+::\+Input}}를 구현.
+
+
+
+Windows\+Input.\+cpp 파일의 11 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12     \{}
+\DoxyCodeLine{13         \textcolor{keyword}{auto} window = \textcolor{keyword}{static\_cast<}GLFWwindow*\textcolor{keyword}{>}(\mbox{\hyperlink{class_gear_1_1_application_a283bd8871db563d9948c1be5450387fb}{Application::Get}}().\mbox{\hyperlink{class_gear_1_1_application_a2253b406ab3c4a74fd5e58d76e3f0408}{GetWindow}}().\mbox{\hyperlink{class_gear_1_1_window_a91c6a9a81c6a6b4650ff2eecad46df8a}{GetNativeWindow}}());}
+\DoxyCodeLine{14         \textcolor{keyword}{auto} state = glfwGetKey(window, keycode);}
+\DoxyCodeLine{15         }
+\DoxyCodeLine{16         \textcolor{keywordflow}{return} state == GLFW\_PRESS || state == GLFW\_REPEAT;}
+\DoxyCodeLine{17     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 7
+\mbox{\Hypertarget{class_gear_1_1_input_a0d43a87d4a9ecd4914d548a6e8d6cd06}\label{class_gear_1_1_input_a0d43a87d4a9ecd4914d548a6e8d6cd06}} 
+\index{Gear::WindowsInput@{Gear::WindowsInput}!IsMouseButtonPressed@{IsMouseButtonPressed}}
+\index{IsMouseButtonPressed@{IsMouseButtonPressed}!Gear::WindowsInput@{Gear::WindowsInput}}
+\doxysubsubsection{\texorpdfstring{IsMouseButtonPressed()}{IsMouseButtonPressed()}}
+{\footnotesize\ttfamily static bool Gear\+::\+Input\+::\+Is\+Mouse\+Button\+Pressed (\begin{DoxyParamCaption}\item[{int}]{button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [inherited]}}
+
+
+
+Input.\+h 파일의 11 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_input_abd60aff6e71d72d8311d1d10576fbf51}{s\_Instance}}-\/>IsMouseButtonPressedImpl(button); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_windows_input_aefcf7a8b4351521f5d5a2582e978ef7b}\label{class_gear_1_1_windows_input_aefcf7a8b4351521f5d5a2582e978ef7b}} 
+\index{Gear::WindowsInput@{Gear::WindowsInput}!IsMouseButtonPressedImpl@{IsMouseButtonPressedImpl}}
+\index{IsMouseButtonPressedImpl@{IsMouseButtonPressedImpl}!Gear::WindowsInput@{Gear::WindowsInput}}
+\doxysubsubsection{\texorpdfstring{IsMouseButtonPressedImpl()}{IsMouseButtonPressedImpl()}}
+{\footnotesize\ttfamily bool Gear\+::\+Windows\+Input\+::\+Is\+Mouse\+Button\+Pressed\+Impl (\begin{DoxyParamCaption}\item[{int}]{keycode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_input_ad2326f1b1b286d28dff26e379282732c}{Gear\+::\+Input}}를 구현.
+
+
+
+Windows\+Input.\+cpp 파일의 19 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20     \{}
+\DoxyCodeLine{21         \textcolor{keyword}{auto} window = \textcolor{keyword}{static\_cast<}GLFWwindow*\textcolor{keyword}{>}(\mbox{\hyperlink{class_gear_1_1_application_a283bd8871db563d9948c1be5450387fb}{Application::Get}}().\mbox{\hyperlink{class_gear_1_1_application_a2253b406ab3c4a74fd5e58d76e3f0408}{GetWindow}}().\mbox{\hyperlink{class_gear_1_1_window_a91c6a9a81c6a6b4650ff2eecad46df8a}{GetNativeWindow}}());}
+\DoxyCodeLine{22         \textcolor{keywordtype}{double} xpos, ypos;}
+\DoxyCodeLine{23         glfwGetCursorPos(window, \&xpos, \&ypos);}
+\DoxyCodeLine{24         }
+\DoxyCodeLine{25         \textcolor{keywordflow}{return} (\textcolor{keywordtype}{float})xpos;}
+\DoxyCodeLine{26     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 8
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_input_abd60aff6e71d72d8311d1d10576fbf51}\label{class_gear_1_1_input_abd60aff6e71d72d8311d1d10576fbf51}} 
+\index{Gear::WindowsInput@{Gear::WindowsInput}!s\_Instance@{s\_Instance}}
+\index{s\_Instance@{s\_Instance}!Gear::WindowsInput@{Gear::WindowsInput}}
+\doxysubsubsection{\texorpdfstring{s\_Instance}{s\_Instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_gear_abef5ce1767f345625e08a951f865a20d}{Scope}}$<$ \mbox{\hyperlink{class_gear_1_1_input}{Input}} $>$ Gear\+::\+Input\+::s\+\_\+\+Instance = \mbox{\hyperlink{namespace_gear_a0931f35259d76c5ca3aa6d5e92870716}{Create\+Scope}}$<$\mbox{\hyperlink{class_gear_1_1_windows_input}{Windows\+Input}}$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+Input.\+h 파일의 25 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Platform/\+Windows/\mbox{\hyperlink{_windows_input_8h}{Windows\+Input.\+h}}\item 
+Gear/src/\+Platform/\+Windows/\mbox{\hyperlink{_windows_input_8cpp}{Windows\+Input.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GearEngine: Gear/src/Platform/Windows/WindowsWindow.cpp 소스 파일</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../EngineLogo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GearEngine
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('db/d9d/_windows_window_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">WindowsWindow.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../db/d9d/_windows_window_8cpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d1b/grpch_8h.html">grpch.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/dd7/_windows_window_8h.html">WindowsWindow.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/d87/_application_event_8h.html">Gear/Events/ApplicationEvent.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/df8/_mouse_event_8h.html">Gear/Events/MouseEvent.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/d79/_key_event_8h.html">Gear/Events/KeyEvent.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d2c/_open_g_l_context_8h.html">Platform/OpenGL/OpenGLContext.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d8/d4b/namespace_gear.html">Gear</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d8/d4b/namespace_gear.html#ac2d488e64416f4f4928fe77c6bdc8e1b">   12</a></span>&#160;    <span class="keyword">static</span> uint8_t <a class="code" href="../../d8/d4b/namespace_gear.html#ac2d488e64416f4f4928fe77c6bdc8e1b">s_GLFWWindowCount</a> = 0;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d8/d4b/namespace_gear.html#ace1f77b4b47338e9724bdc5a7b3c882e">   14</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d8/d4b/namespace_gear.html#ace1f77b4b47338e9724bdc5a7b3c882e">GLFWErrorCallback</a>(<span class="keywordtype">int</span> error, <span class="keyword">const</span> <span class="keywordtype">char</span>* description) </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="../../da/df4/_log_8h.html#a7e4992b12c6d3a2fd60ba5135e671c39">GR_CORE_ERROR</a>(<span class="stringliteral">&quot;GLFW Error ({0}) : {1}&quot;</span>, error, description);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../dd/d1f/class_gear_1_1_window.html#a8bfdb15553b8fd4b9bdb96dd9862a4b3">   19</a></span>&#160;    <a class="code" href="../../dd/d1f/class_gear_1_1_window.html">Window</a>* <a class="code" href="../../dd/d1f/class_gear_1_1_window.html#a8bfdb15553b8fd4b9bdb96dd9862a4b3">Window::Create</a>(<span class="keyword">const</span> <a class="code" href="../../d1/df9/struct_gear_1_1_window_props.html">WindowProps</a>&amp; props) </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html">WindowsWindow</a>(props);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d8/dc1/class_gear_1_1_windows_window.html#a80272862911846833db4049d3ed163df">   24</a></span>&#160;    <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a80272862911846833db4049d3ed163df">WindowsWindow::WindowsWindow</a>(<span class="keyword">const</span> <a class="code" href="../../d1/df9/struct_gear_1_1_window_props.html">WindowProps</a>&amp; props)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="../../d2/d4b/_instrumentor_8h.html#a42e05b5340607a81e495d6c3c7db7e14">GR_PROFILE_FUNCTION</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a607b61157ad0a1f40282f11555a42668">Init</a>(props);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d8/dc1/class_gear_1_1_windows_window.html#ac81650f1a02c88cf1a552e15948f3d7f">   31</a></span>&#160;    <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#ac81650f1a02c88cf1a552e15948f3d7f">WindowsWindow::~WindowsWindow</a>()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="../../d2/d4b/_instrumentor_8h.html#a42e05b5340607a81e495d6c3c7db7e14">GR_PROFILE_FUNCTION</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a5b45023ba114f50beaf9c36fb5ea2f69">Shutdown</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d8/dc1/class_gear_1_1_windows_window.html#a607b61157ad0a1f40282f11555a42668">   38</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a607b61157ad0a1f40282f11555a42668">WindowsWindow::Init</a>(<span class="keyword">const</span> <a class="code" href="../../d1/df9/struct_gear_1_1_window_props.html">WindowProps</a> &amp; props)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="../../d2/d4b/_instrumentor_8h.html#a42e05b5340607a81e495d6c3c7db7e14">GR_PROFILE_FUNCTION</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a1976d9c5be7f617d25e09784c7b57e67">m_Data</a>.<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a8823290a77182feb5dc850c83997c34a">Title</a> = props.<a class="code" href="../../d1/df9/struct_gear_1_1_window_props.html#ac4d367e7a5d74b6ab5c3c9356b516116">Title</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a1976d9c5be7f617d25e09784c7b57e67">m_Data</a>.<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a98e4dee25c0365627b38996add07a214">Width</a> = props.<a class="code" href="../../d1/df9/struct_gear_1_1_window_props.html#a8920d39b91b7cca56a831be5a5e595eb">Width</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a1976d9c5be7f617d25e09784c7b57e67">m_Data</a>.<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a4222988c4e1cf411bd25e9437779e012">Height</a> = props.<a class="code" href="../../d1/df9/struct_gear_1_1_window_props.html#ac3e35ffc096b5d342ff23954fcf7b5fa">Height</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="../../da/df4/_log_8h.html#adcf02b331e781f082585b15d04bd56de">GR_CORE_INFO</a>(<span class="stringliteral">&quot;Creating window {0} ({1}, {2})&quot;</span>, props.<a class="code" href="../../d1/df9/struct_gear_1_1_window_props.html#ac4d367e7a5d74b6ab5c3c9356b516116">Title</a>, props.<a class="code" href="../../d1/df9/struct_gear_1_1_window_props.html#a8920d39b91b7cca56a831be5a5e595eb">Width</a>, props.<a class="code" href="../../d1/df9/struct_gear_1_1_window_props.html#ac3e35ffc096b5d342ff23954fcf7b5fa">Height</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d8/d4b/namespace_gear.html#ac2d488e64416f4f4928fe77c6bdc8e1b">s_GLFWWindowCount</a> == 0)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="../../d2/d4b/_instrumentor_8h.html#a4ecb6a74f29a012dea3a4e3b1e855876">GR_PROFILE_SCOPE</a>(<span class="stringliteral">&quot;glfwInit&quot;</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordtype">int</span> success = glfwInit();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="../../d4/d09/_core_8h.html#aada7d47fe675d944b0516553e43d2c58">GR_CORE_ASSERT</a>(success, <span class="stringliteral">&quot;Could not initialize GLFW!&quot;</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            glfwSetErrorCallback(<a class="code" href="../../d8/d4b/namespace_gear.html#ace1f77b4b47338e9724bdc5a7b3c882e">GLFWErrorCallback</a>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="../../d2/d4b/_instrumentor_8h.html#a4ecb6a74f29a012dea3a4e3b1e855876">GR_PROFILE_SCOPE</a>(<span class="stringliteral">&quot;glfwCreateWindow&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a1c7f1fa87b984c3b8a03436814631609">m_Window</a> = glfwCreateWindow((<span class="keywordtype">int</span>)props.<a class="code" href="../../d1/df9/struct_gear_1_1_window_props.html#a8920d39b91b7cca56a831be5a5e595eb">Width</a>, (<span class="keywordtype">int</span>)props.<a class="code" href="../../d1/df9/struct_gear_1_1_window_props.html#ac3e35ffc096b5d342ff23954fcf7b5fa">Height</a>, <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a1976d9c5be7f617d25e09784c7b57e67">m_Data</a>.<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a8823290a77182feb5dc850c83997c34a">Title</a>.c_str(), <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            ++<a class="code" href="../../d8/d4b/namespace_gear.html#ac2d488e64416f4f4928fe77c6bdc8e1b">s_GLFWWindowCount</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a0783dd3075eb5309c977acaf322da1b1">m_Context</a> = CreateScope&lt;OpenGLContext&gt;(<a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a1c7f1fa87b984c3b8a03436814631609">m_Window</a>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a0783dd3075eb5309c977acaf322da1b1">m_Context</a>-&gt;init();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        glfwSetWindowUserPointer(<a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a1c7f1fa87b984c3b8a03436814631609">m_Window</a>, &amp;<a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a1976d9c5be7f617d25e09784c7b57e67">m_Data</a>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a64fb516c8a99f515ae400b574c0151cb">SetVSync</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">//Set GLFW callbacks</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        glfwSetWindowSizeCallback(<a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a1c7f1fa87b984c3b8a03436814631609">m_Window</a>, [](GLFWwindow* window, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html">WindowData</a>&amp; data = *(<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html">WindowData</a>*)glfwGetWindowUserPointer(window);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            data.<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a98e4dee25c0365627b38996add07a214">Width</a> = width;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            data.<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a4222988c4e1cf411bd25e9437779e012">Height</a> = height;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <a class="code" href="../../db/d09/class_gear_1_1_window_resize_event.html">WindowResizeEvent</a> event(width, height);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            data.<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a8db93df561ec60c892e22c91a7f4c76d">EventCallback</a>(event);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        });</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        glfwSetWindowCloseCallback(<a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a1c7f1fa87b984c3b8a03436814631609">m_Window</a>, [](GLFWwindow* window) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html">WindowData</a>&amp; data = *(<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html">WindowData</a>*)glfwGetWindowUserPointer(window);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <a class="code" href="../../d5/d2f/class_gear_1_1_window_close_event.html">WindowCloseEvent</a> event;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            data.<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a8db93df561ec60c892e22c91a7f4c76d">EventCallback</a>(event);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        });</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        glfwSetKeyCallback(<a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a1c7f1fa87b984c3b8a03436814631609">m_Window</a>, [](GLFWwindow* window, <span class="keywordtype">int</span> key, <span class="keywordtype">int</span> scancode, <span class="keywordtype">int</span> action, <span class="keywordtype">int</span> mods) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html">WindowData</a>&amp; data = *(<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html">WindowData</a>*)glfwGetWindowUserPointer(window);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">switch</span> (action) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">case</span> GLFW_PRESS:{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <a class="code" href="../../d6/dfd/class_gear_1_1_key_pressed_event.html">KeyPressedEvent</a> event(key, 0);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                data.<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a8db93df561ec60c892e22c91a7f4c76d">EventCallback</a>(event);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">case</span> GLFW_RELEASE: {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <a class="code" href="../../dc/d9e/class_gear_1_1_key_released_event.html">KeyReleasedEvent</a> event(key);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                data.<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a8db93df561ec60c892e22c91a7f4c76d">EventCallback</a>(event);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">case</span> GLFW_REPEAT: {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <a class="code" href="../../d6/dfd/class_gear_1_1_key_pressed_event.html">KeyPressedEvent</a> event(key, 1);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                data.<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a8db93df561ec60c892e22c91a7f4c76d">EventCallback</a>(event);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        });</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        glfwSetCharCallback(<a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a1c7f1fa87b984c3b8a03436814631609">m_Window</a>, [](GLFWwindow* window, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> keycode) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html">WindowData</a>&amp; data = *(<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html">WindowData</a>*)glfwGetWindowUserPointer(window);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <a class="code" href="../../d2/dce/class_gear_1_1_key_typed_event.html">KeyTypedEvent</a> event(keycode);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            data.<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a8db93df561ec60c892e22c91a7f4c76d">EventCallback</a>(event);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        });</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        glfwSetMouseButtonCallback(<a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a1c7f1fa87b984c3b8a03436814631609">m_Window</a>, [](GLFWwindow* window, <span class="keywordtype">int</span> button, <span class="keywordtype">int</span> action, <span class="keywordtype">int</span> mods) {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html">WindowData</a>&amp; data = *(<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html">WindowData</a>*)glfwGetWindowUserPointer(window);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">switch</span> (action)</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordflow">case</span> GLFW_PRESS: {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                <a class="code" href="../../d6/df3/class_gear_1_1_mouse_button_pressed_event.html">MouseButtonPressedEvent</a> event(button);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                data.<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a8db93df561ec60c892e22c91a7f4c76d">EventCallback</a>(event);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">case</span> GLFW_RELEASE: {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <a class="code" href="../../db/de0/class_gear_1_1_mouse_button_released_event.html">MouseButtonReleasedEvent</a> event(button);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                data.<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a8db93df561ec60c892e22c91a7f4c76d">EventCallback</a>(event);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            }       </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        });</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        glfwSetScrollCallback(<a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a1c7f1fa87b984c3b8a03436814631609">m_Window</a>, [](GLFWwindow* window, <span class="keywordtype">double</span> xOffset, <span class="keywordtype">double</span> yOffset) {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html">WindowData</a>&amp; data = *(<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html">WindowData</a>*)glfwGetWindowUserPointer(window);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <a class="code" href="../../da/d7e/class_gear_1_1_mouse_scrolled_event.html">MouseScrolledEvent</a> event((<span class="keywordtype">float</span>)xOffset, (<span class="keywordtype">float</span>)yOffset);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            data.<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a8db93df561ec60c892e22c91a7f4c76d">EventCallback</a>(event);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        });</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        glfwSetCursorPosCallback(<a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a1c7f1fa87b984c3b8a03436814631609">m_Window</a>, [](GLFWwindow* window, <span class="keywordtype">double</span> xPos, <span class="keywordtype">double</span> yPos) {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html">WindowData</a>&amp; data = *(<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html">WindowData</a>*)glfwGetWindowUserPointer(window);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <a class="code" href="../../de/d00/class_gear_1_1_mouse_moved_event.html">MouseMovedEvent</a> event((<span class="keywordtype">float</span>)xPos, (<span class="keywordtype">float</span>)yPos);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            data.<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a8db93df561ec60c892e22c91a7f4c76d">EventCallback</a>(event);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        });</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="../../d8/dc1/class_gear_1_1_windows_window.html#a5b45023ba114f50beaf9c36fb5ea2f69">  148</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a5b45023ba114f50beaf9c36fb5ea2f69">WindowsWindow::Shutdown</a>()</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <a class="code" href="../../d2/d4b/_instrumentor_8h.html#a42e05b5340607a81e495d6c3c7db7e14">GR_PROFILE_FUNCTION</a>();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        glfwDestroyWindow(<a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a1c7f1fa87b984c3b8a03436814631609">m_Window</a>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        --<a class="code" href="../../d8/d4b/namespace_gear.html#ac2d488e64416f4f4928fe77c6bdc8e1b">s_GLFWWindowCount</a>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d8/d4b/namespace_gear.html#ac2d488e64416f4f4928fe77c6bdc8e1b">s_GLFWWindowCount</a> == 0)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            glfwTerminate();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="../../d8/dc1/class_gear_1_1_windows_window.html#a0ee7ffa440edf62ba5d6a27aa56d7df4">  161</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a0ee7ffa440edf62ba5d6a27aa56d7df4">WindowsWindow::OnUpdate</a>()</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <a class="code" href="../../d2/d4b/_instrumentor_8h.html#a42e05b5340607a81e495d6c3c7db7e14">GR_PROFILE_FUNCTION</a>();</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        glfwPollEvents();</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a0783dd3075eb5309c977acaf322da1b1">m_Context</a>-&gt;SwapBuffers();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="../../d8/dc1/class_gear_1_1_windows_window.html#a64fb516c8a99f515ae400b574c0151cb">  170</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a64fb516c8a99f515ae400b574c0151cb">WindowsWindow::SetVSync</a>(<span class="keywordtype">bool</span> enabled)</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <a class="code" href="../../d2/d4b/_instrumentor_8h.html#a42e05b5340607a81e495d6c3c7db7e14">GR_PROFILE_FUNCTION</a>();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">if</span> (enabled)</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            glfwSwapInterval(1);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            glfwSwapInterval(0);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a1976d9c5be7f617d25e09784c7b57e67">m_Data</a>.<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a52248c69c0b7b188ffa725856c93fe2b">VSync</a> = enabled;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="../../d8/dc1/class_gear_1_1_windows_window.html#a5d1289683360f7c1fb657a1d0b1a2351">  182</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a5d1289683360f7c1fb657a1d0b1a2351">WindowsWindow::IsVSync</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/dc1/class_gear_1_1_windows_window.html#a1976d9c5be7f617d25e09784c7b57e67">m_Data</a>.<a class="code" href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a52248c69c0b7b188ffa725856c93fe2b">VSync</a>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;}</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_gear_1_1_mouse_button_released_event_html"><div class="ttname"><a href="../../db/de0/class_gear_1_1_mouse_button_released_event.html">Gear::MouseButtonReleasedEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/df8/_mouse_event_8h_source.html#l00073">MouseEvent.h:73</a></div></div>
+<div class="ttc" id="astruct_gear_1_1_window_props_html_ac4d367e7a5d74b6ab5c3c9356b516116"><div class="ttname"><a href="../../d1/df9/struct_gear_1_1_window_props.html#ac4d367e7a5d74b6ab5c3c9356b516116">Gear::WindowProps::Title</a></div><div class="ttdeci">std::string Title</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_window_8h_source.html#l00011">Window.h:11</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_mouse_moved_event_html"><div class="ttname"><a href="../../de/d00/class_gear_1_1_mouse_moved_event.html">Gear::MouseMovedEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/df8/_mouse_event_8h_source.html#l00006">MouseEvent.h:6</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_windows_window_html_a0783dd3075eb5309c977acaf322da1b1"><div class="ttname"><a href="../../d8/dc1/class_gear_1_1_windows_window.html#a0783dd3075eb5309c977acaf322da1b1">Gear::WindowsWindow::m_Context</a></div><div class="ttdeci">Scope&lt; GraphicsContext &gt; m_Context</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd7/_windows_window_8h_source.html#l00031">WindowsWindow.h:31</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_windows_window_html_ac81650f1a02c88cf1a552e15948f3d7f"><div class="ttname"><a href="../../d8/dc1/class_gear_1_1_windows_window.html#ac81650f1a02c88cf1a552e15948f3d7f">Gear::WindowsWindow::~WindowsWindow</a></div><div class="ttdeci">virtual ~WindowsWindow()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/_windows_window_8cpp_source.html#l00031">WindowsWindow.cpp:31</a></div></div>
+<div class="ttc" id="astruct_gear_1_1_window_props_html_a8920d39b91b7cca56a831be5a5e595eb"><div class="ttname"><a href="../../d1/df9/struct_gear_1_1_window_props.html#a8920d39b91b7cca56a831be5a5e595eb">Gear::WindowProps::Width</a></div><div class="ttdeci">unsigned int Width</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_window_8h_source.html#l00012">Window.h:12</a></div></div>
+<div class="ttc" id="a_log_8h_html_a7e4992b12c6d3a2fd60ba5135e671c39"><div class="ttname"><a href="../../da/df4/_log_8h.html#a7e4992b12c6d3a2fd60ba5135e671c39">GR_CORE_ERROR</a></div><div class="ttdeci">#define GR_CORE_ERROR(...)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/df4/_log_8h_source.html#l00029">Log.h:29</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_key_typed_event_html"><div class="ttname"><a href="../../d2/dce/class_gear_1_1_key_typed_event.html">Gear::KeyTypedEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d79/_key_event_8h_source.html#l00051">KeyEvent.h:51</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_windows_window_html_a5d1289683360f7c1fb657a1d0b1a2351"><div class="ttname"><a href="../../d8/dc1/class_gear_1_1_windows_window.html#a5d1289683360f7c1fb657a1d0b1a2351">Gear::WindowsWindow::IsVSync</a></div><div class="ttdeci">bool IsVSync() const override</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/_windows_window_8cpp_source.html#l00182">WindowsWindow.cpp:182</a></div></div>
+<div class="ttc" id="a_application_event_8h_html"><div class="ttname"><a href="../../d3/d87/_application_event_8h.html">ApplicationEvent.h</a></div></div>
+<div class="ttc" id="agrpch_8h_html"><div class="ttname"><a href="../../d4/d1b/grpch_8h.html">grpch.h</a></div></div>
+<div class="ttc" id="astruct_gear_1_1_windows_window_1_1_window_data_html_a98e4dee25c0365627b38996add07a214"><div class="ttname"><a href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a98e4dee25c0365627b38996add07a214">Gear::WindowsWindow::WindowData::Width</a></div><div class="ttdeci">unsigned int Width</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd7/_windows_window_8h_source.html#l00035">WindowsWindow.h:35</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_key_pressed_event_html"><div class="ttname"><a href="../../d6/dfd/class_gear_1_1_key_pressed_event.html">Gear::KeyPressedEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d79/_key_event_8h_source.html#l00017">KeyEvent.h:17</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_windows_window_html_a607b61157ad0a1f40282f11555a42668"><div class="ttname"><a href="../../d8/dc1/class_gear_1_1_windows_window.html#a607b61157ad0a1f40282f11555a42668">Gear::WindowsWindow::Init</a></div><div class="ttdeci">virtual void Init(const WindowProps &amp;props)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/_windows_window_8cpp_source.html#l00038">WindowsWindow.cpp:38</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_windows_window_html_a1c7f1fa87b984c3b8a03436814631609"><div class="ttname"><a href="../../d8/dc1/class_gear_1_1_windows_window.html#a1c7f1fa87b984c3b8a03436814631609">Gear::WindowsWindow::m_Window</a></div><div class="ttdeci">GLFWwindow * m_Window</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd7/_windows_window_8h_source.html#l00029">WindowsWindow.h:29</a></div></div>
+<div class="ttc" id="a_windows_window_8h_html"><div class="ttname"><a href="../../de/dd7/_windows_window_8h.html">WindowsWindow.h</a></div></div>
+<div class="ttc" id="astruct_gear_1_1_windows_window_1_1_window_data_html_a8823290a77182feb5dc850c83997c34a"><div class="ttname"><a href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a8823290a77182feb5dc850c83997c34a">Gear::WindowsWindow::WindowData::Title</a></div><div class="ttdeci">std::string Title</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd7/_windows_window_8h_source.html#l00034">WindowsWindow.h:34</a></div></div>
+<div class="ttc" id="a_instrumentor_8h_html_a42e05b5340607a81e495d6c3c7db7e14"><div class="ttname"><a href="../../d2/d4b/_instrumentor_8h.html#a42e05b5340607a81e495d6c3c7db7e14">GR_PROFILE_FUNCTION</a></div><div class="ttdeci">#define GR_PROFILE_FUNCTION()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4b/_instrumentor_8h_source.html#l00131">Instrumentor.h:131</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_windows_window_html_a1976d9c5be7f617d25e09784c7b57e67"><div class="ttname"><a href="../../d8/dc1/class_gear_1_1_windows_window.html#a1976d9c5be7f617d25e09784c7b57e67">Gear::WindowsWindow::m_Data</a></div><div class="ttdeci">WindowData m_Data</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd7/_windows_window_8h_source.html#l00041">WindowsWindow.h:41</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_windows_window_html"><div class="ttname"><a href="../../d8/dc1/class_gear_1_1_windows_window.html">Gear::WindowsWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd7/_windows_window_8h_source.html#l00008">WindowsWindow.h:8</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_mouse_scrolled_event_html"><div class="ttname"><a href="../../da/d7e/class_gear_1_1_mouse_scrolled_event.html">Gear::MouseScrolledEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/df8/_mouse_event_8h_source.html#l00027">MouseEvent.h:27</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_window_html"><div class="ttname"><a href="../../dd/d1f/class_gear_1_1_window.html">Gear::Window</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_window_8h_source.html#l00022">Window.h:22</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_windows_window_html_a80272862911846833db4049d3ed163df"><div class="ttname"><a href="../../d8/dc1/class_gear_1_1_windows_window.html#a80272862911846833db4049d3ed163df">Gear::WindowsWindow::WindowsWindow</a></div><div class="ttdeci">WindowsWindow(const WindowProps &amp;props)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/_windows_window_8cpp_source.html#l00024">WindowsWindow.cpp:24</a></div></div>
+<div class="ttc" id="a_instrumentor_8h_html_a4ecb6a74f29a012dea3a4e3b1e855876"><div class="ttname"><a href="../../d2/d4b/_instrumentor_8h.html#a4ecb6a74f29a012dea3a4e3b1e855876">GR_PROFILE_SCOPE</a></div><div class="ttdeci">#define GR_PROFILE_SCOPE(name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d4b/_instrumentor_8h_source.html#l00130">Instrumentor.h:130</a></div></div>
+<div class="ttc" id="astruct_gear_1_1_windows_window_1_1_window_data_html_a52248c69c0b7b188ffa725856c93fe2b"><div class="ttname"><a href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a52248c69c0b7b188ffa725856c93fe2b">Gear::WindowsWindow::WindowData::VSync</a></div><div class="ttdeci">bool VSync</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd7/_windows_window_8h_source.html#l00036">WindowsWindow.h:36</a></div></div>
+<div class="ttc" id="a_key_event_8h_html"><div class="ttname"><a href="../../dd/d79/_key_event_8h.html">KeyEvent.h</a></div></div>
+<div class="ttc" id="anamespace_gear_html"><div class="ttname"><a href="../../d8/d4b/namespace_gear.html">Gear</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d42/_application_8cpp_source.html#l00011">Application.cpp:11</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_window_close_event_html"><div class="ttname"><a href="../../d5/d2f/class_gear_1_1_window_close_event.html">Gear::WindowCloseEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d87/_application_event_8h_source.html#l00027">ApplicationEvent.h:27</a></div></div>
+<div class="ttc" id="anamespace_gear_html_ace1f77b4b47338e9724bdc5a7b3c882e"><div class="ttname"><a href="../../d8/d4b/namespace_gear.html#ace1f77b4b47338e9724bdc5a7b3c882e">Gear::GLFWErrorCallback</a></div><div class="ttdeci">static void GLFWErrorCallback(int error, const char *description)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/_windows_window_8cpp_source.html#l00014">WindowsWindow.cpp:14</a></div></div>
+<div class="ttc" id="a_core_8h_html_aada7d47fe675d944b0516553e43d2c58"><div class="ttname"><a href="../../d4/d09/_core_8h.html#aada7d47fe675d944b0516553e43d2c58">GR_CORE_ASSERT</a></div><div class="ttdeci">#define GR_CORE_ASSERT(x,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d09/_core_8h_source.html#l00068">Core.h:68</a></div></div>
+<div class="ttc" id="a_log_8h_html_adcf02b331e781f082585b15d04bd56de"><div class="ttname"><a href="../../da/df4/_log_8h.html#adcf02b331e781f082585b15d04bd56de">GR_CORE_INFO</a></div><div class="ttdeci">#define GR_CORE_INFO(...)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/df4/_log_8h_source.html#l00027">Log.h:27</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_mouse_button_pressed_event_html"><div class="ttname"><a href="../../d6/df3/class_gear_1_1_mouse_button_pressed_event.html">Gear::MouseButtonPressedEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/df8/_mouse_event_8h_source.html#l00059">MouseEvent.h:59</a></div></div>
+<div class="ttc" id="astruct_gear_1_1_windows_window_1_1_window_data_html"><div class="ttname"><a href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html">Gear::WindowsWindow::WindowData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd7/_windows_window_8h_source.html#l00033">WindowsWindow.h:33</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_window_resize_event_html"><div class="ttname"><a href="../../db/d09/class_gear_1_1_window_resize_event.html">Gear::WindowResizeEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d87/_application_event_8h_source.html#l00006">ApplicationEvent.h:6</a></div></div>
+<div class="ttc" id="astruct_gear_1_1_window_props_html_ac3e35ffc096b5d342ff23954fcf7b5fa"><div class="ttname"><a href="../../d1/df9/struct_gear_1_1_window_props.html#ac3e35ffc096b5d342ff23954fcf7b5fa">Gear::WindowProps::Height</a></div><div class="ttdeci">unsigned int Height</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_window_8h_source.html#l00013">Window.h:13</a></div></div>
+<div class="ttc" id="astruct_gear_1_1_window_props_html"><div class="ttname"><a href="../../d1/df9/struct_gear_1_1_window_props.html">Gear::WindowProps</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_window_8h_source.html#l00009">Window.h:9</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_key_released_event_html"><div class="ttname"><a href="../../dc/d9e/class_gear_1_1_key_released_event.html">Gear::KeyReleasedEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d79/_key_event_8h_source.html#l00036">KeyEvent.h:36</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_windows_window_html_a0ee7ffa440edf62ba5d6a27aa56d7df4"><div class="ttname"><a href="../../d8/dc1/class_gear_1_1_windows_window.html#a0ee7ffa440edf62ba5d6a27aa56d7df4">Gear::WindowsWindow::OnUpdate</a></div><div class="ttdeci">void OnUpdate() override</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/_windows_window_8cpp_source.html#l00161">WindowsWindow.cpp:161</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_windows_window_html_a64fb516c8a99f515ae400b574c0151cb"><div class="ttname"><a href="../../d8/dc1/class_gear_1_1_windows_window.html#a64fb516c8a99f515ae400b574c0151cb">Gear::WindowsWindow::SetVSync</a></div><div class="ttdeci">void SetVSync(bool enabled) override</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/_windows_window_8cpp_source.html#l00170">WindowsWindow.cpp:170</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_windows_window_html_a5b45023ba114f50beaf9c36fb5ea2f69"><div class="ttname"><a href="../../d8/dc1/class_gear_1_1_windows_window.html#a5b45023ba114f50beaf9c36fb5ea2f69">Gear::WindowsWindow::Shutdown</a></div><div class="ttdeci">virtual void Shutdown()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/_windows_window_8cpp_source.html#l00148">WindowsWindow.cpp:148</a></div></div>
+<div class="ttc" id="a_open_g_l_context_8h_html"><div class="ttname"><a href="../../da/d2c/_open_g_l_context_8h.html">OpenGLContext.h</a></div></div>
+<div class="ttc" id="a_mouse_event_8h_html"><div class="ttname"><a href="../../d4/df8/_mouse_event_8h.html">MouseEvent.h</a></div></div>
+<div class="ttc" id="astruct_gear_1_1_windows_window_1_1_window_data_html_a4222988c4e1cf411bd25e9437779e012"><div class="ttname"><a href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a4222988c4e1cf411bd25e9437779e012">Gear::WindowsWindow::WindowData::Height</a></div><div class="ttdeci">unsigned int Height</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd7/_windows_window_8h_source.html#l00035">WindowsWindow.h:35</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_window_html_a8bfdb15553b8fd4b9bdb96dd9862a4b3"><div class="ttname"><a href="../../dd/d1f/class_gear_1_1_window.html#a8bfdb15553b8fd4b9bdb96dd9862a4b3">Gear::Window::Create</a></div><div class="ttdeci">static Window * Create(const WindowProps &amp;props=WindowProps())</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/_windows_window_8cpp_source.html#l00019">WindowsWindow.cpp:19</a></div></div>
+<div class="ttc" id="astruct_gear_1_1_windows_window_1_1_window_data_html_a8db93df561ec60c892e22c91a7f4c76d"><div class="ttname"><a href="../../d7/dfd/struct_gear_1_1_windows_window_1_1_window_data.html#a8db93df561ec60c892e22c91a7f4c76d">Gear::WindowsWindow::WindowData::EventCallback</a></div><div class="ttdeci">EventCallbackFn EventCallback</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd7/_windows_window_8h_source.html#l00038">WindowsWindow.h:38</a></div></div>
+<div class="ttc" id="anamespace_gear_html_ac2d488e64416f4f4928fe77c6bdc8e1b"><div class="ttname"><a href="../../d8/d4b/namespace_gear.html#ac2d488e64416f4f4928fe77c6bdc8e1b">Gear::s_GLFWWindowCount</a></div><div class="ttdeci">static uint8_t s_GLFWWindowCount</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d9d/_windows_window_8cpp_source.html#l00012">WindowsWindow.cpp:12</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_53d5e98abdf3a310efd03de30bd70f59.html">Gear</a></li><li class="navelem"><a class="el" href="../../dir_2e86bc557449db88413d12c593cb549e.html">src</a></li><li class="navelem"><a class="el" href="../../dir_e0dd27717ea3d35aa5f857ee7edcadee.html">Platform</a></li><li class="navelem"><a class="el" href="../../dir_b90203381cb6d05b60ac95771975474c.html">Windows</a></li><li class="navelem"><a class="el" href="../../db/d9d/_windows_window_8cpp.html">WindowsWindow.cpp</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

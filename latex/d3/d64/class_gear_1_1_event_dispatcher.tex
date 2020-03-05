@@ -1,0 +1,114 @@
+\hypertarget{class_gear_1_1_event_dispatcher}{}\doxysection{Gear\+::Event\+Dispatcher 클래스 참조}
+\label{class_gear_1_1_event_dispatcher}\index{Gear::EventDispatcher@{Gear::EventDispatcher}}
+
+
+{\ttfamily \#include $<$Event.\+h$>$}
+
+
+
+Gear\+::Event\+Dispatcher에 대한 협력 다이어그램\+:
+% FIG 0
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_event_dispatcher_a6a6ec7a99908d82bf82c2f79769e4ff8}{Event\+Dispatcher}} (\mbox{\hyperlink{class_gear_1_1_event}{Event}} \&event)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{class_gear_1_1_event_dispatcher_ab8abb015f20e1342cabe633f023a7614}{Dispatch}} (\mbox{\hyperlink{class_gear_1_1_event_dispatcher_ac28b824028b9458ec20c6b27a14c47f0}{Event\+Fn}}$<$ T $>$ func)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 타입}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{class_gear_1_1_event_dispatcher_ac28b824028b9458ec20c6b27a14c47f0}{Event\+Fn}} = std\+::function$<$ bool(T \&)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_event}{Event}} \& \mbox{\hyperlink{class_gear_1_1_event_dispatcher_a64dc3c9ce6cf9d30b04d630843dae12b}{m\+\_\+\+Event}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Event.\+h 파일의 50 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 타입정의 문서화}
+\mbox{\Hypertarget{class_gear_1_1_event_dispatcher_ac28b824028b9458ec20c6b27a14c47f0}\label{class_gear_1_1_event_dispatcher_ac28b824028b9458ec20c6b27a14c47f0}} 
+\index{Gear::EventDispatcher@{Gear::EventDispatcher}!EventFn@{EventFn}}
+\index{EventFn@{EventFn}!Gear::EventDispatcher@{Gear::EventDispatcher}}
+\doxysubsubsection{\texorpdfstring{EventFn}{EventFn}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{class_gear_1_1_event_dispatcher_ac28b824028b9458ec20c6b27a14c47f0}{Gear\+::\+Event\+Dispatcher\+::\+Event\+Fn}} =  std\+::function$<$bool(T\&)$>$\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Event.\+h 파일의 52 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_event_dispatcher_a6a6ec7a99908d82bf82c2f79769e4ff8}\label{class_gear_1_1_event_dispatcher_a6a6ec7a99908d82bf82c2f79769e4ff8}} 
+\index{Gear::EventDispatcher@{Gear::EventDispatcher}!EventDispatcher@{EventDispatcher}}
+\index{EventDispatcher@{EventDispatcher}!Gear::EventDispatcher@{Gear::EventDispatcher}}
+\doxysubsubsection{\texorpdfstring{EventDispatcher()}{EventDispatcher()}}
+{\footnotesize\ttfamily Gear\+::\+Event\+Dispatcher\+::\+Event\+Dispatcher (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_event}{Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Event.\+h 파일의 54 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55             : \mbox{\hyperlink{class_gear_1_1_event_dispatcher_a64dc3c9ce6cf9d30b04d630843dae12b}{m\_Event}}(event)}
+\DoxyCodeLine{56         \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_event_dispatcher_ab8abb015f20e1342cabe633f023a7614}\label{class_gear_1_1_event_dispatcher_ab8abb015f20e1342cabe633f023a7614}} 
+\index{Gear::EventDispatcher@{Gear::EventDispatcher}!Dispatch@{Dispatch}}
+\index{Dispatch@{Dispatch}!Gear::EventDispatcher@{Gear::EventDispatcher}}
+\doxysubsubsection{\texorpdfstring{Dispatch()}{Dispatch()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool Gear\+::\+Event\+Dispatcher\+::\+Dispatch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_event_dispatcher_ac28b824028b9458ec20c6b27a14c47f0}{Event\+Fn}}$<$ T $>$}]{func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Event.\+h 파일의 59 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59                                        \{}
+\DoxyCodeLine{60             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_gear_1_1_event_dispatcher_a64dc3c9ce6cf9d30b04d630843dae12b}{m\_Event}}.\mbox{\hyperlink{class_gear_1_1_event_aafeedc7f01a03c29964cecd1dcfcdd3d}{GetEventType}}() == T::GetStaticType()) \{}
+\DoxyCodeLine{61                 \mbox{\hyperlink{class_gear_1_1_event_dispatcher_a64dc3c9ce6cf9d30b04d630843dae12b}{m\_Event}}.\mbox{\hyperlink{class_gear_1_1_event_accf654785eb1c3dda58dfc8b0a8765c9}{m\_Handled}} = func(*(T*)\&\mbox{\hyperlink{class_gear_1_1_event_dispatcher_a64dc3c9ce6cf9d30b04d630843dae12b}{m\_Event}});}
+\DoxyCodeLine{62                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{63             \}}
+\DoxyCodeLine{64             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{65         \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 1
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_event_dispatcher_a64dc3c9ce6cf9d30b04d630843dae12b}\label{class_gear_1_1_event_dispatcher_a64dc3c9ce6cf9d30b04d630843dae12b}} 
+\index{Gear::EventDispatcher@{Gear::EventDispatcher}!m\_Event@{m\_Event}}
+\index{m\_Event@{m\_Event}!Gear::EventDispatcher@{Gear::EventDispatcher}}
+\doxysubsubsection{\texorpdfstring{m\_Event}{m\_Event}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gear_1_1_event}{Event}}\& Gear\+::\+Event\+Dispatcher\+::m\+\_\+\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Event.\+h 파일의 67 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Events/\mbox{\hyperlink{_event_8h}{Event.\+h}}\end{DoxyCompactItemize}

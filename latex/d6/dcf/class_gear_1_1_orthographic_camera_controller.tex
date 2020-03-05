@@ -1,0 +1,350 @@
+\hypertarget{class_gear_1_1_orthographic_camera_controller}{}\doxysection{Gear\+::Orthographic\+Camera\+Controller 클래스 참조}
+\label{class_gear_1_1_orthographic_camera_controller}\index{Gear::OrthographicCameraController@{Gear::OrthographicCameraController}}
+
+
+{\ttfamily \#include $<$Orthographic\+Camera\+Controller.\+h$>$}
+
+
+
+Gear\+::Orthographic\+Camera\+Controller에 대한 협력 다이어그램\+:
+% FIG 0
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a055f57784876a9132b50f414209fff7b}{Orthographic\+Camera\+Controller}} (float aspect\+Ratio, bool rotation=false)
+\item 
+void \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a01115078b303039fdfc5b78a0ab66e6a}{On\+Update}} (\mbox{\hyperlink{class_gear_1_1_timestep}{Timestep}} ts)
+\item 
+void \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a3195301ef4e55c0e737b2902cd3b780e}{On\+Event}} (\mbox{\hyperlink{class_gear_1_1_event}{Event}} \&e)
+\item 
+\mbox{\hyperlink{class_gear_1_1_orthographic_camera}{Orthographic\+Camera}} \& \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_adc227373f8c69c3e3d0c1cfad8c3e7ba}{Get\+Camera}} ()
+\item 
+const \mbox{\hyperlink{class_gear_1_1_orthographic_camera}{Orthographic\+Camera}} \& \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a1160b4ec89ae9f68511f43f89f89b260}{Get\+Camera}} () const
+\item 
+float \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ad342728efb490e3994de3c74714e0f0c}{Get\+Zoom\+Level}} () const
+\item 
+void \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_afa93ba053310d800a9a35d93967bad81}{Set\+Zoom\+Level}} (float level)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a35f49fd2b62479db2016c24d3c3f967c}{On\+Mouse\+Scrolled}} (\mbox{\hyperlink{class_gear_1_1_mouse_scrolled_event}{Mouse\+Scrolled\+Event}} \&e)
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a8802accfe1fe096e4a060206c24a9518}{On\+Window\+Resized}} (\mbox{\hyperlink{class_gear_1_1_window_resize_event}{Window\+Resize\+Event}} \&e)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_af421a7c6a0b9a90ebff7a7dcef571cc6}{m\+\_\+\+Aspect\+Ratio}}
+\item 
+float \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}{m\+\_\+\+Zoom\+Level}} = 1.\+0f
+\item 
+\mbox{\hyperlink{class_gear_1_1_orthographic_camera}{Orthographic\+Camera}} \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a0cf06a02cf256d647d0e3f1daccb2453}{m\+\_\+\+Camera}}
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a86005ad1b7a8119d9db64b04f0fe294c}{m\+\_\+\+Rotation}} = false
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a9c1912622f2d20fcc2d1de8727da15fe}{m\+\_\+\+Camera\+Position}} = \{ 0.\+0f, 0.\+0f, 0.\+0f \}
+\item 
+float \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a468fd12d87fe9e782b69c798166c388f}{m\+\_\+\+Camera\+Rotation}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4708801f816b85f69ac8522329cc72f}{m\+\_\+\+Camera\+Translation\+Speed}} = 5.\+0f
+\item 
+float \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a296476eb520b12a20a51e90f78420b4a}{m\+\_\+\+Camera\+Rotation\+Speed}} = 180.\+0f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Orthographic\+Camera\+Controller.\+h 파일의 11 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_controller_a055f57784876a9132b50f414209fff7b}\label{class_gear_1_1_orthographic_camera_controller_a055f57784876a9132b50f414209fff7b}} 
+\index{Gear::OrthographicCameraController@{Gear::OrthographicCameraController}!OrthographicCameraController@{OrthographicCameraController}}
+\index{OrthographicCameraController@{OrthographicCameraController}!Gear::OrthographicCameraController@{Gear::OrthographicCameraController}}
+\doxysubsubsection{\texorpdfstring{OrthographicCameraController()}{OrthographicCameraController()}}
+{\footnotesize\ttfamily Gear\+::\+Orthographic\+Camera\+Controller\+::\+Orthographic\+Camera\+Controller (\begin{DoxyParamCaption}\item[{float}]{aspect\+Ratio,  }\item[{bool}]{rotation = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Orthographic\+Camera\+Controller.\+cpp 파일의 8 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9         : \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_af421a7c6a0b9a90ebff7a7dcef571cc6}{m\_AspectRatio}}(aspectRatio), \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a0cf06a02cf256d647d0e3f1daccb2453}{m\_Camera}}(-\/\mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_af421a7c6a0b9a90ebff7a7dcef571cc6}{m\_AspectRatio}} * \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}{m\_ZoomLevel}}, \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_af421a7c6a0b9a90ebff7a7dcef571cc6}{m\_AspectRatio}} * \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}{m\_ZoomLevel}}, -\/\mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}{m\_ZoomLevel}}, \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}{m\_ZoomLevel}}), \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a86005ad1b7a8119d9db64b04f0fe294c}{m\_Rotation}}(rotation)}
+\DoxyCodeLine{10     \{}
+\DoxyCodeLine{11     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_controller_adc227373f8c69c3e3d0c1cfad8c3e7ba}\label{class_gear_1_1_orthographic_camera_controller_adc227373f8c69c3e3d0c1cfad8c3e7ba}} 
+\index{Gear::OrthographicCameraController@{Gear::OrthographicCameraController}!GetCamera@{GetCamera}}
+\index{GetCamera@{GetCamera}!Gear::OrthographicCameraController@{Gear::OrthographicCameraController}}
+\doxysubsubsection{\texorpdfstring{GetCamera()}{GetCamera()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gear_1_1_orthographic_camera}{Orthographic\+Camera}}\& Gear\+::\+Orthographic\+Camera\+Controller\+::\+Get\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Orthographic\+Camera\+Controller.\+h 파일의 19 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a0cf06a02cf256d647d0e3f1daccb2453}{m\_Camera}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_controller_a1160b4ec89ae9f68511f43f89f89b260}\label{class_gear_1_1_orthographic_camera_controller_a1160b4ec89ae9f68511f43f89f89b260}} 
+\index{Gear::OrthographicCameraController@{Gear::OrthographicCameraController}!GetCamera@{GetCamera}}
+\index{GetCamera@{GetCamera}!Gear::OrthographicCameraController@{Gear::OrthographicCameraController}}
+\doxysubsubsection{\texorpdfstring{GetCamera()}{GetCamera()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_gear_1_1_orthographic_camera}{Orthographic\+Camera}}\& Gear\+::\+Orthographic\+Camera\+Controller\+::\+Get\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Orthographic\+Camera\+Controller.\+h 파일의 20 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a0cf06a02cf256d647d0e3f1daccb2453}{m\_Camera}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_controller_ad342728efb490e3994de3c74714e0f0c}\label{class_gear_1_1_orthographic_camera_controller_ad342728efb490e3994de3c74714e0f0c}} 
+\index{Gear::OrthographicCameraController@{Gear::OrthographicCameraController}!GetZoomLevel@{GetZoomLevel}}
+\index{GetZoomLevel@{GetZoomLevel}!Gear::OrthographicCameraController@{Gear::OrthographicCameraController}}
+\doxysubsubsection{\texorpdfstring{GetZoomLevel()}{GetZoomLevel()}}
+{\footnotesize\ttfamily float Gear\+::\+Orthographic\+Camera\+Controller\+::\+Get\+Zoom\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Orthographic\+Camera\+Controller.\+h 파일의 22 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}{m\_ZoomLevel}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_controller_a3195301ef4e55c0e737b2902cd3b780e}\label{class_gear_1_1_orthographic_camera_controller_a3195301ef4e55c0e737b2902cd3b780e}} 
+\index{Gear::OrthographicCameraController@{Gear::OrthographicCameraController}!OnEvent@{OnEvent}}
+\index{OnEvent@{OnEvent}!Gear::OrthographicCameraController@{Gear::OrthographicCameraController}}
+\doxysubsubsection{\texorpdfstring{OnEvent()}{OnEvent()}}
+{\footnotesize\ttfamily void Gear\+::\+Orthographic\+Camera\+Controller\+::\+On\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_event}{Event}} \&}]{e }\end{DoxyParamCaption})}
+
+
+
+Orthographic\+Camera\+Controller.\+cpp 파일의 40 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41     \{}
+\DoxyCodeLine{42         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44         EventDispatcher dispatcher(e);}
+\DoxyCodeLine{45         dispatcher.Dispatch<MouseScrolledEvent>(\mbox{\hyperlink{_core_8h_a1b294077fd8afbc1740916700e5390d4}{GR\_BIND\_EVENT\_FN}}(\mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a35f49fd2b62479db2016c24d3c3f967c}{OrthographicCameraController::OnMouseScrolled}}));}
+\DoxyCodeLine{46         dispatcher.Dispatch<WindowResizeEvent>(\mbox{\hyperlink{_core_8h_a1b294077fd8afbc1740916700e5390d4}{GR\_BIND\_EVENT\_FN}}(\mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a8802accfe1fe096e4a060206c24a9518}{OrthographicCameraController::OnWindowResized}}));}
+\DoxyCodeLine{47     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 1
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_controller_a35f49fd2b62479db2016c24d3c3f967c}\label{class_gear_1_1_orthographic_camera_controller_a35f49fd2b62479db2016c24d3c3f967c}} 
+\index{Gear::OrthographicCameraController@{Gear::OrthographicCameraController}!OnMouseScrolled@{OnMouseScrolled}}
+\index{OnMouseScrolled@{OnMouseScrolled}!Gear::OrthographicCameraController@{Gear::OrthographicCameraController}}
+\doxysubsubsection{\texorpdfstring{OnMouseScrolled()}{OnMouseScrolled()}}
+{\footnotesize\ttfamily bool Gear\+::\+Orthographic\+Camera\+Controller\+::\+On\+Mouse\+Scrolled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_mouse_scrolled_event}{Mouse\+Scrolled\+Event}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Orthographic\+Camera\+Controller.\+cpp 파일의 48 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49     \{}
+\DoxyCodeLine{50         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52         \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}{m\_ZoomLevel}} -\/= e.GetYOffset() * 0.25f;}
+\DoxyCodeLine{53         \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}{m\_ZoomLevel}} = std::max(\mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}{m\_ZoomLevel}}, 0.25f);}
+\DoxyCodeLine{54         \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a0cf06a02cf256d647d0e3f1daccb2453}{m\_Camera}}.\mbox{\hyperlink{class_gear_1_1_orthographic_camera_a93fa0dbd22fdee3b80a7c39c7dee23bf}{SetProjection}}(-\/\mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_af421a7c6a0b9a90ebff7a7dcef571cc6}{m\_AspectRatio}} * \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}{m\_ZoomLevel}}, \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_af421a7c6a0b9a90ebff7a7dcef571cc6}{m\_AspectRatio}} * \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}{m\_ZoomLevel}}, -\/\mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}{m\_ZoomLevel}}, \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}{m\_ZoomLevel}});}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{57     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_controller_a01115078b303039fdfc5b78a0ab66e6a}\label{class_gear_1_1_orthographic_camera_controller_a01115078b303039fdfc5b78a0ab66e6a}} 
+\index{Gear::OrthographicCameraController@{Gear::OrthographicCameraController}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!Gear::OrthographicCameraController@{Gear::OrthographicCameraController}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily void Gear\+::\+Orthographic\+Camera\+Controller\+::\+On\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_timestep}{Timestep}}}]{ts }\end{DoxyParamCaption})}
+
+
+
+Orthographic\+Camera\+Controller.\+cpp 파일의 12 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13     \{}
+\DoxyCodeLine{14         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_gear_1_1_input_a8f5114f35156683c8f50ecca7cd0a9ce}{Input::IsKeyPressd}}(\mbox{\hyperlink{_key_codes_8h_a6f1ce218d54f1b3a93232f56def27fef}{GR\_KEY\_A}}))}
+\DoxyCodeLine{17             \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a9c1912622f2d20fcc2d1de8727da15fe}{m\_CameraPosition}}.x -\/= \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4708801f816b85f69ac8522329cc72f}{m\_CameraTranslationSpeed}} * ts;}
+\DoxyCodeLine{18         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_gear_1_1_input_a8f5114f35156683c8f50ecca7cd0a9ce}{Input::IsKeyPressd}}(\mbox{\hyperlink{_key_codes_8h_a517baa680bf2a0ab840969f23cb49e02}{GR\_KEY\_D}}))}
+\DoxyCodeLine{19             \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a9c1912622f2d20fcc2d1de8727da15fe}{m\_CameraPosition}}.x += \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4708801f816b85f69ac8522329cc72f}{m\_CameraTranslationSpeed}} * ts;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_gear_1_1_input_a8f5114f35156683c8f50ecca7cd0a9ce}{Input::IsKeyPressd}}(\mbox{\hyperlink{_key_codes_8h_a4e4109218a529439394630274ac9acae}{GR\_KEY\_W}}))}
+\DoxyCodeLine{22             \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a9c1912622f2d20fcc2d1de8727da15fe}{m\_CameraPosition}}.y += \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4708801f816b85f69ac8522329cc72f}{m\_CameraTranslationSpeed}} * ts;}
+\DoxyCodeLine{23         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_gear_1_1_input_a8f5114f35156683c8f50ecca7cd0a9ce}{Input::IsKeyPressd}}(\mbox{\hyperlink{_key_codes_8h_a3aa914a89cf4e753961983bf42232fb5}{GR\_KEY\_S}}))}
+\DoxyCodeLine{24             \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a9c1912622f2d20fcc2d1de8727da15fe}{m\_CameraPosition}}.y -\/= \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4708801f816b85f69ac8522329cc72f}{m\_CameraTranslationSpeed}} * ts;}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a86005ad1b7a8119d9db64b04f0fe294c}{m\_Rotation}})}
+\DoxyCodeLine{27         \{}
+\DoxyCodeLine{28             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_gear_1_1_input_a8f5114f35156683c8f50ecca7cd0a9ce}{Input::IsKeyPressd}}(\mbox{\hyperlink{_key_codes_8h_a835f810dd7d05c67efad267efc9932c7}{GR\_KEY\_Q}}))}
+\DoxyCodeLine{29                 \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a468fd12d87fe9e782b69c798166c388f}{m\_CameraRotation}} += \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a296476eb520b12a20a51e90f78420b4a}{m\_CameraRotationSpeed}} * ts;}
+\DoxyCodeLine{30             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_gear_1_1_input_a8f5114f35156683c8f50ecca7cd0a9ce}{Input::IsKeyPressd}}(\mbox{\hyperlink{_key_codes_8h_a76032ede7785bcb01495b292b266402e}{GR\_KEY\_E}}))}
+\DoxyCodeLine{31                 \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a468fd12d87fe9e782b69c798166c388f}{m\_CameraRotation}} -\/= \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a296476eb520b12a20a51e90f78420b4a}{m\_CameraRotationSpeed}} * ts;}
+\DoxyCodeLine{32             }
+\DoxyCodeLine{33             \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a0cf06a02cf256d647d0e3f1daccb2453}{m\_Camera}}.\mbox{\hyperlink{class_gear_1_1_orthographic_camera_a7a207d10fbfcf4b90ff1577b0052dc29}{SetRotation}}(\mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a468fd12d87fe9e782b69c798166c388f}{m\_CameraRotation}});}
+\DoxyCodeLine{34         \}}
+\DoxyCodeLine{35         }
+\DoxyCodeLine{36         \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a0cf06a02cf256d647d0e3f1daccb2453}{m\_Camera}}.\mbox{\hyperlink{class_gear_1_1_orthographic_camera_a5dbc7cbe9c512b38cca28e354ed7a3c0}{SetPosition}}(\mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a9c1912622f2d20fcc2d1de8727da15fe}{m\_CameraPosition}});}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38         \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4708801f816b85f69ac8522329cc72f}{m\_CameraTranslationSpeed}} = \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}{m\_ZoomLevel}};}
+\DoxyCodeLine{39     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 4
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_controller_a8802accfe1fe096e4a060206c24a9518}\label{class_gear_1_1_orthographic_camera_controller_a8802accfe1fe096e4a060206c24a9518}} 
+\index{Gear::OrthographicCameraController@{Gear::OrthographicCameraController}!OnWindowResized@{OnWindowResized}}
+\index{OnWindowResized@{OnWindowResized}!Gear::OrthographicCameraController@{Gear::OrthographicCameraController}}
+\doxysubsubsection{\texorpdfstring{OnWindowResized()}{OnWindowResized()}}
+{\footnotesize\ttfamily bool Gear\+::\+Orthographic\+Camera\+Controller\+::\+On\+Window\+Resized (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_window_resize_event}{Window\+Resize\+Event}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Orthographic\+Camera\+Controller.\+cpp 파일의 58 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59     \{}
+\DoxyCodeLine{60         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62         \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_af421a7c6a0b9a90ebff7a7dcef571cc6}{m\_AspectRatio}} = (float)e.GetWidth() / (float)e.GetHeight();}
+\DoxyCodeLine{63         \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_a0cf06a02cf256d647d0e3f1daccb2453}{m\_Camera}}.\mbox{\hyperlink{class_gear_1_1_orthographic_camera_a93fa0dbd22fdee3b80a7c39c7dee23bf}{SetProjection}}(-\/\mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_af421a7c6a0b9a90ebff7a7dcef571cc6}{m\_AspectRatio}} * \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}{m\_ZoomLevel}}, \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_af421a7c6a0b9a90ebff7a7dcef571cc6}{m\_AspectRatio}} * \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}{m\_ZoomLevel}}, -\/\mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}{m\_ZoomLevel}}, \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}{m\_ZoomLevel}});}
+\DoxyCodeLine{64         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{65     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 5
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 6
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_controller_afa93ba053310d800a9a35d93967bad81}\label{class_gear_1_1_orthographic_camera_controller_afa93ba053310d800a9a35d93967bad81}} 
+\index{Gear::OrthographicCameraController@{Gear::OrthographicCameraController}!SetZoomLevel@{SetZoomLevel}}
+\index{SetZoomLevel@{SetZoomLevel}!Gear::OrthographicCameraController@{Gear::OrthographicCameraController}}
+\doxysubsubsection{\texorpdfstring{SetZoomLevel()}{SetZoomLevel()}}
+{\footnotesize\ttfamily void Gear\+::\+Orthographic\+Camera\+Controller\+::\+Set\+Zoom\+Level (\begin{DoxyParamCaption}\item[{float}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Orthographic\+Camera\+Controller.\+h 파일의 23 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23 \{ \mbox{\hyperlink{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}{m\_ZoomLevel}} = level; \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_controller_af421a7c6a0b9a90ebff7a7dcef571cc6}\label{class_gear_1_1_orthographic_camera_controller_af421a7c6a0b9a90ebff7a7dcef571cc6}} 
+\index{Gear::OrthographicCameraController@{Gear::OrthographicCameraController}!m\_AspectRatio@{m\_AspectRatio}}
+\index{m\_AspectRatio@{m\_AspectRatio}!Gear::OrthographicCameraController@{Gear::OrthographicCameraController}}
+\doxysubsubsection{\texorpdfstring{m\_AspectRatio}{m\_AspectRatio}}
+{\footnotesize\ttfamily float Gear\+::\+Orthographic\+Camera\+Controller\+::m\+\_\+\+Aspect\+Ratio\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Orthographic\+Camera\+Controller.\+h 파일의 28 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_controller_a0cf06a02cf256d647d0e3f1daccb2453}\label{class_gear_1_1_orthographic_camera_controller_a0cf06a02cf256d647d0e3f1daccb2453}} 
+\index{Gear::OrthographicCameraController@{Gear::OrthographicCameraController}!m\_Camera@{m\_Camera}}
+\index{m\_Camera@{m\_Camera}!Gear::OrthographicCameraController@{Gear::OrthographicCameraController}}
+\doxysubsubsection{\texorpdfstring{m\_Camera}{m\_Camera}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gear_1_1_orthographic_camera}{Orthographic\+Camera}} Gear\+::\+Orthographic\+Camera\+Controller\+::m\+\_\+\+Camera\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Orthographic\+Camera\+Controller.\+h 파일의 30 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_controller_a9c1912622f2d20fcc2d1de8727da15fe}\label{class_gear_1_1_orthographic_camera_controller_a9c1912622f2d20fcc2d1de8727da15fe}} 
+\index{Gear::OrthographicCameraController@{Gear::OrthographicCameraController}!m\_CameraPosition@{m\_CameraPosition}}
+\index{m\_CameraPosition@{m\_CameraPosition}!Gear::OrthographicCameraController@{Gear::OrthographicCameraController}}
+\doxysubsubsection{\texorpdfstring{m\_CameraPosition}{m\_CameraPosition}}
+{\footnotesize\ttfamily glm\+::vec3 Gear\+::\+Orthographic\+Camera\+Controller\+::m\+\_\+\+Camera\+Position = \{ 0.\+0f, 0.\+0f, 0.\+0f \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Orthographic\+Camera\+Controller.\+h 파일의 34 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_controller_a468fd12d87fe9e782b69c798166c388f}\label{class_gear_1_1_orthographic_camera_controller_a468fd12d87fe9e782b69c798166c388f}} 
+\index{Gear::OrthographicCameraController@{Gear::OrthographicCameraController}!m\_CameraRotation@{m\_CameraRotation}}
+\index{m\_CameraRotation@{m\_CameraRotation}!Gear::OrthographicCameraController@{Gear::OrthographicCameraController}}
+\doxysubsubsection{\texorpdfstring{m\_CameraRotation}{m\_CameraRotation}}
+{\footnotesize\ttfamily float Gear\+::\+Orthographic\+Camera\+Controller\+::m\+\_\+\+Camera\+Rotation = 0.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Orthographic\+Camera\+Controller.\+h 파일의 35 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_controller_a296476eb520b12a20a51e90f78420b4a}\label{class_gear_1_1_orthographic_camera_controller_a296476eb520b12a20a51e90f78420b4a}} 
+\index{Gear::OrthographicCameraController@{Gear::OrthographicCameraController}!m\_CameraRotationSpeed@{m\_CameraRotationSpeed}}
+\index{m\_CameraRotationSpeed@{m\_CameraRotationSpeed}!Gear::OrthographicCameraController@{Gear::OrthographicCameraController}}
+\doxysubsubsection{\texorpdfstring{m\_CameraRotationSpeed}{m\_CameraRotationSpeed}}
+{\footnotesize\ttfamily float Gear\+::\+Orthographic\+Camera\+Controller\+::m\+\_\+\+Camera\+Rotation\+Speed = 180.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Orthographic\+Camera\+Controller.\+h 파일의 37 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_controller_ab4708801f816b85f69ac8522329cc72f}\label{class_gear_1_1_orthographic_camera_controller_ab4708801f816b85f69ac8522329cc72f}} 
+\index{Gear::OrthographicCameraController@{Gear::OrthographicCameraController}!m\_CameraTranslationSpeed@{m\_CameraTranslationSpeed}}
+\index{m\_CameraTranslationSpeed@{m\_CameraTranslationSpeed}!Gear::OrthographicCameraController@{Gear::OrthographicCameraController}}
+\doxysubsubsection{\texorpdfstring{m\_CameraTranslationSpeed}{m\_CameraTranslationSpeed}}
+{\footnotesize\ttfamily float Gear\+::\+Orthographic\+Camera\+Controller\+::m\+\_\+\+Camera\+Translation\+Speed = 5.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Orthographic\+Camera\+Controller.\+h 파일의 37 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_controller_a86005ad1b7a8119d9db64b04f0fe294c}\label{class_gear_1_1_orthographic_camera_controller_a86005ad1b7a8119d9db64b04f0fe294c}} 
+\index{Gear::OrthographicCameraController@{Gear::OrthographicCameraController}!m\_Rotation@{m\_Rotation}}
+\index{m\_Rotation@{m\_Rotation}!Gear::OrthographicCameraController@{Gear::OrthographicCameraController}}
+\doxysubsubsection{\texorpdfstring{m\_Rotation}{m\_Rotation}}
+{\footnotesize\ttfamily bool Gear\+::\+Orthographic\+Camera\+Controller\+::m\+\_\+\+Rotation = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Orthographic\+Camera\+Controller.\+h 파일의 32 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}\label{class_gear_1_1_orthographic_camera_controller_ab4e62b82fd94894b23d26a6f1e8fcbe8}} 
+\index{Gear::OrthographicCameraController@{Gear::OrthographicCameraController}!m\_ZoomLevel@{m\_ZoomLevel}}
+\index{m\_ZoomLevel@{m\_ZoomLevel}!Gear::OrthographicCameraController@{Gear::OrthographicCameraController}}
+\doxysubsubsection{\texorpdfstring{m\_ZoomLevel}{m\_ZoomLevel}}
+{\footnotesize\ttfamily float Gear\+::\+Orthographic\+Camera\+Controller\+::m\+\_\+\+Zoom\+Level = 1.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Orthographic\+Camera\+Controller.\+h 파일의 29 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Renderer/\mbox{\hyperlink{_orthographic_camera_controller_8h}{Orthographic\+Camera\+Controller.\+h}}\item 
+Gear/src/\+Gear/\+Renderer/\mbox{\hyperlink{_orthographic_camera_controller_8cpp}{Orthographic\+Camera\+Controller.\+cpp}}\end{DoxyCompactItemize}

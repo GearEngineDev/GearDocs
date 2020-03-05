@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GearEngine: Gear/src/Gear/Core/Application.h 소스 파일</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../EngineLogo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GearEngine
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d9/da3/_application_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Application.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/da3/_application_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d09/_core_8h.html">Core.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/d42/_window_8h.html">Window.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/d56/_scene_8h.html">Gear/Core/Scene.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/d6d/_event_8h.html">Gear/Events/Event.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/d87/_application_event_8h.html">Gear/Events/ApplicationEvent.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/dae/_timestep_8h.html">Gear/Core/Timestep.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/d68/_im_gui_layer_8h.html">Gear/ImGui/ImGuiLayer.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d8/d4b/namespace_gear.html">Gear</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d6/d10/class_gear_1_1_application.html">   17</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d6/d10/class_gear_1_1_application.html">Application</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="../../d6/d10/class_gear_1_1_application.html#adeae0a9fc9ba0d1439f1af1ba3ab2a91">Application</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d6/d10/class_gear_1_1_application.html#a63ca74fae055463c3f73ea5da8a7fb01">~Application</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d6/d10/class_gear_1_1_application.html#a1a8787f10a5132e3a92a9f4e6ab8e3c0">Run</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d6/d10/class_gear_1_1_application.html#a8487b61d01833a84ee9ca9c354d8f8b9">OnEvent</a>(<a class="code" href="../../d2/d64/class_gear_1_1_event.html">Event</a>&amp; e);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d6/d10/class_gear_1_1_application.html#a283bd8871db563d9948c1be5450387fb">   27</a></span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="../../d6/d10/class_gear_1_1_application.html">Application</a>&amp; <a class="code" href="../../d6/d10/class_gear_1_1_application.html#a283bd8871db563d9948c1be5450387fb">Get</a>() { <span class="keywordflow">return</span> *<a class="code" href="../../d6/d10/class_gear_1_1_application.html#af20b4dc1c356c6843a492a6b1ee6d588">s_Instance</a>; }</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d6/d10/class_gear_1_1_application.html#a2253b406ab3c4a74fd5e58d76e3f0408">   28</a></span>&#160;        <span class="keyword">inline</span> <a class="code" href="../../dd/d1f/class_gear_1_1_window.html">Window</a>&amp; <a class="code" href="../../d6/d10/class_gear_1_1_application.html#a2253b406ab3c4a74fd5e58d76e3f0408">GetWindow</a>() { <span class="keywordflow">return</span> *<a class="code" href="../../d6/d10/class_gear_1_1_application.html#a1798d33948295a2b2c92f5169a53101c">m_Window</a>; }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d6/d10/class_gear_1_1_application.html#aebbf7985b1ca5ea5b8341d8ff2411f02">OnWindowClose</a>(<a class="code" href="../../d5/d2f/class_gear_1_1_window_close_event.html">WindowCloseEvent</a>&amp; e);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d6/d10/class_gear_1_1_application.html#a5f3b89a0f64ca8abd231c8769ea41f13">OnWindowResize</a>(<a class="code" href="../../db/d09/class_gear_1_1_window_resize_event.html">WindowResizeEvent</a>&amp; e);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d6/d10/class_gear_1_1_application.html#a5b45576d85e25ee872f8cf4a33fd0830">   35</a></span>&#160;        <a class="code" href="../../d3/de8/class_gear_1_1_im_gui_layer.html">ImGuiLayer</a>* <a class="code" href="../../d6/d10/class_gear_1_1_application.html#a5b45576d85e25ee872f8cf4a33fd0830">m_ImGuilayer</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d6/d10/class_gear_1_1_application.html#a1798d33948295a2b2c92f5169a53101c">   38</a></span>&#160;        std::unique_ptr&lt;Window&gt; <a class="code" href="../../d6/d10/class_gear_1_1_application.html#a1798d33948295a2b2c92f5169a53101c">m_Window</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d6/d10/class_gear_1_1_application.html#ada1fcd30ce47eea61f7276dbec49c672">   39</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d6/d10/class_gear_1_1_application.html#ada1fcd30ce47eea61f7276dbec49c672">m_Running</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d6/d10/class_gear_1_1_application.html#a6236185ab04e1460e2dee3a4cd8c46d4">   40</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d6/d10/class_gear_1_1_application.html#a6236185ab04e1460e2dee3a4cd8c46d4">m_Minimized</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d6/d10/class_gear_1_1_application.html#a824c8053de5026bdc13dff8d55b1ccb3">   41</a></span>&#160;        <a class="code" href="../../d1/d45/class_gear_1_1_scene.html">Scene</a>* <a class="code" href="../../d6/d10/class_gear_1_1_application.html#a824c8053de5026bdc13dff8d55b1ccb3">m_CurScene</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d6/d10/class_gear_1_1_application.html#aba0718f999e4b001c9f0893c66cba769">   42</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="../../d6/d10/class_gear_1_1_application.html#aba0718f999e4b001c9f0893c66cba769">m_LastFrameTime</a> = 0.0f;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d6/d10/class_gear_1_1_application.html#af20b4dc1c356c6843a492a6b1ee6d588">   44</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="../../d6/d10/class_gear_1_1_application.html">Application</a>* <a class="code" href="../../d6/d10/class_gear_1_1_application.html#af20b4dc1c356c6843a492a6b1ee6d588">s_Instance</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    };</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">//To be defined in CLIENT</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="../../d6/d10/class_gear_1_1_application.html">Application</a>* <a class="code" href="../../d8/d4b/namespace_gear.html#afe0113ac40616a2af4758a3c14b283c4">CreateApplication</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_core_8h_html"><div class="ttname"><a href="../../d4/d09/_core_8h.html">Core.h</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_scene_html"><div class="ttname"><a href="../../d1/d45/class_gear_1_1_scene.html">Gear::Scene</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_scene_8h_source.html#l00007">Scene.h:7</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_event_html"><div class="ttname"><a href="../../d2/d64/class_gear_1_1_event.html">Gear::Event</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d6d/_event_8h_source.html#l00035">Event.h:35</a></div></div>
+<div class="ttc" id="a_scene_8h_html"><div class="ttname"><a href="../../de/d56/_scene_8h.html">Scene.h</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_application_html_a8487b61d01833a84ee9ca9c354d8f8b9"><div class="ttname"><a href="../../d6/d10/class_gear_1_1_application.html#a8487b61d01833a84ee9ca9c354d8f8b9">Gear::Application::OnEvent</a></div><div class="ttdeci">void OnEvent(Event &amp;e)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d42/_application_8cpp_source.html#l00038">Application.cpp:38</a></div></div>
+<div class="ttc" id="a_application_event_8h_html"><div class="ttname"><a href="../../d3/d87/_application_event_8h.html">ApplicationEvent.h</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_application_html_a283bd8871db563d9948c1be5450387fb"><div class="ttname"><a href="../../d6/d10/class_gear_1_1_application.html#a283bd8871db563d9948c1be5450387fb">Gear::Application::Get</a></div><div class="ttdeci">static Application &amp; Get()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da3/_application_8h_source.html#l00027">Application.h:27</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_application_html_a1798d33948295a2b2c92f5169a53101c"><div class="ttname"><a href="../../d6/d10/class_gear_1_1_application.html#a1798d33948295a2b2c92f5169a53101c">Gear::Application::m_Window</a></div><div class="ttdeci">std::unique_ptr&lt; Window &gt; m_Window</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da3/_application_8h_source.html#l00038">Application.h:38</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_application_html_a6236185ab04e1460e2dee3a4cd8c46d4"><div class="ttname"><a href="../../d6/d10/class_gear_1_1_application.html#a6236185ab04e1460e2dee3a4cd8c46d4">Gear::Application::m_Minimized</a></div><div class="ttdeci">bool m_Minimized</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da3/_application_8h_source.html#l00040">Application.h:40</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_application_html_af20b4dc1c356c6843a492a6b1ee6d588"><div class="ttname"><a href="../../d6/d10/class_gear_1_1_application.html#af20b4dc1c356c6843a492a6b1ee6d588">Gear::Application::s_Instance</a></div><div class="ttdeci">static Application * s_Instance</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da3/_application_8h_source.html#l00044">Application.h:44</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_application_html_a1a8787f10a5132e3a92a9f4e6ab8e3c0"><div class="ttname"><a href="../../d6/d10/class_gear_1_1_application.html#a1a8787f10a5132e3a92a9f4e6ab8e3c0">Gear::Application::Run</a></div><div class="ttdeci">void Run()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d42/_application_8cpp_source.html#l00054">Application.cpp:54</a></div></div>
+<div class="ttc" id="a_im_gui_layer_8h_html"><div class="ttname"><a href="../../df/d68/_im_gui_layer_8h.html">ImGuiLayer.h</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_window_html"><div class="ttname"><a href="../../dd/d1f/class_gear_1_1_window.html">Gear::Window</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d42/_window_8h_source.html#l00022">Window.h:22</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_application_html_a2253b406ab3c4a74fd5e58d76e3f0408"><div class="ttname"><a href="../../d6/d10/class_gear_1_1_application.html#a2253b406ab3c4a74fd5e58d76e3f0408">Gear::Application::GetWindow</a></div><div class="ttdeci">Window &amp; GetWindow()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da3/_application_8h_source.html#l00028">Application.h:28</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_application_html_aebbf7985b1ca5ea5b8341d8ff2411f02"><div class="ttname"><a href="../../d6/d10/class_gear_1_1_application.html#aebbf7985b1ca5ea5b8341d8ff2411f02">Gear::Application::OnWindowClose</a></div><div class="ttdeci">bool OnWindowClose(WindowCloseEvent &amp;e)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d42/_application_8cpp_source.html#l00090">Application.cpp:90</a></div></div>
+<div class="ttc" id="anamespace_gear_html"><div class="ttname"><a href="../../d8/d4b/namespace_gear.html">Gear</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d42/_application_8cpp_source.html#l00011">Application.cpp:11</a></div></div>
+<div class="ttc" id="a_timestep_8h_html"><div class="ttname"><a href="../../dd/dae/_timestep_8h.html">Timestep.h</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_window_close_event_html"><div class="ttname"><a href="../../d5/d2f/class_gear_1_1_window_close_event.html">Gear::WindowCloseEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d87/_application_event_8h_source.html#l00027">ApplicationEvent.h:27</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_application_html_a63ca74fae055463c3f73ea5da8a7fb01"><div class="ttname"><a href="../../d6/d10/class_gear_1_1_application.html#a63ca74fae055463c3f73ea5da8a7fb01">Gear::Application::~Application</a></div><div class="ttdeci">virtual ~Application()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d42/_application_8cpp_source.html#l00031">Application.cpp:31</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_application_html_a5b45576d85e25ee872f8cf4a33fd0830"><div class="ttname"><a href="../../d6/d10/class_gear_1_1_application.html#a5b45576d85e25ee872f8cf4a33fd0830">Gear::Application::m_ImGuilayer</a></div><div class="ttdeci">ImGuiLayer * m_ImGuilayer</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da3/_application_8h_source.html#l00035">Application.h:35</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_application_html_a5f3b89a0f64ca8abd231c8769ea41f13"><div class="ttname"><a href="../../d6/d10/class_gear_1_1_application.html#a5f3b89a0f64ca8abd231c8769ea41f13">Gear::Application::OnWindowResize</a></div><div class="ttdeci">bool OnWindowResize(WindowResizeEvent &amp;e)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d42/_application_8cpp_source.html#l00096">Application.cpp:96</a></div></div>
+<div class="ttc" id="anamespace_gear_html_afe0113ac40616a2af4758a3c14b283c4"><div class="ttname"><a href="../../d8/d4b/namespace_gear.html#afe0113ac40616a2af4758a3c14b283c4">Gear::CreateApplication</a></div><div class="ttdeci">Application * CreateApplication()</div></div>
+<div class="ttc" id="aclass_gear_1_1_window_resize_event_html"><div class="ttname"><a href="../../db/d09/class_gear_1_1_window_resize_event.html">Gear::WindowResizeEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d87/_application_event_8h_source.html#l00006">ApplicationEvent.h:6</a></div></div>
+<div class="ttc" id="a_event_8h_html"><div class="ttname"><a href="../../de/d6d/_event_8h.html">Event.h</a></div></div>
+<div class="ttc" id="a_window_8h_html"><div class="ttname"><a href="../../de/d42/_window_8h.html">Window.h</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_im_gui_layer_html"><div class="ttname"><a href="../../d3/de8/class_gear_1_1_im_gui_layer.html">Gear::ImGuiLayer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d68/_im_gui_layer_8h_source.html#l00010">ImGuiLayer.h:10</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_application_html_aba0718f999e4b001c9f0893c66cba769"><div class="ttname"><a href="../../d6/d10/class_gear_1_1_application.html#aba0718f999e4b001c9f0893c66cba769">Gear::Application::m_LastFrameTime</a></div><div class="ttdeci">float m_LastFrameTime</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da3/_application_8h_source.html#l00042">Application.h:42</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_application_html_a824c8053de5026bdc13dff8d55b1ccb3"><div class="ttname"><a href="../../d6/d10/class_gear_1_1_application.html#a824c8053de5026bdc13dff8d55b1ccb3">Gear::Application::m_CurScene</a></div><div class="ttdeci">Scene * m_CurScene</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da3/_application_8h_source.html#l00041">Application.h:41</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_application_html_adeae0a9fc9ba0d1439f1af1ba3ab2a91"><div class="ttname"><a href="../../d6/d10/class_gear_1_1_application.html#adeae0a9fc9ba0d1439f1af1ba3ab2a91">Gear::Application::Application</a></div><div class="ttdeci">Application()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d42/_application_8cpp_source.html#l00017">Application.cpp:17</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_application_html_ada1fcd30ce47eea61f7276dbec49c672"><div class="ttname"><a href="../../d6/d10/class_gear_1_1_application.html#ada1fcd30ce47eea61f7276dbec49c672">Gear::Application::m_Running</a></div><div class="ttdeci">bool m_Running</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da3/_application_8h_source.html#l00039">Application.h:39</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_application_html"><div class="ttname"><a href="../../d6/d10/class_gear_1_1_application.html">Gear::Application</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/da3/_application_8h_source.html#l00017">Application.h:17</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_53d5e98abdf3a310efd03de30bd70f59.html">Gear</a></li><li class="navelem"><a class="el" href="../../dir_2e86bc557449db88413d12c593cb549e.html">src</a></li><li class="navelem"><a class="el" href="../../dir_cb4ae8cb444fc781104283c5acb48e8f.html">Gear</a></li><li class="navelem"><a class="el" href="../../dir_d0cb7879984fa8aa94ab09ebc982a893.html">Core</a></li><li class="navelem"><a class="el" href="../../d9/da3/_application_8h.html">Application.h</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

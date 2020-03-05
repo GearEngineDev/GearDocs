@@ -1,0 +1,122 @@
+\hypertarget{class_gear_1_1_log}{}\doxysection{Gear\+::Log 클래스 참조}
+\label{class_gear_1_1_log}\index{Gear::Log@{Gear::Log}}
+
+
+{\ttfamily \#include $<$Log.\+h$>$}
+
+
+
+Gear\+::Log에 대한 협력 다이어그램\+:
+% FIG 0
+\doxysubsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_log_a91b02139783c904a343c14884a8e2c43}{Init}} ()
+\item 
+static std\+::shared\+\_\+ptr$<$ spdlog\+::logger $>$ \& \mbox{\hyperlink{class_gear_1_1_log_a3c1a737f9bd5ef0e4de2ae308b2d2426}{Get\+Core\+Logger}} ()
+\item 
+static std\+::shared\+\_\+ptr$<$ spdlog\+::logger $>$ \& \mbox{\hyperlink{class_gear_1_1_log_acfaf57af95c0eb9845e9b6a585e7dfe2}{Get\+Client\+Logger}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{정적 Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ spdlog\+::logger $>$ \mbox{\hyperlink{class_gear_1_1_log_a2a9b79672378479a557623170a722427}{s\+\_\+\+Core\+Logger}}
+\item 
+static std\+::shared\+\_\+ptr$<$ spdlog\+::logger $>$ \mbox{\hyperlink{class_gear_1_1_log_ac53f6ced11179fee4005d2eba2ecb5c3}{s\+\_\+\+Client\+Logger}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Log.\+h 파일의 8 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_log_acfaf57af95c0eb9845e9b6a585e7dfe2}\label{class_gear_1_1_log_acfaf57af95c0eb9845e9b6a585e7dfe2}} 
+\index{Gear::Log@{Gear::Log}!GetClientLogger@{GetClientLogger}}
+\index{GetClientLogger@{GetClientLogger}!Gear::Log@{Gear::Log}}
+\doxysubsubsection{\texorpdfstring{GetClientLogger()}{GetClientLogger()}}
+{\footnotesize\ttfamily static std\+::shared\+\_\+ptr$<$spdlog\+::logger$>$\& Gear\+::\+Log\+::\+Get\+Client\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Log.\+h 파일의 15 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15                                                                      \{}
+\DoxyCodeLine{16             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_log_ac53f6ced11179fee4005d2eba2ecb5c3}{s\_ClientLogger}};}
+\DoxyCodeLine{17         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_log_a3c1a737f9bd5ef0e4de2ae308b2d2426}\label{class_gear_1_1_log_a3c1a737f9bd5ef0e4de2ae308b2d2426}} 
+\index{Gear::Log@{Gear::Log}!GetCoreLogger@{GetCoreLogger}}
+\index{GetCoreLogger@{GetCoreLogger}!Gear::Log@{Gear::Log}}
+\doxysubsubsection{\texorpdfstring{GetCoreLogger()}{GetCoreLogger()}}
+{\footnotesize\ttfamily static std\+::shared\+\_\+ptr$<$spdlog\+::logger$>$\& Gear\+::\+Log\+::\+Get\+Core\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Log.\+h 파일의 12 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12                                                                    \{}
+\DoxyCodeLine{13             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_log_a2a9b79672378479a557623170a722427}{s\_CoreLogger}};}
+\DoxyCodeLine{14         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_log_a91b02139783c904a343c14884a8e2c43}\label{class_gear_1_1_log_a91b02139783c904a343c14884a8e2c43}} 
+\index{Gear::Log@{Gear::Log}!Init@{Init}}
+\index{Init@{Init}!Gear::Log@{Gear::Log}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Gear\+::\+Log\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Log.\+cpp 파일의 10 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11     \{}
+\DoxyCodeLine{12         spdlog::set\_pattern(\textcolor{stringliteral}{"\%\string^[\%T] \%n: \%v\%\$"});}
+\DoxyCodeLine{13         }
+\DoxyCodeLine{14         \mbox{\hyperlink{class_gear_1_1_log_a2a9b79672378479a557623170a722427}{s\_CoreLogger}} = spdlog::stderr\_color\_mt(\textcolor{stringliteral}{"Gear"});}
+\DoxyCodeLine{15         \mbox{\hyperlink{class_gear_1_1_log_a2a9b79672378479a557623170a722427}{s\_CoreLogger}}-\/>set\_level(spdlog::level::trace);}
+\DoxyCodeLine{16         }
+\DoxyCodeLine{17         \mbox{\hyperlink{class_gear_1_1_log_ac53f6ced11179fee4005d2eba2ecb5c3}{s\_ClientLogger}} = spdlog::stderr\_color\_mt(\textcolor{stringliteral}{"APP"});}
+\DoxyCodeLine{18         \mbox{\hyperlink{class_gear_1_1_log_ac53f6ced11179fee4005d2eba2ecb5c3}{s\_ClientLogger}}-\/>set\_level(spdlog::level::trace);}
+\DoxyCodeLine{19     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_log_ac53f6ced11179fee4005d2eba2ecb5c3}\label{class_gear_1_1_log_ac53f6ced11179fee4005d2eba2ecb5c3}} 
+\index{Gear::Log@{Gear::Log}!s\_ClientLogger@{s\_ClientLogger}}
+\index{s\_ClientLogger@{s\_ClientLogger}!Gear::Log@{Gear::Log}}
+\doxysubsubsection{\texorpdfstring{s\_ClientLogger}{s\_ClientLogger}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ spdlog\+::logger $>$ Gear\+::\+Log\+::s\+\_\+\+Client\+Logger\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Log.\+h 파일의 20 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_log_a2a9b79672378479a557623170a722427}\label{class_gear_1_1_log_a2a9b79672378479a557623170a722427}} 
+\index{Gear::Log@{Gear::Log}!s\_CoreLogger@{s\_CoreLogger}}
+\index{s\_CoreLogger@{s\_CoreLogger}!Gear::Log@{Gear::Log}}
+\doxysubsubsection{\texorpdfstring{s\_CoreLogger}{s\_CoreLogger}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ spdlog\+::logger $>$ Gear\+::\+Log\+::s\+\_\+\+Core\+Logger\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Log.\+h 파일의 19 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Core/\mbox{\hyperlink{_log_8h}{Log.\+h}}\item 
+Gear/src/\+Gear/\+Core/\mbox{\hyperlink{_log_8cpp}{Log.\+cpp}}\end{DoxyCompactItemize}

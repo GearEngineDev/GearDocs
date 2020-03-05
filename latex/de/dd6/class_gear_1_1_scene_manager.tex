@@ -1,0 +1,342 @@
+\hypertarget{class_gear_1_1_scene_manager}{}\doxysection{Gear\+::Scene\+Manager 클래스 참조}
+\label{class_gear_1_1_scene_manager}\index{Gear::SceneManager@{Gear::SceneManager}}
+
+
+{\ttfamily \#include $<$Scene\+Manager.\+h$>$}
+
+
+
+Gear\+::Scene\+Manager에 대한 협력 다이어그램\+:
+% FIG 0
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_gear_1_1_scene_manager_a1e10a7222aea93e4988b3a5e307ab7a1}{Add\+Scene}} (const std\+::string \&name, \mbox{\hyperlink{class_gear_1_1_scene}{Scene}} $\ast$scene)
+\item 
+void \mbox{\hyperlink{class_gear_1_1_scene_manager_a786fc75b75dd1ac579ffcf532dd1879e}{Erase\+Scene}} (const std\+::string \&scene\+Name)
+\item 
+void \mbox{\hyperlink{class_gear_1_1_scene_manager_afcd12e5430208f837f80e4f6699f3480}{Scene\+Push}} (const std\+::string \&name)
+\item 
+void \mbox{\hyperlink{class_gear_1_1_scene_manager_a84b85da9bea599373814b482d88a5855}{Scene\+Pop}} ()
+\item 
+void \mbox{\hyperlink{class_gear_1_1_scene_manager_addca54fa47dad9328bc1fc9e1d93ca5e}{change\+Scene}} (const std\+::string \&name)
+\end{DoxyCompactItemize}
+\doxysubsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_gear_1_1_scene}{Scene}} $\ast$ \mbox{\hyperlink{class_gear_1_1_scene_manager_a4ad39cd209f7907edc7275566bd1c9a4}{Get\+Cur\+Scene}} ()
+\item 
+static \mbox{\hyperlink{class_gear_1_1_scene_manager}{Scene\+Manager}} $\ast$ \mbox{\hyperlink{class_gear_1_1_scene_manager_a95e49fa4083d8f0316a548aaccfa34b7}{Get}} ()
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_scene_manager_a10c11f89b12ca5f9fa6fcf47f5104528}{Destory}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_scene_manager_a35c8308d9f87252a7f43266306fbed96}{Scene\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_gear_1_1_scene_manager_aea80d4a9b3ba00b8f0667a5e3baf21b3}{$\sim$\+Scene\+Manager}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_gear_1_1_scene}{Scene}} $\ast$ $>$ \mbox{\hyperlink{class_gear_1_1_scene_manager_a89d9596975c29a98968c139a73790c98}{m\+\_\+\+Scene\+Storadge}}
+\item 
+std\+::stack$<$ \mbox{\hyperlink{class_gear_1_1_scene}{Scene}} $\ast$ $>$ \mbox{\hyperlink{class_gear_1_1_scene_manager_a213ac99d4b2f4210e16d30615646c66c}{m\+\_\+\+Scene\+Stack}}
+\end{DoxyCompactItemize}
+\doxysubsection*{정적 Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_gear_1_1_scene}{Scene}} $\ast$ \mbox{\hyperlink{class_gear_1_1_scene_manager_ab60eaae2b846f1be7918344debf976da}{s\+\_\+\+Cur\+Scene}} = nullptr
+\item 
+static \mbox{\hyperlink{class_gear_1_1_scene_manager}{Scene\+Manager}} $\ast$ \mbox{\hyperlink{class_gear_1_1_scene_manager_afc59cf6f8488cba2a5ca3557849e11fa}{s\+\_\+\+Instance}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Scene\+Manager.\+h 파일의 7 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_scene_manager_a35c8308d9f87252a7f43266306fbed96}\label{class_gear_1_1_scene_manager_a35c8308d9f87252a7f43266306fbed96}} 
+\index{Gear::SceneManager@{Gear::SceneManager}!SceneManager@{SceneManager}}
+\index{SceneManager@{SceneManager}!Gear::SceneManager@{Gear::SceneManager}}
+\doxysubsubsection{\texorpdfstring{SceneManager()}{SceneManager()}}
+{\footnotesize\ttfamily Gear\+::\+Scene\+Manager\+::\+Scene\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Scene\+Manager.\+cpp 파일의 9 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10     \{}
+\DoxyCodeLine{11     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 1
+\mbox{\Hypertarget{class_gear_1_1_scene_manager_aea80d4a9b3ba00b8f0667a5e3baf21b3}\label{class_gear_1_1_scene_manager_aea80d4a9b3ba00b8f0667a5e3baf21b3}} 
+\index{Gear::SceneManager@{Gear::SceneManager}!````~SceneManager@{$\sim$SceneManager}}
+\index{````~SceneManager@{$\sim$SceneManager}!Gear::SceneManager@{Gear::SceneManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$SceneManager()}{~SceneManager()}}
+{\footnotesize\ttfamily Gear\+::\+Scene\+Manager\+::$\sim$\+Scene\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Scene\+Manager.\+cpp 파일의 13 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14     \{}
+\DoxyCodeLine{15         \textcolor{keywordflow}{while} (!\mbox{\hyperlink{class_gear_1_1_scene_manager_a213ac99d4b2f4210e16d30615646c66c}{m\_SceneStack}}.empty())}
+\DoxyCodeLine{16         \{}
+\DoxyCodeLine{17             \mbox{\hyperlink{class_gear_1_1_scene_manager_a213ac99d4b2f4210e16d30615646c66c}{m\_SceneStack}}.pop();}
+\DoxyCodeLine{18         \}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} scene : \mbox{\hyperlink{class_gear_1_1_scene_manager_a89d9596975c29a98968c139a73790c98}{m\_SceneStoradge}})}
+\DoxyCodeLine{21         \{}
+\DoxyCodeLine{22             \textcolor{keyword}{delete} scene.second;}
+\DoxyCodeLine{23         \}}
+\DoxyCodeLine{24         \mbox{\hyperlink{class_gear_1_1_scene_manager_a89d9596975c29a98968c139a73790c98}{m\_SceneStoradge}}.clear();}
+\DoxyCodeLine{25     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_scene_manager_a1e10a7222aea93e4988b3a5e307ab7a1}\label{class_gear_1_1_scene_manager_a1e10a7222aea93e4988b3a5e307ab7a1}} 
+\index{Gear::SceneManager@{Gear::SceneManager}!AddScene@{AddScene}}
+\index{AddScene@{AddScene}!Gear::SceneManager@{Gear::SceneManager}}
+\doxysubsubsection{\texorpdfstring{AddScene()}{AddScene()}}
+{\footnotesize\ttfamily void Gear\+::\+Scene\+Manager\+::\+Add\+Scene (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{class_gear_1_1_scene}{Scene}} $\ast$}]{scene }\end{DoxyParamCaption})}
+
+
+
+Scene\+Manager.\+cpp 파일의 27 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28     \{}
+\DoxyCodeLine{29         \textcolor{keyword}{auto} target = \mbox{\hyperlink{class_gear_1_1_scene_manager_a89d9596975c29a98968c139a73790c98}{m\_SceneStoradge}}.find(name);}
+\DoxyCodeLine{30         \textcolor{keywordflow}{if} (target == \mbox{\hyperlink{class_gear_1_1_scene_manager_a89d9596975c29a98968c139a73790c98}{m\_SceneStoradge}}.end())}
+\DoxyCodeLine{31         \{}
+\DoxyCodeLine{32             \mbox{\hyperlink{class_gear_1_1_scene_manager_a89d9596975c29a98968c139a73790c98}{m\_SceneStoradge}}.insert(\{ name, scene \});}
+\DoxyCodeLine{33         \}}
+\DoxyCodeLine{34         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{35         \{}
+\DoxyCodeLine{36             \mbox{\hyperlink{_log_8h_a98d54f2d256213ca6b228eff1f1067c2}{GR\_CORE\_TRACE}}(\textcolor{stringliteral}{"\%s Scene aleady Exist!"}, name);}
+\DoxyCodeLine{37         \}}
+\DoxyCodeLine{38     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_scene_manager_addca54fa47dad9328bc1fc9e1d93ca5e}\label{class_gear_1_1_scene_manager_addca54fa47dad9328bc1fc9e1d93ca5e}} 
+\index{Gear::SceneManager@{Gear::SceneManager}!changeScene@{changeScene}}
+\index{changeScene@{changeScene}!Gear::SceneManager@{Gear::SceneManager}}
+\doxysubsubsection{\texorpdfstring{changeScene()}{changeScene()}}
+{\footnotesize\ttfamily void Gear\+::\+Scene\+Manager\+::change\+Scene (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Scene\+Manager.\+cpp 파일의 82 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{83     \{}
+\DoxyCodeLine{84         \textcolor{keyword}{auto} scene = \mbox{\hyperlink{class_gear_1_1_scene_manager_a89d9596975c29a98968c139a73790c98}{m\_SceneStoradge}}.find(name);}
+\DoxyCodeLine{85         \textcolor{keywordflow}{if} (scene != \mbox{\hyperlink{class_gear_1_1_scene_manager_a89d9596975c29a98968c139a73790c98}{m\_SceneStoradge}}.end())}
+\DoxyCodeLine{86         \{}
+\DoxyCodeLine{87             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_gear_1_1_scene_manager_ab60eaae2b846f1be7918344debf976da}{s\_CurScene}} != scene-\/>second)}
+\DoxyCodeLine{88             \{}
+\DoxyCodeLine{89                 \mbox{\hyperlink{class_gear_1_1_scene_manager_ab60eaae2b846f1be7918344debf976da}{s\_CurScene}} = scene-\/>second;}
+\DoxyCodeLine{90             \}}
+\DoxyCodeLine{91         \}}
+\DoxyCodeLine{92     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_scene_manager_a10c11f89b12ca5f9fa6fcf47f5104528}\label{class_gear_1_1_scene_manager_a10c11f89b12ca5f9fa6fcf47f5104528}} 
+\index{Gear::SceneManager@{Gear::SceneManager}!Destory@{Destory}}
+\index{Destory@{Destory}!Gear::SceneManager@{Gear::SceneManager}}
+\doxysubsubsection{\texorpdfstring{Destory()}{Destory()}}
+{\footnotesize\ttfamily static void Gear\+::\+Scene\+Manager\+::\+Destory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Scene\+Manager.\+h 파일의 29 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29                                      \{}
+\DoxyCodeLine{30             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_gear_1_1_scene_manager_afc59cf6f8488cba2a5ca3557849e11fa}{s\_Instance}} != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{31                 \textcolor{keyword}{delete} \mbox{\hyperlink{class_gear_1_1_scene_manager_afc59cf6f8488cba2a5ca3557849e11fa}{s\_Instance}};}
+\DoxyCodeLine{32         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_scene_manager_a786fc75b75dd1ac579ffcf532dd1879e}\label{class_gear_1_1_scene_manager_a786fc75b75dd1ac579ffcf532dd1879e}} 
+\index{Gear::SceneManager@{Gear::SceneManager}!EraseScene@{EraseScene}}
+\index{EraseScene@{EraseScene}!Gear::SceneManager@{Gear::SceneManager}}
+\doxysubsubsection{\texorpdfstring{EraseScene()}{EraseScene()}}
+{\footnotesize\ttfamily void Gear\+::\+Scene\+Manager\+::\+Erase\+Scene (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{scene\+Name }\end{DoxyParamCaption})}
+
+
+
+Scene\+Manager.\+cpp 파일의 40 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41     \{}
+\DoxyCodeLine{42         \textcolor{keyword}{auto} scene = \mbox{\hyperlink{class_gear_1_1_scene_manager_a89d9596975c29a98968c139a73790c98}{m\_SceneStoradge}}.find(name);}
+\DoxyCodeLine{43         \textcolor{keywordflow}{if} (scene != \mbox{\hyperlink{class_gear_1_1_scene_manager_a89d9596975c29a98968c139a73790c98}{m\_SceneStoradge}}.end())}
+\DoxyCodeLine{44         \{}
+\DoxyCodeLine{45             \textcolor{keyword}{delete} scene-\/>second;}
+\DoxyCodeLine{46             \mbox{\hyperlink{class_gear_1_1_scene_manager_a89d9596975c29a98968c139a73790c98}{m\_SceneStoradge}}.erase(scene);}
+\DoxyCodeLine{47         \}}
+\DoxyCodeLine{48         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{49         \{}
+\DoxyCodeLine{50             \mbox{\hyperlink{_log_8h_a98d54f2d256213ca6b228eff1f1067c2}{GR\_CORE\_TRACE}}(\textcolor{stringliteral}{"\%s Scene dosn't Exist!"}, name);}
+\DoxyCodeLine{51         \}}
+\DoxyCodeLine{52     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_scene_manager_a95e49fa4083d8f0316a548aaccfa34b7}\label{class_gear_1_1_scene_manager_a95e49fa4083d8f0316a548aaccfa34b7}} 
+\index{Gear::SceneManager@{Gear::SceneManager}!Get@{Get}}
+\index{Get@{Get}!Gear::SceneManager@{Gear::SceneManager}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_gear_1_1_scene_manager}{Scene\+Manager}}$\ast$ Gear\+::\+Scene\+Manager\+::\+Get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Scene\+Manager.\+h 파일의 24 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                                           \{}
+\DoxyCodeLine{25             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_gear_1_1_scene_manager_afc59cf6f8488cba2a5ca3557849e11fa}{s\_Instance}} == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{26                 \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_scene_manager_afc59cf6f8488cba2a5ca3557849e11fa}{s\_Instance}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_gear_1_1_scene_manager_a35c8308d9f87252a7f43266306fbed96}{SceneManager}};}
+\DoxyCodeLine{27             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_scene_manager_afc59cf6f8488cba2a5ca3557849e11fa}{s\_Instance}};}
+\DoxyCodeLine{28         \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\mbox{\Hypertarget{class_gear_1_1_scene_manager_a4ad39cd209f7907edc7275566bd1c9a4}\label{class_gear_1_1_scene_manager_a4ad39cd209f7907edc7275566bd1c9a4}} 
+\index{Gear::SceneManager@{Gear::SceneManager}!GetCurScene@{GetCurScene}}
+\index{GetCurScene@{GetCurScene}!Gear::SceneManager@{Gear::SceneManager}}
+\doxysubsubsection{\texorpdfstring{GetCurScene()}{GetCurScene()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_gear_1_1_scene}{Scene}}$\ast$ Gear\+::\+Scene\+Manager\+::\+Get\+Cur\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Scene\+Manager.\+h 파일의 22 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_scene_manager_ab60eaae2b846f1be7918344debf976da}{s\_CurScene}}; \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+\mbox{\Hypertarget{class_gear_1_1_scene_manager_a84b85da9bea599373814b482d88a5855}\label{class_gear_1_1_scene_manager_a84b85da9bea599373814b482d88a5855}} 
+\index{Gear::SceneManager@{Gear::SceneManager}!ScenePop@{ScenePop}}
+\index{ScenePop@{ScenePop}!Gear::SceneManager@{Gear::SceneManager}}
+\doxysubsubsection{\texorpdfstring{ScenePop()}{ScenePop()}}
+{\footnotesize\ttfamily void Gear\+::\+Scene\+Manager\+::\+Scene\+Pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Scene\+Manager.\+cpp 파일의 69 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{70     \{}
+\DoxyCodeLine{71         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_gear_1_1_scene_manager_a213ac99d4b2f4210e16d30615646c66c}{m\_SceneStack}}.size() != 1) }
+\DoxyCodeLine{72         \{}
+\DoxyCodeLine{73             \mbox{\hyperlink{class_gear_1_1_scene_manager_a213ac99d4b2f4210e16d30615646c66c}{m\_SceneStack}}.pop();}
+\DoxyCodeLine{74             \mbox{\hyperlink{class_gear_1_1_scene_manager_ab60eaae2b846f1be7918344debf976da}{s\_CurScene}} = \mbox{\hyperlink{class_gear_1_1_scene_manager_a213ac99d4b2f4210e16d30615646c66c}{m\_SceneStack}}.top();}
+\DoxyCodeLine{75         \}}
+\DoxyCodeLine{76         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{77         \{}
+\DoxyCodeLine{78             \mbox{\hyperlink{_log_8h_a98d54f2d256213ca6b228eff1f1067c2}{GR\_CORE\_TRACE}}(\textcolor{stringliteral}{"SceneStack has only one Scene!"});}
+\DoxyCodeLine{79         \}}
+\DoxyCodeLine{80     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_scene_manager_afcd12e5430208f837f80e4f6699f3480}\label{class_gear_1_1_scene_manager_afcd12e5430208f837f80e4f6699f3480}} 
+\index{Gear::SceneManager@{Gear::SceneManager}!ScenePush@{ScenePush}}
+\index{ScenePush@{ScenePush}!Gear::SceneManager@{Gear::SceneManager}}
+\doxysubsubsection{\texorpdfstring{ScenePush()}{ScenePush()}}
+{\footnotesize\ttfamily void Gear\+::\+Scene\+Manager\+::\+Scene\+Push (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Scene\+Manager.\+cpp 파일의 54 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55     \{}
+\DoxyCodeLine{56         \textcolor{keyword}{auto} scene = \mbox{\hyperlink{class_gear_1_1_scene_manager_a89d9596975c29a98968c139a73790c98}{m\_SceneStoradge}}.find(name);}
+\DoxyCodeLine{57         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_gear_1_1_scene_manager_ab60eaae2b846f1be7918344debf976da}{s\_CurScene}} != scene-\/>second)}
+\DoxyCodeLine{58         \{}
+\DoxyCodeLine{59             \mbox{\hyperlink{class_gear_1_1_scene_manager_a213ac99d4b2f4210e16d30615646c66c}{m\_SceneStack}}.push(scene-\/>second);}
+\DoxyCodeLine{60             \mbox{\hyperlink{class_gear_1_1_scene_manager_ab60eaae2b846f1be7918344debf976da}{s\_CurScene}} = \mbox{\hyperlink{class_gear_1_1_scene_manager_a213ac99d4b2f4210e16d30615646c66c}{m\_SceneStack}}.top();}
+\DoxyCodeLine{61         \}}
+\DoxyCodeLine{62         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{63         \{}
+\DoxyCodeLine{64             \mbox{\hyperlink{_log_8h_a98d54f2d256213ca6b228eff1f1067c2}{GR\_CORE\_TRACE}}(\textcolor{stringliteral}{"\%s Scene is aleady Current Scene!"}, name);}
+\DoxyCodeLine{65         \}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_scene_manager_a213ac99d4b2f4210e16d30615646c66c}\label{class_gear_1_1_scene_manager_a213ac99d4b2f4210e16d30615646c66c}} 
+\index{Gear::SceneManager@{Gear::SceneManager}!m\_SceneStack@{m\_SceneStack}}
+\index{m\_SceneStack@{m\_SceneStack}!Gear::SceneManager@{Gear::SceneManager}}
+\doxysubsubsection{\texorpdfstring{m\_SceneStack}{m\_SceneStack}}
+{\footnotesize\ttfamily std\+::stack$<$\mbox{\hyperlink{class_gear_1_1_scene}{Scene}}$\ast$$>$ Gear\+::\+Scene\+Manager\+::m\+\_\+\+Scene\+Stack\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Scene\+Manager.\+h 파일의 35 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_scene_manager_a89d9596975c29a98968c139a73790c98}\label{class_gear_1_1_scene_manager_a89d9596975c29a98968c139a73790c98}} 
+\index{Gear::SceneManager@{Gear::SceneManager}!m\_SceneStoradge@{m\_SceneStoradge}}
+\index{m\_SceneStoradge@{m\_SceneStoradge}!Gear::SceneManager@{Gear::SceneManager}}
+\doxysubsubsection{\texorpdfstring{m\_SceneStoradge}{m\_SceneStoradge}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{class_gear_1_1_scene}{Scene}}$\ast$$>$ Gear\+::\+Scene\+Manager\+::m\+\_\+\+Scene\+Storadge\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Scene\+Manager.\+h 파일의 34 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_scene_manager_ab60eaae2b846f1be7918344debf976da}\label{class_gear_1_1_scene_manager_ab60eaae2b846f1be7918344debf976da}} 
+\index{Gear::SceneManager@{Gear::SceneManager}!s\_CurScene@{s\_CurScene}}
+\index{s\_CurScene@{s\_CurScene}!Gear::SceneManager@{Gear::SceneManager}}
+\doxysubsubsection{\texorpdfstring{s\_CurScene}{s\_CurScene}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gear_1_1_scene}{Scene}} $\ast$ Gear\+::\+Scene\+Manager\+::s\+\_\+\+Cur\+Scene = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Scene\+Manager.\+h 파일의 36 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_scene_manager_afc59cf6f8488cba2a5ca3557849e11fa}\label{class_gear_1_1_scene_manager_afc59cf6f8488cba2a5ca3557849e11fa}} 
+\index{Gear::SceneManager@{Gear::SceneManager}!s\_Instance@{s\_Instance}}
+\index{s\_Instance@{s\_Instance}!Gear::SceneManager@{Gear::SceneManager}}
+\doxysubsubsection{\texorpdfstring{s\_Instance}{s\_Instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gear_1_1_scene_manager}{Scene\+Manager}} $\ast$ Gear\+::\+Scene\+Manager\+::s\+\_\+\+Instance = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Scene\+Manager.\+h 파일의 37 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Core/\mbox{\hyperlink{_scene_manager_8h}{Scene\+Manager.\+h}}\item 
+Gear/src/\+Gear/\+Core/\mbox{\hyperlink{_scene_manager_8cpp}{Scene\+Manager.\+cpp}}\end{DoxyCompactItemize}

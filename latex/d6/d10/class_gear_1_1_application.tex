@@ -1,0 +1,366 @@
+\hypertarget{class_gear_1_1_application}{}\doxysection{Gear\+::Application 클래스 참조}
+\label{class_gear_1_1_application}\index{Gear::Application@{Gear::Application}}
+
+
+{\ttfamily \#include $<$Application.\+h$>$}
+
+
+
+Gear\+::Application에 대한 협력 다이어그램\+:
+% FIG 0
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_application_adeae0a9fc9ba0d1439f1af1ba3ab2a91}{Application}} ()
+\item 
+virtual \mbox{\hyperlink{class_gear_1_1_application_a63ca74fae055463c3f73ea5da8a7fb01}{$\sim$\+Application}} ()
+\item 
+void \mbox{\hyperlink{class_gear_1_1_application_a1a8787f10a5132e3a92a9f4e6ab8e3c0}{Run}} ()
+\item 
+void \mbox{\hyperlink{class_gear_1_1_application_a8487b61d01833a84ee9ca9c354d8f8b9}{On\+Event}} (\mbox{\hyperlink{class_gear_1_1_event}{Event}} \&e)
+\item 
+\mbox{\hyperlink{class_gear_1_1_window}{Window}} \& \mbox{\hyperlink{class_gear_1_1_application_a2253b406ab3c4a74fd5e58d76e3f0408}{Get\+Window}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_gear_1_1_application}{Application}} \& \mbox{\hyperlink{class_gear_1_1_application_a283bd8871db563d9948c1be5450387fb}{Get}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_im_gui_layer}{Im\+Gui\+Layer}} $\ast$ \mbox{\hyperlink{class_gear_1_1_application_a5b45576d85e25ee872f8cf4a33fd0830}{m\+\_\+\+Im\+Guilayer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_application_aebbf7985b1ca5ea5b8341d8ff2411f02}{On\+Window\+Close}} (\mbox{\hyperlink{class_gear_1_1_window_close_event}{Window\+Close\+Event}} \&e)
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_application_a5f3b89a0f64ca8abd231c8769ea41f13}{On\+Window\+Resize}} (\mbox{\hyperlink{class_gear_1_1_window_resize_event}{Window\+Resize\+Event}} \&e)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_gear_1_1_window}{Window}} $>$ \mbox{\hyperlink{class_gear_1_1_application_a1798d33948295a2b2c92f5169a53101c}{m\+\_\+\+Window}}
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_application_ada1fcd30ce47eea61f7276dbec49c672}{m\+\_\+\+Running}} = true
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_application_a6236185ab04e1460e2dee3a4cd8c46d4}{m\+\_\+\+Minimized}} = false
+\item 
+\mbox{\hyperlink{class_gear_1_1_scene}{Scene}} $\ast$ \mbox{\hyperlink{class_gear_1_1_application_a824c8053de5026bdc13dff8d55b1ccb3}{m\+\_\+\+Cur\+Scene}}
+\item 
+float \mbox{\hyperlink{class_gear_1_1_application_aba0718f999e4b001c9f0893c66cba769}{m\+\_\+\+Last\+Frame\+Time}} = 0.\+0f
+\end{DoxyCompactItemize}
+\doxysubsection*{정적 Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_gear_1_1_application}{Application}} $\ast$ \mbox{\hyperlink{class_gear_1_1_application_af20b4dc1c356c6843a492a6b1ee6d588}{s\+\_\+\+Instance}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Application.\+h 파일의 17 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_application_adeae0a9fc9ba0d1439f1af1ba3ab2a91}\label{class_gear_1_1_application_adeae0a9fc9ba0d1439f1af1ba3ab2a91}} 
+\index{Gear::Application@{Gear::Application}!Application@{Application}}
+\index{Application@{Application}!Gear::Application@{Gear::Application}}
+\doxysubsubsection{\texorpdfstring{Application()}{Application()}}
+{\footnotesize\ttfamily Gear\+::\+Application\+::\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Application.\+cpp 파일의 17 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18     \{}
+\DoxyCodeLine{19         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21         \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{GR\_CORE\_ASSERT}}(!\mbox{\hyperlink{class_gear_1_1_application_af20b4dc1c356c6843a492a6b1ee6d588}{s\_Instance}}, \textcolor{stringliteral}{"Application arleady exist!"});}
+\DoxyCodeLine{22         \mbox{\hyperlink{class_gear_1_1_application_af20b4dc1c356c6843a492a6b1ee6d588}{s\_Instance}} = \textcolor{keyword}{this};}
+\DoxyCodeLine{23         \mbox{\hyperlink{class_gear_1_1_application_a1798d33948295a2b2c92f5169a53101c}{m\_Window}} = std::unique\_ptr<Window>(\mbox{\hyperlink{class_gear_1_1_window_a8bfdb15553b8fd4b9bdb96dd9862a4b3}{Window::Create}}());}
+\DoxyCodeLine{24         \mbox{\hyperlink{class_gear_1_1_application_a1798d33948295a2b2c92f5169a53101c}{m\_Window}}-\/>SetEventCallback(\mbox{\hyperlink{_application_8cpp_a2290aac021a7119e86af0aa6d962a226}{BIND\_EVENT\_FN}}(\mbox{\hyperlink{class_gear_1_1_application_a8487b61d01833a84ee9ca9c354d8f8b9}{OnEvent}}));}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26         \mbox{\hyperlink{class_gear_1_1_renderer_abfccab18eea7796f760b4026ca0b180b}{Renderer::Init}}();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28         \mbox{\hyperlink{class_gear_1_1_application_a5b45576d85e25ee872f8cf4a33fd0830}{m\_ImGuilayer}} = \textcolor{keyword}{new} ImGuiLayer;}
+\DoxyCodeLine{29     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 1
+\mbox{\Hypertarget{class_gear_1_1_application_a63ca74fae055463c3f73ea5da8a7fb01}\label{class_gear_1_1_application_a63ca74fae055463c3f73ea5da8a7fb01}} 
+\index{Gear::Application@{Gear::Application}!````~Application@{$\sim$Application}}
+\index{````~Application@{$\sim$Application}!Gear::Application@{Gear::Application}}
+\doxysubsubsection{\texorpdfstring{$\sim$Application()}{~Application()}}
+{\footnotesize\ttfamily Gear\+::\+Application\+::$\sim$\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Application.\+cpp 파일의 31 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32     \{}
+\DoxyCodeLine{33         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35         \mbox{\hyperlink{class_gear_1_1_renderer_a9b3f366718c62175b9224efac9e1125a}{Renderer::Shutdown}}();}
+\DoxyCodeLine{36     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_application_a283bd8871db563d9948c1be5450387fb}\label{class_gear_1_1_application_a283bd8871db563d9948c1be5450387fb}} 
+\index{Gear::Application@{Gear::Application}!Get@{Get}}
+\index{Get@{Get}!Gear::Application@{Gear::Application}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_gear_1_1_application}{Application}}\& Gear\+::\+Application\+::\+Get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Application.\+h 파일의 27 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27 \{ \textcolor{keywordflow}{return} *\mbox{\hyperlink{class_gear_1_1_application_af20b4dc1c356c6843a492a6b1ee6d588}{s\_Instance}}; \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+\mbox{\Hypertarget{class_gear_1_1_application_a2253b406ab3c4a74fd5e58d76e3f0408}\label{class_gear_1_1_application_a2253b406ab3c4a74fd5e58d76e3f0408}} 
+\index{Gear::Application@{Gear::Application}!GetWindow@{GetWindow}}
+\index{GetWindow@{GetWindow}!Gear::Application@{Gear::Application}}
+\doxysubsubsection{\texorpdfstring{GetWindow()}{GetWindow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gear_1_1_window}{Window}}\& Gear\+::\+Application\+::\+Get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Application.\+h 파일의 28 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28 \{ \textcolor{keywordflow}{return} *\mbox{\hyperlink{class_gear_1_1_application_a1798d33948295a2b2c92f5169a53101c}{m\_Window}}; \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 4
+\mbox{\Hypertarget{class_gear_1_1_application_a8487b61d01833a84ee9ca9c354d8f8b9}\label{class_gear_1_1_application_a8487b61d01833a84ee9ca9c354d8f8b9}} 
+\index{Gear::Application@{Gear::Application}!OnEvent@{OnEvent}}
+\index{OnEvent@{OnEvent}!Gear::Application@{Gear::Application}}
+\doxysubsubsection{\texorpdfstring{OnEvent()}{OnEvent()}}
+{\footnotesize\ttfamily void Gear\+::\+Application\+::\+On\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_event}{Event}} \&}]{e }\end{DoxyParamCaption})}
+
+
+
+Application.\+cpp 파일의 38 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39     \{}
+\DoxyCodeLine{40         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42         EventDispatcher dispatcher(e);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44         dispatcher.Dispatch<WindowCloseEvent>(\mbox{\hyperlink{_application_8cpp_a2290aac021a7119e86af0aa6d962a226}{BIND\_EVENT\_FN}}(\mbox{\hyperlink{class_gear_1_1_application_aebbf7985b1ca5ea5b8341d8ff2411f02}{OnWindowClose}}));}
+\DoxyCodeLine{45         dispatcher.Dispatch<WindowResizeEvent>(\mbox{\hyperlink{_application_8cpp_a2290aac021a7119e86af0aa6d962a226}{BIND\_EVENT\_FN}}(\mbox{\hyperlink{class_gear_1_1_application_a5f3b89a0f64ca8abd231c8769ea41f13}{OnWindowResize}}));}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = \mbox{\hyperlink{class_gear_1_1_application_a824c8053de5026bdc13dff8d55b1ccb3}{m\_CurScene}}-\/>\mbox{\hyperlink{class_gear_1_1_scene_afa00f2193b0cf960831659f366610a8d}{end}}(); it != \mbox{\hyperlink{class_gear_1_1_application_a824c8053de5026bdc13dff8d55b1ccb3}{m\_CurScene}}-\/>\mbox{\hyperlink{class_gear_1_1_scene_af1d5da2588df80d2c0477f9a8aae934e}{begin}}();) \{}
+\DoxyCodeLine{48             (*-\/-\/it)-\/>\mbox{\hyperlink{class_gear_1_1_application_a8487b61d01833a84ee9ca9c354d8f8b9}{OnEvent}}(e);}
+\DoxyCodeLine{49             \textcolor{keywordflow}{if} (e.m\_Handled)}
+\DoxyCodeLine{50                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{51         \}}
+\DoxyCodeLine{52     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 5
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 6
+\mbox{\Hypertarget{class_gear_1_1_application_aebbf7985b1ca5ea5b8341d8ff2411f02}\label{class_gear_1_1_application_aebbf7985b1ca5ea5b8341d8ff2411f02}} 
+\index{Gear::Application@{Gear::Application}!OnWindowClose@{OnWindowClose}}
+\index{OnWindowClose@{OnWindowClose}!Gear::Application@{Gear::Application}}
+\doxysubsubsection{\texorpdfstring{OnWindowClose()}{OnWindowClose()}}
+{\footnotesize\ttfamily bool Gear\+::\+Application\+::\+On\+Window\+Close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_window_close_event}{Window\+Close\+Event}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Application.\+cpp 파일의 90 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91     \{}
+\DoxyCodeLine{92         \mbox{\hyperlink{class_gear_1_1_application_ada1fcd30ce47eea61f7276dbec49c672}{m\_Running}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{93         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{94     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 7
+\mbox{\Hypertarget{class_gear_1_1_application_a5f3b89a0f64ca8abd231c8769ea41f13}\label{class_gear_1_1_application_a5f3b89a0f64ca8abd231c8769ea41f13}} 
+\index{Gear::Application@{Gear::Application}!OnWindowResize@{OnWindowResize}}
+\index{OnWindowResize@{OnWindowResize}!Gear::Application@{Gear::Application}}
+\doxysubsubsection{\texorpdfstring{OnWindowResize()}{OnWindowResize()}}
+{\footnotesize\ttfamily bool Gear\+::\+Application\+::\+On\+Window\+Resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_window_resize_event}{Window\+Resize\+Event}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Application.\+cpp 파일의 96 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{97     \{}
+\DoxyCodeLine{98         \mbox{\hyperlink{_instrumentor_8h_a4ecb6a74f29a012dea3a4e3b1e855876}{GR\_PROFILE\_SCOPE}}(\textcolor{stringliteral}{"RunLoop"});}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100         \textcolor{keywordflow}{if} (e.GetWidth() == 0 || e.GetHeight() == 0)}
+\DoxyCodeLine{101         \{}
+\DoxyCodeLine{102             \mbox{\hyperlink{class_gear_1_1_application_a6236185ab04e1460e2dee3a4cd8c46d4}{m\_Minimized}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{103             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{104         \}}
+\DoxyCodeLine{105         \mbox{\hyperlink{class_gear_1_1_application_a6236185ab04e1460e2dee3a4cd8c46d4}{m\_Minimized}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{106         \mbox{\hyperlink{class_gear_1_1_renderer_aab219c2766233709dd4aeebe8d8be6cf}{Renderer::OnWindowResize}}(e.GetWidth(), e.GetHeight());}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{109     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 8
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 9
+\mbox{\Hypertarget{class_gear_1_1_application_a1a8787f10a5132e3a92a9f4e6ab8e3c0}\label{class_gear_1_1_application_a1a8787f10a5132e3a92a9f4e6ab8e3c0}} 
+\index{Gear::Application@{Gear::Application}!Run@{Run}}
+\index{Run@{Run}!Gear::Application@{Gear::Application}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void Gear\+::\+Application\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Application.\+cpp 파일의 54 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55     \{}
+\DoxyCodeLine{56         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58         \textcolor{keywordflow}{while} (\mbox{\hyperlink{class_gear_1_1_application_ada1fcd30ce47eea61f7276dbec49c672}{m\_Running}})}
+\DoxyCodeLine{59         \{}
+\DoxyCodeLine{60             \mbox{\hyperlink{_instrumentor_8h_a4ecb6a74f29a012dea3a4e3b1e855876}{GR\_PROFILE\_SCOPE}}(\textcolor{stringliteral}{"RunLoop"});}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62             \textcolor{keywordtype}{float} time = (float)glfwGetTime();}
+\DoxyCodeLine{63             Timestep timestep = time -\/ \mbox{\hyperlink{class_gear_1_1_application_aba0718f999e4b001c9f0893c66cba769}{m\_LastFrameTime}};}
+\DoxyCodeLine{64             \mbox{\hyperlink{class_gear_1_1_application_aba0718f999e4b001c9f0893c66cba769}{m\_LastFrameTime}} = time;}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66             }
+\DoxyCodeLine{67             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_gear_1_1_application_a6236185ab04e1460e2dee3a4cd8c46d4}{m\_Minimized}})}
+\DoxyCodeLine{68             \{}
+\DoxyCodeLine{69                 \mbox{\hyperlink{class_gear_1_1_application_a824c8053de5026bdc13dff8d55b1ccb3}{m\_CurScene}} = \mbox{\hyperlink{class_gear_1_1_scene_manager_a4ad39cd209f7907edc7275566bd1c9a4}{Gear::SceneManager::GetCurScene}}();}
+\DoxyCodeLine{70                 \{}
+\DoxyCodeLine{71                     \mbox{\hyperlink{_instrumentor_8h_a4ecb6a74f29a012dea3a4e3b1e855876}{GR\_PROFILE\_SCOPE}}(\textcolor{stringliteral}{"LayerStack OnUpdate"});}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73                     \textcolor{keywordflow}{for} (Layer* layer : *\mbox{\hyperlink{class_gear_1_1_application_a824c8053de5026bdc13dff8d55b1ccb3}{m\_CurScene}})}
+\DoxyCodeLine{74                         layer-\/>OnUpdate(timestep);}
+\DoxyCodeLine{75                 \}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77                 \mbox{\hyperlink{class_gear_1_1_application_a5b45576d85e25ee872f8cf4a33fd0830}{m\_ImGuilayer}}-\/>\mbox{\hyperlink{class_gear_1_1_im_gui_layer_ae04e078d8f63e8d7685c7544b79fa84a}{Begin}}();}
+\DoxyCodeLine{78                 \{}
+\DoxyCodeLine{79                     \mbox{\hyperlink{_instrumentor_8h_a4ecb6a74f29a012dea3a4e3b1e855876}{GR\_PROFILE\_SCOPE}}(\textcolor{stringliteral}{"LayerStack OnImGuiRender"});}
+\DoxyCodeLine{80                     \textcolor{keywordflow}{for} (Layer* layer : *\mbox{\hyperlink{class_gear_1_1_application_a824c8053de5026bdc13dff8d55b1ccb3}{m\_CurScene}})}
+\DoxyCodeLine{81                         layer-\/>OnImGuiRender();}
+\DoxyCodeLine{82                 \}}
+\DoxyCodeLine{83                 \mbox{\hyperlink{class_gear_1_1_application_a5b45576d85e25ee872f8cf4a33fd0830}{m\_ImGuilayer}}-\/>\mbox{\hyperlink{class_gear_1_1_im_gui_layer_a8c48103e30baa35b0869a05e5f54819f}{End}}();}
+\DoxyCodeLine{84             \}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86             \mbox{\hyperlink{class_gear_1_1_application_a1798d33948295a2b2c92f5169a53101c}{m\_Window}}-\/>OnUpdate();}
+\DoxyCodeLine{87         \}}
+\DoxyCodeLine{88     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 10
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_application_a824c8053de5026bdc13dff8d55b1ccb3}\label{class_gear_1_1_application_a824c8053de5026bdc13dff8d55b1ccb3}} 
+\index{Gear::Application@{Gear::Application}!m\_CurScene@{m\_CurScene}}
+\index{m\_CurScene@{m\_CurScene}!Gear::Application@{Gear::Application}}
+\doxysubsubsection{\texorpdfstring{m\_CurScene}{m\_CurScene}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gear_1_1_scene}{Scene}}$\ast$ Gear\+::\+Application\+::m\+\_\+\+Cur\+Scene\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Application.\+h 파일의 41 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_application_a5b45576d85e25ee872f8cf4a33fd0830}\label{class_gear_1_1_application_a5b45576d85e25ee872f8cf4a33fd0830}} 
+\index{Gear::Application@{Gear::Application}!m\_ImGuilayer@{m\_ImGuilayer}}
+\index{m\_ImGuilayer@{m\_ImGuilayer}!Gear::Application@{Gear::Application}}
+\doxysubsubsection{\texorpdfstring{m\_ImGuilayer}{m\_ImGuilayer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gear_1_1_im_gui_layer}{Im\+Gui\+Layer}}$\ast$ Gear\+::\+Application\+::m\+\_\+\+Im\+Guilayer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Application.\+h 파일의 35 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_application_aba0718f999e4b001c9f0893c66cba769}\label{class_gear_1_1_application_aba0718f999e4b001c9f0893c66cba769}} 
+\index{Gear::Application@{Gear::Application}!m\_LastFrameTime@{m\_LastFrameTime}}
+\index{m\_LastFrameTime@{m\_LastFrameTime}!Gear::Application@{Gear::Application}}
+\doxysubsubsection{\texorpdfstring{m\_LastFrameTime}{m\_LastFrameTime}}
+{\footnotesize\ttfamily float Gear\+::\+Application\+::m\+\_\+\+Last\+Frame\+Time = 0.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Application.\+h 파일의 42 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_application_a6236185ab04e1460e2dee3a4cd8c46d4}\label{class_gear_1_1_application_a6236185ab04e1460e2dee3a4cd8c46d4}} 
+\index{Gear::Application@{Gear::Application}!m\_Minimized@{m\_Minimized}}
+\index{m\_Minimized@{m\_Minimized}!Gear::Application@{Gear::Application}}
+\doxysubsubsection{\texorpdfstring{m\_Minimized}{m\_Minimized}}
+{\footnotesize\ttfamily bool Gear\+::\+Application\+::m\+\_\+\+Minimized = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Application.\+h 파일의 40 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_application_ada1fcd30ce47eea61f7276dbec49c672}\label{class_gear_1_1_application_ada1fcd30ce47eea61f7276dbec49c672}} 
+\index{Gear::Application@{Gear::Application}!m\_Running@{m\_Running}}
+\index{m\_Running@{m\_Running}!Gear::Application@{Gear::Application}}
+\doxysubsubsection{\texorpdfstring{m\_Running}{m\_Running}}
+{\footnotesize\ttfamily bool Gear\+::\+Application\+::m\+\_\+\+Running = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Application.\+h 파일의 39 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_application_a1798d33948295a2b2c92f5169a53101c}\label{class_gear_1_1_application_a1798d33948295a2b2c92f5169a53101c}} 
+\index{Gear::Application@{Gear::Application}!m\_Window@{m\_Window}}
+\index{m\_Window@{m\_Window}!Gear::Application@{Gear::Application}}
+\doxysubsubsection{\texorpdfstring{m\_Window}{m\_Window}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_gear_1_1_window}{Window}}$>$ Gear\+::\+Application\+::m\+\_\+\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Application.\+h 파일의 38 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_application_af20b4dc1c356c6843a492a6b1ee6d588}\label{class_gear_1_1_application_af20b4dc1c356c6843a492a6b1ee6d588}} 
+\index{Gear::Application@{Gear::Application}!s\_Instance@{s\_Instance}}
+\index{s\_Instance@{s\_Instance}!Gear::Application@{Gear::Application}}
+\doxysubsubsection{\texorpdfstring{s\_Instance}{s\_Instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gear_1_1_application}{Application}} $\ast$ Gear\+::\+Application\+::s\+\_\+\+Instance = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Application.\+h 파일의 44 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Core/\mbox{\hyperlink{_application_8h}{Application.\+h}}\item 
+Gear/src/\+Gear/\+Core/\mbox{\hyperlink{_application_8cpp}{Application.\+cpp}}\end{DoxyCompactItemize}

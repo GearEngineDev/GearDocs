@@ -1,0 +1,211 @@
+\hypertarget{class_gear_1_1_renderer}{}\doxysection{Gear\+::Renderer 클래스 참조}
+\label{class_gear_1_1_renderer}\index{Gear::Renderer@{Gear::Renderer}}
+
+
+{\ttfamily \#include $<$Renderer.\+h$>$}
+
+
+
+Gear\+::Renderer에 대한 협력 다이어그램\+:
+% FIG 0
+\doxysubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_gear_1_1_renderer_1_1_scene_data}{Scene\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_renderer_abfccab18eea7796f760b4026ca0b180b}{Init}} ()
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_renderer_a9b3f366718c62175b9224efac9e1125a}{Shutdown}} ()
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_renderer_aab219c2766233709dd4aeebe8d8be6cf}{On\+Window\+Resize}} (uint32\+\_\+t width, uint32\+\_\+t height)
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_renderer_a883726823470b5b6bf2ec62cea30ba22}{Begin\+Scene}} (\mbox{\hyperlink{class_gear_1_1_orthographic_camera}{Orthographic\+Camera}} \&camera)
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_renderer_a9780a7c019a7b9ca7750242c6dce7a77}{End\+Scene}} ()
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_renderer_a46fcbf3ff7cc8170300a300052bb2cad}{Submit}} (const \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_shader}{Shader}} $>$ \&shader, const \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_vertex_array}{Vertex\+Array}} $>$ \&vertex\+Array, const glm\+::mat4 \&transform=glm\+::mat4(1.\+0f))
+\item 
+static \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78}{Renderer\+A\+P\+I\+::\+A\+PI}} \mbox{\hyperlink{class_gear_1_1_renderer_ad13c79d41ff9c92e63e0a356ddb06d1f}{Get\+A\+PI}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{정적 Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{namespace_gear_abef5ce1767f345625e08a951f865a20d}{Scope}}$<$ \mbox{\hyperlink{struct_gear_1_1_renderer_1_1_scene_data}{Scene\+Data}} $>$ \mbox{\hyperlink{class_gear_1_1_renderer_abd82f0c6fc41377a7d9d99868a8763bb}{m\+\_\+\+Scene\+Data}} = \mbox{\hyperlink{namespace_gear_a0931f35259d76c5ca3aa6d5e92870716}{Create\+Scope}}$<$\mbox{\hyperlink{struct_gear_1_1_renderer_1_1_scene_data}{Renderer\+::\+Scene\+Data}}$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Renderer.\+h 파일의 9 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_renderer_a883726823470b5b6bf2ec62cea30ba22}\label{class_gear_1_1_renderer_a883726823470b5b6bf2ec62cea30ba22}} 
+\index{Gear::Renderer@{Gear::Renderer}!BeginScene@{BeginScene}}
+\index{BeginScene@{BeginScene}!Gear::Renderer@{Gear::Renderer}}
+\doxysubsubsection{\texorpdfstring{BeginScene()}{BeginScene()}}
+{\footnotesize\ttfamily void Gear\+::\+Renderer\+::\+Begin\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_orthographic_camera}{Orthographic\+Camera}} \&}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Renderer.\+cpp 파일의 29 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30     \{}
+\DoxyCodeLine{31         \mbox{\hyperlink{class_gear_1_1_renderer_abd82f0c6fc41377a7d9d99868a8763bb}{m\_SceneData}}-\/>ViewProjectionMatrix = camera.GetViewProjectionMatrix();}
+\DoxyCodeLine{32     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 1
+\mbox{\Hypertarget{class_gear_1_1_renderer_a9780a7c019a7b9ca7750242c6dce7a77}\label{class_gear_1_1_renderer_a9780a7c019a7b9ca7750242c6dce7a77}} 
+\index{Gear::Renderer@{Gear::Renderer}!EndScene@{EndScene}}
+\index{EndScene@{EndScene}!Gear::Renderer@{Gear::Renderer}}
+\doxysubsubsection{\texorpdfstring{EndScene()}{EndScene()}}
+{\footnotesize\ttfamily void Gear\+::\+Renderer\+::\+End\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Renderer.\+cpp 파일의 34 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35     \{}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_renderer_ad13c79d41ff9c92e63e0a356ddb06d1f}\label{class_gear_1_1_renderer_ad13c79d41ff9c92e63e0a356ddb06d1f}} 
+\index{Gear::Renderer@{Gear::Renderer}!GetAPI@{GetAPI}}
+\index{GetAPI@{GetAPI}!Gear::Renderer@{Gear::Renderer}}
+\doxysubsubsection{\texorpdfstring{GetAPI()}{GetAPI()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78}{Renderer\+A\+P\+I\+::\+A\+PI}} Gear\+::\+Renderer\+::\+Get\+A\+PI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Renderer.\+h 파일의 23 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_aab4755243147f8bdb84910c9d1906c80}{RendererAPI::GetAPI}}(); \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+\mbox{\Hypertarget{class_gear_1_1_renderer_abfccab18eea7796f760b4026ca0b180b}\label{class_gear_1_1_renderer_abfccab18eea7796f760b4026ca0b180b}} 
+\index{Gear::Renderer@{Gear::Renderer}!Init@{Init}}
+\index{Init@{Init}!Gear::Renderer@{Gear::Renderer}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Gear\+::\+Renderer\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Renderer.\+cpp 파일의 11 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12     \{}
+\DoxyCodeLine{13         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15         \mbox{\hyperlink{class_gear_1_1_render_command_a69613ec9525fb9499570ac6312270bc6}{RenderCommand::Init}}();}
+\DoxyCodeLine{16         \mbox{\hyperlink{class_gear_1_1_renderer2_d_a012d5dabb3d03a26b4610027d78786e8}{Renderer2D::Init}}();}
+\DoxyCodeLine{17     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 4
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 5
+\mbox{\Hypertarget{class_gear_1_1_renderer_aab219c2766233709dd4aeebe8d8be6cf}\label{class_gear_1_1_renderer_aab219c2766233709dd4aeebe8d8be6cf}} 
+\index{Gear::Renderer@{Gear::Renderer}!OnWindowResize@{OnWindowResize}}
+\index{OnWindowResize@{OnWindowResize}!Gear::Renderer@{Gear::Renderer}}
+\doxysubsubsection{\texorpdfstring{OnWindowResize()}{OnWindowResize()}}
+{\footnotesize\ttfamily void Gear\+::\+Renderer\+::\+On\+Window\+Resize (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Renderer.\+cpp 파일의 24 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25     \{}
+\DoxyCodeLine{26         \mbox{\hyperlink{class_gear_1_1_render_command_adbc1915b08ebaa559b74140580466c6e}{RenderCommand::SetViewPort}}(0, 0, width, height);}
+\DoxyCodeLine{27     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 6
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 7
+\mbox{\Hypertarget{class_gear_1_1_renderer_a9b3f366718c62175b9224efac9e1125a}\label{class_gear_1_1_renderer_a9b3f366718c62175b9224efac9e1125a}} 
+\index{Gear::Renderer@{Gear::Renderer}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!Gear::Renderer@{Gear::Renderer}}
+\doxysubsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
+{\footnotesize\ttfamily void Gear\+::\+Renderer\+::\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Renderer.\+cpp 파일의 19 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20     \{}
+\DoxyCodeLine{21         \mbox{\hyperlink{class_gear_1_1_renderer2_d_a1ea05ea55ad97cc724c8093833c8c5f8}{Renderer2D::Shutdown}}();}
+\DoxyCodeLine{22     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 8
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 9
+\mbox{\Hypertarget{class_gear_1_1_renderer_a46fcbf3ff7cc8170300a300052bb2cad}\label{class_gear_1_1_renderer_a46fcbf3ff7cc8170300a300052bb2cad}} 
+\index{Gear::Renderer@{Gear::Renderer}!Submit@{Submit}}
+\index{Submit@{Submit}!Gear::Renderer@{Gear::Renderer}}
+\doxysubsubsection{\texorpdfstring{Submit()}{Submit()}}
+{\footnotesize\ttfamily void Gear\+::\+Renderer\+::\+Submit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_shader}{Shader}} $>$ \&}]{shader,  }\item[{const \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_vertex_array}{Vertex\+Array}} $>$ \&}]{vertex\+Array,  }\item[{const glm\+::mat4 \&}]{transform = {\ttfamily glm\+:\+:mat4(1.0f)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Renderer.\+cpp 파일의 39 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41         shader-\/>Bind();}
+\DoxyCodeLine{42         std::dynamic\_pointer\_cast<OpenGLShader>(shader)-\/>UploadUniformMat4(\textcolor{stringliteral}{"u\_ViewProjection"}, \mbox{\hyperlink{class_gear_1_1_renderer_abd82f0c6fc41377a7d9d99868a8763bb}{m\_SceneData}}-\/>ViewProjectionMatrix);}
+\DoxyCodeLine{43         std::dynamic\_pointer\_cast<OpenGLShader>(shader)-\/>UploadUniformMat4(\textcolor{stringliteral}{"u\_Transform"}, transform);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45         vertexArray-\/>Bind();}
+\DoxyCodeLine{46         \mbox{\hyperlink{class_gear_1_1_render_command_a034585ba8f23d7a327319015f8d59fd9}{RenderCommand::DrawIndexed}}(vertexArray);}
+\DoxyCodeLine{47     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 10
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_renderer_abd82f0c6fc41377a7d9d99868a8763bb}\label{class_gear_1_1_renderer_abd82f0c6fc41377a7d9d99868a8763bb}} 
+\index{Gear::Renderer@{Gear::Renderer}!m\_SceneData@{m\_SceneData}}
+\index{m\_SceneData@{m\_SceneData}!Gear::Renderer@{Gear::Renderer}}
+\doxysubsubsection{\texorpdfstring{m\_SceneData}{m\_SceneData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_gear_abef5ce1767f345625e08a951f865a20d}{Scope}}$<$ \mbox{\hyperlink{struct_gear_1_1_renderer_1_1_scene_data}{Renderer\+::\+Scene\+Data}} $>$ Gear\+::\+Renderer\+::m\+\_\+\+Scene\+Data = \mbox{\hyperlink{namespace_gear_a0931f35259d76c5ca3aa6d5e92870716}{Create\+Scope}}$<$\mbox{\hyperlink{struct_gear_1_1_renderer_1_1_scene_data}{Renderer\+::\+Scene\+Data}}$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Renderer.\+h 파일의 30 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Renderer/\mbox{\hyperlink{_renderer_8h}{Renderer.\+h}}\item 
+Gear/src/\+Gear/\+Renderer/\mbox{\hyperlink{_renderer_8cpp}{Renderer.\+cpp}}\end{DoxyCompactItemize}

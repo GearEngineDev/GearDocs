@@ -1,0 +1,195 @@
+\hypertarget{class_gear_1_1_layer}{}\doxysection{Gear\+::Layer 클래스 참조}
+\label{class_gear_1_1_layer}\index{Gear::Layer@{Gear::Layer}}
+
+
+{\ttfamily \#include $<$Layer.\+h$>$}
+
+
+
+Gear\+::Layer에 대한 상속 다이어그램 \+: 
+% FIG 0
+
+
+Gear\+::Layer에 대한 협력 다이어그램\+:
+% FIG 1
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_layer_aee863bc70662c36fdaabc3e402a9016a}{Layer}} (const std\+::string \&name=\char`\"{}Layer\char`\"{})
+\item 
+virtual \mbox{\hyperlink{class_gear_1_1_layer_aed4464688e9b9a0e3ab982501d89a844}{$\sim$\+Layer}} ()=default
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_layer_a9baeea9bf389a9cf716b624d0c61484f}{On\+Attach}} ()
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_layer_aeb445129facd1ab14a4f9c58fc3e434f}{On\+Detach}} ()
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_layer_aa187b065f84047d738804eaff30372b9}{On\+Update}} (\mbox{\hyperlink{class_gear_1_1_timestep}{Timestep}} ts)
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_layer_a27fc0b5571c7b1d101bc109e41fbc67e}{On\+Im\+Gui\+Render}} ()
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_layer_a514d0a0823bd3dca81855b40f3ec46d8}{On\+Event}} (\mbox{\hyperlink{class_gear_1_1_event}{Event}} \&event)
+\item 
+const std\+::string \& \mbox{\hyperlink{class_gear_1_1_layer_a696bcec60a17dc928248da61e08f76ab}{Get\+Name}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 속성}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_gear_1_1_layer_a8b8171be931048688dbe1f0bf96ab8d9}{m\+\_\+\+Debug\+Name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Layer.\+h 파일의 8 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_layer_aee863bc70662c36fdaabc3e402a9016a}\label{class_gear_1_1_layer_aee863bc70662c36fdaabc3e402a9016a}} 
+\index{Gear::Layer@{Gear::Layer}!Layer@{Layer}}
+\index{Layer@{Layer}!Gear::Layer@{Gear::Layer}}
+\doxysubsubsection{\texorpdfstring{Layer()}{Layer()}}
+{\footnotesize\ttfamily Gear\+::\+Layer\+::\+Layer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name = {\ttfamily \char`\"{}Layer\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Layer.\+cpp 파일의 5 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6         : \mbox{\hyperlink{class_gear_1_1_layer_a8b8171be931048688dbe1f0bf96ab8d9}{m\_DebugName}}(name)}
+\DoxyCodeLine{7     \{}
+\DoxyCodeLine{8     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_layer_aed4464688e9b9a0e3ab982501d89a844}\label{class_gear_1_1_layer_aed4464688e9b9a0e3ab982501d89a844}} 
+\index{Gear::Layer@{Gear::Layer}!````~Layer@{$\sim$Layer}}
+\index{````~Layer@{$\sim$Layer}!Gear::Layer@{Gear::Layer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Layer()}{~Layer()}}
+{\footnotesize\ttfamily virtual Gear\+::\+Layer\+::$\sim$\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_layer_a696bcec60a17dc928248da61e08f76ab}\label{class_gear_1_1_layer_a696bcec60a17dc928248da61e08f76ab}} 
+\index{Gear::Layer@{Gear::Layer}!GetName@{GetName}}
+\index{GetName@{GetName}!Gear::Layer@{Gear::Layer}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily const std\+::string\& Gear\+::\+Layer\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Layer.\+h 파일의 20 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_layer_a8b8171be931048688dbe1f0bf96ab8d9}{m\_DebugName}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_layer_a9baeea9bf389a9cf716b624d0c61484f}\label{class_gear_1_1_layer_a9baeea9bf389a9cf716b624d0c61484f}} 
+\index{Gear::Layer@{Gear::Layer}!OnAttach@{OnAttach}}
+\index{OnAttach@{OnAttach}!Gear::Layer@{Gear::Layer}}
+\doxysubsubsection{\texorpdfstring{OnAttach()}{OnAttach()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Layer\+::\+On\+Attach (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_im_gui_layer_a52a17d4fdca7c81837db56bade001cac}{Gear\+::\+Im\+Gui\+Layer}}에서 재구현되었습니다.
+
+
+
+Layer.\+h 파일의 14 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14 \{\}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\mbox{\Hypertarget{class_gear_1_1_layer_aeb445129facd1ab14a4f9c58fc3e434f}\label{class_gear_1_1_layer_aeb445129facd1ab14a4f9c58fc3e434f}} 
+\index{Gear::Layer@{Gear::Layer}!OnDetach@{OnDetach}}
+\index{OnDetach@{OnDetach}!Gear::Layer@{Gear::Layer}}
+\doxysubsubsection{\texorpdfstring{OnDetach()}{OnDetach()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Layer\+::\+On\+Detach (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_im_gui_layer_a247b505b394fc9dca8fe084e16fa60f0}{Gear\+::\+Im\+Gui\+Layer}}에서 재구현되었습니다.
+
+
+
+Layer.\+h 파일의 15 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15 \{\}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+\mbox{\Hypertarget{class_gear_1_1_layer_a514d0a0823bd3dca81855b40f3ec46d8}\label{class_gear_1_1_layer_a514d0a0823bd3dca81855b40f3ec46d8}} 
+\index{Gear::Layer@{Gear::Layer}!OnEvent@{OnEvent}}
+\index{OnEvent@{OnEvent}!Gear::Layer@{Gear::Layer}}
+\doxysubsubsection{\texorpdfstring{OnEvent()}{OnEvent()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Layer\+::\+On\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_event}{Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Layer.\+h 파일의 18 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_layer_a27fc0b5571c7b1d101bc109e41fbc67e}\label{class_gear_1_1_layer_a27fc0b5571c7b1d101bc109e41fbc67e}} 
+\index{Gear::Layer@{Gear::Layer}!OnImGuiRender@{OnImGuiRender}}
+\index{OnImGuiRender@{OnImGuiRender}!Gear::Layer@{Gear::Layer}}
+\doxysubsubsection{\texorpdfstring{OnImGuiRender()}{OnImGuiRender()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Layer\+::\+On\+Im\+Gui\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Layer.\+h 파일의 17 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_layer_aa187b065f84047d738804eaff30372b9}\label{class_gear_1_1_layer_aa187b065f84047d738804eaff30372b9}} 
+\index{Gear::Layer@{Gear::Layer}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!Gear::Layer@{Gear::Layer}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Layer\+::\+On\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_timestep}{Timestep}}}]{ts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Layer.\+h 파일의 16 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_layer_a8b8171be931048688dbe1f0bf96ab8d9}\label{class_gear_1_1_layer_a8b8171be931048688dbe1f0bf96ab8d9}} 
+\index{Gear::Layer@{Gear::Layer}!m\_DebugName@{m\_DebugName}}
+\index{m\_DebugName@{m\_DebugName}!Gear::Layer@{Gear::Layer}}
+\doxysubsubsection{\texorpdfstring{m\_DebugName}{m\_DebugName}}
+{\footnotesize\ttfamily std\+::string Gear\+::\+Layer\+::m\+\_\+\+Debug\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Layer.\+h 파일의 22 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Core/\mbox{\hyperlink{_layer_8h}{Layer.\+h}}\item 
+Gear/src/\+Gear/\+Core/\mbox{\hyperlink{_layer_8cpp}{Layer.\+cpp}}\end{DoxyCompactItemize}

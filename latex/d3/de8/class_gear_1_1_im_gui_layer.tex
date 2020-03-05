@@ -1,0 +1,319 @@
+\hypertarget{class_gear_1_1_im_gui_layer}{}\doxysection{Gear\+::Im\+Gui\+Layer 클래스 참조}
+\label{class_gear_1_1_im_gui_layer}\index{Gear::ImGuiLayer@{Gear::ImGuiLayer}}
+
+
+{\ttfamily \#include $<$Im\+Gui\+Layer.\+h$>$}
+
+
+
+Gear\+::Im\+Gui\+Layer에 대한 상속 다이어그램 \+: 
+% FIG 0
+
+
+Gear\+::Im\+Gui\+Layer에 대한 협력 다이어그램\+:
+% FIG 1
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_im_gui_layer_aaf983c11c72aeaa25cd64e3ba3e53929}{Im\+Gui\+Layer}} ()
+\item 
+\mbox{\hyperlink{class_gear_1_1_im_gui_layer_a1b31f63ebf690db1c4dde15f41336add}{$\sim$\+Im\+Gui\+Layer}} ()
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_im_gui_layer_a52a17d4fdca7c81837db56bade001cac}{On\+Attach}} () override
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_im_gui_layer_a247b505b394fc9dca8fe084e16fa60f0}{On\+Detach}} () override
+\item 
+void \mbox{\hyperlink{class_gear_1_1_im_gui_layer_ae04e078d8f63e8d7685c7544b79fa84a}{Begin}} ()
+\item 
+void \mbox{\hyperlink{class_gear_1_1_im_gui_layer_a8c48103e30baa35b0869a05e5f54819f}{End}} ()
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_layer_aa187b065f84047d738804eaff30372b9}{On\+Update}} (\mbox{\hyperlink{class_gear_1_1_timestep}{Timestep}} ts)
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_layer_a27fc0b5571c7b1d101bc109e41fbc67e}{On\+Im\+Gui\+Render}} ()
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_layer_a514d0a0823bd3dca81855b40f3ec46d8}{On\+Event}} (\mbox{\hyperlink{class_gear_1_1_event}{Event}} \&event)
+\item 
+const std\+::string \& \mbox{\hyperlink{class_gear_1_1_layer_a696bcec60a17dc928248da61e08f76ab}{Get\+Name}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 속성}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_gear_1_1_layer_a8b8171be931048688dbe1f0bf96ab8d9}{m\+\_\+\+Debug\+Name}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_gear_1_1_im_gui_layer_a600984e80d6e338941e7914a80a68350}{m\+\_\+\+Time}} = 0.\+0f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Im\+Gui\+Layer.\+h 파일의 10 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_im_gui_layer_aaf983c11c72aeaa25cd64e3ba3e53929}\label{class_gear_1_1_im_gui_layer_aaf983c11c72aeaa25cd64e3ba3e53929}} 
+\index{Gear::ImGuiLayer@{Gear::ImGuiLayer}!ImGuiLayer@{ImGuiLayer}}
+\index{ImGuiLayer@{ImGuiLayer}!Gear::ImGuiLayer@{Gear::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{ImGuiLayer()}{ImGuiLayer()}}
+{\footnotesize\ttfamily Gear\+::\+Im\+Gui\+Layer\+::\+Im\+Gui\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Im\+Gui\+Layer.\+cpp 파일의 17 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18         : \mbox{\hyperlink{class_gear_1_1_layer_aee863bc70662c36fdaabc3e402a9016a}{Layer}}(\textcolor{stringliteral}{"ImGuiLayer"})}
+\DoxyCodeLine{19     \{}
+\DoxyCodeLine{20     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_im_gui_layer_a1b31f63ebf690db1c4dde15f41336add}\label{class_gear_1_1_im_gui_layer_a1b31f63ebf690db1c4dde15f41336add}} 
+\index{Gear::ImGuiLayer@{Gear::ImGuiLayer}!````~ImGuiLayer@{$\sim$ImGuiLayer}}
+\index{````~ImGuiLayer@{$\sim$ImGuiLayer}!Gear::ImGuiLayer@{Gear::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{$\sim$ImGuiLayer()}{~ImGuiLayer()}}
+{\footnotesize\ttfamily Gear\+::\+Im\+Gui\+Layer\+::$\sim$\+Im\+Gui\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Im\+Gui\+Layer.\+cpp 파일의 22 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23     \{}
+\DoxyCodeLine{24     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_im_gui_layer_ae04e078d8f63e8d7685c7544b79fa84a}\label{class_gear_1_1_im_gui_layer_ae04e078d8f63e8d7685c7544b79fa84a}} 
+\index{Gear::ImGuiLayer@{Gear::ImGuiLayer}!Begin@{Begin}}
+\index{Begin@{Begin}!Gear::ImGuiLayer@{Gear::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{Begin()}{Begin()}}
+{\footnotesize\ttfamily void Gear\+::\+Im\+Gui\+Layer\+::\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Im\+Gui\+Layer.\+cpp 파일의 69 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{70     \{}
+\DoxyCodeLine{71         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73         ImGui\_ImplOpenGL3\_NewFrame();}
+\DoxyCodeLine{74         ImGui\_ImplGlfw\_NewFrame();}
+\DoxyCodeLine{75         ImGui::NewFrame();}
+\DoxyCodeLine{76     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\mbox{\Hypertarget{class_gear_1_1_im_gui_layer_a8c48103e30baa35b0869a05e5f54819f}\label{class_gear_1_1_im_gui_layer_a8c48103e30baa35b0869a05e5f54819f}} 
+\index{Gear::ImGuiLayer@{Gear::ImGuiLayer}!End@{End}}
+\index{End@{End}!Gear::ImGuiLayer@{Gear::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{End()}{End()}}
+{\footnotesize\ttfamily void Gear\+::\+Im\+Gui\+Layer\+::\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Im\+Gui\+Layer.\+cpp 파일의 78 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{79     \{}
+\DoxyCodeLine{80         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82         ImGuiIO\& io = ImGui::GetIO();}
+\DoxyCodeLine{83         Application\& app = \mbox{\hyperlink{class_gear_1_1_application_a283bd8871db563d9948c1be5450387fb}{Application::Get}}();}
+\DoxyCodeLine{84         io.DisplaySize = ImVec2((\textcolor{keywordtype}{float})app.GetWindow().GetWidth(), (\textcolor{keywordtype}{float})app.GetWindow().GetHeight());}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86         \textcolor{comment}{//Rendering}}
+\DoxyCodeLine{87         ImGui::Render();}
+\DoxyCodeLine{88         ImGui\_ImplOpenGL3\_RenderDrawData(ImGui::GetDrawData());}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90         \textcolor{keywordflow}{if} (io.ConfigFlags \& ImGuiConfigFlags\_ViewportsEnable)}
+\DoxyCodeLine{91         \{}
+\DoxyCodeLine{92             GLFWwindow* backup\_current\_context = glfwGetCurrentContext();}
+\DoxyCodeLine{93             ImGui::UpdatePlatformWindows();}
+\DoxyCodeLine{94             ImGui::RenderPlatformWindowsDefault();}
+\DoxyCodeLine{95             glfwMakeContextCurrent(backup\_current\_context);}
+\DoxyCodeLine{96         \}}
+\DoxyCodeLine{97     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 4
+\mbox{\Hypertarget{class_gear_1_1_layer_a696bcec60a17dc928248da61e08f76ab}\label{class_gear_1_1_layer_a696bcec60a17dc928248da61e08f76ab}} 
+\index{Gear::ImGuiLayer@{Gear::ImGuiLayer}!GetName@{GetName}}
+\index{GetName@{GetName}!Gear::ImGuiLayer@{Gear::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily const std\+::string\& Gear\+::\+Layer\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Layer.\+h 파일의 20 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_layer_a8b8171be931048688dbe1f0bf96ab8d9}{m\_DebugName}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_im_gui_layer_a52a17d4fdca7c81837db56bade001cac}\label{class_gear_1_1_im_gui_layer_a52a17d4fdca7c81837db56bade001cac}} 
+\index{Gear::ImGuiLayer@{Gear::ImGuiLayer}!OnAttach@{OnAttach}}
+\index{OnAttach@{OnAttach}!Gear::ImGuiLayer@{Gear::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{OnAttach()}{OnAttach()}}
+{\footnotesize\ttfamily void Gear\+::\+Im\+Gui\+Layer\+::\+On\+Attach (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_layer_a9baeea9bf389a9cf716b624d0c61484f}{Gear\+::\+Layer}}(으)로부터 재구현되었습니다.
+
+
+
+Im\+Gui\+Layer.\+cpp 파일의 26 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27     \{}
+\DoxyCodeLine{28         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30         \textcolor{comment}{//Setup dear ImGui context}}
+\DoxyCodeLine{31         IMGUI\_CHECKVERSION();}
+\DoxyCodeLine{32         ImGui::CreateContext();}
+\DoxyCodeLine{33         ImGuiIO\& io = ImGui::GetIO(); (void)io;}
+\DoxyCodeLine{34         io.ConfigFlags |= ImGuiConfigFlags\_NavEnableKeyboard;       \textcolor{comment}{// Enable Keyboard Controls}}
+\DoxyCodeLine{35         \textcolor{comment}{//io.ConfigFlags |= ImGuiConfigFlags\_NavEnableGamepad;      // Enable Gamepad Controls}}
+\DoxyCodeLine{36         io.ConfigFlags |= ImGuiConfigFlags\_DockingEnable;           \textcolor{comment}{// Enable Docking}}
+\DoxyCodeLine{37         io.ConfigFlags |= ImGuiConfigFlags\_ViewportsEnable;         \textcolor{comment}{// Enable Multi-\/Viewport / Platform Windows}}
+\DoxyCodeLine{38         \textcolor{comment}{//io.ConfigViewportsNoAutoMerge = true;}}
+\DoxyCodeLine{39         \textcolor{comment}{//io.ConfigViewportsNoTaskBarIcon = true;}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41         \textcolor{comment}{// Setup Dear ImGui style}}
+\DoxyCodeLine{42         ImGui::StyleColorsDark();}
+\DoxyCodeLine{43         \textcolor{comment}{//ImGui::StyleColorsClassic();}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45         \textcolor{comment}{//When viewports are enabled we tweak WindowRounding/WindowBg so platform windows can look identical to regular ones.}}
+\DoxyCodeLine{46         ImGuiStyle\& style = ImGui::GetStyle();}
+\DoxyCodeLine{47         \textcolor{keywordflow}{if} (io.ConfigFlags \& ImGuiConfigFlags\_ViewportsEnable)}
+\DoxyCodeLine{48         \{}
+\DoxyCodeLine{49             style.WindowRounding = 0.0f;}
+\DoxyCodeLine{50             style.Colors[ImGuiCol\_WindowBg].w = 1.0f;}
+\DoxyCodeLine{51         \}}
+\DoxyCodeLine{52         Application\& app = \mbox{\hyperlink{class_gear_1_1_application_a283bd8871db563d9948c1be5450387fb}{Application::Get}}();}
+\DoxyCodeLine{53         GLFWwindow* window = \textcolor{keyword}{static\_cast<}GLFWwindow*\textcolor{keyword}{>}(app.GetWindow().GetNativeWindow());}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55         \textcolor{comment}{// Setup Platform/Renderer bindings}}
+\DoxyCodeLine{56         ImGui\_ImplGlfw\_InitForOpenGL(window, \textcolor{keyword}{true});}
+\DoxyCodeLine{57         ImGui\_ImplOpenGL3\_Init(\textcolor{stringliteral}{"\#version 410"});}
+\DoxyCodeLine{58     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 5
+\mbox{\Hypertarget{class_gear_1_1_im_gui_layer_a247b505b394fc9dca8fe084e16fa60f0}\label{class_gear_1_1_im_gui_layer_a247b505b394fc9dca8fe084e16fa60f0}} 
+\index{Gear::ImGuiLayer@{Gear::ImGuiLayer}!OnDetach@{OnDetach}}
+\index{OnDetach@{OnDetach}!Gear::ImGuiLayer@{Gear::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{OnDetach()}{OnDetach()}}
+{\footnotesize\ttfamily void Gear\+::\+Im\+Gui\+Layer\+::\+On\+Detach (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_layer_aeb445129facd1ab14a4f9c58fc3e434f}{Gear\+::\+Layer}}(으)로부터 재구현되었습니다.
+
+
+
+Im\+Gui\+Layer.\+cpp 파일의 60 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61     \{}
+\DoxyCodeLine{62         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64         ImGui\_ImplOpenGL3\_Shutdown();}
+\DoxyCodeLine{65         ImGui\_ImplGlfw\_Shutdown();}
+\DoxyCodeLine{66         ImGui::DestroyContext();}
+\DoxyCodeLine{67     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_layer_a514d0a0823bd3dca81855b40f3ec46d8}\label{class_gear_1_1_layer_a514d0a0823bd3dca81855b40f3ec46d8}} 
+\index{Gear::ImGuiLayer@{Gear::ImGuiLayer}!OnEvent@{OnEvent}}
+\index{OnEvent@{OnEvent}!Gear::ImGuiLayer@{Gear::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{OnEvent()}{OnEvent()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Layer\+::\+On\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_event}{Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Layer.\+h 파일의 18 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_layer_a27fc0b5571c7b1d101bc109e41fbc67e}\label{class_gear_1_1_layer_a27fc0b5571c7b1d101bc109e41fbc67e}} 
+\index{Gear::ImGuiLayer@{Gear::ImGuiLayer}!OnImGuiRender@{OnImGuiRender}}
+\index{OnImGuiRender@{OnImGuiRender}!Gear::ImGuiLayer@{Gear::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{OnImGuiRender()}{OnImGuiRender()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Layer\+::\+On\+Im\+Gui\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Layer.\+h 파일의 17 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_layer_aa187b065f84047d738804eaff30372b9}\label{class_gear_1_1_layer_aa187b065f84047d738804eaff30372b9}} 
+\index{Gear::ImGuiLayer@{Gear::ImGuiLayer}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!Gear::ImGuiLayer@{Gear::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Layer\+::\+On\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_timestep}{Timestep}}}]{ts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Layer.\+h 파일의 16 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_layer_a8b8171be931048688dbe1f0bf96ab8d9}\label{class_gear_1_1_layer_a8b8171be931048688dbe1f0bf96ab8d9}} 
+\index{Gear::ImGuiLayer@{Gear::ImGuiLayer}!m\_DebugName@{m\_DebugName}}
+\index{m\_DebugName@{m\_DebugName}!Gear::ImGuiLayer@{Gear::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{m\_DebugName}{m\_DebugName}}
+{\footnotesize\ttfamily std\+::string Gear\+::\+Layer\+::m\+\_\+\+Debug\+Name\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Layer.\+h 파일의 22 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_im_gui_layer_a600984e80d6e338941e7914a80a68350}\label{class_gear_1_1_im_gui_layer_a600984e80d6e338941e7914a80a68350}} 
+\index{Gear::ImGuiLayer@{Gear::ImGuiLayer}!m\_Time@{m\_Time}}
+\index{m\_Time@{m\_Time}!Gear::ImGuiLayer@{Gear::ImGuiLayer}}
+\doxysubsubsection{\texorpdfstring{m\_Time}{m\_Time}}
+{\footnotesize\ttfamily float Gear\+::\+Im\+Gui\+Layer\+::m\+\_\+\+Time = 0.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Im\+Gui\+Layer.\+h 파일의 23 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Im\+Gui/\mbox{\hyperlink{_im_gui_layer_8h}{Im\+Gui\+Layer.\+h}}\item 
+Gear/src/\+Gear/\+Im\+Gui/\mbox{\hyperlink{_im_gui_layer_8cpp}{Im\+Gui\+Layer.\+cpp}}\end{DoxyCompactItemize}

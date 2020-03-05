@@ -1,0 +1,137 @@
+\hypertarget{class_gear_1_1_vertex_buffer}{}\doxysection{Gear\+::Vertex\+Buffer 클래스 참조}
+\label{class_gear_1_1_vertex_buffer}\index{Gear::VertexBuffer@{Gear::VertexBuffer}}
+
+
+{\ttfamily \#include $<$Buffer.\+h$>$}
+
+
+
+Gear\+::Vertex\+Buffer에 대한 상속 다이어그램 \+: 
+% FIG 0
+
+
+Gear\+::Vertex\+Buffer에 대한 협력 다이어그램\+:
+% FIG 1
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_gear_1_1_vertex_buffer_a28b01ee83f26748555cba67f095c332b}{$\sim$\+Vertex\+Buffer}} ()
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_vertex_buffer_a5fcb9373fd681c6eef16c4d4dca30a47}{Bind}} () const =0
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_vertex_buffer_a626c289b1266615d22a5e2dee0ea73a8}{Unbind}} () const =0
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_vertex_buffer_ad1ea169d6e453faf95c3a96d8aed40b3}{Set\+Layout}} (const \mbox{\hyperlink{class_gear_1_1_buffer_layout}{Buffer\+Layout}} \&layout)=0
+\item 
+virtual const \mbox{\hyperlink{class_gear_1_1_buffer_layout}{Buffer\+Layout}} \& \mbox{\hyperlink{class_gear_1_1_vertex_buffer_a3c356eb58992ea37485f6bc9b9de6575}{Get\+Layout}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_gear_1_1_vertex_buffer}{Vertex\+Buffer}} $\ast$ \mbox{\hyperlink{class_gear_1_1_vertex_buffer_a5a0bbcfacafdab11e4204c3060df661d}{Create}} (float $\ast$vertices, uint32\+\_\+t size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Buffer.\+h 파일의 105 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_vertex_buffer_a28b01ee83f26748555cba67f095c332b}\label{class_gear_1_1_vertex_buffer_a28b01ee83f26748555cba67f095c332b}} 
+\index{Gear::VertexBuffer@{Gear::VertexBuffer}!````~VertexBuffer@{$\sim$VertexBuffer}}
+\index{````~VertexBuffer@{$\sim$VertexBuffer}!Gear::VertexBuffer@{Gear::VertexBuffer}}
+\doxysubsubsection{\texorpdfstring{$\sim$VertexBuffer()}{~VertexBuffer()}}
+{\footnotesize\ttfamily virtual Gear\+::\+Vertex\+Buffer\+::$\sim$\+Vertex\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Buffer.\+h 파일의 108 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{108 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_vertex_buffer_a5fcb9373fd681c6eef16c4d4dca30a47}\label{class_gear_1_1_vertex_buffer_a5fcb9373fd681c6eef16c4d4dca30a47}} 
+\index{Gear::VertexBuffer@{Gear::VertexBuffer}!Bind@{Bind}}
+\index{Bind@{Bind}!Gear::VertexBuffer@{Gear::VertexBuffer}}
+\doxysubsubsection{\texorpdfstring{Bind()}{Bind()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Vertex\+Buffer\+::\+Bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_open_g_l_vertex_buffer_aaf987fac644743405b062d8dcdb97dd1}{Gear\+::\+Open\+G\+L\+Vertex\+Buffer}}에서 구현되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_vertex_buffer_a5a0bbcfacafdab11e4204c3060df661d}\label{class_gear_1_1_vertex_buffer_a5a0bbcfacafdab11e4204c3060df661d}} 
+\index{Gear::VertexBuffer@{Gear::VertexBuffer}!Create@{Create}}
+\index{Create@{Create}!Gear::VertexBuffer@{Gear::VertexBuffer}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gear_1_1_vertex_buffer}{Vertex\+Buffer}} $\ast$ Gear\+::\+Vertex\+Buffer\+::\+Create (\begin{DoxyParamCaption}\item[{float $\ast$}]{vertices,  }\item[{uint32\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Buffer.\+cpp 파일의 11 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12     \{}
+\DoxyCodeLine{13         \textcolor{keywordflow}{switch} (\mbox{\hyperlink{class_gear_1_1_renderer_ad13c79d41ff9c92e63e0a356ddb06d1f}{Renderer::GetAPI}}())}
+\DoxyCodeLine{14         \{}
+\DoxyCodeLine{15         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a6adf97f83acf6453d4a6a4b1070f3754}{RendererAPI::API::None}}:}
+\DoxyCodeLine{16             \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{GR\_CORE\_ASSERT}}(\textcolor{keyword}{false}, \textcolor{stringliteral}{"RendererAPI::None is currently not supported!"});}
+\DoxyCodeLine{17             \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{18         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a760716b590ee7c0adc25f434f577d8be}{RendererAPI::API::OpenGL}}:}
+\DoxyCodeLine{19             \textcolor{keywordflow}{return} \textcolor{keyword}{new} OpenGLVertexBuffer(vertices, size);}
+\DoxyCodeLine{20         \}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22         \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{GR\_CORE\_ASSERT}}(\textcolor{keyword}{false}, \textcolor{stringliteral}{"Unknown RendererAPI!"});}
+\DoxyCodeLine{23         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{24     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+\mbox{\Hypertarget{class_gear_1_1_vertex_buffer_a3c356eb58992ea37485f6bc9b9de6575}\label{class_gear_1_1_vertex_buffer_a3c356eb58992ea37485f6bc9b9de6575}} 
+\index{Gear::VertexBuffer@{Gear::VertexBuffer}!GetLayout@{GetLayout}}
+\index{GetLayout@{GetLayout}!Gear::VertexBuffer@{Gear::VertexBuffer}}
+\doxysubsubsection{\texorpdfstring{GetLayout()}{GetLayout()}}
+{\footnotesize\ttfamily virtual const \mbox{\hyperlink{class_gear_1_1_buffer_layout}{Buffer\+Layout}}\& Gear\+::\+Vertex\+Buffer\+::\+Get\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_open_g_l_vertex_buffer_aa8dc04707411d4a827ed179c076fa394}{Gear\+::\+Open\+G\+L\+Vertex\+Buffer}}에서 구현되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_vertex_buffer_ad1ea169d6e453faf95c3a96d8aed40b3}\label{class_gear_1_1_vertex_buffer_ad1ea169d6e453faf95c3a96d8aed40b3}} 
+\index{Gear::VertexBuffer@{Gear::VertexBuffer}!SetLayout@{SetLayout}}
+\index{SetLayout@{SetLayout}!Gear::VertexBuffer@{Gear::VertexBuffer}}
+\doxysubsubsection{\texorpdfstring{SetLayout()}{SetLayout()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Vertex\+Buffer\+::\+Set\+Layout (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_gear_1_1_buffer_layout}{Buffer\+Layout}} \&}]{layout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_open_g_l_vertex_buffer_a5d613ee5fedc39ebf6c40419bec3b115}{Gear\+::\+Open\+G\+L\+Vertex\+Buffer}}에서 구현되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_vertex_buffer_a626c289b1266615d22a5e2dee0ea73a8}\label{class_gear_1_1_vertex_buffer_a626c289b1266615d22a5e2dee0ea73a8}} 
+\index{Gear::VertexBuffer@{Gear::VertexBuffer}!Unbind@{Unbind}}
+\index{Unbind@{Unbind}!Gear::VertexBuffer@{Gear::VertexBuffer}}
+\doxysubsubsection{\texorpdfstring{Unbind()}{Unbind()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Vertex\+Buffer\+::\+Unbind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_open_g_l_vertex_buffer_a6b864eb2f5317db07b72f744146ca8ce}{Gear\+::\+Open\+G\+L\+Vertex\+Buffer}}에서 구현되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Renderer/\mbox{\hyperlink{_buffer_8h}{Buffer.\+h}}\item 
+Gear/src/\+Gear/\+Renderer/\mbox{\hyperlink{_buffer_8cpp}{Buffer.\+cpp}}\end{DoxyCompactItemize}

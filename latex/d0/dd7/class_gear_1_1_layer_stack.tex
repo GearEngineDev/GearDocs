@@ -1,0 +1,238 @@
+\hypertarget{class_gear_1_1_layer_stack}{}\doxysection{Gear\+::Layer\+Stack 클래스 참조}
+\label{class_gear_1_1_layer_stack}\index{Gear::LayerStack@{Gear::LayerStack}}
+
+
+{\ttfamily \#include $<$Layer\+Stack.\+h$>$}
+
+
+
+Gear\+::Layer\+Stack에 대한 협력 다이어그램\+:
+% FIG 0
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_layer_stack_a6598245793df923c7532f62f4f2f99e5}{Layer\+Stack}} ()
+\item 
+\mbox{\hyperlink{class_gear_1_1_layer_stack_a4fb9f29df13f4adc399708c6a29e708c}{$\sim$\+Layer\+Stack}} ()
+\item 
+void \mbox{\hyperlink{class_gear_1_1_layer_stack_a5e9f743fc344a96dff1bab2195bea654}{Push\+Layer}} (\mbox{\hyperlink{class_gear_1_1_layer}{Layer}} $\ast$layer)
+\item 
+void \mbox{\hyperlink{class_gear_1_1_layer_stack_a3f7cb60c0d0119a2d5c6839a3f0e2f8b}{Push\+Overlay}} (\mbox{\hyperlink{class_gear_1_1_layer}{Layer}} $\ast$overlay)
+\item 
+void \mbox{\hyperlink{class_gear_1_1_layer_stack_ac13135e6ad2a80b50c8a21f4785b3bda}{Pop\+Layer}} (\mbox{\hyperlink{class_gear_1_1_layer}{Layer}} $\ast$layer)
+\item 
+void \mbox{\hyperlink{class_gear_1_1_layer_stack_ad4d755ae14ad818be7d530bca5b24c55}{Pop\+Overlay}} (\mbox{\hyperlink{class_gear_1_1_layer}{Layer}} $\ast$overlay)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_gear_1_1_layer}{Layer}} $\ast$ $>$\+::iterator \mbox{\hyperlink{class_gear_1_1_layer_stack_aec95eaa5840764ada8547824cae4e22c}{begin}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_gear_1_1_layer}{Layer}} $\ast$ $>$\+::iterator \mbox{\hyperlink{class_gear_1_1_layer_stack_a53badf9ab610f608479eff671860219a}{end}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_gear_1_1_layer}{Layer}} $\ast$ $>$ \mbox{\hyperlink{class_gear_1_1_layer_stack_ad7adbd94817305fdc057dccf46ef5ac5}{m\+\_\+\+Layers}}
+\item 
+unsigned int \mbox{\hyperlink{class_gear_1_1_layer_stack_ad48afed6206cb1452a418637b8ee00a2}{m\+\_\+\+Layer\+Insert\+Index}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Layer\+Stack.\+h 파일의 7 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_layer_stack_a6598245793df923c7532f62f4f2f99e5}\label{class_gear_1_1_layer_stack_a6598245793df923c7532f62f4f2f99e5}} 
+\index{Gear::LayerStack@{Gear::LayerStack}!LayerStack@{LayerStack}}
+\index{LayerStack@{LayerStack}!Gear::LayerStack@{Gear::LayerStack}}
+\doxysubsubsection{\texorpdfstring{LayerStack()}{LayerStack()}}
+{\footnotesize\ttfamily Gear\+::\+Layer\+Stack\+::\+Layer\+Stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Layer\+Stack.\+cpp 파일의 5 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6     \{}
+\DoxyCodeLine{7     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_layer_stack_a4fb9f29df13f4adc399708c6a29e708c}\label{class_gear_1_1_layer_stack_a4fb9f29df13f4adc399708c6a29e708c}} 
+\index{Gear::LayerStack@{Gear::LayerStack}!````~LayerStack@{$\sim$LayerStack}}
+\index{````~LayerStack@{$\sim$LayerStack}!Gear::LayerStack@{Gear::LayerStack}}
+\doxysubsubsection{\texorpdfstring{$\sim$LayerStack()}{~LayerStack()}}
+{\footnotesize\ttfamily Gear\+::\+Layer\+Stack\+::$\sim$\+Layer\+Stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Layer\+Stack.\+cpp 파일의 9 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9                            \{}
+\DoxyCodeLine{10         \textcolor{keywordflow}{for} (Layer* layer : \mbox{\hyperlink{class_gear_1_1_layer_stack_ad7adbd94817305fdc057dccf46ef5ac5}{m\_Layers}})}
+\DoxyCodeLine{11             \textcolor{keyword}{delete} layer;}
+\DoxyCodeLine{12     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_layer_stack_aec95eaa5840764ada8547824cae4e22c}\label{class_gear_1_1_layer_stack_aec95eaa5840764ada8547824cae4e22c}} 
+\index{Gear::LayerStack@{Gear::LayerStack}!begin@{begin}}
+\index{begin@{begin}!Gear::LayerStack@{Gear::LayerStack}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_gear_1_1_layer}{Layer}}$\ast$$>$\+::iterator Gear\+::\+Layer\+Stack\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Layer\+Stack.\+h 파일의 18 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_layer_stack_ad7adbd94817305fdc057dccf46ef5ac5}{m\_Layers}}.begin(); \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 1
+\mbox{\Hypertarget{class_gear_1_1_layer_stack_a53badf9ab610f608479eff671860219a}\label{class_gear_1_1_layer_stack_a53badf9ab610f608479eff671860219a}} 
+\index{Gear::LayerStack@{Gear::LayerStack}!end@{end}}
+\index{end@{end}!Gear::LayerStack@{Gear::LayerStack}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_gear_1_1_layer}{Layer}}$\ast$$>$\+::iterator Gear\+::\+Layer\+Stack\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Layer\+Stack.\+h 파일의 19 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_layer_stack_ad7adbd94817305fdc057dccf46ef5ac5}{m\_Layers}}.end(); \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\mbox{\Hypertarget{class_gear_1_1_layer_stack_ac13135e6ad2a80b50c8a21f4785b3bda}\label{class_gear_1_1_layer_stack_ac13135e6ad2a80b50c8a21f4785b3bda}} 
+\index{Gear::LayerStack@{Gear::LayerStack}!PopLayer@{PopLayer}}
+\index{PopLayer@{PopLayer}!Gear::LayerStack@{Gear::LayerStack}}
+\doxysubsubsection{\texorpdfstring{PopLayer()}{PopLayer()}}
+{\footnotesize\ttfamily void Gear\+::\+Layer\+Stack\+::\+Pop\+Layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_layer}{Layer}} $\ast$}]{layer }\end{DoxyParamCaption})}
+
+
+
+Layer\+Stack.\+cpp 파일의 25 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26     \{}
+\DoxyCodeLine{27         \textcolor{keyword}{auto} it = std::find(\mbox{\hyperlink{class_gear_1_1_layer_stack_ad7adbd94817305fdc057dccf46ef5ac5}{m\_Layers}}.begin(), \mbox{\hyperlink{class_gear_1_1_layer_stack_ad7adbd94817305fdc057dccf46ef5ac5}{m\_Layers}}.end(), layer);}
+\DoxyCodeLine{28         \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_gear_1_1_layer_stack_ad7adbd94817305fdc057dccf46ef5ac5}{m\_Layers}}.end()) }
+\DoxyCodeLine{29         \{}
+\DoxyCodeLine{30             layer-\/>OnDetach();}
+\DoxyCodeLine{31             \mbox{\hyperlink{class_gear_1_1_layer_stack_ad7adbd94817305fdc057dccf46ef5ac5}{m\_Layers}}.erase(it);}
+\DoxyCodeLine{32             \mbox{\hyperlink{class_gear_1_1_layer_stack_ad48afed6206cb1452a418637b8ee00a2}{m\_LayerInsertIndex}}-\/-\/;}
+\DoxyCodeLine{33         \}}
+\DoxyCodeLine{34     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 4
+\mbox{\Hypertarget{class_gear_1_1_layer_stack_ad4d755ae14ad818be7d530bca5b24c55}\label{class_gear_1_1_layer_stack_ad4d755ae14ad818be7d530bca5b24c55}} 
+\index{Gear::LayerStack@{Gear::LayerStack}!PopOverlay@{PopOverlay}}
+\index{PopOverlay@{PopOverlay}!Gear::LayerStack@{Gear::LayerStack}}
+\doxysubsubsection{\texorpdfstring{PopOverlay()}{PopOverlay()}}
+{\footnotesize\ttfamily void Gear\+::\+Layer\+Stack\+::\+Pop\+Overlay (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_layer}{Layer}} $\ast$}]{overlay }\end{DoxyParamCaption})}
+
+
+
+Layer\+Stack.\+cpp 파일의 36 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37     \{}
+\DoxyCodeLine{38         \textcolor{keyword}{auto} it = std::find(\mbox{\hyperlink{class_gear_1_1_layer_stack_ad7adbd94817305fdc057dccf46ef5ac5}{m\_Layers}}.begin(), \mbox{\hyperlink{class_gear_1_1_layer_stack_ad7adbd94817305fdc057dccf46ef5ac5}{m\_Layers}}.end(), overlay);}
+\DoxyCodeLine{39         \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_gear_1_1_layer_stack_ad7adbd94817305fdc057dccf46ef5ac5}{m\_Layers}}.end())}
+\DoxyCodeLine{40         \{}
+\DoxyCodeLine{41             overlay-\/>OnDetach();}
+\DoxyCodeLine{42             \mbox{\hyperlink{class_gear_1_1_layer_stack_ad7adbd94817305fdc057dccf46ef5ac5}{m\_Layers}}.erase(it);}
+\DoxyCodeLine{43         \}}
+\DoxyCodeLine{44     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 5
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 6
+\mbox{\Hypertarget{class_gear_1_1_layer_stack_a5e9f743fc344a96dff1bab2195bea654}\label{class_gear_1_1_layer_stack_a5e9f743fc344a96dff1bab2195bea654}} 
+\index{Gear::LayerStack@{Gear::LayerStack}!PushLayer@{PushLayer}}
+\index{PushLayer@{PushLayer}!Gear::LayerStack@{Gear::LayerStack}}
+\doxysubsubsection{\texorpdfstring{PushLayer()}{PushLayer()}}
+{\footnotesize\ttfamily void Gear\+::\+Layer\+Stack\+::\+Push\+Layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_layer}{Layer}} $\ast$}]{layer }\end{DoxyParamCaption})}
+
+
+
+Layer\+Stack.\+cpp 파일의 14 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15     \{}
+\DoxyCodeLine{16         \mbox{\hyperlink{class_gear_1_1_layer_stack_ad7adbd94817305fdc057dccf46ef5ac5}{m\_Layers}}.emplace(\mbox{\hyperlink{class_gear_1_1_layer_stack_ad7adbd94817305fdc057dccf46ef5ac5}{m\_Layers}}.begin() + \mbox{\hyperlink{class_gear_1_1_layer_stack_ad48afed6206cb1452a418637b8ee00a2}{m\_LayerInsertIndex}}, layer);}
+\DoxyCodeLine{17         \mbox{\hyperlink{class_gear_1_1_layer_stack_ad48afed6206cb1452a418637b8ee00a2}{m\_LayerInsertIndex}}++;}
+\DoxyCodeLine{18     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 7
+\mbox{\Hypertarget{class_gear_1_1_layer_stack_a3f7cb60c0d0119a2d5c6839a3f0e2f8b}\label{class_gear_1_1_layer_stack_a3f7cb60c0d0119a2d5c6839a3f0e2f8b}} 
+\index{Gear::LayerStack@{Gear::LayerStack}!PushOverlay@{PushOverlay}}
+\index{PushOverlay@{PushOverlay}!Gear::LayerStack@{Gear::LayerStack}}
+\doxysubsubsection{\texorpdfstring{PushOverlay()}{PushOverlay()}}
+{\footnotesize\ttfamily void Gear\+::\+Layer\+Stack\+::\+Push\+Overlay (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gear_1_1_layer}{Layer}} $\ast$}]{overlay }\end{DoxyParamCaption})}
+
+
+
+Layer\+Stack.\+cpp 파일의 20 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21     \{}
+\DoxyCodeLine{22         \mbox{\hyperlink{class_gear_1_1_layer_stack_ad7adbd94817305fdc057dccf46ef5ac5}{m\_Layers}}.emplace\_back(overlay);}
+\DoxyCodeLine{23     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 8
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_layer_stack_ad48afed6206cb1452a418637b8ee00a2}\label{class_gear_1_1_layer_stack_ad48afed6206cb1452a418637b8ee00a2}} 
+\index{Gear::LayerStack@{Gear::LayerStack}!m\_LayerInsertIndex@{m\_LayerInsertIndex}}
+\index{m\_LayerInsertIndex@{m\_LayerInsertIndex}!Gear::LayerStack@{Gear::LayerStack}}
+\doxysubsubsection{\texorpdfstring{m\_LayerInsertIndex}{m\_LayerInsertIndex}}
+{\footnotesize\ttfamily unsigned int Gear\+::\+Layer\+Stack\+::m\+\_\+\+Layer\+Insert\+Index = 0}
+
+
+
+Layer\+Stack.\+h 파일의 22 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_layer_stack_ad7adbd94817305fdc057dccf46ef5ac5}\label{class_gear_1_1_layer_stack_ad7adbd94817305fdc057dccf46ef5ac5}} 
+\index{Gear::LayerStack@{Gear::LayerStack}!m\_Layers@{m\_Layers}}
+\index{m\_Layers@{m\_Layers}!Gear::LayerStack@{Gear::LayerStack}}
+\doxysubsubsection{\texorpdfstring{m\_Layers}{m\_Layers}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_gear_1_1_layer}{Layer}}$\ast$$>$ Gear\+::\+Layer\+Stack\+::m\+\_\+\+Layers}
+
+
+
+Layer\+Stack.\+h 파일의 21 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Core/\mbox{\hyperlink{_layer_stack_8h}{Layer\+Stack.\+h}}\item 
+Gear/src/\+Gear/\+Core/\mbox{\hyperlink{_layer_stack_8cpp}{Layer\+Stack.\+cpp}}\end{DoxyCompactItemize}

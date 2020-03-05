@@ -1,0 +1,231 @@
+\hypertarget{class_gear_1_1_open_g_l_renderer_a_p_i}{}\doxysection{Gear\+::Open\+G\+L\+Renderer\+A\+PI 클래스 참조}
+\label{class_gear_1_1_open_g_l_renderer_a_p_i}\index{Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}}
+
+
+{\ttfamily \#include $<$Open\+G\+L\+Renderer\+A\+P\+I.\+h$>$}
+
+
+
+Gear\+::Open\+G\+L\+Renderer\+A\+P\+I에 대한 상속 다이어그램 \+: 
+% FIG 0
+
+
+Gear\+::Open\+G\+L\+Renderer\+A\+P\+I에 대한 협력 다이어그램\+:
+% FIG 1
+\doxysubsection*{Public 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78}{A\+PI}} \{ \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a6adf97f83acf6453d4a6a4b1070f3754}{A\+P\+I\+::\+None}} = 0, 
+\mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a760716b590ee7c0adc25f434f577d8be}{A\+P\+I\+::\+Open\+GL}} = 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_open_g_l_renderer_a_p_i_ae1cf2b6edfaa07e1532a04ba91f7e94c}{Init}} () override
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_open_g_l_renderer_a_p_i_a36c3ed6cc36202293ae4bed385e5b829}{Set\+View\+Port}} (uint32\+\_\+t x, uint32\+\_\+t y, uint32\+\_\+t width, uint32\+\_\+t height) override
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_open_g_l_renderer_a_p_i_a840c175cd8196e70e8a50bb7c1503adc}{Set\+Clear\+Color}} (const glm\+::vec4 \&color) override
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_open_g_l_renderer_a_p_i_a25814e4966c4c8f52351caa66332eb58}{Clear}} () override
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_open_g_l_renderer_a_p_i_a9c7706fa55b59fb3e9ffd92d66462797}{Draw\+Indexed}} (const \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_vertex_array}{Vertex\+Array}} $>$ \&vertex\+Array) override
+\end{DoxyCompactItemize}
+\doxysubsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78}{A\+PI}} \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_aab4755243147f8bdb84910c9d1906c80}{Get\+A\+PI}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{정적 Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78}{A\+PI}} \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a3ed7dbf952b04e13682257a396ad3f57}{s\+\_\+\+A\+PI}} = \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a760716b590ee7c0adc25f434f577d8be}{Renderer\+A\+P\+I\+::\+A\+P\+I\+::\+Open\+GL}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Open\+G\+L\+Renderer\+A\+P\+I.\+h 파일의 7 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 열거형 문서화}
+\mbox{\Hypertarget{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78}\label{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78}} 
+\index{Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}!API@{API}}
+\index{API@{API}!Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}}
+\doxysubsubsection{\texorpdfstring{API}{API}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78}{Gear\+::\+Renderer\+A\+P\+I\+::\+A\+PI}}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [inherited]}}
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}}\index{Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}!None@{None}}}\mbox{\Hypertarget{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a6adf97f83acf6453d4a6a4b1070f3754}\label{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a6adf97f83acf6453d4a6a4b1070f3754}} 
+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OpenGL@{OpenGL}!Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}}\index{Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}!OpenGL@{OpenGL}}}\mbox{\Hypertarget{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a760716b590ee7c0adc25f434f577d8be}\label{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a760716b590ee7c0adc25f434f577d8be}} 
+Open\+GL&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Renderer\+A\+P\+I.\+h 파일의 11 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12         \{}
+\DoxyCodeLine{13             \mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1a8e46388add6ddee9ace7d2bb1ea66b59}{None}} = 0, OpenGL = 1}
+\DoxyCodeLine{14         \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_open_g_l_renderer_a_p_i_a25814e4966c4c8f52351caa66332eb58}\label{class_gear_1_1_open_g_l_renderer_a_p_i_a25814e4966c4c8f52351caa66332eb58}} 
+\index{Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}!Clear@{Clear}}
+\index{Clear@{Clear}!Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Gear\+::\+Open\+G\+L\+Renderer\+A\+P\+I\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a7742f75e720b5ce84d9a9119ab035028}{Gear\+::\+Renderer\+A\+PI}}를 구현.
+
+
+
+Open\+G\+L\+Renderer\+A\+P\+I.\+cpp 파일의 27 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28     \{}
+\DoxyCodeLine{29         glClear(GL\_COLOR\_BUFFER\_BIT | GL\_DEPTH\_BUFFER\_BIT);}
+\DoxyCodeLine{30     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_open_g_l_renderer_a_p_i_a9c7706fa55b59fb3e9ffd92d66462797}\label{class_gear_1_1_open_g_l_renderer_a_p_i_a9c7706fa55b59fb3e9ffd92d66462797}} 
+\index{Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}!DrawIndexed@{DrawIndexed}}
+\index{DrawIndexed@{DrawIndexed}!Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}}
+\doxysubsubsection{\texorpdfstring{DrawIndexed()}{DrawIndexed()}}
+{\footnotesize\ttfamily void Gear\+::\+Open\+G\+L\+Renderer\+A\+P\+I\+::\+Draw\+Indexed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_vertex_array}{Vertex\+Array}} $>$ \&}]{vertex\+Array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a5205233c7b24ac5493e87161f6efda98}{Gear\+::\+Renderer\+A\+PI}}를 구현.
+
+
+
+Open\+G\+L\+Renderer\+A\+P\+I.\+cpp 파일의 32 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33     \{}
+\DoxyCodeLine{34         glDrawElements(GL\_TRIANGLES, vertexArray-\/>GetIndexBuffer()-\/>GetCount(), GL\_UNSIGNED\_INT, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{35         glBindTexture(GL\_TEXTURE\_2D, 0);}
+\DoxyCodeLine{36     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_renderer_a_p_i_aab4755243147f8bdb84910c9d1906c80}\label{class_gear_1_1_renderer_a_p_i_aab4755243147f8bdb84910c9d1906c80}} 
+\index{Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}!GetAPI@{GetAPI}}
+\index{GetAPI@{GetAPI}!Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}}
+\doxysubsubsection{\texorpdfstring{GetAPI()}{GetAPI()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78}{A\+PI}} Gear\+::\+Renderer\+A\+P\+I\+::\+Get\+A\+PI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [inherited]}}
+
+
+
+Renderer\+A\+P\+I.\+h 파일의 23 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a3ed7dbf952b04e13682257a396ad3f57}{s\_API}}; \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\mbox{\Hypertarget{class_gear_1_1_open_g_l_renderer_a_p_i_ae1cf2b6edfaa07e1532a04ba91f7e94c}\label{class_gear_1_1_open_g_l_renderer_a_p_i_ae1cf2b6edfaa07e1532a04ba91f7e94c}} 
+\index{Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}!Init@{Init}}
+\index{Init@{Init}!Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Gear\+::\+Open\+G\+L\+Renderer\+A\+P\+I\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a87d8dd5367aca4569f74252de18e3276}{Gear\+::\+Renderer\+A\+PI}}를 구현.
+
+
+
+Open\+G\+L\+Renderer\+A\+P\+I.\+cpp 파일의 7 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8     \{}
+\DoxyCodeLine{9         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11         glEnable(GL\_BLEND);}
+\DoxyCodeLine{12         glBlendFunc(GL\_SRC\_ALPHA, GL\_ONE\_MINUS\_SRC\_ALPHA);}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14         glEnable(GL\_DEPTH\_TEST);}
+\DoxyCodeLine{15     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_open_g_l_renderer_a_p_i_a840c175cd8196e70e8a50bb7c1503adc}\label{class_gear_1_1_open_g_l_renderer_a_p_i_a840c175cd8196e70e8a50bb7c1503adc}} 
+\index{Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}!SetClearColor@{SetClearColor}}
+\index{SetClearColor@{SetClearColor}!Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}}
+\doxysubsubsection{\texorpdfstring{SetClearColor()}{SetClearColor()}}
+{\footnotesize\ttfamily void Gear\+::\+Open\+G\+L\+Renderer\+A\+P\+I\+::\+Set\+Clear\+Color (\begin{DoxyParamCaption}\item[{const glm\+::vec4 \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_af1eb787294a0967d528698b2c8d65334}{Gear\+::\+Renderer\+A\+PI}}를 구현.
+
+
+
+Open\+G\+L\+Renderer\+A\+P\+I.\+cpp 파일의 22 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23     \{}
+\DoxyCodeLine{24         glClearColor(color.r, color.g, color.b, color.a);}
+\DoxyCodeLine{25     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_open_g_l_renderer_a_p_i_a36c3ed6cc36202293ae4bed385e5b829}\label{class_gear_1_1_open_g_l_renderer_a_p_i_a36c3ed6cc36202293ae4bed385e5b829}} 
+\index{Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}!SetViewPort@{SetViewPort}}
+\index{SetViewPort@{SetViewPort}!Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}}
+\doxysubsubsection{\texorpdfstring{SetViewPort()}{SetViewPort()}}
+{\footnotesize\ttfamily void Gear\+::\+Open\+G\+L\+Renderer\+A\+P\+I\+::\+Set\+View\+Port (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{x,  }\item[{uint32\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a3db3c736b13e3253d24875684c661709}{Gear\+::\+Renderer\+A\+PI}}를 구현.
+
+
+
+Open\+G\+L\+Renderer\+A\+P\+I.\+cpp 파일의 17 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18     \{}
+\DoxyCodeLine{19         glViewport(x, y, width, height);}
+\DoxyCodeLine{20     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_renderer_a_p_i_a3ed7dbf952b04e13682257a396ad3f57}\label{class_gear_1_1_renderer_a_p_i_a3ed7dbf952b04e13682257a396ad3f57}} 
+\index{Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}!s\_API@{s\_API}}
+\index{s\_API@{s\_API}!Gear::OpenGLRendererAPI@{Gear::OpenGLRendererAPI}}
+\doxysubsubsection{\texorpdfstring{s\_API}{s\_API}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78}{Renderer\+A\+P\+I\+::\+A\+PI}} Gear\+::\+Renderer\+A\+P\+I\+::s\+\_\+\+A\+PI = \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a760716b590ee7c0adc25f434f577d8be}{Renderer\+A\+P\+I\+::\+A\+P\+I\+::\+Open\+GL}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+Renderer\+A\+P\+I.\+h 파일의 25 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Platform/\+Open\+G\+L/\mbox{\hyperlink{_open_g_l_renderer_a_p_i_8h}{Open\+G\+L\+Renderer\+A\+P\+I.\+h}}\item 
+Gear/src/\+Platform/\+Open\+G\+L/\mbox{\hyperlink{_open_g_l_renderer_a_p_i_8cpp}{Open\+G\+L\+Renderer\+A\+P\+I.\+cpp}}\end{DoxyCompactItemize}

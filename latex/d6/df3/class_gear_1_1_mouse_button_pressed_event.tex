@@ -1,0 +1,173 @@
+\hypertarget{class_gear_1_1_mouse_button_pressed_event}{}\doxysection{Gear\+::Mouse\+Button\+Pressed\+Event 클래스 참조}
+\label{class_gear_1_1_mouse_button_pressed_event}\index{Gear::MouseButtonPressedEvent@{Gear::MouseButtonPressedEvent}}
+
+
+{\ttfamily \#include $<$Mouse\+Event.\+h$>$}
+
+
+
+Gear\+::Mouse\+Button\+Pressed\+Event에 대한 상속 다이어그램 \+: 
+% FIG 0
+
+
+Gear\+::Mouse\+Button\+Pressed\+Event에 대한 협력 다이어그램\+:
+% FIG 1
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_mouse_button_pressed_event_ab71e9ca0087175513d5c6e072e490620}{Mouse\+Button\+Pressed\+Event}} (int button)
+\item 
+std\+::string \mbox{\hyperlink{class_gear_1_1_mouse_button_pressed_event_aa74d853f4745c542c6ee6e199b1b476c}{To\+String}} () const override
+\item 
+int \mbox{\hyperlink{class_gear_1_1_mouse_button_event_a8869996767d0308567055c334531d2c8}{Get\+Mouse\+Button}} () const
+\item 
+virtual \mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7ba}{Event\+Type}} \mbox{\hyperlink{class_gear_1_1_event_aafeedc7f01a03c29964cecd1dcfcdd3d}{Get\+Event\+Type}} () const =0
+\item 
+virtual const char $\ast$ \mbox{\hyperlink{class_gear_1_1_event_aa17c21c5a7560a271ed3da2b799123d8}{Get\+Name}} () const =0
+\item 
+virtual int \mbox{\hyperlink{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}{Get\+Category\+Flags}} () const =0
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_event_aa68ff805c8d833d4701aa06ccb4c8968}{Is\+In\+Category}} (\mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1}{Event\+Category}} category)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_event_accf654785eb1c3dda58dfc8b0a8765c9}{m\+\_\+\+Handled}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 속성}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_gear_1_1_mouse_button_event_a5780601823818776e9a58be50ef2a165}{m\+\_\+\+Button}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Mouse\+Event.\+h 파일의 59 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_mouse_button_pressed_event_ab71e9ca0087175513d5c6e072e490620}\label{class_gear_1_1_mouse_button_pressed_event_ab71e9ca0087175513d5c6e072e490620}} 
+\index{Gear::MouseButtonPressedEvent@{Gear::MouseButtonPressedEvent}!MouseButtonPressedEvent@{MouseButtonPressedEvent}}
+\index{MouseButtonPressedEvent@{MouseButtonPressedEvent}!Gear::MouseButtonPressedEvent@{Gear::MouseButtonPressedEvent}}
+\doxysubsubsection{\texorpdfstring{MouseButtonPressedEvent()}{MouseButtonPressedEvent()}}
+{\footnotesize\ttfamily Gear\+::\+Mouse\+Button\+Pressed\+Event\+::\+Mouse\+Button\+Pressed\+Event (\begin{DoxyParamCaption}\item[{int}]{button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mouse\+Event.\+h 파일의 61 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{62             : \mbox{\hyperlink{class_gear_1_1_mouse_button_event_a70b94b905800fa92814aeef877ab52e5}{MouseButtonEvent}}(button)}
+\DoxyCodeLine{63         \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}\label{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}} 
+\index{Gear::MouseButtonPressedEvent@{Gear::MouseButtonPressedEvent}!GetCategoryFlags@{GetCategoryFlags}}
+\index{GetCategoryFlags@{GetCategoryFlags}!Gear::MouseButtonPressedEvent@{Gear::MouseButtonPressedEvent}}
+\doxysubsubsection{\texorpdfstring{GetCategoryFlags()}{GetCategoryFlags()}}
+{\footnotesize\ttfamily virtual int Gear\+::\+Event\+::\+Get\+Category\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_gear_1_1_event_aafeedc7f01a03c29964cecd1dcfcdd3d}\label{class_gear_1_1_event_aafeedc7f01a03c29964cecd1dcfcdd3d}} 
+\index{Gear::MouseButtonPressedEvent@{Gear::MouseButtonPressedEvent}!GetEventType@{GetEventType}}
+\index{GetEventType@{GetEventType}!Gear::MouseButtonPressedEvent@{Gear::MouseButtonPressedEvent}}
+\doxysubsubsection{\texorpdfstring{GetEventType()}{GetEventType()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7ba}{Event\+Type}} Gear\+::\+Event\+::\+Get\+Event\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\mbox{\Hypertarget{class_gear_1_1_mouse_button_event_a8869996767d0308567055c334531d2c8}\label{class_gear_1_1_mouse_button_event_a8869996767d0308567055c334531d2c8}} 
+\index{Gear::MouseButtonPressedEvent@{Gear::MouseButtonPressedEvent}!GetMouseButton@{GetMouseButton}}
+\index{GetMouseButton@{GetMouseButton}!Gear::MouseButtonPressedEvent@{Gear::MouseButtonPressedEvent}}
+\doxysubsubsection{\texorpdfstring{GetMouseButton()}{GetMouseButton()}}
+{\footnotesize\ttfamily int Gear\+::\+Mouse\+Button\+Event\+::\+Get\+Mouse\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Mouse\+Event.\+h 파일의 49 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_mouse_button_event_a5780601823818776e9a58be50ef2a165}{m\_Button}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_event_aa17c21c5a7560a271ed3da2b799123d8}\label{class_gear_1_1_event_aa17c21c5a7560a271ed3da2b799123d8}} 
+\index{Gear::MouseButtonPressedEvent@{Gear::MouseButtonPressedEvent}!GetName@{GetName}}
+\index{GetName@{GetName}!Gear::MouseButtonPressedEvent@{Gear::MouseButtonPressedEvent}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Gear\+::\+Event\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_gear_1_1_event_aa68ff805c8d833d4701aa06ccb4c8968}\label{class_gear_1_1_event_aa68ff805c8d833d4701aa06ccb4c8968}} 
+\index{Gear::MouseButtonPressedEvent@{Gear::MouseButtonPressedEvent}!IsInCategory@{IsInCategory}}
+\index{IsInCategory@{IsInCategory}!Gear::MouseButtonPressedEvent@{Gear::MouseButtonPressedEvent}}
+\doxysubsubsection{\texorpdfstring{IsInCategory()}{IsInCategory()}}
+{\footnotesize\ttfamily bool Gear\+::\+Event\+::\+Is\+In\+Category (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1}{Event\+Category}}}]{category }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Event.\+h 파일의 43 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                                                          \{}
+\DoxyCodeLine{44             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}{GetCategoryFlags}}() \& category;}
+\DoxyCodeLine{45         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_mouse_button_pressed_event_aa74d853f4745c542c6ee6e199b1b476c}\label{class_gear_1_1_mouse_button_pressed_event_aa74d853f4745c542c6ee6e199b1b476c}} 
+\index{Gear::MouseButtonPressedEvent@{Gear::MouseButtonPressedEvent}!ToString@{ToString}}
+\index{ToString@{ToString}!Gear::MouseButtonPressedEvent@{Gear::MouseButtonPressedEvent}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily std\+::string Gear\+::\+Mouse\+Button\+Pressed\+Event\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_event_a969ee911d682f0436cdf2da5bb0b6913}{Gear\+::\+Event}}(으)로부터 재구현되었습니다.
+
+
+
+Mouse\+Event.\+h 파일의 65 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65                                             \{}
+\DoxyCodeLine{66             std::stringstream ss;}
+\DoxyCodeLine{67             ss << \textcolor{stringliteral}{"MouseButtonPressedEvent: "} << \mbox{\hyperlink{class_gear_1_1_mouse_button_event_a5780601823818776e9a58be50ef2a165}{m\_Button}};}
+\DoxyCodeLine{68             \textcolor{keywordflow}{return} ss.str();}
+\DoxyCodeLine{69         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_mouse_button_event_a5780601823818776e9a58be50ef2a165}\label{class_gear_1_1_mouse_button_event_a5780601823818776e9a58be50ef2a165}} 
+\index{Gear::MouseButtonPressedEvent@{Gear::MouseButtonPressedEvent}!m\_Button@{m\_Button}}
+\index{m\_Button@{m\_Button}!Gear::MouseButtonPressedEvent@{Gear::MouseButtonPressedEvent}}
+\doxysubsubsection{\texorpdfstring{m\_Button}{m\_Button}}
+{\footnotesize\ttfamily int Gear\+::\+Mouse\+Button\+Event\+::m\+\_\+\+Button\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Mouse\+Event.\+h 파일의 56 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_event_accf654785eb1c3dda58dfc8b0a8765c9}\label{class_gear_1_1_event_accf654785eb1c3dda58dfc8b0a8765c9}} 
+\index{Gear::MouseButtonPressedEvent@{Gear::MouseButtonPressedEvent}!m\_Handled@{m\_Handled}}
+\index{m\_Handled@{m\_Handled}!Gear::MouseButtonPressedEvent@{Gear::MouseButtonPressedEvent}}
+\doxysubsubsection{\texorpdfstring{m\_Handled}{m\_Handled}}
+{\footnotesize\ttfamily bool Gear\+::\+Event\+::m\+\_\+\+Handled = false\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Event.\+h 파일의 47 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Events/\mbox{\hyperlink{_mouse_event_8h}{Mouse\+Event.\+h}}\end{DoxyCompactItemize}

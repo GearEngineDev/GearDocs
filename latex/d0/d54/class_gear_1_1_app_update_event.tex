@@ -1,0 +1,138 @@
+\hypertarget{class_gear_1_1_app_update_event}{}\doxysection{Gear\+::App\+Update\+Event 클래스 참조}
+\label{class_gear_1_1_app_update_event}\index{Gear::AppUpdateEvent@{Gear::AppUpdateEvent}}
+
+
+{\ttfamily \#include $<$Application\+Event.\+h$>$}
+
+
+
+Gear\+::App\+Update\+Event에 대한 상속 다이어그램 \+: 
+% FIG 0
+
+
+Gear\+::App\+Update\+Event에 대한 협력 다이어그램\+:
+% FIG 1
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_app_update_event_a95a4cd210f8f40878884d1b05190b99c}{App\+Update\+Event}} ()
+\item 
+virtual \mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7ba}{Event\+Type}} \mbox{\hyperlink{class_gear_1_1_event_aafeedc7f01a03c29964cecd1dcfcdd3d}{Get\+Event\+Type}} () const =0
+\item 
+virtual const char $\ast$ \mbox{\hyperlink{class_gear_1_1_event_aa17c21c5a7560a271ed3da2b799123d8}{Get\+Name}} () const =0
+\item 
+virtual int \mbox{\hyperlink{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}{Get\+Category\+Flags}} () const =0
+\item 
+virtual std\+::string \mbox{\hyperlink{class_gear_1_1_event_a969ee911d682f0436cdf2da5bb0b6913}{To\+String}} () const
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_event_aa68ff805c8d833d4701aa06ccb4c8968}{Is\+In\+Category}} (\mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1}{Event\+Category}} category)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_event_accf654785eb1c3dda58dfc8b0a8765c9}{m\+\_\+\+Handled}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Application\+Event.\+h 파일의 43 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_app_update_event_a95a4cd210f8f40878884d1b05190b99c}\label{class_gear_1_1_app_update_event_a95a4cd210f8f40878884d1b05190b99c}} 
+\index{Gear::AppUpdateEvent@{Gear::AppUpdateEvent}!AppUpdateEvent@{AppUpdateEvent}}
+\index{AppUpdateEvent@{AppUpdateEvent}!Gear::AppUpdateEvent@{Gear::AppUpdateEvent}}
+\doxysubsubsection{\texorpdfstring{AppUpdateEvent()}{AppUpdateEvent()}}
+{\footnotesize\ttfamily Gear\+::\+App\+Update\+Event\+::\+App\+Update\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Application\+Event.\+h 파일의 45 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}\label{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}} 
+\index{Gear::AppUpdateEvent@{Gear::AppUpdateEvent}!GetCategoryFlags@{GetCategoryFlags}}
+\index{GetCategoryFlags@{GetCategoryFlags}!Gear::AppUpdateEvent@{Gear::AppUpdateEvent}}
+\doxysubsubsection{\texorpdfstring{GetCategoryFlags()}{GetCategoryFlags()}}
+{\footnotesize\ttfamily virtual int Gear\+::\+Event\+::\+Get\+Category\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_gear_1_1_event_aafeedc7f01a03c29964cecd1dcfcdd3d}\label{class_gear_1_1_event_aafeedc7f01a03c29964cecd1dcfcdd3d}} 
+\index{Gear::AppUpdateEvent@{Gear::AppUpdateEvent}!GetEventType@{GetEventType}}
+\index{GetEventType@{GetEventType}!Gear::AppUpdateEvent@{Gear::AppUpdateEvent}}
+\doxysubsubsection{\texorpdfstring{GetEventType()}{GetEventType()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespace_gear_a2bf07ccae0bb1993329a17776e8bf7ba}{Event\+Type}} Gear\+::\+Event\+::\+Get\+Event\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\mbox{\Hypertarget{class_gear_1_1_event_aa17c21c5a7560a271ed3da2b799123d8}\label{class_gear_1_1_event_aa17c21c5a7560a271ed3da2b799123d8}} 
+\index{Gear::AppUpdateEvent@{Gear::AppUpdateEvent}!GetName@{GetName}}
+\index{GetName@{GetName}!Gear::AppUpdateEvent@{Gear::AppUpdateEvent}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Gear\+::\+Event\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+\mbox{\Hypertarget{class_gear_1_1_event_aa68ff805c8d833d4701aa06ccb4c8968}\label{class_gear_1_1_event_aa68ff805c8d833d4701aa06ccb4c8968}} 
+\index{Gear::AppUpdateEvent@{Gear::AppUpdateEvent}!IsInCategory@{IsInCategory}}
+\index{IsInCategory@{IsInCategory}!Gear::AppUpdateEvent@{Gear::AppUpdateEvent}}
+\doxysubsubsection{\texorpdfstring{IsInCategory()}{IsInCategory()}}
+{\footnotesize\ttfamily bool Gear\+::\+Event\+::\+Is\+In\+Category (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_gear_aacb11cc0857c3ae782a0d0dccac79ef1}{Event\+Category}}}]{category }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Event.\+h 파일의 43 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                                                          \{}
+\DoxyCodeLine{44             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_event_a111ab9f515b7ca075a720798cc8e1fbc}{GetCategoryFlags}}() \& category;}
+\DoxyCodeLine{45         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_event_a969ee911d682f0436cdf2da5bb0b6913}\label{class_gear_1_1_event_a969ee911d682f0436cdf2da5bb0b6913}} 
+\index{Gear::AppUpdateEvent@{Gear::AppUpdateEvent}!ToString@{ToString}}
+\index{ToString@{ToString}!Gear::AppUpdateEvent@{Gear::AppUpdateEvent}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily virtual std\+::string Gear\+::\+Event\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_mouse_button_released_event_a36c8b163653f3ac3c9c89cec46be028d}{Gear\+::\+Mouse\+Button\+Released\+Event}}, \mbox{\hyperlink{class_gear_1_1_mouse_button_pressed_event_aa74d853f4745c542c6ee6e199b1b476c}{Gear\+::\+Mouse\+Button\+Pressed\+Event}}, \mbox{\hyperlink{class_gear_1_1_key_typed_event_a5bb0d250fb1c6b8ad30f822cd86a8e61}{Gear\+::\+Key\+Typed\+Event}}, \mbox{\hyperlink{class_gear_1_1_key_released_event_a865fe4edba7832e9a3796dcb394661db}{Gear\+::\+Key\+Released\+Event}}, \mbox{\hyperlink{class_gear_1_1_mouse_scrolled_event_a7c211e836b313522413ce50145b86899}{Gear\+::\+Mouse\+Scrolled\+Event}}, \mbox{\hyperlink{class_gear_1_1_key_pressed_event_a16f5e5c608f8851e9c557be17a9d446c}{Gear\+::\+Key\+Pressed\+Event}}, \mbox{\hyperlink{class_gear_1_1_window_resize_event_a98d46ccc58b6e5be5ff7a1260631804d}{Gear\+::\+Window\+Resize\+Event}}, \mbox{\hyperlink{class_gear_1_1_mouse_moved_event_a0124517dd15afd8e2666a6646f17b4c0}{Gear\+::\+Mouse\+Moved\+Event}}에서 재구현되었습니다.
+
+
+
+Event.\+h 파일의 41 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_event_aa17c21c5a7560a271ed3da2b799123d8}{GetName}}(); \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_event_accf654785eb1c3dda58dfc8b0a8765c9}\label{class_gear_1_1_event_accf654785eb1c3dda58dfc8b0a8765c9}} 
+\index{Gear::AppUpdateEvent@{Gear::AppUpdateEvent}!m\_Handled@{m\_Handled}}
+\index{m\_Handled@{m\_Handled}!Gear::AppUpdateEvent@{Gear::AppUpdateEvent}}
+\doxysubsubsection{\texorpdfstring{m\_Handled}{m\_Handled}}
+{\footnotesize\ttfamily bool Gear\+::\+Event\+::m\+\_\+\+Handled = false\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Event.\+h 파일의 47 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Events/\mbox{\hyperlink{_application_event_8h}{Application\+Event.\+h}}\end{DoxyCompactItemize}

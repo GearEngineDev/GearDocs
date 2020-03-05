@@ -1,0 +1,10 @@
+<map id="Gear::Renderer2D::Init" name="Gear::Renderer2D::Init">
+<area shape="rect" id="node1" title=" " alt="" coords="5,122,156,149"/>
+<area shape="rect" id="node2" href="$dd/d26/class_gear_1_1_vertex_array.html#a3e410e3316125bb52c0fde00759c079f" title=" " alt="" coords="218,5,353,47"/>
+<area shape="rect" id="node5" href="$da/d37/class_gear_1_1_texture2_d.html#a737ee8c105066854fd4c3f8def62fd73" title=" " alt="" coords="204,71,367,98"/>
+<area shape="rect" id="node6" href="$d3/dbb/class_gear_1_1_shader.html#af441a167abaa6d02e14d23fd24180d15" title=" " alt="" coords="213,122,358,149"/>
+<area shape="rect" id="node7" href="$d7/d1c/class_gear_1_1_vertex_buffer.html#a5a0bbcfacafdab11e4204c3060df661d" title=" " alt="" coords="221,173,350,215"/>
+<area shape="rect" id="node8" href="$dc/d1a/class_gear_1_1_index_buffer.html#a3740f4ce510a3dce66d5ec88431216e9" title=" " alt="" coords="220,239,351,280"/>
+<area shape="rect" id="node3" href="$d2/d0c/class_gear_1_1_renderer.html#ad13c79d41ff9c92e63e0a356ddb06d1f" title=" " alt="" coords="415,122,575,149"/>
+<area shape="rect" id="node4" href="$dd/d38/class_gear_1_1_renderer_a_p_i.html#aab4755243147f8bdb84910c9d1906c80" title=" " alt="" coords="623,115,761,156"/>
+</map>

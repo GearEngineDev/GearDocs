@@ -1,0 +1,180 @@
+\hypertarget{class_gear_1_1_shader_library}{}\doxysection{Gear\+::Shader\+Library 클래스 참조}
+\label{class_gear_1_1_shader_library}\index{Gear::ShaderLibrary@{Gear::ShaderLibrary}}
+
+
+{\ttfamily \#include $<$Shader.\+h$>$}
+
+
+
+Gear\+::Shader\+Library에 대한 협력 다이어그램\+:
+% FIG 0
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_gear_1_1_shader_library_a3f48fb852aa3b72f7bffeb4e722a347f}{Add}} (const \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_shader}{Shader}} $>$ \&shader)
+\item 
+void \mbox{\hyperlink{class_gear_1_1_shader_library_a5491b686f8471a3c6efe07dd7e9a7280}{Add}} (const std\+::string \&name, const \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_shader}{Shader}} $>$ \&shader)
+\item 
+\mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_shader}{Shader}} $>$ \mbox{\hyperlink{class_gear_1_1_shader_library_ab0c16c11a58594c27a316642715bdf79}{Load}} (const std\+::string \&filepath)
+\item 
+\mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_shader}{Shader}} $>$ \mbox{\hyperlink{class_gear_1_1_shader_library_a983eee2e6689f5aa969295a2c0e5131d}{Load}} (const std\+::string \&name, const std\+::string \&filepath)
+\item 
+\mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_shader}{Shader}} $>$ \mbox{\hyperlink{class_gear_1_1_shader_library_a0a15f9b0022956eb6adf2944b665bbb9}{Get}} (const std\+::string \&name)
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_shader_library_acc0b055f3491a44fd282e037111cc7a8}{Exists}} (const std\+::string \&name) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_shader}{Shader}} $>$ $>$ \mbox{\hyperlink{class_gear_1_1_shader_library_a982d0200073a02b1d5539aa3774d40ef}{m\+\_\+\+Shaders}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Shader.\+h 파일의 29 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_shader_library_a3f48fb852aa3b72f7bffeb4e722a347f}\label{class_gear_1_1_shader_library_a3f48fb852aa3b72f7bffeb4e722a347f}} 
+\index{Gear::ShaderLibrary@{Gear::ShaderLibrary}!Add@{Add}}
+\index{Add@{Add}!Gear::ShaderLibrary@{Gear::ShaderLibrary}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Gear\+::\+Shader\+Library\+::\+Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_shader}{Shader}} $>$ \&}]{shader }\end{DoxyParamCaption})}
+
+
+
+Shader.\+cpp 파일의 43 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44     \{}
+\DoxyCodeLine{45         \textcolor{keyword}{auto}\& name = shader-\/>GetName();}
+\DoxyCodeLine{46         \mbox{\hyperlink{class_gear_1_1_shader_library_a3f48fb852aa3b72f7bffeb4e722a347f}{Add}}(name, shader);}
+\DoxyCodeLine{47     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 1
+\mbox{\Hypertarget{class_gear_1_1_shader_library_a5491b686f8471a3c6efe07dd7e9a7280}\label{class_gear_1_1_shader_library_a5491b686f8471a3c6efe07dd7e9a7280}} 
+\index{Gear::ShaderLibrary@{Gear::ShaderLibrary}!Add@{Add}}
+\index{Add@{Add}!Gear::ShaderLibrary@{Gear::ShaderLibrary}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Gear\+::\+Shader\+Library\+::\+Add (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_shader}{Shader}} $>$ \&}]{shader }\end{DoxyParamCaption})}
+
+
+
+Shader.\+cpp 파일의 37 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38     \{}
+\DoxyCodeLine{39         \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{GR\_CORE\_ASSERT}}(!\mbox{\hyperlink{class_gear_1_1_shader_library_acc0b055f3491a44fd282e037111cc7a8}{Exists}}(name), \textcolor{stringliteral}{"Shader aleady exists!"});}
+\DoxyCodeLine{40         \mbox{\hyperlink{class_gear_1_1_shader_library_a982d0200073a02b1d5539aa3774d40ef}{m\_Shaders}}[name] = shader;}
+\DoxyCodeLine{41     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\mbox{\Hypertarget{class_gear_1_1_shader_library_acc0b055f3491a44fd282e037111cc7a8}\label{class_gear_1_1_shader_library_acc0b055f3491a44fd282e037111cc7a8}} 
+\index{Gear::ShaderLibrary@{Gear::ShaderLibrary}!Exists@{Exists}}
+\index{Exists@{Exists}!Gear::ShaderLibrary@{Gear::ShaderLibrary}}
+\doxysubsubsection{\texorpdfstring{Exists()}{Exists()}}
+{\footnotesize\ttfamily bool Gear\+::\+Shader\+Library\+::\+Exists (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Shader.\+cpp 파일의 69 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{70     \{}
+\DoxyCodeLine{71         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_shader_library_a982d0200073a02b1d5539aa3774d40ef}{m\_Shaders}}.find(name) != \mbox{\hyperlink{class_gear_1_1_shader_library_a982d0200073a02b1d5539aa3774d40ef}{m\_Shaders}}.end();}
+\DoxyCodeLine{72     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+\mbox{\Hypertarget{class_gear_1_1_shader_library_a0a15f9b0022956eb6adf2944b665bbb9}\label{class_gear_1_1_shader_library_a0a15f9b0022956eb6adf2944b665bbb9}} 
+\index{Gear::ShaderLibrary@{Gear::ShaderLibrary}!Get@{Get}}
+\index{Get@{Get}!Gear::ShaderLibrary@{Gear::ShaderLibrary}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_shader}{Shader}} $>$ Gear\+::\+Shader\+Library\+::\+Get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Shader.\+cpp 파일의 63 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64     \{}
+\DoxyCodeLine{65         \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{GR\_CORE\_ASSERT}}(\mbox{\hyperlink{class_gear_1_1_shader_library_acc0b055f3491a44fd282e037111cc7a8}{Exists}}(name), \textcolor{stringliteral}{"Shader not found!"});}
+\DoxyCodeLine{66         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_shader_library_a982d0200073a02b1d5539aa3774d40ef}{m\_Shaders}}[name];}
+\DoxyCodeLine{67     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 4
+\mbox{\Hypertarget{class_gear_1_1_shader_library_ab0c16c11a58594c27a316642715bdf79}\label{class_gear_1_1_shader_library_ab0c16c11a58594c27a316642715bdf79}} 
+\index{Gear::ShaderLibrary@{Gear::ShaderLibrary}!Load@{Load}}
+\index{Load@{Load}!Gear::ShaderLibrary@{Gear::ShaderLibrary}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_shader}{Shader}} $>$ Gear\+::\+Shader\+Library\+::\+Load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Shader.\+cpp 파일의 49 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50     \{}
+\DoxyCodeLine{51         \textcolor{keyword}{auto} shader = \mbox{\hyperlink{class_gear_1_1_shader_af441a167abaa6d02e14d23fd24180d15}{Shader::Create}}(filepath);}
+\DoxyCodeLine{52         \mbox{\hyperlink{class_gear_1_1_shader_library_a3f48fb852aa3b72f7bffeb4e722a347f}{Add}}(shader);}
+\DoxyCodeLine{53         \textcolor{keywordflow}{return} shader;}
+\DoxyCodeLine{54     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 5
+\mbox{\Hypertarget{class_gear_1_1_shader_library_a983eee2e6689f5aa969295a2c0e5131d}\label{class_gear_1_1_shader_library_a983eee2e6689f5aa969295a2c0e5131d}} 
+\index{Gear::ShaderLibrary@{Gear::ShaderLibrary}!Load@{Load}}
+\index{Load@{Load}!Gear::ShaderLibrary@{Gear::ShaderLibrary}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_shader}{Shader}} $>$ Gear\+::\+Shader\+Library\+::\+Load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Shader.\+cpp 파일의 56 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57     \{}
+\DoxyCodeLine{58         \textcolor{keyword}{auto} shader = \mbox{\hyperlink{class_gear_1_1_shader_af441a167abaa6d02e14d23fd24180d15}{Shader::Create}}(filepath);}
+\DoxyCodeLine{59         \mbox{\hyperlink{class_gear_1_1_shader_library_a3f48fb852aa3b72f7bffeb4e722a347f}{Add}}(name, shader);}
+\DoxyCodeLine{60         \textcolor{keywordflow}{return} shader;}
+\DoxyCodeLine{61     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 6
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_shader_library_a982d0200073a02b1d5539aa3774d40ef}\label{class_gear_1_1_shader_library_a982d0200073a02b1d5539aa3774d40ef}} 
+\index{Gear::ShaderLibrary@{Gear::ShaderLibrary}!m\_Shaders@{m\_Shaders}}
+\index{m\_Shaders@{m\_Shaders}!Gear::ShaderLibrary@{Gear::ShaderLibrary}}
+\doxysubsubsection{\texorpdfstring{m\_Shaders}{m\_Shaders}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$\mbox{\hyperlink{class_gear_1_1_shader}{Shader}}$>$ $>$ Gear\+::\+Shader\+Library\+::m\+\_\+\+Shaders\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Shader.\+h 파일의 42 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Renderer/\mbox{\hyperlink{_shader_8h}{Shader.\+h}}\item 
+Gear/src/\+Gear/\+Renderer/\mbox{\hyperlink{_shader_8cpp}{Shader.\+cpp}}\end{DoxyCompactItemize}

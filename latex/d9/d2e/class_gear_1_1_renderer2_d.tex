@@ -1,0 +1,371 @@
+\hypertarget{class_gear_1_1_renderer2_d}{}\doxysection{Gear\+::Renderer2D 클래스 참조}
+\label{class_gear_1_1_renderer2_d}\index{Gear::Renderer2D@{Gear::Renderer2D}}
+
+
+{\ttfamily \#include $<$Renderer2\+D.\+h$>$}
+
+
+
+Gear\+::Renderer2\+D에 대한 협력 다이어그램\+:
+% FIG 0
+\doxysubsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_renderer2_d_a012d5dabb3d03a26b4610027d78786e8}{Init}} ()
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_renderer2_d_a1ea05ea55ad97cc724c8093833c8c5f8}{Shutdown}} ()
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_renderer2_d_a9bc96e1620376071ebfc1585da9bff76}{Begin\+Scene}} (const \mbox{\hyperlink{class_gear_1_1_orthographic_camera}{Orthographic\+Camera}} \&camera)
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_renderer2_d_a69d92c3dd7bb0b8fcc13f639e470c009}{End\+Scene}} ()
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_renderer2_d_aa9c138616beb0cf5170e4bbfc96eb71f}{Draw\+Quad}} (const glm\+::vec2 \&position, const glm\+::vec2 \&size, const glm\+::vec4 \&color)
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_renderer2_d_a9b90ecac434fcba0080d8404f5a8b42b}{Draw\+Quad}} (const glm\+::vec3 \&position, const glm\+::vec2 \&size, const glm\+::vec4 \&color)
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_renderer2_d_a85e05bd754fdc5518f56202694e5dd25}{Draw\+Quad}} (const glm\+::vec2 \&position, const glm\+::vec2 \&size, const \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_texture}{Texture}} $>$ \&texture, float tiling\+Factor=1.\+0f, const glm\+::vec4 \&tint\+Color=glm\+::vec4(1.\+0f))
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_renderer2_d_a94ec0f7d9950a86e5591ac0405932360}{Draw\+Quad}} (const glm\+::vec3 \&position, const glm\+::vec2 \&size, const \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_texture}{Texture}} $>$ \&texture, float tiling\+Factor=1.\+0f, const glm\+::vec4 \&tint\+Color=glm\+::vec4(1.\+0f))
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_renderer2_d_a03206ffcdbce01b45ca1c8a3b67e4ee8}{Draw\+Rotated\+Quad}} (const glm\+::vec2 \&position, const glm\+::vec2 \&size, float rotation, const glm\+::vec4 \&color)
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_renderer2_d_a533f86fa5614361213a74e0da548aaf0}{Draw\+Rotated\+Quad}} (const glm\+::vec3 \&position, const glm\+::vec2 \&size, float rotation, const glm\+::vec4 \&color)
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_renderer2_d_a1827709d253411740f17952f910350d4}{Draw\+Rotated\+Quad}} (const glm\+::vec2 \&position, const glm\+::vec2 \&size, float rotation, const \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_texture}{Texture}} $>$ \&texture, float tiling\+Factor=1.\+0f, const glm\+::vec4 \&tint\+Color=glm\+::vec4(1.\+0f))
+\item 
+static void \mbox{\hyperlink{class_gear_1_1_renderer2_d_abb4c4d85e2a375a813bc9c6ad818dd7c}{Draw\+Rotated\+Quad}} (const glm\+::vec3 \&position, const glm\+::vec2 \&size, float rotation, const \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_texture}{Texture}} $>$ \&texture, float tiling\+Factor=1.\+0f, const glm\+::vec4 \&tint\+Color=glm\+::vec4(1.\+0f))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Renderer2\+D.\+h 파일의 8 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_renderer2_d_a9bc96e1620376071ebfc1585da9bff76}\label{class_gear_1_1_renderer2_d_a9bc96e1620376071ebfc1585da9bff76}} 
+\index{Gear::Renderer2D@{Gear::Renderer2D}!BeginScene@{BeginScene}}
+\index{BeginScene@{BeginScene}!Gear::Renderer2D@{Gear::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{BeginScene()}{BeginScene()}}
+{\footnotesize\ttfamily void Gear\+::\+Renderer2\+D\+::\+Begin\+Scene (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_gear_1_1_orthographic_camera}{Orthographic\+Camera}} \&}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Renderer2\+D.\+cpp 파일의 71 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{72     \{}
+\DoxyCodeLine{73         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a20c21b2b257a14f0d49acb8cf7166fa5}{TextureShader}}-\/>Bind();}
+\DoxyCodeLine{76         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a20c21b2b257a14f0d49acb8cf7166fa5}{TextureShader}}-\/>SetMat4(\textcolor{stringliteral}{"u\_ViewProjection"}, camera.GetViewProjectionMatrix());}
+\DoxyCodeLine{77     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 1
+\mbox{\Hypertarget{class_gear_1_1_renderer2_d_aa9c138616beb0cf5170e4bbfc96eb71f}\label{class_gear_1_1_renderer2_d_aa9c138616beb0cf5170e4bbfc96eb71f}} 
+\index{Gear::Renderer2D@{Gear::Renderer2D}!DrawQuad@{DrawQuad}}
+\index{DrawQuad@{DrawQuad}!Gear::Renderer2D@{Gear::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuad()}{DrawQuad()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void Gear\+::\+Renderer2\+D\+::\+Draw\+Quad (\begin{DoxyParamCaption}\item[{const glm\+::vec2 \&}]{position,  }\item[{const glm\+::vec2 \&}]{size,  }\item[{const glm\+::vec4 \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Renderer2\+D.\+cpp 파일의 85 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86     \{}
+\DoxyCodeLine{87         \mbox{\hyperlink{class_gear_1_1_renderer2_d_aa9c138616beb0cf5170e4bbfc96eb71f}{DrawQuad}}(\{ position.x, position.y, 0.0f\}, size, color);}
+\DoxyCodeLine{88     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\mbox{\Hypertarget{class_gear_1_1_renderer2_d_a85e05bd754fdc5518f56202694e5dd25}\label{class_gear_1_1_renderer2_d_a85e05bd754fdc5518f56202694e5dd25}} 
+\index{Gear::Renderer2D@{Gear::Renderer2D}!DrawQuad@{DrawQuad}}
+\index{DrawQuad@{DrawQuad}!Gear::Renderer2D@{Gear::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuad()}{DrawQuad()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void Gear\+::\+Renderer2\+D\+::\+Draw\+Quad (\begin{DoxyParamCaption}\item[{const glm\+::vec2 \&}]{position,  }\item[{const glm\+::vec2 \&}]{size,  }\item[{const \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_texture}{Texture}} $>$ \&}]{texture,  }\item[{float}]{tiling\+Factor = {\ttfamily 1.0f},  }\item[{const glm\+::vec4 \&}]{tint\+Color = {\ttfamily glm\+:\+:vec4(1.0f)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Renderer2\+D.\+cpp 파일의 106 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{107     \{}
+\DoxyCodeLine{108         \mbox{\hyperlink{class_gear_1_1_renderer2_d_aa9c138616beb0cf5170e4bbfc96eb71f}{DrawQuad}}(\{ position.x, position.y, 0.0f \}, size, texture, tilingFactor, tintColor);}
+\DoxyCodeLine{109     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+\mbox{\Hypertarget{class_gear_1_1_renderer2_d_a9b90ecac434fcba0080d8404f5a8b42b}\label{class_gear_1_1_renderer2_d_a9b90ecac434fcba0080d8404f5a8b42b}} 
+\index{Gear::Renderer2D@{Gear::Renderer2D}!DrawQuad@{DrawQuad}}
+\index{DrawQuad@{DrawQuad}!Gear::Renderer2D@{Gear::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuad()}{DrawQuad()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void Gear\+::\+Renderer2\+D\+::\+Draw\+Quad (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{position,  }\item[{const glm\+::vec2 \&}]{size,  }\item[{const glm\+::vec4 \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Renderer2\+D.\+cpp 파일의 90 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91     \{}
+\DoxyCodeLine{92         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a20c21b2b257a14f0d49acb8cf7166fa5}{TextureShader}}-\/>SetFloat4(\textcolor{stringliteral}{"u\_Color"}, color);}
+\DoxyCodeLine{95         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a20c21b2b257a14f0d49acb8cf7166fa5}{TextureShader}}-\/>SetFloat(\textcolor{stringliteral}{"u\_TilingFactor"}, 1.0f);}
+\DoxyCodeLine{96         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_aaeb36f4f0b4024aae39d614a54839526}{WhiteTexture}}-\/>Bind();}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98         glm::mat4 translate = glm::translate(glm::mat4(1.0f), position) }
+\DoxyCodeLine{99             * glm::scale(glm::mat4(1.0f), \{ size.x, size.y, 1.0f \});}
+\DoxyCodeLine{100         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a20c21b2b257a14f0d49acb8cf7166fa5}{TextureShader}}-\/>SetMat4(\textcolor{stringliteral}{"u\_Transform"}, translate);}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a7de45bc5b030be97b072a0b3e0f9daf1}{QuardVertexArray}}-\/>Bind();}
+\DoxyCodeLine{103         \mbox{\hyperlink{class_gear_1_1_render_command_a034585ba8f23d7a327319015f8d59fd9}{RenderCommand::DrawIndexed}}(\mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a7de45bc5b030be97b072a0b3e0f9daf1}{QuardVertexArray}});}
+\DoxyCodeLine{104     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 4
+\mbox{\Hypertarget{class_gear_1_1_renderer2_d_a94ec0f7d9950a86e5591ac0405932360}\label{class_gear_1_1_renderer2_d_a94ec0f7d9950a86e5591ac0405932360}} 
+\index{Gear::Renderer2D@{Gear::Renderer2D}!DrawQuad@{DrawQuad}}
+\index{DrawQuad@{DrawQuad}!Gear::Renderer2D@{Gear::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawQuad()}{DrawQuad()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void Gear\+::\+Renderer2\+D\+::\+Draw\+Quad (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{position,  }\item[{const glm\+::vec2 \&}]{size,  }\item[{const \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_texture}{Texture}} $>$ \&}]{texture,  }\item[{float}]{tiling\+Factor = {\ttfamily 1.0f},  }\item[{const glm\+::vec4 \&}]{tint\+Color = {\ttfamily glm\+:\+:vec4(1.0f)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Renderer2\+D.\+cpp 파일의 111 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{112     \{}
+\DoxyCodeLine{113         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a20c21b2b257a14f0d49acb8cf7166fa5}{TextureShader}}-\/>SetFloat4(\textcolor{stringliteral}{"u\_Color"}, tintColor);}
+\DoxyCodeLine{116         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a20c21b2b257a14f0d49acb8cf7166fa5}{TextureShader}}-\/>SetFloat(\textcolor{stringliteral}{"u\_TilingFactor"}, tilingFactor);}
+\DoxyCodeLine{117         texture-\/>Bind();}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119         glm::mat4 translate = glm::translate(glm::mat4(1.0f), position) }
+\DoxyCodeLine{120             * glm::scale(glm::mat4(1.0f), \{ size.x, size.y, 1.0f \});}
+\DoxyCodeLine{121         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a20c21b2b257a14f0d49acb8cf7166fa5}{TextureShader}}-\/>SetMat4(\textcolor{stringliteral}{"u\_Transform"}, translate);}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a7de45bc5b030be97b072a0b3e0f9daf1}{QuardVertexArray}}-\/>Bind();}
+\DoxyCodeLine{124         \mbox{\hyperlink{class_gear_1_1_render_command_a034585ba8f23d7a327319015f8d59fd9}{RenderCommand::DrawIndexed}}(\mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a7de45bc5b030be97b072a0b3e0f9daf1}{QuardVertexArray}});}
+\DoxyCodeLine{125     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 5
+\mbox{\Hypertarget{class_gear_1_1_renderer2_d_a03206ffcdbce01b45ca1c8a3b67e4ee8}\label{class_gear_1_1_renderer2_d_a03206ffcdbce01b45ca1c8a3b67e4ee8}} 
+\index{Gear::Renderer2D@{Gear::Renderer2D}!DrawRotatedQuad@{DrawRotatedQuad}}
+\index{DrawRotatedQuad@{DrawRotatedQuad}!Gear::Renderer2D@{Gear::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawRotatedQuad()}{DrawRotatedQuad()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void Gear\+::\+Renderer2\+D\+::\+Draw\+Rotated\+Quad (\begin{DoxyParamCaption}\item[{const glm\+::vec2 \&}]{position,  }\item[{const glm\+::vec2 \&}]{size,  }\item[{float}]{rotation,  }\item[{const glm\+::vec4 \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Renderer2\+D.\+cpp 파일의 127 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{128     \{}
+\DoxyCodeLine{129         \mbox{\hyperlink{class_gear_1_1_renderer2_d_a03206ffcdbce01b45ca1c8a3b67e4ee8}{DrawRotatedQuad}}(\{ position.x, position.y, 0.0f \}, size, rotation, color);}
+\DoxyCodeLine{130     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 6
+\mbox{\Hypertarget{class_gear_1_1_renderer2_d_a1827709d253411740f17952f910350d4}\label{class_gear_1_1_renderer2_d_a1827709d253411740f17952f910350d4}} 
+\index{Gear::Renderer2D@{Gear::Renderer2D}!DrawRotatedQuad@{DrawRotatedQuad}}
+\index{DrawRotatedQuad@{DrawRotatedQuad}!Gear::Renderer2D@{Gear::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawRotatedQuad()}{DrawRotatedQuad()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void Gear\+::\+Renderer2\+D\+::\+Draw\+Rotated\+Quad (\begin{DoxyParamCaption}\item[{const glm\+::vec2 \&}]{position,  }\item[{const glm\+::vec2 \&}]{size,  }\item[{float}]{rotation,  }\item[{const \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_texture}{Texture}} $>$ \&}]{texture,  }\item[{float}]{tiling\+Factor = {\ttfamily 1.0f},  }\item[{const glm\+::vec4 \&}]{tint\+Color = {\ttfamily glm\+:\+:vec4(1.0f)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Renderer2\+D.\+cpp 파일의 149 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{150     \{}
+\DoxyCodeLine{151         \mbox{\hyperlink{class_gear_1_1_renderer2_d_a03206ffcdbce01b45ca1c8a3b67e4ee8}{DrawRotatedQuad}}(\{ position.x, position.y, 0.0f \}, size, rotation, texture, tilingFactor, tintColor);}
+\DoxyCodeLine{152     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 7
+\mbox{\Hypertarget{class_gear_1_1_renderer2_d_a533f86fa5614361213a74e0da548aaf0}\label{class_gear_1_1_renderer2_d_a533f86fa5614361213a74e0da548aaf0}} 
+\index{Gear::Renderer2D@{Gear::Renderer2D}!DrawRotatedQuad@{DrawRotatedQuad}}
+\index{DrawRotatedQuad@{DrawRotatedQuad}!Gear::Renderer2D@{Gear::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawRotatedQuad()}{DrawRotatedQuad()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void Gear\+::\+Renderer2\+D\+::\+Draw\+Rotated\+Quad (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{position,  }\item[{const glm\+::vec2 \&}]{size,  }\item[{float}]{rotation,  }\item[{const glm\+::vec4 \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Renderer2\+D.\+cpp 파일의 132 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{133     \{}
+\DoxyCodeLine{134         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a20c21b2b257a14f0d49acb8cf7166fa5}{TextureShader}}-\/>SetFloat4(\textcolor{stringliteral}{"u\_Color"}, color);}
+\DoxyCodeLine{137         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a20c21b2b257a14f0d49acb8cf7166fa5}{TextureShader}}-\/>SetFloat(\textcolor{stringliteral}{"u\_TilingFactor"}, 1.0f);}
+\DoxyCodeLine{138         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_aaeb36f4f0b4024aae39d614a54839526}{WhiteTexture}}-\/>Bind();}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140         glm::mat4 translate = glm::translate(glm::mat4(1.0f), position)}
+\DoxyCodeLine{141             * glm::rotate(glm::mat4(1.0f), rotation, \{0.0f, 0.0f, 1.0f, \})}
+\DoxyCodeLine{142             * glm::scale(glm::mat4(1.0f), \{ size.x, size.y, 1.0f \});}
+\DoxyCodeLine{143         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a20c21b2b257a14f0d49acb8cf7166fa5}{TextureShader}}-\/>SetMat4(\textcolor{stringliteral}{"u\_Transform"}, translate);}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a7de45bc5b030be97b072a0b3e0f9daf1}{QuardVertexArray}}-\/>Bind();}
+\DoxyCodeLine{146         \mbox{\hyperlink{class_gear_1_1_render_command_a034585ba8f23d7a327319015f8d59fd9}{RenderCommand::DrawIndexed}}(\mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a7de45bc5b030be97b072a0b3e0f9daf1}{QuardVertexArray}});}
+\DoxyCodeLine{147     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 8
+\mbox{\Hypertarget{class_gear_1_1_renderer2_d_abb4c4d85e2a375a813bc9c6ad818dd7c}\label{class_gear_1_1_renderer2_d_abb4c4d85e2a375a813bc9c6ad818dd7c}} 
+\index{Gear::Renderer2D@{Gear::Renderer2D}!DrawRotatedQuad@{DrawRotatedQuad}}
+\index{DrawRotatedQuad@{DrawRotatedQuad}!Gear::Renderer2D@{Gear::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{DrawRotatedQuad()}{DrawRotatedQuad()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void Gear\+::\+Renderer2\+D\+::\+Draw\+Rotated\+Quad (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{position,  }\item[{const glm\+::vec2 \&}]{size,  }\item[{float}]{rotation,  }\item[{const \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_texture}{Texture}} $>$ \&}]{texture,  }\item[{float}]{tiling\+Factor = {\ttfamily 1.0f},  }\item[{const glm\+::vec4 \&}]{tint\+Color = {\ttfamily glm\+:\+:vec4(1.0f)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Renderer2\+D.\+cpp 파일의 154 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{155     \{}
+\DoxyCodeLine{156         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a20c21b2b257a14f0d49acb8cf7166fa5}{TextureShader}}-\/>SetFloat4(\textcolor{stringliteral}{"u\_Color"}, tintColor);}
+\DoxyCodeLine{159         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a20c21b2b257a14f0d49acb8cf7166fa5}{TextureShader}}-\/>SetFloat(\textcolor{stringliteral}{"u\_TilingFactor"}, tilingFactor);}
+\DoxyCodeLine{160         texture-\/>Bind();}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162         glm::mat4 translate = glm::translate(glm::mat4(1.0f), position)}
+\DoxyCodeLine{163             * glm::rotate(glm::mat4(1.0f), rotation, \{ 0.0f, 0.0f, 1.0f, \})}
+\DoxyCodeLine{164             * glm::scale(glm::mat4(1.0f), \{ size.x, size.y, 1.0f \});}
+\DoxyCodeLine{165         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a20c21b2b257a14f0d49acb8cf7166fa5}{TextureShader}}-\/>SetMat4(\textcolor{stringliteral}{"u\_Transform"}, translate);}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a7de45bc5b030be97b072a0b3e0f9daf1}{QuardVertexArray}}-\/>Bind();}
+\DoxyCodeLine{168         \mbox{\hyperlink{class_gear_1_1_render_command_a034585ba8f23d7a327319015f8d59fd9}{RenderCommand::DrawIndexed}}(\mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a7de45bc5b030be97b072a0b3e0f9daf1}{QuardVertexArray}});}
+\DoxyCodeLine{169     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 9
+\mbox{\Hypertarget{class_gear_1_1_renderer2_d_a69d92c3dd7bb0b8fcc13f639e470c009}\label{class_gear_1_1_renderer2_d_a69d92c3dd7bb0b8fcc13f639e470c009}} 
+\index{Gear::Renderer2D@{Gear::Renderer2D}!EndScene@{EndScene}}
+\index{EndScene@{EndScene}!Gear::Renderer2D@{Gear::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{EndScene()}{EndScene()}}
+{\footnotesize\ttfamily void Gear\+::\+Renderer2\+D\+::\+End\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Renderer2\+D.\+cpp 파일의 79 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80     \{}
+\DoxyCodeLine{81         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_renderer2_d_a012d5dabb3d03a26b4610027d78786e8}\label{class_gear_1_1_renderer2_d_a012d5dabb3d03a26b4610027d78786e8}} 
+\index{Gear::Renderer2D@{Gear::Renderer2D}!Init@{Init}}
+\index{Init@{Init}!Gear::Renderer2D@{Gear::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Gear\+::\+Renderer2\+D\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Renderer2\+D.\+cpp 파일의 21 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22     \{}
+\DoxyCodeLine{23         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}} = \textcolor{keyword}{new} Renderer2DStorage();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27         \textcolor{comment}{//1. Create VertexArray}}
+\DoxyCodeLine{28         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a7de45bc5b030be97b072a0b3e0f9daf1}{QuardVertexArray}} = \mbox{\hyperlink{class_gear_1_1_vertex_array_a3e410e3316125bb52c0fde00759c079f}{VertexArray::Create}}();}
+\DoxyCodeLine{29         \textcolor{comment}{//2. define vertices, Indices}}
+\DoxyCodeLine{30         \textcolor{keywordtype}{float} squareVertices[5 * 4] = \{}
+\DoxyCodeLine{31             -\/0.5f, -\/0.5f, 0.0f, 0.0f, 0.0f,}
+\DoxyCodeLine{32              0.5f, -\/0.5f, 0.0f, 1.0f, 0.0f,}
+\DoxyCodeLine{33              0.5f,  0.5f, 0.0f, 1.0f, 1.0f,}
+\DoxyCodeLine{34             -\/0.5f,  0.5f, 0.0f, 0.0f, 1.0f}
+\DoxyCodeLine{35         \};}
+\DoxyCodeLine{36         uint32\_t squreIndices[6] = \{}
+\DoxyCodeLine{37             0, 1, 2, 2, 3, 0}
+\DoxyCodeLine{38         \};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40         \textcolor{comment}{//3. Create VertexBuffer}}
+\DoxyCodeLine{41         Ref<VertexBuffer> squareVB;}
+\DoxyCodeLine{42         squareVB.reset(\mbox{\hyperlink{class_gear_1_1_vertex_buffer_a5a0bbcfacafdab11e4204c3060df661d}{VertexBuffer::Create}}(squareVertices, \textcolor{keyword}{sizeof}(squareVertices)));}
+\DoxyCodeLine{43         squareVB-\/>SetLayout(\{}
+\DoxyCodeLine{44             \{\mbox{\hyperlink{namespace_gear_a6475c6a99df2c0a52fa8d9d6f4e631baa8a8a1d211464d4bdee46db3c75bfa121}{ShaderDataType::Float3}}, \textcolor{stringliteral}{"a\_Position"}\},}
+\DoxyCodeLine{45             \{\mbox{\hyperlink{namespace_gear_a6475c6a99df2c0a52fa8d9d6f4e631baa6694430a2b471b5d2de071f2ef1fdc57}{ShaderDataType::Float2}}, \textcolor{stringliteral}{"a\_TexCoord"}\}}
+\DoxyCodeLine{46         \});}
+\DoxyCodeLine{47         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a7de45bc5b030be97b072a0b3e0f9daf1}{QuardVertexArray}}-\/>AddVertexBuffer(squareVB);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         \textcolor{comment}{//4. Create IndexBuffer}}
+\DoxyCodeLine{50         Ref<IndexBuffer> squreIB;}
+\DoxyCodeLine{51         squreIB.reset(\mbox{\hyperlink{class_gear_1_1_index_buffer_a3740f4ce510a3dce66d5ec88431216e9}{IndexBuffer::Create}}(squreIndices, \textcolor{keyword}{sizeof}(squreIndices) / \textcolor{keyword}{sizeof}(uint32\_t)));}
+\DoxyCodeLine{52         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a7de45bc5b030be97b072a0b3e0f9daf1}{QuardVertexArray}}-\/>SetIndexBuffer(squreIB);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54         \textcolor{comment}{//5. Shader setup}}
+\DoxyCodeLine{55         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_aaeb36f4f0b4024aae39d614a54839526}{WhiteTexture}} = \mbox{\hyperlink{class_gear_1_1_texture2_d_a737ee8c105066854fd4c3f8def62fd73}{Texture2D::Create}}(1, 1);}
+\DoxyCodeLine{56         uint32\_t whiteTextureData = 0xffffffff;}
+\DoxyCodeLine{57         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_aaeb36f4f0b4024aae39d614a54839526}{WhiteTexture}}-\/>SetData(\&whiteTextureData, \textcolor{keyword}{sizeof}(uint32\_t));}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a20c21b2b257a14f0d49acb8cf7166fa5}{TextureShader}} = \mbox{\hyperlink{class_gear_1_1_shader_af441a167abaa6d02e14d23fd24180d15}{Shader::Create}}(\textcolor{stringliteral}{"assets/shaders/Texture.glsl"});}
+\DoxyCodeLine{60         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a20c21b2b257a14f0d49acb8cf7166fa5}{TextureShader}}-\/>Bind();}
+\DoxyCodeLine{61         \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}}-\/>\mbox{\hyperlink{struct_gear_1_1_renderer2_d_storage_a20c21b2b257a14f0d49acb8cf7166fa5}{TextureShader}}-\/>SetInt(\textcolor{stringliteral}{"u\_Texture"}, 0);}
+\DoxyCodeLine{62     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 10
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 11
+\mbox{\Hypertarget{class_gear_1_1_renderer2_d_a1ea05ea55ad97cc724c8093833c8c5f8}\label{class_gear_1_1_renderer2_d_a1ea05ea55ad97cc724c8093833c8c5f8}} 
+\index{Gear::Renderer2D@{Gear::Renderer2D}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!Gear::Renderer2D@{Gear::Renderer2D}}
+\doxysubsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
+{\footnotesize\ttfamily void Gear\+::\+Renderer2\+D\+::\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Renderer2\+D.\+cpp 파일의 64 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65     \{}
+\DoxyCodeLine{66         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68         \textcolor{keyword}{delete} \mbox{\hyperlink{namespace_gear_ac5f9681be14fe815b91558f89ca2549c}{s\_Data}};}
+\DoxyCodeLine{69     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 12
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Renderer/\mbox{\hyperlink{_renderer2_d_8h}{Renderer2\+D.\+h}}\item 
+Gear/src/\+Gear/\+Renderer/\mbox{\hyperlink{_renderer2_d_8cpp}{Renderer2\+D.\+cpp}}\end{DoxyCompactItemize}

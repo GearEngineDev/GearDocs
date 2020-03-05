@@ -1,0 +1,93 @@
+\hypertarget{_instrumentor_8h}{}\doxysection{Gear/src/\+Gear/\+Debug/\+Instrumentor.h 파일 참조}
+\label{_instrumentor_8h}\index{Gear/src/Gear/Debug/Instrumentor.h@{Gear/src/Gear/Debug/Instrumentor.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+Instrumentor.\+h에 대한 include 의존 그래프
+% FIG 0
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\+:
+% FIG 1
+\doxysubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_gear_1_1_profile_result}{Gear\+::\+Profile\+Result}}
+\item 
+struct \mbox{\hyperlink{struct_gear_1_1_instrumentation_session}{Gear\+::\+Instrumentation\+Session}}
+\item 
+class \mbox{\hyperlink{class_gear_1_1_instrumentor}{Gear\+::\+Instrumentor}}
+\item 
+class \mbox{\hyperlink{class_gear_1_1_instrumentation_timer}{Gear\+::\+Instrumentation\+Timer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{네임스페이스}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_gear}{Gear}}
+\end{DoxyCompactItemize}
+\doxysubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_instrumentor_8h_afe6c3edb6d15bf62612c67f4e9437ac4}{G\+R\+\_\+\+P\+R\+O\+F\+I\+LE}}~1
+\item 
+\#define \mbox{\hyperlink{_instrumentor_8h_a1e7240e9bb5102156f05d976b23ac2b7}{G\+R\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+B\+E\+G\+I\+N\+\_\+\+S\+E\+S\+S\+I\+ON}}(name,  filepath)~\+::\mbox{\hyperlink{class_gear_1_1_instrumentor_ab99c04e194f05e850c9621a97b21e715}{Gear\+::\+Instrumentor\+::\+Get}}().Begin\+Session(name, filepath)
+\item 
+\#define \mbox{\hyperlink{_instrumentor_8h_a1479eff50cb574362e4cc52136165deb}{G\+R\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+E\+N\+D\+\_\+\+S\+E\+S\+S\+I\+ON}}()~\+::\mbox{\hyperlink{class_gear_1_1_instrumentor_ab99c04e194f05e850c9621a97b21e715}{Gear\+::\+Instrumentor\+::\+Get}}().End\+Session()
+\item 
+\#define \mbox{\hyperlink{_instrumentor_8h_a4ecb6a74f29a012dea3a4e3b1e855876}{G\+R\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+S\+C\+O\+PE}}(name)~\+::\mbox{\hyperlink{class_gear_1_1_instrumentation_timer}{Gear\+::\+Instrumentation\+Timer}} timer\#\#\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+(name);
+\item 
+\#define \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{G\+R\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}()~\mbox{\hyperlink{_instrumentor_8h_a4ecb6a74f29a012dea3a4e3b1e855876}{G\+R\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+S\+C\+O\+PE}}(\+\_\+\+\_\+\+F\+U\+N\+C\+S\+I\+G\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{매크로 문서화}
+\mbox{\Hypertarget{_instrumentor_8h_afe6c3edb6d15bf62612c67f4e9437ac4}\label{_instrumentor_8h_afe6c3edb6d15bf62612c67f4e9437ac4}} 
+\index{Instrumentor.h@{Instrumentor.h}!GR\_PROFILE@{GR\_PROFILE}}
+\index{GR\_PROFILE@{GR\_PROFILE}!Instrumentor.h@{Instrumentor.h}}
+\doxysubsubsection{\texorpdfstring{GR\_PROFILE}{GR\_PROFILE}}
+{\footnotesize\ttfamily \#define G\+R\+\_\+\+P\+R\+O\+F\+I\+LE~1}
+
+
+
+Instrumentor.\+h 파일의 126 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_instrumentor_8h_a1e7240e9bb5102156f05d976b23ac2b7}\label{_instrumentor_8h_a1e7240e9bb5102156f05d976b23ac2b7}} 
+\index{Instrumentor.h@{Instrumentor.h}!GR\_PROFILE\_BEGIN\_SESSION@{GR\_PROFILE\_BEGIN\_SESSION}}
+\index{GR\_PROFILE\_BEGIN\_SESSION@{GR\_PROFILE\_BEGIN\_SESSION}!Instrumentor.h@{Instrumentor.h}}
+\doxysubsubsection{\texorpdfstring{GR\_PROFILE\_BEGIN\_SESSION}{GR\_PROFILE\_BEGIN\_SESSION}}
+{\footnotesize\ttfamily \#define G\+R\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+B\+E\+G\+I\+N\+\_\+\+S\+E\+S\+S\+I\+ON(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{filepath }\end{DoxyParamCaption})~\+::\mbox{\hyperlink{class_gear_1_1_instrumentor_ab99c04e194f05e850c9621a97b21e715}{Gear\+::\+Instrumentor\+::\+Get}}().Begin\+Session(name, filepath)}
+
+
+
+Instrumentor.\+h 파일의 128 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_instrumentor_8h_a1479eff50cb574362e4cc52136165deb}\label{_instrumentor_8h_a1479eff50cb574362e4cc52136165deb}} 
+\index{Instrumentor.h@{Instrumentor.h}!GR\_PROFILE\_END\_SESSION@{GR\_PROFILE\_END\_SESSION}}
+\index{GR\_PROFILE\_END\_SESSION@{GR\_PROFILE\_END\_SESSION}!Instrumentor.h@{Instrumentor.h}}
+\doxysubsubsection{\texorpdfstring{GR\_PROFILE\_END\_SESSION}{GR\_PROFILE\_END\_SESSION}}
+{\footnotesize\ttfamily \#define G\+R\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+E\+N\+D\+\_\+\+S\+E\+S\+S\+I\+ON(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\+::\mbox{\hyperlink{class_gear_1_1_instrumentor_ab99c04e194f05e850c9621a97b21e715}{Gear\+::\+Instrumentor\+::\+Get}}().End\+Session()}
+
+
+
+Instrumentor.\+h 파일의 129 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}\label{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}} 
+\index{Instrumentor.h@{Instrumentor.h}!GR\_PROFILE\_FUNCTION@{GR\_PROFILE\_FUNCTION}}
+\index{GR\_PROFILE\_FUNCTION@{GR\_PROFILE\_FUNCTION}!Instrumentor.h@{Instrumentor.h}}
+\doxysubsubsection{\texorpdfstring{GR\_PROFILE\_FUNCTION}{GR\_PROFILE\_FUNCTION}}
+{\footnotesize\ttfamily \#define G\+R\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{_instrumentor_8h_a4ecb6a74f29a012dea3a4e3b1e855876}{G\+R\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+S\+C\+O\+PE}}(\+\_\+\+\_\+\+F\+U\+N\+C\+S\+I\+G\+\_\+\+\_\+)}
+
+
+
+Instrumentor.\+h 파일의 131 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_instrumentor_8h_a4ecb6a74f29a012dea3a4e3b1e855876}\label{_instrumentor_8h_a4ecb6a74f29a012dea3a4e3b1e855876}} 
+\index{Instrumentor.h@{Instrumentor.h}!GR\_PROFILE\_SCOPE@{GR\_PROFILE\_SCOPE}}
+\index{GR\_PROFILE\_SCOPE@{GR\_PROFILE\_SCOPE}!Instrumentor.h@{Instrumentor.h}}
+\doxysubsubsection{\texorpdfstring{GR\_PROFILE\_SCOPE}{GR\_PROFILE\_SCOPE}}
+{\footnotesize\ttfamily \#define G\+R\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+S\+C\+O\+PE(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\+::\mbox{\hyperlink{class_gear_1_1_instrumentation_timer}{Gear\+::\+Instrumentation\+Timer}} timer\#\#\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+(name);}
+
+
+
+Instrumentor.\+h 파일의 130 번째 라인에서 정의되었습니다.
+

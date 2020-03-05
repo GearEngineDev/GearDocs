@@ -1,0 +1,497 @@
+\hypertarget{class_gear_1_1_windows_window}{}\doxysection{Gear\+::Windows\+Window 클래스 참조}
+\label{class_gear_1_1_windows_window}\index{Gear::WindowsWindow@{Gear::WindowsWindow}}
+
+
+{\ttfamily \#include $<$Windows\+Window.\+h$>$}
+
+
+
+Gear\+::Windows\+Window에 대한 상속 다이어그램 \+: 
+% FIG 0
+
+
+Gear\+::Windows\+Window에 대한 협력 다이어그램\+:
+% FIG 1
+\doxysubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_gear_1_1_windows_window_1_1_window_data}{Window\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 타입}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{class_gear_1_1_window_a1bc65d5c35dde062e41df9655eabf2fc}{Event\+Callback\+Fn}} = std\+::function$<$ void(\mbox{\hyperlink{class_gear_1_1_event}{Event}} \&)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_windows_window_a80272862911846833db4049d3ed163df}{Windows\+Window}} (const \mbox{\hyperlink{struct_gear_1_1_window_props}{Window\+Props}} \&props)
+\item 
+virtual \mbox{\hyperlink{class_gear_1_1_windows_window_ac81650f1a02c88cf1a552e15948f3d7f}{$\sim$\+Windows\+Window}} ()
+\item 
+void \mbox{\hyperlink{class_gear_1_1_windows_window_a0ee7ffa440edf62ba5d6a27aa56d7df4}{On\+Update}} () override
+\item 
+unsigned int \mbox{\hyperlink{class_gear_1_1_windows_window_aa9f7f3facab925c3bf31ed3cc50a8dad}{Get\+Width}} () const override
+\item 
+unsigned int \mbox{\hyperlink{class_gear_1_1_windows_window_a36514dbd81948ff22355dc7210fc9030}{Get\+Height}} () const override
+\item 
+void \mbox{\hyperlink{class_gear_1_1_windows_window_a4a184374095ae3ad3ca48c2ad7ce1bac}{Set\+Event\+Callback}} (const \mbox{\hyperlink{class_gear_1_1_window_a1bc65d5c35dde062e41df9655eabf2fc}{Event\+Callback\+Fn}} \&callback) override
+\item 
+void \mbox{\hyperlink{class_gear_1_1_windows_window_a64fb516c8a99f515ae400b574c0151cb}{Set\+V\+Sync}} (bool enabled) override
+\item 
+bool \mbox{\hyperlink{class_gear_1_1_windows_window_a5d1289683360f7c1fb657a1d0b1a2351}{Is\+V\+Sync}} () const override
+\item 
+virtual void $\ast$ \mbox{\hyperlink{class_gear_1_1_windows_window_ac910333fa9bde07391a2cc50e7698fe6}{Get\+Native\+Window}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_gear_1_1_window}{Window}} $\ast$ \mbox{\hyperlink{class_gear_1_1_window_a8bfdb15553b8fd4b9bdb96dd9862a4b3}{Create}} (const \mbox{\hyperlink{struct_gear_1_1_window_props}{Window\+Props}} \&props=\mbox{\hyperlink{struct_gear_1_1_window_props}{Window\+Props}}())
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_windows_window_a607b61157ad0a1f40282f11555a42668}{Init}} (const \mbox{\hyperlink{struct_gear_1_1_window_props}{Window\+Props}} \&props)
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_windows_window_a5b45023ba114f50beaf9c36fb5ea2f69}{Shutdown}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{class_gear_1_1_windows_window_a1c7f1fa87b984c3b8a03436814631609}{m\+\_\+\+Window}}
+\item 
+\mbox{\hyperlink{namespace_gear_abef5ce1767f345625e08a951f865a20d}{Scope}}$<$ \mbox{\hyperlink{class_gear_1_1_graphics_context}{Graphics\+Context}} $>$ \mbox{\hyperlink{class_gear_1_1_windows_window_a0783dd3075eb5309c977acaf322da1b1}{m\+\_\+\+Context}}
+\item 
+\mbox{\hyperlink{struct_gear_1_1_windows_window_1_1_window_data}{Window\+Data}} \mbox{\hyperlink{class_gear_1_1_windows_window_a1976d9c5be7f617d25e09784c7b57e67}{m\+\_\+\+Data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Windows\+Window.\+h 파일의 8 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 타입정의 문서화}
+\mbox{\Hypertarget{class_gear_1_1_window_a1bc65d5c35dde062e41df9655eabf2fc}\label{class_gear_1_1_window_a1bc65d5c35dde062e41df9655eabf2fc}} 
+\index{Gear::WindowsWindow@{Gear::WindowsWindow}!EventCallbackFn@{EventCallbackFn}}
+\index{EventCallbackFn@{EventCallbackFn}!Gear::WindowsWindow@{Gear::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{EventCallbackFn}{EventCallbackFn}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{class_gear_1_1_window_a1bc65d5c35dde062e41df9655eabf2fc}{Gear\+::\+Window\+::\+Event\+Callback\+Fn}} =  std\+::function$<$void(\mbox{\hyperlink{class_gear_1_1_event}{Event}}\&)$>$\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Window.\+h 파일의 24 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_windows_window_a80272862911846833db4049d3ed163df}\label{class_gear_1_1_windows_window_a80272862911846833db4049d3ed163df}} 
+\index{Gear::WindowsWindow@{Gear::WindowsWindow}!WindowsWindow@{WindowsWindow}}
+\index{WindowsWindow@{WindowsWindow}!Gear::WindowsWindow@{Gear::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{WindowsWindow()}{WindowsWindow()}}
+{\footnotesize\ttfamily Gear\+::\+Windows\+Window\+::\+Windows\+Window (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_gear_1_1_window_props}{Window\+Props}} \&}]{props }\end{DoxyParamCaption})}
+
+
+
+Windows\+Window.\+cpp 파일의 24 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25     \{}
+\DoxyCodeLine{26         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28         \mbox{\hyperlink{class_gear_1_1_windows_window_a607b61157ad0a1f40282f11555a42668}{Init}}(props);}
+\DoxyCodeLine{29     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\mbox{\Hypertarget{class_gear_1_1_windows_window_ac81650f1a02c88cf1a552e15948f3d7f}\label{class_gear_1_1_windows_window_ac81650f1a02c88cf1a552e15948f3d7f}} 
+\index{Gear::WindowsWindow@{Gear::WindowsWindow}!````~WindowsWindow@{$\sim$WindowsWindow}}
+\index{````~WindowsWindow@{$\sim$WindowsWindow}!Gear::WindowsWindow@{Gear::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{$\sim$WindowsWindow()}{~WindowsWindow()}}
+{\footnotesize\ttfamily Gear\+::\+Windows\+Window\+::$\sim$\+Windows\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Windows\+Window.\+cpp 파일의 31 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32     \{}
+\DoxyCodeLine{33         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35         \mbox{\hyperlink{class_gear_1_1_windows_window_a5b45023ba114f50beaf9c36fb5ea2f69}{Shutdown}}();}
+\DoxyCodeLine{36     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_window_a8bfdb15553b8fd4b9bdb96dd9862a4b3}\label{class_gear_1_1_window_a8bfdb15553b8fd4b9bdb96dd9862a4b3}} 
+\index{Gear::WindowsWindow@{Gear::WindowsWindow}!Create@{Create}}
+\index{Create@{Create}!Gear::WindowsWindow@{Gear::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gear_1_1_window}{Window}} $\ast$ Gear\+::\+Window\+::\+Create (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_gear_1_1_window_props}{Window\+Props}} \&}]{props = {\ttfamily \mbox{\hyperlink{struct_gear_1_1_window_props}{Window\+Props}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [inherited]}}
+
+
+
+Windows\+Window.\+cpp 파일의 19 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20     \{}
+\DoxyCodeLine{21         \textcolor{keywordflow}{return} \textcolor{keyword}{new} WindowsWindow(props);}
+\DoxyCodeLine{22     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 4
+\mbox{\Hypertarget{class_gear_1_1_windows_window_a36514dbd81948ff22355dc7210fc9030}\label{class_gear_1_1_windows_window_a36514dbd81948ff22355dc7210fc9030}} 
+\index{Gear::WindowsWindow@{Gear::WindowsWindow}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!Gear::WindowsWindow@{Gear::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily unsigned int Gear\+::\+Windows\+Window\+::\+Get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_window_a1b8a0735f5ff2fffb0c2424ad2662186}{Gear\+::\+Window}}를 구현.
+
+
+
+Windows\+Window.\+h 파일의 16 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_windows_window_a1976d9c5be7f617d25e09784c7b57e67}{m\_Data}}.\mbox{\hyperlink{struct_gear_1_1_windows_window_1_1_window_data_a4222988c4e1cf411bd25e9437779e012}{Height}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_windows_window_ac910333fa9bde07391a2cc50e7698fe6}\label{class_gear_1_1_windows_window_ac910333fa9bde07391a2cc50e7698fe6}} 
+\index{Gear::WindowsWindow@{Gear::WindowsWindow}!GetNativeWindow@{GetNativeWindow}}
+\index{GetNativeWindow@{GetNativeWindow}!Gear::WindowsWindow@{Gear::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{GetNativeWindow()}{GetNativeWindow()}}
+{\footnotesize\ttfamily virtual void$\ast$ Gear\+::\+Windows\+Window\+::\+Get\+Native\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_window_a91c6a9a81c6a6b4650ff2eecad46df8a}{Gear\+::\+Window}}를 구현.
+
+
+
+Windows\+Window.\+h 파일의 23 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_windows_window_a1c7f1fa87b984c3b8a03436814631609}{m\_Window}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_windows_window_aa9f7f3facab925c3bf31ed3cc50a8dad}\label{class_gear_1_1_windows_window_aa9f7f3facab925c3bf31ed3cc50a8dad}} 
+\index{Gear::WindowsWindow@{Gear::WindowsWindow}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!Gear::WindowsWindow@{Gear::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{GetWidth()}{GetWidth()}}
+{\footnotesize\ttfamily unsigned int Gear\+::\+Windows\+Window\+::\+Get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_window_ae871b01405141f2e682346a86668a81e}{Gear\+::\+Window}}를 구현.
+
+
+
+Windows\+Window.\+h 파일의 15 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_windows_window_a1976d9c5be7f617d25e09784c7b57e67}{m\_Data}}.\mbox{\hyperlink{struct_gear_1_1_windows_window_1_1_window_data_a98e4dee25c0365627b38996add07a214}{Width}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_windows_window_a607b61157ad0a1f40282f11555a42668}\label{class_gear_1_1_windows_window_a607b61157ad0a1f40282f11555a42668}} 
+\index{Gear::WindowsWindow@{Gear::WindowsWindow}!Init@{Init}}
+\index{Init@{Init}!Gear::WindowsWindow@{Gear::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Gear\+::\+Windows\+Window\+::\+Init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_gear_1_1_window_props}{Window\+Props}} \&}]{props }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Windows\+Window.\+cpp 파일의 38 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39     \{}
+\DoxyCodeLine{40         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42         \mbox{\hyperlink{class_gear_1_1_windows_window_a1976d9c5be7f617d25e09784c7b57e67}{m\_Data}}.\mbox{\hyperlink{struct_gear_1_1_windows_window_1_1_window_data_a8823290a77182feb5dc850c83997c34a}{Title}} = props.Title;}
+\DoxyCodeLine{43         \mbox{\hyperlink{class_gear_1_1_windows_window_a1976d9c5be7f617d25e09784c7b57e67}{m\_Data}}.\mbox{\hyperlink{struct_gear_1_1_windows_window_1_1_window_data_a98e4dee25c0365627b38996add07a214}{Width}} = props.Width;}
+\DoxyCodeLine{44         \mbox{\hyperlink{class_gear_1_1_windows_window_a1976d9c5be7f617d25e09784c7b57e67}{m\_Data}}.\mbox{\hyperlink{struct_gear_1_1_windows_window_1_1_window_data_a4222988c4e1cf411bd25e9437779e012}{Height}} = props.Height;}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47         \mbox{\hyperlink{_log_8h_adcf02b331e781f082585b15d04bd56de}{GR\_CORE\_INFO}}(\textcolor{stringliteral}{"Creating window \{0\} (\{1\}, \{2\})"}, props.Title, props.Width, props.Height);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespace_gear_ac2d488e64416f4f4928fe77c6bdc8e1b}{s\_GLFWWindowCount}} == 0)}
+\DoxyCodeLine{50         \{}
+\DoxyCodeLine{51             \mbox{\hyperlink{_instrumentor_8h_a4ecb6a74f29a012dea3a4e3b1e855876}{GR\_PROFILE\_SCOPE}}(\textcolor{stringliteral}{"glfwInit"});}
+\DoxyCodeLine{52             \textcolor{keywordtype}{int} success = glfwInit();}
+\DoxyCodeLine{53             \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{GR\_CORE\_ASSERT}}(success, \textcolor{stringliteral}{"Could not initialize GLFW!"});}
+\DoxyCodeLine{54             glfwSetErrorCallback(\mbox{\hyperlink{namespace_gear_ace1f77b4b47338e9724bdc5a7b3c882e}{GLFWErrorCallback}});}
+\DoxyCodeLine{55         \}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57         \{}
+\DoxyCodeLine{58             \mbox{\hyperlink{_instrumentor_8h_a4ecb6a74f29a012dea3a4e3b1e855876}{GR\_PROFILE\_SCOPE}}(\textcolor{stringliteral}{"glfwCreateWindow"});}
+\DoxyCodeLine{59             \mbox{\hyperlink{class_gear_1_1_windows_window_a1c7f1fa87b984c3b8a03436814631609}{m\_Window}} = glfwCreateWindow((\textcolor{keywordtype}{int})props.Width, (\textcolor{keywordtype}{int})props.Height, \mbox{\hyperlink{class_gear_1_1_windows_window_a1976d9c5be7f617d25e09784c7b57e67}{m\_Data}}.\mbox{\hyperlink{struct_gear_1_1_windows_window_1_1_window_data_a8823290a77182feb5dc850c83997c34a}{Title}}.c\_str(), \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{60             ++\mbox{\hyperlink{namespace_gear_ac2d488e64416f4f4928fe77c6bdc8e1b}{s\_GLFWWindowCount}};}
+\DoxyCodeLine{61         \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63         \mbox{\hyperlink{class_gear_1_1_windows_window_a0783dd3075eb5309c977acaf322da1b1}{m\_Context}} = CreateScope<OpenGLContext>(\mbox{\hyperlink{class_gear_1_1_windows_window_a1c7f1fa87b984c3b8a03436814631609}{m\_Window}});}
+\DoxyCodeLine{64         \mbox{\hyperlink{class_gear_1_1_windows_window_a0783dd3075eb5309c977acaf322da1b1}{m\_Context}}-\/>init();}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66         glfwSetWindowUserPointer(\mbox{\hyperlink{class_gear_1_1_windows_window_a1c7f1fa87b984c3b8a03436814631609}{m\_Window}}, \&\mbox{\hyperlink{class_gear_1_1_windows_window_a1976d9c5be7f617d25e09784c7b57e67}{m\_Data}});}
+\DoxyCodeLine{67         \mbox{\hyperlink{class_gear_1_1_windows_window_a64fb516c8a99f515ae400b574c0151cb}{SetVSync}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69         \textcolor{comment}{//Set GLFW callbacks}}
+\DoxyCodeLine{70         glfwSetWindowSizeCallback(\mbox{\hyperlink{class_gear_1_1_windows_window_a1c7f1fa87b984c3b8a03436814631609}{m\_Window}}, [](GLFWwindow* window, \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height)}
+\DoxyCodeLine{71         \{}
+\DoxyCodeLine{72             WindowData\& data = *(WindowData*)glfwGetWindowUserPointer(window);}
+\DoxyCodeLine{73             data.Width = width;}
+\DoxyCodeLine{74             data.Height = height;}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76             WindowResizeEvent event(width, height);}
+\DoxyCodeLine{77             data.EventCallback(event);}
+\DoxyCodeLine{78         \});}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80         glfwSetWindowCloseCallback(\mbox{\hyperlink{class_gear_1_1_windows_window_a1c7f1fa87b984c3b8a03436814631609}{m\_Window}}, [](GLFWwindow* window) \{}
+\DoxyCodeLine{81             WindowData\& data = *(WindowData*)glfwGetWindowUserPointer(window);}
+\DoxyCodeLine{82             WindowCloseEvent event;}
+\DoxyCodeLine{83             data.EventCallback(event);}
+\DoxyCodeLine{84         \});}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86         glfwSetKeyCallback(\mbox{\hyperlink{class_gear_1_1_windows_window_a1c7f1fa87b984c3b8a03436814631609}{m\_Window}}, [](GLFWwindow* window, \textcolor{keywordtype}{int} key, \textcolor{keywordtype}{int} scancode, \textcolor{keywordtype}{int} action, \textcolor{keywordtype}{int} mods) \{}
+\DoxyCodeLine{87             WindowData\& data = *(WindowData*)glfwGetWindowUserPointer(window);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89             \textcolor{keywordflow}{switch} (action) \{}
+\DoxyCodeLine{90             \textcolor{keywordflow}{case} GLFW\_PRESS:\{}
+\DoxyCodeLine{91                 KeyPressedEvent event(key, 0);}
+\DoxyCodeLine{92                 data.EventCallback(event);}
+\DoxyCodeLine{93             \}}
+\DoxyCodeLine{94                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{95             \textcolor{keywordflow}{case} GLFW\_RELEASE: \{}
+\DoxyCodeLine{96                 KeyReleasedEvent event(key);}
+\DoxyCodeLine{97                 data.EventCallback(event);}
+\DoxyCodeLine{98             \}}
+\DoxyCodeLine{99                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{100             \textcolor{keywordflow}{case} GLFW\_REPEAT: \{}
+\DoxyCodeLine{101                 KeyPressedEvent event(key, 1);}
+\DoxyCodeLine{102                 data.EventCallback(event);}
+\DoxyCodeLine{103             \}}
+\DoxyCodeLine{104                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{105             \}}
+\DoxyCodeLine{106         \});}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108         glfwSetCharCallback(\mbox{\hyperlink{class_gear_1_1_windows_window_a1c7f1fa87b984c3b8a03436814631609}{m\_Window}}, [](GLFWwindow* window, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} keycode) \{}
+\DoxyCodeLine{109             WindowData\& data = *(WindowData*)glfwGetWindowUserPointer(window);}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111             KeyTypedEvent event(keycode);}
+\DoxyCodeLine{112             data.EventCallback(event);}
+\DoxyCodeLine{113         \});}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115         glfwSetMouseButtonCallback(\mbox{\hyperlink{class_gear_1_1_windows_window_a1c7f1fa87b984c3b8a03436814631609}{m\_Window}}, [](GLFWwindow* window, \textcolor{keywordtype}{int} button, \textcolor{keywordtype}{int} action, \textcolor{keywordtype}{int} mods) \{}
+\DoxyCodeLine{116             WindowData\& data = *(WindowData*)glfwGetWindowUserPointer(window);}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118             \textcolor{keywordflow}{switch} (action)}
+\DoxyCodeLine{119             \{}
+\DoxyCodeLine{120             \textcolor{keywordflow}{case} GLFW\_PRESS: \{}
+\DoxyCodeLine{121                 MouseButtonPressedEvent event(button);}
+\DoxyCodeLine{122                 data.EventCallback(event);}
+\DoxyCodeLine{123             \}}
+\DoxyCodeLine{124                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{125             \textcolor{keywordflow}{case} GLFW\_RELEASE: \{}
+\DoxyCodeLine{126                 MouseButtonReleasedEvent event(button);}
+\DoxyCodeLine{127                 data.EventCallback(event);}
+\DoxyCodeLine{128             \}       }
+\DoxyCodeLine{129                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{130             \}}
+\DoxyCodeLine{131         \});}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133         glfwSetScrollCallback(\mbox{\hyperlink{class_gear_1_1_windows_window_a1c7f1fa87b984c3b8a03436814631609}{m\_Window}}, [](GLFWwindow* window, \textcolor{keywordtype}{double} xOffset, \textcolor{keywordtype}{double} yOffset) \{}
+\DoxyCodeLine{134             WindowData\& data = *(WindowData*)glfwGetWindowUserPointer(window);}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136             MouseScrolledEvent event((\textcolor{keywordtype}{float})xOffset, (\textcolor{keywordtype}{float})yOffset);}
+\DoxyCodeLine{137             data.EventCallback(event);}
+\DoxyCodeLine{138         \});}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140         glfwSetCursorPosCallback(\mbox{\hyperlink{class_gear_1_1_windows_window_a1c7f1fa87b984c3b8a03436814631609}{m\_Window}}, [](GLFWwindow* window, \textcolor{keywordtype}{double} xPos, \textcolor{keywordtype}{double} yPos) \{}
+\DoxyCodeLine{141             WindowData\& data = *(WindowData*)glfwGetWindowUserPointer(window);}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143             MouseMovedEvent event((\textcolor{keywordtype}{float})xPos, (\textcolor{keywordtype}{float})yPos);}
+\DoxyCodeLine{144             data.EventCallback(event);}
+\DoxyCodeLine{145         \});}
+\DoxyCodeLine{146     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 5
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 6
+\mbox{\Hypertarget{class_gear_1_1_windows_window_a5d1289683360f7c1fb657a1d0b1a2351}\label{class_gear_1_1_windows_window_a5d1289683360f7c1fb657a1d0b1a2351}} 
+\index{Gear::WindowsWindow@{Gear::WindowsWindow}!IsVSync@{IsVSync}}
+\index{IsVSync@{IsVSync}!Gear::WindowsWindow@{Gear::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{IsVSync()}{IsVSync()}}
+{\footnotesize\ttfamily bool Gear\+::\+Windows\+Window\+::\+Is\+V\+Sync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_window_aff3ffd11ac8f6030e0350e5a934fd9b2}{Gear\+::\+Window}}를 구현.
+
+
+
+Windows\+Window.\+cpp 파일의 182 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{183     \{}
+\DoxyCodeLine{184         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_gear_1_1_windows_window_a1976d9c5be7f617d25e09784c7b57e67}{m\_Data}}.\mbox{\hyperlink{struct_gear_1_1_windows_window_1_1_window_data_a52248c69c0b7b188ffa725856c93fe2b}{VSync}};}
+\DoxyCodeLine{185     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_windows_window_a0ee7ffa440edf62ba5d6a27aa56d7df4}\label{class_gear_1_1_windows_window_a0ee7ffa440edf62ba5d6a27aa56d7df4}} 
+\index{Gear::WindowsWindow@{Gear::WindowsWindow}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!Gear::WindowsWindow@{Gear::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily void Gear\+::\+Windows\+Window\+::\+On\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_window_afd8633ea77da4c96fed5b665dcb542d7}{Gear\+::\+Window}}를 구현.
+
+
+
+Windows\+Window.\+cpp 파일의 161 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{162     \{}
+\DoxyCodeLine{163         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165         glfwPollEvents();}
+\DoxyCodeLine{166         \mbox{\hyperlink{class_gear_1_1_windows_window_a0783dd3075eb5309c977acaf322da1b1}{m\_Context}}-\/>SwapBuffers();}
+\DoxyCodeLine{167         }
+\DoxyCodeLine{168     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_windows_window_a4a184374095ae3ad3ca48c2ad7ce1bac}\label{class_gear_1_1_windows_window_a4a184374095ae3ad3ca48c2ad7ce1bac}} 
+\index{Gear::WindowsWindow@{Gear::WindowsWindow}!SetEventCallback@{SetEventCallback}}
+\index{SetEventCallback@{SetEventCallback}!Gear::WindowsWindow@{Gear::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{SetEventCallback()}{SetEventCallback()}}
+{\footnotesize\ttfamily void Gear\+::\+Windows\+Window\+::\+Set\+Event\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_gear_1_1_window_a1bc65d5c35dde062e41df9655eabf2fc}{Event\+Callback\+Fn}} \&}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_window_a3b0c869efad5a9162c477ce695c9ae6d}{Gear\+::\+Window}}를 구현.
+
+
+
+Windows\+Window.\+h 파일의 19 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19 \{ \mbox{\hyperlink{class_gear_1_1_windows_window_a1976d9c5be7f617d25e09784c7b57e67}{m\_Data}}.\mbox{\hyperlink{struct_gear_1_1_windows_window_1_1_window_data_a8db93df561ec60c892e22c91a7f4c76d}{EventCallback}} = callback; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_windows_window_a64fb516c8a99f515ae400b574c0151cb}\label{class_gear_1_1_windows_window_a64fb516c8a99f515ae400b574c0151cb}} 
+\index{Gear::WindowsWindow@{Gear::WindowsWindow}!SetVSync@{SetVSync}}
+\index{SetVSync@{SetVSync}!Gear::WindowsWindow@{Gear::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{SetVSync()}{SetVSync()}}
+{\footnotesize\ttfamily void Gear\+::\+Windows\+Window\+::\+Set\+V\+Sync (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_window_aef84d3cbb5ee56d518d356ea31a41092}{Gear\+::\+Window}}를 구현.
+
+
+
+Windows\+Window.\+cpp 파일의 170 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{171     \{}
+\DoxyCodeLine{172         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174         \textcolor{keywordflow}{if} (enabled)}
+\DoxyCodeLine{175             glfwSwapInterval(1);}
+\DoxyCodeLine{176         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{177             glfwSwapInterval(0);}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179         \mbox{\hyperlink{class_gear_1_1_windows_window_a1976d9c5be7f617d25e09784c7b57e67}{m\_Data}}.\mbox{\hyperlink{struct_gear_1_1_windows_window_1_1_window_data_a52248c69c0b7b188ffa725856c93fe2b}{VSync}} = enabled;}
+\DoxyCodeLine{180     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 7
+\mbox{\Hypertarget{class_gear_1_1_windows_window_a5b45023ba114f50beaf9c36fb5ea2f69}\label{class_gear_1_1_windows_window_a5b45023ba114f50beaf9c36fb5ea2f69}} 
+\index{Gear::WindowsWindow@{Gear::WindowsWindow}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!Gear::WindowsWindow@{Gear::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
+{\footnotesize\ttfamily void Gear\+::\+Windows\+Window\+::\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Windows\+Window.\+cpp 파일의 148 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{149     \{}
+\DoxyCodeLine{150         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152         glfwDestroyWindow(\mbox{\hyperlink{class_gear_1_1_windows_window_a1c7f1fa87b984c3b8a03436814631609}{m\_Window}});}
+\DoxyCodeLine{153         -\/-\/\mbox{\hyperlink{namespace_gear_ac2d488e64416f4f4928fe77c6bdc8e1b}{s\_GLFWWindowCount}};}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155         \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespace_gear_ac2d488e64416f4f4928fe77c6bdc8e1b}{s\_GLFWWindowCount}} == 0)}
+\DoxyCodeLine{156         \{}
+\DoxyCodeLine{157             glfwTerminate();}
+\DoxyCodeLine{158         \}}
+\DoxyCodeLine{159     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 8
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_windows_window_a0783dd3075eb5309c977acaf322da1b1}\label{class_gear_1_1_windows_window_a0783dd3075eb5309c977acaf322da1b1}} 
+\index{Gear::WindowsWindow@{Gear::WindowsWindow}!m\_Context@{m\_Context}}
+\index{m\_Context@{m\_Context}!Gear::WindowsWindow@{Gear::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{m\_Context}{m\_Context}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_gear_abef5ce1767f345625e08a951f865a20d}{Scope}}$<$\mbox{\hyperlink{class_gear_1_1_graphics_context}{Graphics\+Context}}$>$ Gear\+::\+Windows\+Window\+::m\+\_\+\+Context\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Windows\+Window.\+h 파일의 31 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_windows_window_a1976d9c5be7f617d25e09784c7b57e67}\label{class_gear_1_1_windows_window_a1976d9c5be7f617d25e09784c7b57e67}} 
+\index{Gear::WindowsWindow@{Gear::WindowsWindow}!m\_Data@{m\_Data}}
+\index{m\_Data@{m\_Data}!Gear::WindowsWindow@{Gear::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{m\_Data}{m\_Data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_gear_1_1_windows_window_1_1_window_data}{Window\+Data}} Gear\+::\+Windows\+Window\+::m\+\_\+\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Windows\+Window.\+h 파일의 41 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_windows_window_a1c7f1fa87b984c3b8a03436814631609}\label{class_gear_1_1_windows_window_a1c7f1fa87b984c3b8a03436814631609}} 
+\index{Gear::WindowsWindow@{Gear::WindowsWindow}!m\_Window@{m\_Window}}
+\index{m\_Window@{m\_Window}!Gear::WindowsWindow@{Gear::WindowsWindow}}
+\doxysubsubsection{\texorpdfstring{m\_Window}{m\_Window}}
+{\footnotesize\ttfamily G\+L\+F\+Wwindow$\ast$ Gear\+::\+Windows\+Window\+::m\+\_\+\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Windows\+Window.\+h 파일의 29 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Platform/\+Windows/\mbox{\hyperlink{_windows_window_8h}{Windows\+Window.\+h}}\item 
+Gear/src/\+Platform/\+Windows/\mbox{\hyperlink{_windows_window_8cpp}{Windows\+Window.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,246 @@
+\hypertarget{class_gear_1_1_instrumentor}{}\doxysection{Gear\+::Instrumentor 클래스 참조}
+\label{class_gear_1_1_instrumentor}\index{Gear::Instrumentor@{Gear::Instrumentor}}
+
+
+{\ttfamily \#include $<$Instrumentor.\+h$>$}
+
+
+
+Gear\+::Instrumentor에 대한 협력 다이어그램\+:
+% FIG 0
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_instrumentor_a2adef8be90826378e8e2aca0ce84c096}{Instrumentor}} ()
+\item 
+void \mbox{\hyperlink{class_gear_1_1_instrumentor_a9d9e08bcc7e807821dbaf1f6c16198ba}{Begin\+Session}} (const std\+::string \&name, const std\+::string \&filepath=\char`\"{}results.\+json\char`\"{})
+\item 
+void \mbox{\hyperlink{class_gear_1_1_instrumentor_a1ded2047140738edca13a7582eb4c7a6}{End\+Session}} ()
+\item 
+void \mbox{\hyperlink{class_gear_1_1_instrumentor_a5aebc0c559581f0a426094376fdb2f2e}{Write\+Profile}} (const \mbox{\hyperlink{struct_gear_1_1_profile_result}{Profile\+Result}} \&result)
+\item 
+void \mbox{\hyperlink{class_gear_1_1_instrumentor_abd8325e398585ef2b6e97ce8409f6a55}{Write\+Header}} ()
+\item 
+void \mbox{\hyperlink{class_gear_1_1_instrumentor_a7364d2e20b7dd55958686bb44ccc832a}{Write\+Footer}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_gear_1_1_instrumentor}{Instrumentor}} \& \mbox{\hyperlink{class_gear_1_1_instrumentor_ab99c04e194f05e850c9621a97b21e715}{Get}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_gear_1_1_instrumentation_session}{Instrumentation\+Session}} $\ast$ \mbox{\hyperlink{class_gear_1_1_instrumentor_a25365e84aecc934e49200dc256ad36c0}{m\+\_\+\+Current\+Session}}
+\item 
+std\+::ofstream \mbox{\hyperlink{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}{m\+\_\+\+Output\+Stream}}
+\item 
+int \mbox{\hyperlink{class_gear_1_1_instrumentor_afe8f014b132bff32f8ecd948b4897365}{m\+\_\+\+Profile\+Count}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Instrumentor.\+h 파일의 24 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_instrumentor_a2adef8be90826378e8e2aca0ce84c096}\label{class_gear_1_1_instrumentor_a2adef8be90826378e8e2aca0ce84c096}} 
+\index{Gear::Instrumentor@{Gear::Instrumentor}!Instrumentor@{Instrumentor}}
+\index{Instrumentor@{Instrumentor}!Gear::Instrumentor@{Gear::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{Instrumentor()}{Instrumentor()}}
+{\footnotesize\ttfamily Gear\+::\+Instrumentor\+::\+Instrumentor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Instrumentor.\+h 파일의 31 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32             : \mbox{\hyperlink{class_gear_1_1_instrumentor_a25365e84aecc934e49200dc256ad36c0}{m\_CurrentSession}}(\textcolor{keyword}{nullptr}), \mbox{\hyperlink{class_gear_1_1_instrumentor_afe8f014b132bff32f8ecd948b4897365}{m\_ProfileCount}}(0)}
+\DoxyCodeLine{33         \{}
+\DoxyCodeLine{34         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_instrumentor_a9d9e08bcc7e807821dbaf1f6c16198ba}\label{class_gear_1_1_instrumentor_a9d9e08bcc7e807821dbaf1f6c16198ba}} 
+\index{Gear::Instrumentor@{Gear::Instrumentor}!BeginSession@{BeginSession}}
+\index{BeginSession@{BeginSession}!Gear::Instrumentor@{Gear::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{BeginSession()}{BeginSession()}}
+{\footnotesize\ttfamily void Gear\+::\+Instrumentor\+::\+Begin\+Session (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{filepath = {\ttfamily \char`\"{}results.json\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Instrumentor.\+h 파일의 36 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37         \{}
+\DoxyCodeLine{38             \mbox{\hyperlink{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}{m\_OutputStream}}.open(filepath);}
+\DoxyCodeLine{39             \mbox{\hyperlink{class_gear_1_1_instrumentor_abd8325e398585ef2b6e97ce8409f6a55}{WriteHeader}}();}
+\DoxyCodeLine{40             \mbox{\hyperlink{class_gear_1_1_instrumentor_a25365e84aecc934e49200dc256ad36c0}{m\_CurrentSession}} = \textcolor{keyword}{new} InstrumentationSession\{ name \};}
+\DoxyCodeLine{41         \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 1
+\mbox{\Hypertarget{class_gear_1_1_instrumentor_a1ded2047140738edca13a7582eb4c7a6}\label{class_gear_1_1_instrumentor_a1ded2047140738edca13a7582eb4c7a6}} 
+\index{Gear::Instrumentor@{Gear::Instrumentor}!EndSession@{EndSession}}
+\index{EndSession@{EndSession}!Gear::Instrumentor@{Gear::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{EndSession()}{EndSession()}}
+{\footnotesize\ttfamily void Gear\+::\+Instrumentor\+::\+End\+Session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Instrumentor.\+h 파일의 43 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44         \{}
+\DoxyCodeLine{45             \mbox{\hyperlink{class_gear_1_1_instrumentor_a7364d2e20b7dd55958686bb44ccc832a}{WriteFooter}}();}
+\DoxyCodeLine{46             \mbox{\hyperlink{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}{m\_OutputStream}}.close();}
+\DoxyCodeLine{47             \textcolor{keyword}{delete} \mbox{\hyperlink{class_gear_1_1_instrumentor_a25365e84aecc934e49200dc256ad36c0}{m\_CurrentSession}};}
+\DoxyCodeLine{48             \mbox{\hyperlink{class_gear_1_1_instrumentor_a25365e84aecc934e49200dc256ad36c0}{m\_CurrentSession}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{49             \mbox{\hyperlink{class_gear_1_1_instrumentor_afe8f014b132bff32f8ecd948b4897365}{m\_ProfileCount}} = 0;}
+\DoxyCodeLine{50         \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\mbox{\Hypertarget{class_gear_1_1_instrumentor_ab99c04e194f05e850c9621a97b21e715}\label{class_gear_1_1_instrumentor_ab99c04e194f05e850c9621a97b21e715}} 
+\index{Gear::Instrumentor@{Gear::Instrumentor}!Get@{Get}}
+\index{Get@{Get}!Gear::Instrumentor@{Gear::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_gear_1_1_instrumentor}{Instrumentor}}\& Gear\+::\+Instrumentor\+::\+Get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Instrumentor.\+h 파일의 85 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86         \{}
+\DoxyCodeLine{87             \textcolor{keyword}{static} \mbox{\hyperlink{class_gear_1_1_instrumentor_a2adef8be90826378e8e2aca0ce84c096}{Instrumentor}} instance;}
+\DoxyCodeLine{88             \textcolor{keywordflow}{return} instance;}
+\DoxyCodeLine{89         \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+\mbox{\Hypertarget{class_gear_1_1_instrumentor_a7364d2e20b7dd55958686bb44ccc832a}\label{class_gear_1_1_instrumentor_a7364d2e20b7dd55958686bb44ccc832a}} 
+\index{Gear::Instrumentor@{Gear::Instrumentor}!WriteFooter@{WriteFooter}}
+\index{WriteFooter@{WriteFooter}!Gear::Instrumentor@{Gear::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{WriteFooter()}{WriteFooter()}}
+{\footnotesize\ttfamily void Gear\+::\+Instrumentor\+::\+Write\+Footer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Instrumentor.\+h 파일의 79 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80         \{}
+\DoxyCodeLine{81             \mbox{\hyperlink{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}{m\_OutputStream}} << \textcolor{stringliteral}{"]\}"};}
+\DoxyCodeLine{82             \mbox{\hyperlink{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}{m\_OutputStream}}.flush();}
+\DoxyCodeLine{83         \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 4
+\mbox{\Hypertarget{class_gear_1_1_instrumentor_abd8325e398585ef2b6e97ce8409f6a55}\label{class_gear_1_1_instrumentor_abd8325e398585ef2b6e97ce8409f6a55}} 
+\index{Gear::Instrumentor@{Gear::Instrumentor}!WriteHeader@{WriteHeader}}
+\index{WriteHeader@{WriteHeader}!Gear::Instrumentor@{Gear::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{WriteHeader()}{WriteHeader()}}
+{\footnotesize\ttfamily void Gear\+::\+Instrumentor\+::\+Write\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Instrumentor.\+h 파일의 73 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74         \{}
+\DoxyCodeLine{75             \mbox{\hyperlink{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}{m\_OutputStream}} << \textcolor{stringliteral}{"\{\(\backslash\)"otherData\(\backslash\)": \{\},\(\backslash\)"traceEvents\(\backslash\)":["};}
+\DoxyCodeLine{76             \mbox{\hyperlink{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}{m\_OutputStream}}.flush();}
+\DoxyCodeLine{77         \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 5
+\mbox{\Hypertarget{class_gear_1_1_instrumentor_a5aebc0c559581f0a426094376fdb2f2e}\label{class_gear_1_1_instrumentor_a5aebc0c559581f0a426094376fdb2f2e}} 
+\index{Gear::Instrumentor@{Gear::Instrumentor}!WriteProfile@{WriteProfile}}
+\index{WriteProfile@{WriteProfile}!Gear::Instrumentor@{Gear::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{WriteProfile()}{WriteProfile()}}
+{\footnotesize\ttfamily void Gear\+::\+Instrumentor\+::\+Write\+Profile (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_gear_1_1_profile_result}{Profile\+Result}} \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Instrumentor.\+h 파일의 52 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53         \{}
+\DoxyCodeLine{54             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_gear_1_1_instrumentor_afe8f014b132bff32f8ecd948b4897365}{m\_ProfileCount}}++ > 0)}
+\DoxyCodeLine{55                 \mbox{\hyperlink{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}{m\_OutputStream}} << \textcolor{stringliteral}{","};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57             std::string name = result.Name;}
+\DoxyCodeLine{58             std::replace(name.begin(), name.end(), \textcolor{charliteral}{'"'}, \textcolor{charliteral}{'\(\backslash\)''});}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60             \mbox{\hyperlink{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}{m\_OutputStream}} << \textcolor{stringliteral}{"\{"};}
+\DoxyCodeLine{61             \mbox{\hyperlink{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}{m\_OutputStream}} << \textcolor{stringliteral}{"\(\backslash\)"cat\(\backslash\)":\(\backslash\)"function\(\backslash\)","};}
+\DoxyCodeLine{62             \mbox{\hyperlink{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}{m\_OutputStream}} << \textcolor{stringliteral}{"\(\backslash\)"dur\(\backslash\)":"} << (result.End -\/ result.Start) << \textcolor{charliteral}{','};}
+\DoxyCodeLine{63             \mbox{\hyperlink{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}{m\_OutputStream}} << \textcolor{stringliteral}{"\(\backslash\)"name\(\backslash\)":\(\backslash\)""} << name << \textcolor{stringliteral}{"\(\backslash\)","};}
+\DoxyCodeLine{64             \mbox{\hyperlink{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}{m\_OutputStream}} << \textcolor{stringliteral}{"\(\backslash\)"ph\(\backslash\)":\(\backslash\)"X\(\backslash\)","};}
+\DoxyCodeLine{65             \mbox{\hyperlink{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}{m\_OutputStream}} << \textcolor{stringliteral}{"\(\backslash\)"pid\(\backslash\)":0,"};}
+\DoxyCodeLine{66             \mbox{\hyperlink{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}{m\_OutputStream}} << \textcolor{stringliteral}{"\(\backslash\)"tid\(\backslash\)":"} << result.ThreadID << \textcolor{stringliteral}{","};}
+\DoxyCodeLine{67             \mbox{\hyperlink{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}{m\_OutputStream}} << \textcolor{stringliteral}{"\(\backslash\)"ts\(\backslash\)":"} << result.Start;}
+\DoxyCodeLine{68             \mbox{\hyperlink{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}{m\_OutputStream}} << \textcolor{stringliteral}{"\}"};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70             \mbox{\hyperlink{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}{m\_OutputStream}}.flush();}
+\DoxyCodeLine{71         \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 6
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_instrumentor_a25365e84aecc934e49200dc256ad36c0}\label{class_gear_1_1_instrumentor_a25365e84aecc934e49200dc256ad36c0}} 
+\index{Gear::Instrumentor@{Gear::Instrumentor}!m\_CurrentSession@{m\_CurrentSession}}
+\index{m\_CurrentSession@{m\_CurrentSession}!Gear::Instrumentor@{Gear::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{m\_CurrentSession}{m\_CurrentSession}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_gear_1_1_instrumentation_session}{Instrumentation\+Session}}$\ast$ Gear\+::\+Instrumentor\+::m\+\_\+\+Current\+Session\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instrumentor.\+h 파일의 27 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}\label{class_gear_1_1_instrumentor_a307e283da2ecbbfbdad2def0561263ad}} 
+\index{Gear::Instrumentor@{Gear::Instrumentor}!m\_OutputStream@{m\_OutputStream}}
+\index{m\_OutputStream@{m\_OutputStream}!Gear::Instrumentor@{Gear::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{m\_OutputStream}{m\_OutputStream}}
+{\footnotesize\ttfamily std\+::ofstream Gear\+::\+Instrumentor\+::m\+\_\+\+Output\+Stream\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instrumentor.\+h 파일의 28 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_instrumentor_afe8f014b132bff32f8ecd948b4897365}\label{class_gear_1_1_instrumentor_afe8f014b132bff32f8ecd948b4897365}} 
+\index{Gear::Instrumentor@{Gear::Instrumentor}!m\_ProfileCount@{m\_ProfileCount}}
+\index{m\_ProfileCount@{m\_ProfileCount}!Gear::Instrumentor@{Gear::Instrumentor}}
+\doxysubsubsection{\texorpdfstring{m\_ProfileCount}{m\_ProfileCount}}
+{\footnotesize\ttfamily int Gear\+::\+Instrumentor\+::m\+\_\+\+Profile\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instrumentor.\+h 파일의 29 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Debug/\mbox{\hyperlink{_instrumentor_8h}{Instrumentor.\+h}}\end{DoxyCompactItemize}

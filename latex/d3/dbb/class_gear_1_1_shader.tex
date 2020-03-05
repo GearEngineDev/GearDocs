@@ -1,0 +1,205 @@
+\hypertarget{class_gear_1_1_shader}{}\doxysection{Gear\+::Shader 클래스 참조}
+\label{class_gear_1_1_shader}\index{Gear::Shader@{Gear::Shader}}
+
+
+{\ttfamily \#include $<$Shader.\+h$>$}
+
+
+
+Gear\+::Shader에 대한 상속 다이어그램 \+: 
+% FIG 0
+
+
+Gear\+::Shader에 대한 협력 다이어그램\+:
+% FIG 1
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_gear_1_1_shader_a7e4039a8d3cf1edaeb2c68ef600c44db}{$\sim$\+Shader}} ()=default
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_shader_a1c031240be194f8574e838779a94fd12}{Bind}} () const =0
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_shader_a6f825d66271367071d65f092b4d99a58}{Unbind}} () const =0
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_shader_a3807350f9669c540c42b7ea6a4af8f22}{Set\+Int}} (const std\+::string \&name, int value)=0
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_shader_ac98eec2271443a164b3d31391bf471c0}{Set\+Float}} (const std\+::string \&name, float value)=0
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_shader_a76d231bb1fa5822463ca1567c2efec32}{Set\+Float3}} (const std\+::string \&name, const glm\+::vec3 \&value)=0
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_shader_ad3a6d49cc3404b5d3ad582686cc4cc4d}{Set\+Float4}} (const std\+::string \&name, const glm\+::vec4 \&value)=0
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_shader_a8779c86aa01554970adc8ef78890fbe3}{Set\+Mat4}} (const std\+::string \&name, const glm\+::mat4 \&value)=0
+\item 
+virtual const std\+::string \& \mbox{\hyperlink{class_gear_1_1_shader_a508a18f4e967098125f38eab85d2ee9d}{Get\+Name}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_shader}{Shader}} $>$ \mbox{\hyperlink{class_gear_1_1_shader_af441a167abaa6d02e14d23fd24180d15}{Create}} (const std\+::string \&filepath)
+\item 
+static \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_shader}{Shader}} $>$ \mbox{\hyperlink{class_gear_1_1_shader_af3c30ae02240cbf8da2760f1ae4e4b9e}{Create}} (const std\+::string \&name, const std\+::string \&vertex\+Src, const std\+::string \&fragment\+Src)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Shader.\+h 파일의 9 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_shader_a7e4039a8d3cf1edaeb2c68ef600c44db}\label{class_gear_1_1_shader_a7e4039a8d3cf1edaeb2c68ef600c44db}} 
+\index{Gear::Shader@{Gear::Shader}!````~Shader@{$\sim$Shader}}
+\index{````~Shader@{$\sim$Shader}!Gear::Shader@{Gear::Shader}}
+\doxysubsubsection{\texorpdfstring{$\sim$Shader()}{~Shader()}}
+{\footnotesize\ttfamily virtual Gear\+::\+Shader\+::$\sim$\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_shader_a1c031240be194f8574e838779a94fd12}\label{class_gear_1_1_shader_a1c031240be194f8574e838779a94fd12}} 
+\index{Gear::Shader@{Gear::Shader}!Bind@{Bind}}
+\index{Bind@{Bind}!Gear::Shader@{Gear::Shader}}
+\doxysubsubsection{\texorpdfstring{Bind()}{Bind()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Shader\+::\+Bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_open_g_l_shader_a0339a133b15c017a1f03e16cb8f1924e}{Gear\+::\+Open\+G\+L\+Shader}}에서 구현되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_shader_af441a167abaa6d02e14d23fd24180d15}\label{class_gear_1_1_shader_af441a167abaa6d02e14d23fd24180d15}} 
+\index{Gear::Shader@{Gear::Shader}!Create@{Create}}
+\index{Create@{Create}!Gear::Shader@{Gear::Shader}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_shader}{Shader}} $>$ Gear\+::\+Shader\+::\+Create (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Shader.\+cpp 파일의 9 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10     \{}
+\DoxyCodeLine{11         \textcolor{keywordflow}{switch} (\mbox{\hyperlink{class_gear_1_1_renderer_ad13c79d41ff9c92e63e0a356ddb06d1f}{Renderer::GetAPI}}())}
+\DoxyCodeLine{12         \{}
+\DoxyCodeLine{13         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a6adf97f83acf6453d4a6a4b1070f3754}{RendererAPI::API::None}}:}
+\DoxyCodeLine{14             \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{GR\_CORE\_ASSERT}}(\textcolor{keyword}{false}, \textcolor{stringliteral}{"RendererAPI::None is currently not supported!"});}
+\DoxyCodeLine{15             \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{16         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a760716b590ee7c0adc25f434f577d8be}{RendererAPI::API::OpenGL}}:}
+\DoxyCodeLine{17             \textcolor{keywordflow}{return} std::make\_shared<OpenGLShader>(filepath);}
+\DoxyCodeLine{18         \}}
+\DoxyCodeLine{19         \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{GR\_CORE\_ASSERT}}(\textcolor{keyword}{false}, \textcolor{stringliteral}{"Unknown RendererAPI!"});}
+\DoxyCodeLine{20         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{21     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+\mbox{\Hypertarget{class_gear_1_1_shader_af3c30ae02240cbf8da2760f1ae4e4b9e}\label{class_gear_1_1_shader_af3c30ae02240cbf8da2760f1ae4e4b9e}} 
+\index{Gear::Shader@{Gear::Shader}!Create@{Create}}
+\index{Create@{Create}!Gear::Shader@{Gear::Shader}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_shader}{Shader}} $>$ Gear\+::\+Shader\+::\+Create (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{vertex\+Src,  }\item[{const std\+::string \&}]{fragment\+Src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Shader.\+cpp 파일의 23 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24     \{}
+\DoxyCodeLine{25         \textcolor{keywordflow}{switch} (\mbox{\hyperlink{class_gear_1_1_renderer_ad13c79d41ff9c92e63e0a356ddb06d1f}{Renderer::GetAPI}}())}
+\DoxyCodeLine{26         \{}
+\DoxyCodeLine{27         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a6adf97f83acf6453d4a6a4b1070f3754}{RendererAPI::API::None}}:}
+\DoxyCodeLine{28             \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{GR\_CORE\_ASSERT}}(\textcolor{keyword}{false}, \textcolor{stringliteral}{"RendererAPI::None is currently not supported!"});}
+\DoxyCodeLine{29             \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{30         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a760716b590ee7c0adc25f434f577d8be}{RendererAPI::API::OpenGL}}:}
+\DoxyCodeLine{31             \textcolor{keywordflow}{return} std::make\_shared<OpenGLShader>(name, vertexSrc, fragmentSrc);}
+\DoxyCodeLine{32         \}}
+\DoxyCodeLine{33         \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{GR\_CORE\_ASSERT}}(\textcolor{keyword}{false}, \textcolor{stringliteral}{"Unknown RendererAPI!"});}
+\DoxyCodeLine{34         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{35     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 4
+\mbox{\Hypertarget{class_gear_1_1_shader_a508a18f4e967098125f38eab85d2ee9d}\label{class_gear_1_1_shader_a508a18f4e967098125f38eab85d2ee9d}} 
+\index{Gear::Shader@{Gear::Shader}!GetName@{GetName}}
+\index{GetName@{GetName}!Gear::Shader@{Gear::Shader}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily virtual const std\+::string\& Gear\+::\+Shader\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_open_g_l_shader_a3db5e77b9c6cc842f3a9fc2e8164d75d}{Gear\+::\+Open\+G\+L\+Shader}}에서 구현되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_shader_ac98eec2271443a164b3d31391bf471c0}\label{class_gear_1_1_shader_ac98eec2271443a164b3d31391bf471c0}} 
+\index{Gear::Shader@{Gear::Shader}!SetFloat@{SetFloat}}
+\index{SetFloat@{SetFloat}!Gear::Shader@{Gear::Shader}}
+\doxysubsubsection{\texorpdfstring{SetFloat()}{SetFloat()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Shader\+::\+Set\+Float (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_open_g_l_shader_aaeaa3eb68bbbfb9b621a1395f0d8ec91}{Gear\+::\+Open\+G\+L\+Shader}}에서 구현되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_shader_a76d231bb1fa5822463ca1567c2efec32}\label{class_gear_1_1_shader_a76d231bb1fa5822463ca1567c2efec32}} 
+\index{Gear::Shader@{Gear::Shader}!SetFloat3@{SetFloat3}}
+\index{SetFloat3@{SetFloat3}!Gear::Shader@{Gear::Shader}}
+\doxysubsubsection{\texorpdfstring{SetFloat3()}{SetFloat3()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Shader\+::\+Set\+Float3 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const glm\+::vec3 \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_open_g_l_shader_af236d346c65a6a1339e6dd5e21e1d6eb}{Gear\+::\+Open\+G\+L\+Shader}}에서 구현되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_shader_ad3a6d49cc3404b5d3ad582686cc4cc4d}\label{class_gear_1_1_shader_ad3a6d49cc3404b5d3ad582686cc4cc4d}} 
+\index{Gear::Shader@{Gear::Shader}!SetFloat4@{SetFloat4}}
+\index{SetFloat4@{SetFloat4}!Gear::Shader@{Gear::Shader}}
+\doxysubsubsection{\texorpdfstring{SetFloat4()}{SetFloat4()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Shader\+::\+Set\+Float4 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const glm\+::vec4 \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_open_g_l_shader_a87d77d3579bd16ffa44513f3130eaa35}{Gear\+::\+Open\+G\+L\+Shader}}에서 구현되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_shader_a3807350f9669c540c42b7ea6a4af8f22}\label{class_gear_1_1_shader_a3807350f9669c540c42b7ea6a4af8f22}} 
+\index{Gear::Shader@{Gear::Shader}!SetInt@{SetInt}}
+\index{SetInt@{SetInt}!Gear::Shader@{Gear::Shader}}
+\doxysubsubsection{\texorpdfstring{SetInt()}{SetInt()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Shader\+::\+Set\+Int (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_open_g_l_shader_a3acf4c283ab9939d6a36f7b572d983be}{Gear\+::\+Open\+G\+L\+Shader}}에서 구현되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_shader_a8779c86aa01554970adc8ef78890fbe3}\label{class_gear_1_1_shader_a8779c86aa01554970adc8ef78890fbe3}} 
+\index{Gear::Shader@{Gear::Shader}!SetMat4@{SetMat4}}
+\index{SetMat4@{SetMat4}!Gear::Shader@{Gear::Shader}}
+\doxysubsubsection{\texorpdfstring{SetMat4()}{SetMat4()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Shader\+::\+Set\+Mat4 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const glm\+::mat4 \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_open_g_l_shader_a89fcc3c49f52bbe1a65cd8b1bf8e67a5}{Gear\+::\+Open\+G\+L\+Shader}}에서 구현되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_shader_a6f825d66271367071d65f092b4d99a58}\label{class_gear_1_1_shader_a6f825d66271367071d65f092b4d99a58}} 
+\index{Gear::Shader@{Gear::Shader}!Unbind@{Unbind}}
+\index{Unbind@{Unbind}!Gear::Shader@{Gear::Shader}}
+\doxysubsubsection{\texorpdfstring{Unbind()}{Unbind()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Shader\+::\+Unbind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_open_g_l_shader_a6aeac5049128e7970b87686ceab44f03}{Gear\+::\+Open\+G\+L\+Shader}}에서 구현되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Renderer/\mbox{\hyperlink{_shader_8h}{Shader.\+h}}\item 
+Gear/src/\+Gear/\+Renderer/\mbox{\hyperlink{_shader_8cpp}{Shader.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,146 @@
+\hypertarget{class_gear_1_1_texture2_d}{}\doxysection{Gear\+::Texture2D 클래스 참조}
+\label{class_gear_1_1_texture2_d}\index{Gear::Texture2D@{Gear::Texture2D}}
+
+
+{\ttfamily \#include $<$Texture.\+h$>$}
+
+
+
+Gear\+::Texture2\+D에 대한 상속 다이어그램 \+: 
+% FIG 0
+
+
+Gear\+::Texture2\+D에 대한 협력 다이어그램\+:
+% FIG 1
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{class_gear_1_1_texture_ab2716773594ab82583d1f75a815613b9}{Get\+Width}} () const =0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{class_gear_1_1_texture_a689b10bfb60e1ad716202e3611107915}{Get\+Height}} () const =0
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_texture_a4ac8f558ac8f8f30e887f214395996c8}{Set\+Data}} (void $\ast$data, uint32\+\_\+t size)=0
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_texture_afb5a893186bd82dcece46f4819612b77}{Bind}} (uint32\+\_\+t slot=0) const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_texture2_d}{Texture2D}} $>$ \mbox{\hyperlink{class_gear_1_1_texture2_d_a737ee8c105066854fd4c3f8def62fd73}{Create}} (uint32\+\_\+t width, uint32\+\_\+t height)
+\item 
+static \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_texture2_d}{Texture2D}} $>$ \mbox{\hyperlink{class_gear_1_1_texture2_d_a5b41272f37782cb4a47667d918aae614}{Create}} (const std\+::string \&path)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Texture.\+h 파일의 21 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_texture_afb5a893186bd82dcece46f4819612b77}\label{class_gear_1_1_texture_afb5a893186bd82dcece46f4819612b77}} 
+\index{Gear::Texture2D@{Gear::Texture2D}!Bind@{Bind}}
+\index{Bind@{Bind}!Gear::Texture2D@{Gear::Texture2D}}
+\doxysubsubsection{\texorpdfstring{Bind()}{Bind()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Texture\+::\+Bind (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{slot = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_open_g_l_texture2_d_a2719b4fc97b027a3f10f00c6100f66fa}{Gear\+::\+Open\+G\+L\+Texture2D}}에서 구현되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_texture2_d_a5b41272f37782cb4a47667d918aae614}\label{class_gear_1_1_texture2_d_a5b41272f37782cb4a47667d918aae614}} 
+\index{Gear::Texture2D@{Gear::Texture2D}!Create@{Create}}
+\index{Create@{Create}!Gear::Texture2D@{Gear::Texture2D}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_texture2_d}{Texture2D}} $>$ Gear\+::\+Texture2\+D\+::\+Create (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Texture.\+cpp 파일의 23 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24     \{}
+\DoxyCodeLine{25         \textcolor{keywordflow}{switch} (\mbox{\hyperlink{class_gear_1_1_renderer_ad13c79d41ff9c92e63e0a356ddb06d1f}{Renderer::GetAPI}}())}
+\DoxyCodeLine{26         \{}
+\DoxyCodeLine{27         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a6adf97f83acf6453d4a6a4b1070f3754}{RendererAPI::API::None}}:}
+\DoxyCodeLine{28             \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{GR\_CORE\_ASSERT}}(\textcolor{keyword}{false}, \textcolor{stringliteral}{"RendererAPI::None is currently not supported!"});}
+\DoxyCodeLine{29             \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{30         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a760716b590ee7c0adc25f434f577d8be}{RendererAPI::API::OpenGL}}:}
+\DoxyCodeLine{31             \textcolor{keywordflow}{return} CreateRef<OpenGLTexture2D>(path);}
+\DoxyCodeLine{32         \}}
+\DoxyCodeLine{33         \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{GR\_CORE\_ASSERT}}(\textcolor{keyword}{false}, \textcolor{stringliteral}{"Unknown RendererAPI!"});}
+\DoxyCodeLine{34         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{35     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\mbox{\Hypertarget{class_gear_1_1_texture2_d_a737ee8c105066854fd4c3f8def62fd73}\label{class_gear_1_1_texture2_d_a737ee8c105066854fd4c3f8def62fd73}} 
+\index{Gear::Texture2D@{Gear::Texture2D}!Create@{Create}}
+\index{Create@{Create}!Gear::Texture2D@{Gear::Texture2D}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Ref}}$<$ \mbox{\hyperlink{class_gear_1_1_texture2_d}{Texture2D}} $>$ Gear\+::\+Texture2\+D\+::\+Create (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Texture.\+cpp 파일의 9 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10     \{}
+\DoxyCodeLine{11         \textcolor{keywordflow}{switch} (\mbox{\hyperlink{class_gear_1_1_renderer_ad13c79d41ff9c92e63e0a356ddb06d1f}{Renderer::GetAPI}}())}
+\DoxyCodeLine{12         \{}
+\DoxyCodeLine{13         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a6adf97f83acf6453d4a6a4b1070f3754}{RendererAPI::API::None}}:}
+\DoxyCodeLine{14             \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{GR\_CORE\_ASSERT}}(\textcolor{keyword}{false}, \textcolor{stringliteral}{"RendererAPI::None is currently not supported!"});}
+\DoxyCodeLine{15             \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{16         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_gear_1_1_renderer_a_p_i_a34bc885c5c1156653aece10a93452b78a760716b590ee7c0adc25f434f577d8be}{RendererAPI::API::OpenGL}}:}
+\DoxyCodeLine{17             \textcolor{keywordflow}{return} CreateRef<OpenGLTexture2D>(width, height);}
+\DoxyCodeLine{18         \}}
+\DoxyCodeLine{19         \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{GR\_CORE\_ASSERT}}(\textcolor{keyword}{false}, \textcolor{stringliteral}{"Unknown RendererAPI!"});}
+\DoxyCodeLine{20         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{21     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 4
+\mbox{\Hypertarget{class_gear_1_1_texture_a689b10bfb60e1ad716202e3611107915}\label{class_gear_1_1_texture_a689b10bfb60e1ad716202e3611107915}} 
+\index{Gear::Texture2D@{Gear::Texture2D}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!Gear::Texture2D@{Gear::Texture2D}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t Gear\+::\+Texture\+::\+Get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_open_g_l_texture2_d_a727581f32616ff8bb04a9e993d5d02b5}{Gear\+::\+Open\+G\+L\+Texture2D}}에서 구현되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_texture_ab2716773594ab82583d1f75a815613b9}\label{class_gear_1_1_texture_ab2716773594ab82583d1f75a815613b9}} 
+\index{Gear::Texture2D@{Gear::Texture2D}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!Gear::Texture2D@{Gear::Texture2D}}
+\doxysubsubsection{\texorpdfstring{GetWidth()}{GetWidth()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t Gear\+::\+Texture\+::\+Get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_open_g_l_texture2_d_aba55904d7c649a60bc4f6f65c0696622}{Gear\+::\+Open\+G\+L\+Texture2D}}에서 구현되었습니다.
+
+\mbox{\Hypertarget{class_gear_1_1_texture_a4ac8f558ac8f8f30e887f214395996c8}\label{class_gear_1_1_texture_a4ac8f558ac8f8f30e887f214395996c8}} 
+\index{Gear::Texture2D@{Gear::Texture2D}!SetData@{SetData}}
+\index{SetData@{SetData}!Gear::Texture2D@{Gear::Texture2D}}
+\doxysubsubsection{\texorpdfstring{SetData()}{SetData()}}
+{\footnotesize\ttfamily virtual void Gear\+::\+Texture\+::\+Set\+Data (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{uint32\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_open_g_l_texture2_d_a9f5ad50d1c88461905c5646ea3e777bd}{Gear\+::\+Open\+G\+L\+Texture2D}}에서 구현되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Gear/\+Renderer/\mbox{\hyperlink{_texture_8h}{Texture.\+h}}\item 
+Gear/src/\+Gear/\+Renderer/\mbox{\hyperlink{_texture_8cpp}{Texture.\+cpp}}\end{DoxyCompactItemize}

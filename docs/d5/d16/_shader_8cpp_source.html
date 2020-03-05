@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GearEngine: Gear/src/Gear/Renderer/Shader.cpp 소스 파일</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../EngineLogo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GearEngine
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d5/d16/_shader_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Shader.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d5/d16/_shader_8cpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d1b/grpch_8h.html">grpch.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d34/_shader_8h.html">Shader.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/da0/_renderer_8h.html">Renderer.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/de8/_open_g_l_shader_8h.html">Platform/OpenGL/OpenGLShader.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d8/d4b/namespace_gear.html">Gear</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d3/dbb/class_gear_1_1_shader.html#af441a167abaa6d02e14d23fd24180d15">    9</a></span>&#160;    <a class="code" href="../../d8/d4b/namespace_gear.html#af13c1b0195b1ab42127ab63e5559c043">Ref&lt;Shader&gt;</a> <a class="code" href="../../d3/dbb/class_gear_1_1_shader.html#af441a167abaa6d02e14d23fd24180d15">Shader::Create</a>(<span class="keyword">const</span> std::string &amp; filepath)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordflow">switch</span> (<a class="code" href="../../d2/d0c/class_gear_1_1_renderer.html#ad13c79d41ff9c92e63e0a356ddb06d1f">Renderer::GetAPI</a>())</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../dd/d38/class_gear_1_1_renderer_a_p_i.html#a34bc885c5c1156653aece10a93452b78a6adf97f83acf6453d4a6a4b1070f3754">RendererAPI::API::None</a>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <a class="code" href="../../d4/d09/_core_8h.html#aada7d47fe675d944b0516553e43d2c58">GR_CORE_ASSERT</a>(<span class="keyword">false</span>, <span class="stringliteral">&quot;RendererAPI::None is currently not supported!&quot;</span>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../dd/d38/class_gear_1_1_renderer_a_p_i.html#a34bc885c5c1156653aece10a93452b78a760716b590ee7c0adc25f434f577d8be">RendererAPI::API::OpenGL</a>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordflow">return</span> std::make_shared&lt;OpenGLShader&gt;(filepath);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="../../d4/d09/_core_8h.html#aada7d47fe675d944b0516553e43d2c58">GR_CORE_ASSERT</a>(<span class="keyword">false</span>, <span class="stringliteral">&quot;Unknown RendererAPI!&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d3/dbb/class_gear_1_1_shader.html#af3c30ae02240cbf8da2760f1ae4e4b9e">   23</a></span>&#160;    <a class="code" href="../../d8/d4b/namespace_gear.html#af13c1b0195b1ab42127ab63e5559c043">Ref&lt;Shader&gt;</a> <a class="code" href="../../d3/dbb/class_gear_1_1_shader.html#af441a167abaa6d02e14d23fd24180d15">Shader::Create</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> std::string&amp; vertexSrc, <span class="keyword">const</span> std::string&amp; fragmentSrc)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">switch</span> (<a class="code" href="../../d2/d0c/class_gear_1_1_renderer.html#ad13c79d41ff9c92e63e0a356ddb06d1f">Renderer::GetAPI</a>())</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../dd/d38/class_gear_1_1_renderer_a_p_i.html#a34bc885c5c1156653aece10a93452b78a6adf97f83acf6453d4a6a4b1070f3754">RendererAPI::API::None</a>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <a class="code" href="../../d4/d09/_core_8h.html#aada7d47fe675d944b0516553e43d2c58">GR_CORE_ASSERT</a>(<span class="keyword">false</span>, <span class="stringliteral">&quot;RendererAPI::None is currently not supported!&quot;</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="../../dd/d38/class_gear_1_1_renderer_a_p_i.html#a34bc885c5c1156653aece10a93452b78a760716b590ee7c0adc25f434f577d8be">RendererAPI::API::OpenGL</a>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">return</span> std::make_shared&lt;OpenGLShader&gt;(name, vertexSrc, fragmentSrc);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="../../d4/d09/_core_8h.html#aada7d47fe675d944b0516553e43d2c58">GR_CORE_ASSERT</a>(<span class="keyword">false</span>, <span class="stringliteral">&quot;Unknown RendererAPI!&quot;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../da/d4d/class_gear_1_1_shader_library.html#a5491b686f8471a3c6efe07dd7e9a7280">   37</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/d4d/class_gear_1_1_shader_library.html#a3f48fb852aa3b72f7bffeb4e722a347f">ShaderLibrary::Add</a>(<span class="keyword">const</span> std::string &amp; name, <span class="keyword">const</span> <a class="code" href="../../d8/d4b/namespace_gear.html#af13c1b0195b1ab42127ab63e5559c043">Ref&lt;Shader&gt;</a>&amp; shader)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="../../d4/d09/_core_8h.html#aada7d47fe675d944b0516553e43d2c58">GR_CORE_ASSERT</a>(!<a class="code" href="../../da/d4d/class_gear_1_1_shader_library.html#acc0b055f3491a44fd282e037111cc7a8">Exists</a>(name), <span class="stringliteral">&quot;Shader aleady exists!&quot;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="../../da/d4d/class_gear_1_1_shader_library.html#a982d0200073a02b1d5539aa3774d40ef">m_Shaders</a>[name] = shader;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../da/d4d/class_gear_1_1_shader_library.html#a3f48fb852aa3b72f7bffeb4e722a347f">   43</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/d4d/class_gear_1_1_shader_library.html#a3f48fb852aa3b72f7bffeb4e722a347f">ShaderLibrary::Add</a>(<span class="keyword">const</span> <a class="code" href="../../d8/d4b/namespace_gear.html#af13c1b0195b1ab42127ab63e5559c043">Ref&lt;Shader&gt;</a>&amp; shader)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">auto</span>&amp; name = shader-&gt;GetName();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="../../da/d4d/class_gear_1_1_shader_library.html#a3f48fb852aa3b72f7bffeb4e722a347f">Add</a>(name, shader);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../da/d4d/class_gear_1_1_shader_library.html#ab0c16c11a58594c27a316642715bdf79">   49</a></span>&#160;    <a class="code" href="../../d8/d4b/namespace_gear.html#af13c1b0195b1ab42127ab63e5559c043">Ref&lt;Shader&gt;</a> <a class="code" href="../../da/d4d/class_gear_1_1_shader_library.html#ab0c16c11a58594c27a316642715bdf79">ShaderLibrary::Load</a>(<span class="keyword">const</span> std::string &amp; filepath)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">auto</span> shader = <a class="code" href="../../d3/dbb/class_gear_1_1_shader.html#af441a167abaa6d02e14d23fd24180d15">Shader::Create</a>(filepath);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="../../da/d4d/class_gear_1_1_shader_library.html#a3f48fb852aa3b72f7bffeb4e722a347f">Add</a>(shader);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> shader;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../da/d4d/class_gear_1_1_shader_library.html#a983eee2e6689f5aa969295a2c0e5131d">   56</a></span>&#160;    <a class="code" href="../../d8/d4b/namespace_gear.html#af13c1b0195b1ab42127ab63e5559c043">Ref&lt;Shader&gt;</a> <a class="code" href="../../da/d4d/class_gear_1_1_shader_library.html#ab0c16c11a58594c27a316642715bdf79">ShaderLibrary::Load</a>(<span class="keyword">const</span> std::string &amp; name, <span class="keyword">const</span> std::string &amp; filepath)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">auto</span> shader = <a class="code" href="../../d3/dbb/class_gear_1_1_shader.html#af441a167abaa6d02e14d23fd24180d15">Shader::Create</a>(filepath);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="../../da/d4d/class_gear_1_1_shader_library.html#a3f48fb852aa3b72f7bffeb4e722a347f">Add</a>(name, shader);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> shader;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../da/d4d/class_gear_1_1_shader_library.html#a0a15f9b0022956eb6adf2944b665bbb9">   63</a></span>&#160;    <a class="code" href="../../d8/d4b/namespace_gear.html#af13c1b0195b1ab42127ab63e5559c043">Ref&lt;Shader&gt;</a> <a class="code" href="../../da/d4d/class_gear_1_1_shader_library.html#a0a15f9b0022956eb6adf2944b665bbb9">ShaderLibrary::Get</a>(<span class="keyword">const</span> std::string &amp; name)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="../../d4/d09/_core_8h.html#aada7d47fe675d944b0516553e43d2c58">GR_CORE_ASSERT</a>(<a class="code" href="../../da/d4d/class_gear_1_1_shader_library.html#acc0b055f3491a44fd282e037111cc7a8">Exists</a>(name), <span class="stringliteral">&quot;Shader not found!&quot;</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../da/d4d/class_gear_1_1_shader_library.html#a982d0200073a02b1d5539aa3774d40ef">m_Shaders</a>[name];</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="../../da/d4d/class_gear_1_1_shader_library.html#acc0b055f3491a44fd282e037111cc7a8">   69</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../da/d4d/class_gear_1_1_shader_library.html#acc0b055f3491a44fd282e037111cc7a8">ShaderLibrary::Exists</a>(<span class="keyword">const</span> std::string &amp; name)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../da/d4d/class_gear_1_1_shader_library.html#a982d0200073a02b1d5539aa3774d40ef">m_Shaders</a>.find(name) != <a class="code" href="../../da/d4d/class_gear_1_1_shader_library.html#a982d0200073a02b1d5539aa3774d40ef">m_Shaders</a>.end();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="agrpch_8h_html"><div class="ttname"><a href="../../d4/d1b/grpch_8h.html">grpch.h</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_shader_library_html_a0a15f9b0022956eb6adf2944b665bbb9"><div class="ttname"><a href="../../da/d4d/class_gear_1_1_shader_library.html#a0a15f9b0022956eb6adf2944b665bbb9">Gear::ShaderLibrary::Get</a></div><div class="ttdeci">Ref&lt; Shader &gt; Get(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/_shader_8cpp_source.html#l00063">Shader.cpp:63</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_shader_library_html_ab0c16c11a58594c27a316642715bdf79"><div class="ttname"><a href="../../da/d4d/class_gear_1_1_shader_library.html#ab0c16c11a58594c27a316642715bdf79">Gear::ShaderLibrary::Load</a></div><div class="ttdeci">Ref&lt; Shader &gt; Load(const std::string &amp;filepath)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/_shader_8cpp_source.html#l00049">Shader.cpp:49</a></div></div>
+<div class="ttc" id="a_renderer_8h_html"><div class="ttname"><a href="../../d3/da0/_renderer_8h.html">Renderer.h</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_renderer_a_p_i_html_a34bc885c5c1156653aece10a93452b78a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="../../dd/d38/class_gear_1_1_renderer_a_p_i.html#a34bc885c5c1156653aece10a93452b78a6adf97f83acf6453d4a6a4b1070f3754">Gear::RendererAPI::API::None</a></div><div class="ttdeci">@ None</div></div>
+<div class="ttc" id="a_open_g_l_shader_8h_html"><div class="ttname"><a href="../../da/de8/_open_g_l_shader_8h.html">OpenGLShader.h</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_renderer_a_p_i_html_a34bc885c5c1156653aece10a93452b78a760716b590ee7c0adc25f434f577d8be"><div class="ttname"><a href="../../dd/d38/class_gear_1_1_renderer_a_p_i.html#a34bc885c5c1156653aece10a93452b78a760716b590ee7c0adc25f434f577d8be">Gear::RendererAPI::API::OpenGL</a></div><div class="ttdeci">@ OpenGL</div></div>
+<div class="ttc" id="aclass_gear_1_1_renderer_html_ad13c79d41ff9c92e63e0a356ddb06d1f"><div class="ttname"><a href="../../d2/d0c/class_gear_1_1_renderer.html#ad13c79d41ff9c92e63e0a356ddb06d1f">Gear::Renderer::GetAPI</a></div><div class="ttdeci">static RendererAPI::API GetAPI()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/da0/_renderer_8h_source.html#l00023">Renderer.h:23</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_shader_library_html_acc0b055f3491a44fd282e037111cc7a8"><div class="ttname"><a href="../../da/d4d/class_gear_1_1_shader_library.html#acc0b055f3491a44fd282e037111cc7a8">Gear::ShaderLibrary::Exists</a></div><div class="ttdeci">bool Exists(const std::string &amp;name) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/_shader_8cpp_source.html#l00069">Shader.cpp:69</a></div></div>
+<div class="ttc" id="a_shader_8h_html"><div class="ttname"><a href="../../d8/d34/_shader_8h.html">Shader.h</a></div></div>
+<div class="ttc" id="anamespace_gear_html"><div class="ttname"><a href="../../d8/d4b/namespace_gear.html">Gear</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d42/_application_8cpp_source.html#l00011">Application.cpp:11</a></div></div>
+<div class="ttc" id="a_core_8h_html_aada7d47fe675d944b0516553e43d2c58"><div class="ttname"><a href="../../d4/d09/_core_8h.html#aada7d47fe675d944b0516553e43d2c58">GR_CORE_ASSERT</a></div><div class="ttdeci">#define GR_CORE_ASSERT(x,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d09/_core_8h_source.html#l00068">Core.h:68</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_shader_library_html_a982d0200073a02b1d5539aa3774d40ef"><div class="ttname"><a href="../../da/d4d/class_gear_1_1_shader_library.html#a982d0200073a02b1d5539aa3774d40ef">Gear::ShaderLibrary::m_Shaders</a></div><div class="ttdeci">std::unordered_map&lt; std::string, Ref&lt; Shader &gt; &gt; m_Shaders</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d34/_shader_8h_source.html#l00042">Shader.h:42</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_shader_library_html_a3f48fb852aa3b72f7bffeb4e722a347f"><div class="ttname"><a href="../../da/d4d/class_gear_1_1_shader_library.html#a3f48fb852aa3b72f7bffeb4e722a347f">Gear::ShaderLibrary::Add</a></div><div class="ttdeci">void Add(const Ref&lt; Shader &gt; &amp;shader)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/_shader_8cpp_source.html#l00043">Shader.cpp:43</a></div></div>
+<div class="ttc" id="anamespace_gear_html_af13c1b0195b1ab42127ab63e5559c043"><div class="ttname"><a href="../../d8/d4b/namespace_gear.html#af13c1b0195b1ab42127ab63e5559c043">Gear::Ref</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; Ref</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d09/_core_8h_source.html#l00086">Core.h:86</a></div></div>
+<div class="ttc" id="aclass_gear_1_1_shader_html_af441a167abaa6d02e14d23fd24180d15"><div class="ttname"><a href="../../d3/dbb/class_gear_1_1_shader.html#af441a167abaa6d02e14d23fd24180d15">Gear::Shader::Create</a></div><div class="ttdeci">static Ref&lt; Shader &gt; Create(const std::string &amp;filepath)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/_shader_8cpp_source.html#l00009">Shader.cpp:9</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_53d5e98abdf3a310efd03de30bd70f59.html">Gear</a></li><li class="navelem"><a class="el" href="../../dir_2e86bc557449db88413d12c593cb549e.html">src</a></li><li class="navelem"><a class="el" href="../../dir_cb4ae8cb444fc781104283c5acb48e8f.html">Gear</a></li><li class="navelem"><a class="el" href="../../dir_1e76e334ecf9414fe0cc87dc15d1f1b5.html">Renderer</a></li><li class="navelem"><a class="el" href="../../d5/d16/_shader_8cpp.html">Shader.cpp</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

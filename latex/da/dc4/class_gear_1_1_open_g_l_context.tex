@@ -1,0 +1,139 @@
+\hypertarget{class_gear_1_1_open_g_l_context}{}\doxysection{Gear\+::Open\+G\+L\+Context 클래스 참조}
+\label{class_gear_1_1_open_g_l_context}\index{Gear::OpenGLContext@{Gear::OpenGLContext}}
+
+
+{\ttfamily \#include $<$Open\+G\+L\+Context.\+h$>$}
+
+
+
+Gear\+::Open\+G\+L\+Context에 대한 상속 다이어그램 \+: 
+% FIG 0
+
+
+Gear\+::Open\+G\+L\+Context에 대한 협력 다이어그램\+:
+% FIG 1
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gear_1_1_open_g_l_context_a05413e4912eac5b30129b3d06b6891ec}{Open\+G\+L\+Context}} (G\+L\+F\+Wwindow $\ast$window\+Handle)
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_open_g_l_context_a771a4fe12b8084561580439db9972c6c}{init}} () override
+\item 
+virtual void \mbox{\hyperlink{class_gear_1_1_open_g_l_context_afae67356a0831486c75bae5de0fd60b2}{Swap\+Buffers}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{class_gear_1_1_open_g_l_context_ab23c1fa43922f72dba14db08bdb256b9}{m\+\_\+\+Window\+Handle}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+Open\+G\+L\+Context.\+h 파일의 8 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_gear_1_1_open_g_l_context_a05413e4912eac5b30129b3d06b6891ec}\label{class_gear_1_1_open_g_l_context_a05413e4912eac5b30129b3d06b6891ec}} 
+\index{Gear::OpenGLContext@{Gear::OpenGLContext}!OpenGLContext@{OpenGLContext}}
+\index{OpenGLContext@{OpenGLContext}!Gear::OpenGLContext@{Gear::OpenGLContext}}
+\doxysubsubsection{\texorpdfstring{OpenGLContext()}{OpenGLContext()}}
+{\footnotesize\ttfamily Gear\+::\+Open\+G\+L\+Context\+::\+Open\+G\+L\+Context (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window\+Handle }\end{DoxyParamCaption})}
+
+
+
+Open\+G\+L\+Context.\+cpp 파일의 9 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10         : \mbox{\hyperlink{class_gear_1_1_open_g_l_context_ab23c1fa43922f72dba14db08bdb256b9}{m\_WindowHandle}}(windowHandle)}
+\DoxyCodeLine{11     \{}
+\DoxyCodeLine{12         \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{GR\_CORE\_ASSERT}}(windowHandle, \textcolor{stringliteral}{"Window hadle is null!"})}
+\DoxyCodeLine{13     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_gear_1_1_open_g_l_context_a771a4fe12b8084561580439db9972c6c}\label{class_gear_1_1_open_g_l_context_a771a4fe12b8084561580439db9972c6c}} 
+\index{Gear::OpenGLContext@{Gear::OpenGLContext}!init@{init}}
+\index{init@{init}!Gear::OpenGLContext@{Gear::OpenGLContext}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Gear\+::\+Open\+G\+L\+Context\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_graphics_context_a905e970355c4d165868f3e7c79d9b906}{Gear\+::\+Graphics\+Context}}를 구현.
+
+
+
+Open\+G\+L\+Context.\+cpp 파일의 15 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16     \{}
+\DoxyCodeLine{17         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19         glfwMakeContextCurrent(\mbox{\hyperlink{class_gear_1_1_open_g_l_context_ab23c1fa43922f72dba14db08bdb256b9}{m\_WindowHandle}});}
+\DoxyCodeLine{20         \textcolor{keywordtype}{int} status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);}
+\DoxyCodeLine{21         \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{GR\_CORE\_ASSERT}}(status, \textcolor{stringliteral}{"Failed to initialize Glad!"});}
+\DoxyCodeLine{22         \mbox{\hyperlink{_log_8h_adcf02b331e781f082585b15d04bd56de}{GR\_CORE\_INFO}}(\textcolor{stringliteral}{"OpenGL Info:"});}
+\DoxyCodeLine{23         \mbox{\hyperlink{_log_8h_adcf02b331e781f082585b15d04bd56de}{GR\_CORE\_INFO}}(\textcolor{stringliteral}{"Vendor : \{0\}"}, glGetString(GL\_VENDOR));}
+\DoxyCodeLine{24         \mbox{\hyperlink{_log_8h_adcf02b331e781f082585b15d04bd56de}{GR\_CORE\_INFO}}(\textcolor{stringliteral}{"Renderer : \{0\}"}, glGetString(GL\_RENDERER));}
+\DoxyCodeLine{25         \mbox{\hyperlink{_log_8h_adcf02b331e781f082585b15d04bd56de}{GR\_CORE\_INFO}}(\textcolor{stringliteral}{"Version : \{0\}"}, glGetString(GL\_VERSION));}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{    \#ifdef GR\_ENABLE\_ASSERTS}}
+\DoxyCodeLine{28         \textcolor{keywordtype}{int} versionMajor;}
+\DoxyCodeLine{29         \textcolor{keywordtype}{int} versionMinor;}
+\DoxyCodeLine{30         glGetIntegerv(GL\_MAJOR\_VERSION, \&versionMajor);}
+\DoxyCodeLine{31         glGetIntegerv(GL\_MINOR\_VERSION, \&versionMinor);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33         \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{GR\_CORE\_ASSERT}}(versionMajor > 4 || (versionMajor == 4 \&\& versionMinor >= 5), \textcolor{stringliteral}{"Gear requires at least OpenGL version 4.5!"});}
+\DoxyCodeLine{34 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{35     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_gear_1_1_open_g_l_context_afae67356a0831486c75bae5de0fd60b2}\label{class_gear_1_1_open_g_l_context_afae67356a0831486c75bae5de0fd60b2}} 
+\index{Gear::OpenGLContext@{Gear::OpenGLContext}!SwapBuffers@{SwapBuffers}}
+\index{SwapBuffers@{SwapBuffers}!Gear::OpenGLContext@{Gear::OpenGLContext}}
+\doxysubsubsection{\texorpdfstring{SwapBuffers()}{SwapBuffers()}}
+{\footnotesize\ttfamily void Gear\+::\+Open\+G\+L\+Context\+::\+Swap\+Buffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_gear_1_1_graphics_context_a2c0d307e5ff48675693d5507fd13fbb1}{Gear\+::\+Graphics\+Context}}를 구현.
+
+
+
+Open\+G\+L\+Context.\+cpp 파일의 37 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38     \{}
+\DoxyCodeLine{39         \mbox{\hyperlink{_instrumentor_8h_a42e05b5340607a81e495d6c3c7db7e14}{GR\_PROFILE\_FUNCTION}}();}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41         glfwSwapBuffers(\mbox{\hyperlink{class_gear_1_1_open_g_l_context_ab23c1fa43922f72dba14db08bdb256b9}{m\_WindowHandle}});}
+\DoxyCodeLine{42     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_gear_1_1_open_g_l_context_ab23c1fa43922f72dba14db08bdb256b9}\label{class_gear_1_1_open_g_l_context_ab23c1fa43922f72dba14db08bdb256b9}} 
+\index{Gear::OpenGLContext@{Gear::OpenGLContext}!m\_WindowHandle@{m\_WindowHandle}}
+\index{m\_WindowHandle@{m\_WindowHandle}!Gear::OpenGLContext@{Gear::OpenGLContext}}
+\doxysubsubsection{\texorpdfstring{m\_WindowHandle}{m\_WindowHandle}}
+{\footnotesize\ttfamily G\+L\+F\+Wwindow$\ast$ Gear\+::\+Open\+G\+L\+Context\+::m\+\_\+\+Window\+Handle\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Open\+G\+L\+Context.\+h 파일의 18 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Gear/src/\+Platform/\+Open\+G\+L/\mbox{\hyperlink{_open_g_l_context_8h}{Open\+G\+L\+Context.\+h}}\item 
+Gear/src/\+Platform/\+Open\+G\+L/\mbox{\hyperlink{_open_g_l_context_8cpp}{Open\+G\+L\+Context.\+cpp}}\end{DoxyCompactItemize}

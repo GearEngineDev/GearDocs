@@ -1,0 +1,325 @@
+\let\mypdfximage\pdfximage\def\pdfximage{\immediate\mypdfximage}\documentclass[twoside]{book}
+
+%% moved from doxygen.sty due to workaround for LaTex 2019 version and unmaintained tabu package
+\usepackage{ifthen}
+\ifx\requestedLaTeXdate\undefined
+\usepackage{array}
+\else
+\usepackage{array}[=2016-10-06]
+\fi
+%%
+% Packages required by doxygen
+\usepackage{fixltx2e}
+\usepackage{calc}
+\usepackage{doxygen}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{multirow}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
+\usepackage[table]{xcolor}
+\usepackage{ifpdf,ifxetex}
+
+% NLS support packages
+\usepackage{kotex}
+
+% Font selection
+\usepackage[T1]{fontenc}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{amssymb}
+\usepackage{sectsty}
+\renewcommand{\familydefault}{\sfdefault}
+\allsectionsfont{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\renewcommand{\DoxyLabelFont}{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+
+% Arguments of doxygenemoji:
+% 1) ':<text>:' form of the emoji, already "LaTeX"-escaped
+% 2) file with the name of the emoji without the .png extension
+% in case image exist use this otherwise use the ':<text>:' form
+\newcommand{\doxygenemoji}[2]{%
+  \IfFileExists{./#2.png}{\raisebox{-0.1em}{\includegraphics[height=0.9em]{./#2.png}}}{#1}%
+}
+% Page & text layout
+\usepackage{geometry}
+\geometry{%
+  a4paper,%
+  top=2.5cm,%
+  bottom=2.5cm,%
+  left=2.5cm,%
+  right=2.5cm%
+}
+\tolerance=750
+\hfuzz=15pt
+\hbadness=750
+\setlength{\emergencystretch}{15pt}
+\setlength{\parindent}{0cm}
+\newcommand{\doxynormalparskip}{\setlength{\parskip}{3ex plus 2ex minus 2ex}}
+\newcommand{\doxytocparskip}{\setlength{\parskip}{1ex plus 0ex minus 0ex}}
+\doxynormalparskip
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@parafont%
+  }%
+}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@subparafont%
+  }%
+}
+\makeatother
+
+\makeatletter
+\newcommand\hrulefilll{\leavevmode\leaders\hrule\hskip 0pt plus 1filll\kern\z@}
+\makeatother
+
+% Headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
+\fancyhead[CE]{\fancyplain{}{}}
+\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
+\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
+\fancyhead[CO]{\fancyplain{}{}}
+\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
+\fancyfoot[LE]{\fancyplain{}{}}
+\fancyfoot[CE]{\fancyplain{}{}}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize 다음에 의해 생성됨 \+:  Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize 다음에 의해 생성됨 \+:  Doxygen }}
+\fancyfoot[CO]{\fancyplain{}{}}
+\fancyfoot[RO]{\fancyplain{}{}}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\ #1}%
+}
+
+% Indices & bibliography
+\usepackage{natbib}
+\usepackage[titles]{tocloft}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\makeindex
+
+\usepackage{newunicodechar}
+  \newunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \newunicodechar{²}{${}^{2}$}% Superscript two
+  \newunicodechar{³}{${}^{3}$}% Superscript three
+
+% Hyperlinks (required, but should be loaded last)
+\ifpdf
+  \usepackage[pdftex,pagebackref=true]{hyperref}
+\else
+  \ifxetex
+    \usepackage[pagebackref=true]{hyperref}
+  \else
+    \usepackage[ps2pdf,pagebackref=true]{hyperref}
+  \fi
+\fi
+
+\hypersetup{%
+  colorlinks=true,%
+  linkcolor=blue,%
+  citecolor=blue,%
+  unicode%
+}
+
+% Custom commands
+\newcommand{\clearemptydoublepage}{%
+  \newpage{\pagestyle{empty}\cleardoublepage}%
+}
+
+\usepackage{caption}
+\captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+
+\usepackage{etoc}
+\etocsettocstyle{\doxytocparskip}{\doxynormalparskip}
+\renewcommand{\numberline}[1]{#1~}
+%===== C O N T E N T S =====
+
+\begin{document}
+
+% Titlepage & ToC
+\hypersetup{pageanchor=false,
+             bookmarksnumbered=true,
+             pdfencoding=unicode
+            }
+\pagenumbering{alph}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}%
+{\Large Gear\+Engine \\[1ex]\large 0.\+0.\+1 }\\
+\vspace*{1cm}
+{\large 다음에 의해 생성됨 \+:  Doxygen 1.8.17}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true}
+
+%--- Begin generated contents ---
+\chapter{네임스페이스 색인}
+\input{namespaces}
+\chapter{계통도 색인}
+\input{hierarchy}
+\chapter{클래스 색인}
+\input{annotated}
+\chapter{파일 색인}
+\input{files}
+\chapter{네임스페이스 문서화}
+\input{d8/d4b/namespace_gear}
+\chapter{클래스 문서화}
+\input{d6/d10/class_gear_1_1_application}
+\input{d3/db5/class_gear_1_1_app_render_event}
+\input{df/d04/class_gear_1_1_app_tick_event}
+\input{d0/d54/class_gear_1_1_app_update_event}
+\input{dc/d67/struct_gear_1_1_buffer_element}
+\input{de/df5/class_gear_1_1_buffer_layout}
+\input{d2/d64/class_gear_1_1_event}
+\input{d3/d64/class_gear_1_1_event_dispatcher}
+\input{d5/d80/class_gear_1_1_graphics_context}
+\input{d3/de8/class_gear_1_1_im_gui_layer}
+\input{dc/d1a/class_gear_1_1_index_buffer}
+\input{dd/dcf/class_gear_1_1_input}
+\input{dd/d49/struct_gear_1_1_instrumentation_session}
+\input{d2/d36/class_gear_1_1_instrumentation_timer}
+\input{de/d53/class_gear_1_1_instrumentor}
+\input{d6/de6/class_gear_1_1_key_event}
+\input{d6/dfd/class_gear_1_1_key_pressed_event}
+\input{dc/d9e/class_gear_1_1_key_released_event}
+\input{d2/dce/class_gear_1_1_key_typed_event}
+\input{df/d6c/class_gear_1_1_layer}
+\input{d0/dd7/class_gear_1_1_layer_stack}
+\input{dd/dc0/class_gear_1_1_log}
+\input{df/d0f/class_gear_1_1_mouse_button_event}
+\input{d6/df3/class_gear_1_1_mouse_button_pressed_event}
+\input{db/de0/class_gear_1_1_mouse_button_released_event}
+\input{de/d00/class_gear_1_1_mouse_moved_event}
+\input{da/d7e/class_gear_1_1_mouse_scrolled_event}
+\input{da/dc4/class_gear_1_1_open_g_l_context}
+\input{dc/d30/class_gear_1_1_open_g_l_index_buffer}
+\input{df/dbd/class_gear_1_1_open_g_l_renderer_a_p_i}
+\input{d8/d6f/class_gear_1_1_open_g_l_shader}
+\input{dd/d2a/class_gear_1_1_open_g_l_texture2_d}
+\input{d1/da3/class_gear_1_1_open_g_l_vertex_array}
+\input{dd/d36/class_gear_1_1_open_g_l_vertex_buffer}
+\input{d5/d11/class_gear_1_1_orthographic_camera}
+\input{d6/dcf/class_gear_1_1_orthographic_camera_controller}
+\input{de/d0d/struct_gear_1_1_profile_result}
+\input{d7/d97/class_gear_1_1_render_command}
+\input{d2/d0c/class_gear_1_1_renderer}
+\input{d9/d2e/class_gear_1_1_renderer2_d}
+\input{d8/d8c/struct_gear_1_1_renderer2_d_storage}
+\input{dd/d38/class_gear_1_1_renderer_a_p_i}
+\input{d1/d45/class_gear_1_1_scene}
+\input{d9/dcd/struct_gear_1_1_renderer_1_1_scene_data}
+\input{de/dd6/class_gear_1_1_scene_manager}
+\input{d3/dbb/class_gear_1_1_shader}
+\input{da/d4d/class_gear_1_1_shader_library}
+\input{d3/d5d/class_gear_1_1_texture}
+\input{da/d37/class_gear_1_1_texture2_d}
+\input{d5/d93/class_gear_1_1_timestep}
+\input{dd/d26/class_gear_1_1_vertex_array}
+\input{d7/d1c/class_gear_1_1_vertex_buffer}
+\input{dd/d1f/class_gear_1_1_window}
+\input{d5/d2f/class_gear_1_1_window_close_event}
+\input{d7/dfd/struct_gear_1_1_windows_window_1_1_window_data}
+\input{d1/df9/struct_gear_1_1_window_props}
+\input{db/d09/class_gear_1_1_window_resize_event}
+\input{d9/d8c/class_gear_1_1_windows_input}
+\input{d8/dc1/class_gear_1_1_windows_window}
+\chapter{파일 문서화}
+\input{d3/d24/_gear_8h}
+\input{d0/d42/_application_8cpp}
+\input{d9/da3/_application_8h}
+\input{d4/d09/_core_8h}
+\input{df/dce/_entry_point_8h}
+\input{d2/d94/_input_8h}
+\input{d3/d68/_key_codes_8h}
+\input{df/d7f/_layer_8cpp}
+\input{d6/d5a/_layer_8h}
+\input{d4/d20/_layer_stack_8cpp}
+\input{db/dd9/_layer_stack_8h}
+\input{d0/da7/_log_8cpp}
+\input{da/df4/_log_8h}
+\input{d6/dd1/_mouse_button_codes_8h}
+\input{d9/d44/_scene_8cpp}
+\input{de/d56/_scene_8h}
+\input{d0/d5f/_scene_manager_8cpp}
+\input{d1/da9/_scene_manager_8h}
+\input{dd/dae/_timestep_8h}
+\input{de/d42/_window_8h}
+\input{d2/d4b/_instrumentor_8h}
+\input{d3/d87/_application_event_8h}
+\input{de/d6d/_event_8h}
+\input{dd/d79/_key_event_8h}
+\input{d4/df8/_mouse_event_8h}
+\input{dc/dac/_im_gui_builld_8cpp}
+\input{dd/df1/_im_gui_layer_8cpp}
+\input{df/d68/_im_gui_layer_8h}
+\input{dc/dcf/_buffer_8cpp}
+\input{d7/d1b/_buffer_8h}
+\input{d8/d38/_graphics_context_8h}
+\input{d0/d80/_orthographic_camera_8cpp}
+\input{d5/dea/_orthographic_camera_8h}
+\input{d1/d33/_orthographic_camera_controller_8cpp}
+\input{d8/db3/_orthographic_camera_controller_8h}
+\input{d3/dec/_render_command_8cpp}
+\input{db/d8f/_render_command_8h}
+\input{da/d84/_renderer_8cpp}
+\input{d3/da0/_renderer_8h}
+\input{dd/d53/_renderer2_d_8cpp}
+\input{d7/d03/_renderer2_d_8h}
+\input{d6/dad/_renderer_a_p_i_8cpp}
+\input{d6/d22/_renderer_a_p_i_8h}
+\input{d5/d16/_shader_8cpp}
+\input{d8/d34/_shader_8h}
+\input{da/d26/_texture_8cpp}
+\input{de/dbf/_texture_8h}
+\input{db/d28/_vertex_array_8cpp}
+\input{d0/df4/_vertex_array_8h}
+\input{d3/d9b/grpch_8cpp}
+\input{d4/d1b/grpch_8h}
+\input{db/db7/_open_g_l_buffer_8cpp}
+\input{d0/d9c/_open_g_l_buffer_8h}
+\input{d5/df8/_open_g_l_context_8cpp}
+\input{da/d2c/_open_g_l_context_8h}
+\input{da/dd7/_open_g_l_renderer_a_p_i_8cpp}
+\input{dd/da6/_open_g_l_renderer_a_p_i_8h}
+\input{de/d86/_open_g_l_shader_8cpp}
+\input{da/de8/_open_g_l_shader_8h}
+\input{d8/d5a/_open_g_l_texture_8cpp}
+\input{d1/d16/_open_g_l_texture_8h}
+\input{d9/d95/_open_g_l_vertex_array_8cpp}
+\input{d8/d4a/_open_g_l_vertex_array_8h}
+\input{d4/df2/_windows_input_8cpp}
+\input{d4/d58/_windows_input_8h}
+\input{db/d9d/_windows_window_8cpp}
+\input{de/dd7/_windows_window_8h}
+%--- End generated contents ---
+
+% Index
+\backmatter
+\newpage
+\phantomsection
+\clearemptydoublepage
+\addcontentsline{toc}{chapter}{\indexname}
+\printindex
+
+\end{document}

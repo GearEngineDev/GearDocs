@@ -1,0 +1,80 @@
+\hypertarget{_core_8h}{}\doxysection{Gear/src/\+Gear/\+Core/\+Core.h 파일 참조}
+\label{_core_8h}\index{Gear/src/Gear/Core/Core.h@{Gear/src/Gear/Core/Core.h}}
+{\ttfamily \#include $<$memory$>$}\newline
+Core.\+h에 대한 include 의존 그래프
+% FIG 0
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\+:
+% FIG 1
+\doxysubsection*{네임스페이스}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_gear}{Gear}}
+\end{DoxyCompactItemize}
+\doxysubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_core_8h_a53e36b1b9baba7ef143d61faf67d1751}{G\+R\+\_\+\+A\+S\+S\+E\+RT}}(x, ...)
+\item 
+\#define \mbox{\hyperlink{_core_8h_aada7d47fe675d944b0516553e43d2c58}{G\+R\+\_\+\+C\+O\+R\+E\+\_\+\+A\+S\+S\+E\+RT}}(x, ...)
+\item 
+\#define \mbox{\hyperlink{_core_8h_ad27cc17b25bb93134368d5eb21126eae}{B\+IT}}(x)~(1 $<$$<$ x)
+\item 
+\#define \mbox{\hyperlink{_core_8h_a1b294077fd8afbc1740916700e5390d4}{G\+R\+\_\+\+B\+I\+N\+D\+\_\+\+E\+V\+E\+N\+T\+\_\+\+FN}}(fn)~std\+::bind(\&fn, this, std\+::placeholders\+::\+\_\+1)
+\end{DoxyCompactItemize}
+\doxysubsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespace_gear_abef5ce1767f345625e08a951f865a20d}{Gear\+::\+Scope}} = std\+::unique\+\_\+ptr$<$ T $>$
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespace_gear_af13c1b0195b1ab42127ab63e5559c043}{Gear\+::\+Ref}} = std\+::shared\+\_\+ptr$<$ T $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename ... Args$>$ }\\constexpr Scope$<$ T $>$ \mbox{\hyperlink{namespace_gear_a0931f35259d76c5ca3aa6d5e92870716}{Gear\+::\+Create\+Scope}} (Args \&\&... args)
+\item 
+{\footnotesize template$<$typename T , typename ... Args$>$ }\\constexpr Ref$<$ T $>$ \mbox{\hyperlink{namespace_gear_a793ec92dc2c5b8293535080278b848fb}{Gear\+::\+Create\+Ref}} (Args \&\&... args)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{매크로 문서화}
+\mbox{\Hypertarget{_core_8h_ad27cc17b25bb93134368d5eb21126eae}\label{_core_8h_ad27cc17b25bb93134368d5eb21126eae}} 
+\index{Core.h@{Core.h}!BIT@{BIT}}
+\index{BIT@{BIT}!Core.h@{Core.h}}
+\doxysubsubsection{\texorpdfstring{BIT}{BIT}}
+{\footnotesize\ttfamily \#define B\+IT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(1 $<$$<$ x)}
+
+
+
+Core.\+h 파일의 71 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_core_8h_a53e36b1b9baba7ef143d61faf67d1751}\label{_core_8h_a53e36b1b9baba7ef143d61faf67d1751}} 
+\index{Core.h@{Core.h}!GR\_ASSERT@{GR\_ASSERT}}
+\index{GR\_ASSERT@{GR\_ASSERT}!Core.h@{Core.h}}
+\doxysubsubsection{\texorpdfstring{GR\_ASSERT}{GR\_ASSERT}}
+{\footnotesize\ttfamily \#define G\+R\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Core.\+h 파일의 67 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_core_8h_a1b294077fd8afbc1740916700e5390d4}\label{_core_8h_a1b294077fd8afbc1740916700e5390d4}} 
+\index{Core.h@{Core.h}!GR\_BIND\_EVENT\_FN@{GR\_BIND\_EVENT\_FN}}
+\index{GR\_BIND\_EVENT\_FN@{GR\_BIND\_EVENT\_FN}!Core.h@{Core.h}}
+\doxysubsubsection{\texorpdfstring{GR\_BIND\_EVENT\_FN}{GR\_BIND\_EVENT\_FN}}
+{\footnotesize\ttfamily \#define G\+R\+\_\+\+B\+I\+N\+D\+\_\+\+E\+V\+E\+N\+T\+\_\+\+FN(\begin{DoxyParamCaption}\item[{}]{fn }\end{DoxyParamCaption})~std\+::bind(\&fn, this, std\+::placeholders\+::\+\_\+1)}
+
+
+
+Core.\+h 파일의 73 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_core_8h_aada7d47fe675d944b0516553e43d2c58}\label{_core_8h_aada7d47fe675d944b0516553e43d2c58}} 
+\index{Core.h@{Core.h}!GR\_CORE\_ASSERT@{GR\_CORE\_ASSERT}}
+\index{GR\_CORE\_ASSERT@{GR\_CORE\_ASSERT}!Core.h@{Core.h}}
+\doxysubsubsection{\texorpdfstring{GR\_CORE\_ASSERT}{GR\_CORE\_ASSERT}}
+{\footnotesize\ttfamily \#define G\+R\+\_\+\+C\+O\+R\+E\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Core.\+h 파일의 68 번째 라인에서 정의되었습니다.
+
